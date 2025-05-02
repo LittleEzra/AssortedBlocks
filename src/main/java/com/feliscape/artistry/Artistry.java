@@ -1,10 +1,7 @@
 package com.feliscape.artistry;
 
 import com.feliscape.artistry.data.worldgen.registry.ArtistryFoliagePlacers;
-import com.feliscape.artistry.registry.ArtistryBlocks;
-import com.feliscape.artistry.registry.ArtistryCreativeModeTabs;
-import com.feliscape.artistry.registry.ArtistryItems;
-import com.feliscape.artistry.registry.ArtistryBlockEntityTypes;
+import com.feliscape.artistry.registry.*;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 
@@ -35,6 +32,7 @@ public class Artistry
         ArtistryItems.register(modEventBus);
         ArtistryCreativeModeTabs.register(modEventBus);
         ArtistryBlockEntityTypes.register(modEventBus);
+        ArtistryEntityTypes.register(modEventBus);
 
         ArtistryFoliagePlacers.register(modEventBus);
 

@@ -35,5 +35,7 @@
   "block.artistry.stripped_aspen_log": "Stripped Aspen Log",
   "block.artistry.stripped_aspen_wood": "Stripped Aspen Wood",
   "block.artistry.warped_table": "Warped Table",
+  "item.artistry.aspen_boat": "Aspen Boat",
+  "item.artistry.aspen_chest_boat": "Aspen Chest Boat",
   "itemGroup.artistry.base": "Artistry"
 }

@@ -122,10 +122,10 @@ public class ArtistryRecipeProvider extends RecipeProvider {
         trapdoorBuilder(ArtistryBlocks.ASPEN_TRAPDOOR.get(), aspenPlankIngredient)
                 .unlockedBy(hasAspenPlanksName, hasAspenPlanks)
                 .save(recipeOutput);
-        /*signBuilder(ArtistryItems.ASPEN_SIGN.get(), aspenPlankIngredient)
+        signBuilder(ArtistryItems.ASPEN_SIGN.get(), aspenPlankIngredient)
                 .unlockedBy(hasAspenPlanksName, hasAspenPlanks)
                 .save(recipeOutput);
-        hangingSign(recipeOutput, ArtistryItems.ASPEN_HANGING_SIGN.get(), ArtistryBlocks.ASPEN_PLANKS.get());*/
+        hangingSign(recipeOutput, ArtistryItems.ASPEN_HANGING_SIGN.get(), ArtistryBlocks.ASPEN_PLANKS.get());
 
         fenceBuilder(ArtistryBlocks.ASPEN_FENCE.get(), aspenPlankIngredient)
                 .unlockedBy(hasAspenPlanksName, hasAspenPlanks)
@@ -137,6 +137,9 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .unlockedBy(hasAspenPlanksName, hasAspenPlanks)
                 .save(recipeOutput);;
         pressurePlate(recipeOutput, ArtistryBlocks.ASPEN_PRESSURE_PLATE.get(), ArtistryBlocks.ASPEN_PLANKS.get());
+
+        woodenBoat(recipeOutput, ArtistryItems.ASPEN_BOAT, ArtistryBlocks.ASPEN_PLANKS.get());
+        chestBoat(recipeOutput, ArtistryItems.ASPEN_CHEST_BOAT, ArtistryItems.ASPEN_BOAT);
         //endregion
     }
 

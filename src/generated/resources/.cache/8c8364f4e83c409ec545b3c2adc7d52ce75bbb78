@@ -1,3 +1,5 @@
-// 1.21.1	2025-05-01T18:38:10.7913401	Tags for minecraft:item mod id vanilla
+// 1.21.1	2025-05-02T16:17:39.0291778	Tags for minecraft:item mod id vanilla
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/item/aspen_logs.json
 13994a7e7e704c24c0cebec3e302b41487842bfa data/artistry/tags/item/can_apply_moss.json
+b2db69008ac5a1cbe34a43d8c9c032f722745dac data/minecraft/tags/item/boats.json
+95720c635f77a097a8df88b0a742618bbdf39fe0 data/minecraft/tags/item/chest_boats.json

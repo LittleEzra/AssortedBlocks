@@ -1,10 +1,12 @@
 package com.feliscape.artistry.data.datagen.tag;
 
+import com.feliscape.artistry.registry.ArtistryItems;
 import com.feliscape.artistry.registry.ArtistryTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 
@@ -23,5 +25,9 @@ public class ArtistryItemTagGenerator extends ItemTagsProvider {
                 .addOptional(ResourceLocation.parse("immersive_weathering:moss_clump"))
         ;
         this.copy(ArtistryTags.Blocks.ASPEN_LOGS, ArtistryTags.Items.ASPEN_LOGS);
+        this.tag(ItemTags.BOATS)
+                .add(ArtistryItems.ASPEN_BOAT.get());
+        this.tag(ItemTags.CHEST_BOATS)
+                .add(ArtistryItems.ASPEN_CHEST_BOAT.get());
     }
 }

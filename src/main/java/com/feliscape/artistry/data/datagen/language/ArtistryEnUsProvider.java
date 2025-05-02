@@ -13,6 +13,8 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
     protected void addTranslations() {
         this.addItem(ArtistryItems.ASPEN_SIGN, "Aspen Sign");
         this.addItem(ArtistryItems.ASPEN_HANGING_SIGN, "Aspen Hanging Sign");
+        this.addItem(ArtistryItems.ASPEN_BOAT, "Aspen Boat");
+        this.addItem(ArtistryItems.ASPEN_CHEST_BOAT, "Aspen Chest Boat");
 
         this.addBlock(ArtistryBlocks.MOSSY_BRICKS, "Mossy Bricks");
         this.addBlock(ArtistryBlocks.CRACKED_BRICKS, "Cracked Bricks");

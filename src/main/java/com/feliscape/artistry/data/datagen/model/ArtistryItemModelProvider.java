@@ -50,6 +50,8 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
 
         simpleItem(ArtistryItems.ASPEN_SIGN);
         simpleItem(ArtistryItems.ASPEN_HANGING_SIGN);
+        simpleItem(ArtistryItems.ASPEN_BOAT);
+        simpleItem(ArtistryItems.ASPEN_CHEST_BOAT);
     }
 
     private ItemModelBuilder simpleItem(Supplier<? extends Item> item){
