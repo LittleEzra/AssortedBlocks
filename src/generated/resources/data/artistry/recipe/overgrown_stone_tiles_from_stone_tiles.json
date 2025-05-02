@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "overgrown_stone_tiles",
+  "ingredients": [
+    {
+      "item": "artistry:stone_tiles"
+    },
+    {
+      "tag": "artistry:can_apply_moss"
+    },
+    {
+      "tag": "artistry:can_apply_moss"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "artistry:overgrown_stone_tiles"
+  }
+}

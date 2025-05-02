@@ -1,0 +1,6 @@
+{
+  "parent": "artistry:block/template_table_northwest_leg",
+  "textures": {
+    "side": "artistry:block/acacia_table_side"
+  }
+}

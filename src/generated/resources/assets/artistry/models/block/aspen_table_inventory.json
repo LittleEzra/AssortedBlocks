@@ -1,0 +1,8 @@
+{
+  "parent": "artistry:block/template_table_inventory",
+  "textures": {
+    "bottom": "artistry:block/aspen_table_bottom",
+    "side": "artistry:block/aspen_table_side",
+    "top": "artistry:block/aspen_table_top"
+  }
+}

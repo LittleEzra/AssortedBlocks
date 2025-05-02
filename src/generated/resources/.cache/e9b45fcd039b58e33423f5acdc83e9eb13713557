@@ -1,0 +1,25 @@
+// 1.21.1	2025-05-02T13:40:52.2599888	Tags for minecraft:block mod id artistry
+5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/block/aspen_logs.json
+9b8417b4419528d8a5d146d171c4e4fd89caede4 data/artistry/tags/block/table.json
+1bba110c9fc802713fa42d07e7f1b8bd8ecec799 data/artistry/tags/block/wooden_table.json
+ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/azalea_root_replaceable.json
+ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/convertable_to_mud.json
+af758703c7ee1fde8d49ad581ce4e2762c7bfcb0 data/minecraft/tags/block/dirt.json
+ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/enderman_holdable.json
+8ddba52279f4616e62ac049cc3e02386bcf14cfa data/minecraft/tags/block/fence_gates.json
+2c4e2b63d7ddfa023501a694b0bb7423512a293e data/minecraft/tags/block/leaves.json
+05936648edde2e2b272c6888a1c9dca6bbfb5784 data/minecraft/tags/block/logs_that_burn.json
+9b8417b4419528d8a5d146d171c4e4fd89caede4 data/minecraft/tags/block/mineable/axe.json
+b878c7d6d375c529ed673eaa5fdd20e4a49ce96b data/minecraft/tags/block/mineable/pickaxe.json
+ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/moss_replaceable.json
+ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/nether_carver_replaceables.json
+ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/overworld_carver_replaceables.json
+72a09d8bd065bc541d6ebaf2cee46366bd5476fb data/minecraft/tags/block/planks.json
+af758703c7ee1fde8d49ad581ce4e2762c7bfcb0 data/minecraft/tags/block/sniffer_diggable_block.json
+668b2796445d31d23057580325583de0479ff000 data/minecraft/tags/block/wooden_buttons.json
+ade2ce1341c278edf91087d557d05e86b27861ec data/minecraft/tags/block/wooden_doors.json
+4cdb468ea99c988eef201e31cad47acf8a7a3c41 data/minecraft/tags/block/wooden_fences.json
+3d8a414115a2bdbdbe1bbbddac0cfae7b24c10e6 data/minecraft/tags/block/wooden_pressure_plates.json
+1456258522d56b5fe3758cfa0c7b5bc22286d131 data/minecraft/tags/block/wooden_slabs.json
+00fee14b780bd99b1fce22fa970705db59f50905 data/minecraft/tags/block/wooden_stairs.json
+ac1db186f4a076a71c2c2baae21e10444377b968 data/minecraft/tags/block/wooden_trapdoors.json

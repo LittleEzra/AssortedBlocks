@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "artistry:block/mossy_stone_tiles"
+  }
+}

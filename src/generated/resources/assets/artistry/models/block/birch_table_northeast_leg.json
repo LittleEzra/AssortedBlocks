@@ -1,0 +1,6 @@
+{
+  "parent": "artistry:block/template_table_northeast_leg",
+  "textures": {
+    "side": "artistry:block/birch_table_side"
+  }
+}

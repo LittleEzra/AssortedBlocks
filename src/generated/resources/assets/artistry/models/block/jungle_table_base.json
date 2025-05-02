@@ -1,0 +1,8 @@
+{
+  "parent": "artistry:block/template_table_base",
+  "textures": {
+    "bottom": "artistry:block/jungle_table_bottom",
+    "side": "artistry:block/jungle_table_side",
+    "top": "artistry:block/jungle_table_top"
+  }
+}

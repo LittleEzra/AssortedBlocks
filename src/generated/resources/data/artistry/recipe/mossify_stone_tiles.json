@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "mossy_stone_tiles",
+  "ingredients": [
+    {
+      "item": "artistry:stone_tiles"
+    },
+    {
+      "tag": "artistry:can_apply_moss"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "artistry:mossy_stone_tiles"
+  }
+}

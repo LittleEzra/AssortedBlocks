@@ -1,0 +1,6 @@
+{
+  "parent": "artistry:block/template_table_southwest_leg",
+  "textures": {
+    "side": "artistry:block/warped_table_side"
+  }
+}

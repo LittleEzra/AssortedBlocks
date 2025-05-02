@@ -1,0 +1,10 @@
+{
+  "values": [
+    "minecraft:moss_block",
+    "minecraft:vine",
+    {
+      "id": "immersive_weathering:moss_clump",
+      "required": false
+    }
+  ]
+}

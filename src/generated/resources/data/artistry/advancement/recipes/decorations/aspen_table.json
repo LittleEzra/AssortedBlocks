@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aspen_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "artistry:aspen_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "artistry:aspen_table"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aspen_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "artistry:aspen_table"
+    ]
+  }
+}
