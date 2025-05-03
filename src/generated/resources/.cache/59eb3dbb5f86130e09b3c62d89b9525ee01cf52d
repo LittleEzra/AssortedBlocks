@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-02T15:43:42.8053585	Loot Tables
+// 1.21.1	2025-05-02T21:38:41.0813491	Loot Tables
 47b6b4ddb80a89fa9150b4f209f8c1912ba8fd04 data/artistry/loot_table/blocks/acacia_table.json
 a86cb573def5ec0b77a3107ab659125d53e396be data/artistry/loot_table/blocks/aspen_button.json
 2ff27d9b3365e36034d68fb0ed1fb43c7ba36139 data/artistry/loot_table/blocks/aspen_door.json
@@ -20,6 +20,7 @@ b0ef8986385cb9ea5203adad94a15f15fb8ee774 data/artistry/loot_table/blocks/aspen_w
 0602119b27d589d728b37e9a306580e7f8229467 data/artistry/loot_table/blocks/aspen_wood.json
 ce58cc6dd557996c7fc69bb2334eec2853d64451 data/artistry/loot_table/blocks/bamboo_table.json
 617a506479827def37f12d154fa0bd72a47d1b8b data/artistry/loot_table/blocks/birch_table.json
+526259eb9d00aa8d593a94907e09b3d952687a3b data/artistry/loot_table/blocks/blooming_vines.json
 94641ab209a384a6634f29793b5ee6c6a173a742 data/artistry/loot_table/blocks/cherry_table.json
 d31189d739c89769abb2671ff921aa7a669dc457 data/artistry/loot_table/blocks/cracked_bricks.json
 29132b60c8dbe6814751af439efddd7dd2759c08 data/artistry/loot_table/blocks/crimson_table.json

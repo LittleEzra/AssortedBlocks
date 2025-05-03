@@ -1,4 +1,4 @@
-package com.feliscape.artistry.content.block;
+package com.feliscape.artistry.content.block.flammable;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

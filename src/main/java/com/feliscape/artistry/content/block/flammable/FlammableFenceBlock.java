@@ -1,14 +1,14 @@
-package com.feliscape.artistry.content.block;
+package com.feliscape.artistry.content.block.flammable;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class FlammableStairBlock extends StairBlock {
-    public FlammableStairBlock(BlockState baseState, Properties properties) {
-        super(baseState, properties);
+public class FlammableFenceBlock extends FenceBlock {
+    public FlammableFenceBlock(Properties properties) {
+        super(properties);
     }
 
     @Override

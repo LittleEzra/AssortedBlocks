@@ -33,6 +33,8 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         manualBlockItem(ArtistryBlocks.STONE_PILLAR);
         manualBlockItem(ArtistryBlocks.MOSSY_STONE_PILLAR);
 
+        blockItemSprite(ArtistryBlocks.BLOOMING_VINES);
+
         manualBlockItem(ArtistryBlocks.ASPEN_LOG);
         manualBlockItem(ArtistryBlocks.ASPEN_WOOD);
         manualBlockItem(ArtistryBlocks.STRIPPED_ASPEN_LOG);

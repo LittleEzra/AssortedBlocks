@@ -1,0 +1,198 @@
+{
+  "multipart": [
+    {
+      "apply": [
+        {
+          "model": "artistry:block/blooming_vines"
+        },
+        {
+          "model": "artistry:block/blooming_vines1"
+        },
+        {
+          "model": "artistry:block/blooming_vines2"
+        }
+      ],
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/blooming_vines"
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "artistry:block/blooming_vines",
+          "y": 90
+        },
+        {
+          "model": "artistry:block/blooming_vines1",
+          "y": 90
+        },
+        {
+          "model": "artistry:block/blooming_vines2",
+          "y": 90
+        }
+      ],
+      "when": {
+        "east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/blooming_vines",
+        "y": 90
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "artistry:block/blooming_vines",
+          "y": 180
+        },
+        {
+          "model": "artistry:block/blooming_vines1",
+          "y": 180
+        },
+        {
+          "model": "artistry:block/blooming_vines2",
+          "y": 180
+        }
+      ],
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/blooming_vines",
+        "y": 180
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "artistry:block/blooming_vines",
+          "y": 270
+        },
+        {
+          "model": "artistry:block/blooming_vines1",
+          "y": 270
+        },
+        {
+          "model": "artistry:block/blooming_vines2",
+          "y": 270
+        }
+      ],
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/blooming_vines",
+        "y": 270
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "artistry:block/blooming_vines",
+          "x": 270
+        },
+        {
+          "model": "artistry:block/blooming_vines1",
+          "x": 270
+        },
+        {
+          "model": "artistry:block/blooming_vines2",
+          "x": 270
+        }
+      ],
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/blooming_vines",
+        "x": 270
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    },
+    {
+      "apply": [
+        {
+          "model": "artistry:block/blooming_vines",
+          "x": 90
+        },
+        {
+          "model": "artistry:block/blooming_vines1",
+          "x": 90
+        },
+        {
+          "model": "artistry:block/blooming_vines2",
+          "x": 90
+        }
+      ],
+      "when": {
+        "down": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/blooming_vines",
+        "x": 90
+      },
+      "when": {
+        "down": "false",
+        "east": "false",
+        "north": "false",
+        "south": "false",
+        "up": "false",
+        "west": "false"
+      }
+    }
+  ]
+}

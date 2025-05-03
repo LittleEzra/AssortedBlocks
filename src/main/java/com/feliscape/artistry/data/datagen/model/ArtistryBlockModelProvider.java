@@ -1,15 +1,20 @@
 package com.feliscape.artistry.data.datagen.model;
 
 import com.feliscape.artistry.Artistry;
+import com.feliscape.artistry.content.block.BloomingVinesBlock;
 import com.feliscape.artistry.content.block.TableBlock;
 import com.feliscape.artistry.registry.ArtistryBlocks;
+import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.function.Supplier;
@@ -42,6 +47,7 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         table(ArtistryBlocks.CRIMSON_TABLE);
         table(ArtistryBlocks.WARPED_TABLE);
 
+        bloomingVines(ArtistryBlocks.BLOOMING_VINES);
 
         leavesBlock(ArtistryBlocks.ASPEN_LEAVES, "cutout_mipped");
 
@@ -74,6 +80,65 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         crossBlockWithRenderType(ArtistryBlocks.ASPEN_SAPLING.get(), "cutout");
 
+    }
+
+    private void bloomingVines(Supplier<BloomingVinesBlock> block){
+        MultiPartBlockStateBuilder multipart = getMultipartBuilder(block.get());
+
+        ModelFile model0 = models().getExistingFile(Artistry.location("block/blooming_vines"));
+        ModelFile model1 = models().getExistingFile(Artistry.location("block/blooming_vines1"));
+        ModelFile model2 = models().getExistingFile(Artistry.location("block/blooming_vines2"));
+
+        addBloomingVinesFaceLoop(multipart, 0, 0, MultifaceBlock.getFaceProperty(Direction.NORTH), model0, model1, model2);
+        bloomingVinesAddAllFalse(model0, multipart, 0, 0);
+
+        addBloomingVinesFaceLoop(multipart, 0, 90, MultifaceBlock.getFaceProperty(Direction.EAST), model0, model1, model2);
+        bloomingVinesAddAllFalse(model0, multipart, 0, 90);
+
+        addBloomingVinesFaceLoop(multipart, 0, 180, MultifaceBlock.getFaceProperty(Direction.SOUTH), model0, model1, model2);
+        bloomingVinesAddAllFalse(model0, multipart, 0, 180);
+
+        addBloomingVinesFaceLoop(multipart, 0, 270, MultifaceBlock.getFaceProperty(Direction.WEST), model0, model1, model2);
+        bloomingVinesAddAllFalse(model0, multipart, 0, 270);
+
+        addBloomingVinesFaceLoop(multipart, 270, 0, MultifaceBlock.getFaceProperty(Direction.UP), model0, model1, model2);
+        bloomingVinesAddAllFalse(model0, multipart, 270, 0);
+
+        addBloomingVinesFaceLoop(multipart, 90, 0, MultifaceBlock.getFaceProperty(Direction.DOWN), model0, model1, model2);
+        bloomingVinesAddAllFalse(model0, multipart, 90, 0);
+    }
+
+    private void addBloomingVinesFaceLoop(MultiPartBlockStateBuilder multipart, int xRot, int yRot, BooleanProperty faceProperty, ModelFile model0, ModelFile... files) {
+        var part = multipart.part()
+                .modelFile(model0)
+                .rotationX(xRot)
+                .rotationY(yRot);
+
+        for (ModelFile file : files){
+            part = part.nextModel()
+                    .modelFile(file)
+                    .rotationX(xRot)
+                    .rotationY(yRot);
+        }
+
+
+        part.addModel()
+                .condition(faceProperty, true)
+                .end();
+    }
+
+    private void bloomingVinesAddAllFalse(ModelFile model, MultiPartBlockStateBuilder builder, int xRotation, int yRotation){
+        builder.part()
+                .modelFile(model)
+                .rotationX(xRotation)
+                .rotationY(yRotation)
+                .addModel()
+                .condition(MultifaceBlock.getFaceProperty(Direction.DOWN), false)
+                .condition(MultifaceBlock.getFaceProperty(Direction.EAST), false)
+                .condition(MultifaceBlock.getFaceProperty(Direction.NORTH), false)
+                .condition(MultifaceBlock.getFaceProperty(Direction.SOUTH), false)
+                .condition(MultifaceBlock.getFaceProperty(Direction.UP), false)
+                .condition(MultifaceBlock.getFaceProperty(Direction.WEST), false).end();
     }
 
     private void table(Supplier<TableBlock> block){

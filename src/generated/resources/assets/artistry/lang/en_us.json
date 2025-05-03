@@ -18,6 +18,7 @@
   "block.artistry.aspen_wood": "Aspen Wood",
   "block.artistry.bamboo_table": "Bamboo Table",
   "block.artistry.birch_table": "Birch Table",
+  "block.artistry.blooming_vines": "Blooming Vines",
   "block.artistry.cherry_table": "Cherry Table",
   "block.artistry.cracked_bricks": "Cracked Bricks",
   "block.artistry.crimson_table": "Crimson Table",
@@ -36,6 +37,6 @@
   "block.artistry.stripped_aspen_wood": "Stripped Aspen Wood",
   "block.artistry.warped_table": "Warped Table",
   "item.artistry.aspen_boat": "Aspen Boat",
-  "item.artistry.aspen_chest_boat": "Aspen Chest Boat",
+  "item.artistry.aspen_chest_boat": "Aspen Boat with Chest",
   "itemGroup.artistry.base": "Artistry"
 }

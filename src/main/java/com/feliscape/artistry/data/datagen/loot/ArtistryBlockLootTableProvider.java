@@ -2,6 +2,8 @@ package com.feliscape.artistry.data.datagen.loot;
 
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -10,7 +12,18 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.MultifaceBlock;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
+import java.util.Arrays;
 import java.util.Set;
 
 public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
@@ -27,6 +40,8 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ArtistryBlocks.OVERGROWN_STONE_TILES.get());
         dropSelf(ArtistryBlocks.STONE_PILLAR.get());
         dropSelf(ArtistryBlocks.MOSSY_STONE_PILLAR.get());
+
+        this.add(ArtistryBlocks.BLOOMING_VINES.get(), block -> this.createBloomingVinesDrops(block, HAS_SHEARS));
 
         dropSelf(ArtistryBlocks.OAK_TABLE.get());
         dropSelf(ArtistryBlocks.SPRUCE_TABLE.get());
@@ -71,6 +86,18 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ArtistryBlocks.ASPEN_LEAVES.get(),
                 block -> createLeavesDrops(ArtistryBlocks.ASPEN_LEAVES.get(), ArtistryBlocks.ASPEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+    }
+
+
+    @SuppressWarnings("unchecked")
+    protected LootTable.Builder createBloomingVinesDrops(Block block, LootItemCondition.Builder builder) {
+        return LootTable.lootTable().withPool(LootPool.lootPool().add((LootPoolEntryContainer.Builder)
+                this.applyExplosionDecay(block, ((LootPoolSingletonContainer.Builder)((LootPoolSingletonContainer.Builder)
+                        LootItem.lootTableItem(block)
+                        .when(builder))
+                        .apply(Direction.Plane.HORIZONTAL, (d) -> SetItemCountFunction.setCount(ConstantValue.exactly(1.0F), true)
+                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(MultifaceBlock.getFaceProperty((Direction) d), true)))))
+                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(-1.0F), true)))));
     }
 
     protected void dropOtherWithoutSilkTouch(Block block, ItemLike other){

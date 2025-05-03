@@ -2,6 +2,7 @@ package com.feliscape.artistry.registry;
 
 import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.content.block.*;
+import com.feliscape.artistry.content.block.flammable.*;
 import com.feliscape.artistry.data.worldgen.registry.ArtistryTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -74,6 +75,18 @@ public class ArtistryBlocks {
     public static final DeferredBlock<TableBlock> BAMBOO_TABLE = registerBlockWithItem("bamboo_table", p -> table(p, MapColor.COLOR_YELLOW, SoundType.BAMBOO_WOOD));
     public static final DeferredBlock<TableBlock> CRIMSON_TABLE = registerBlockWithItem("crimson_table", p -> inflammableTable(p, MapColor.CRIMSON_STEM, SoundType.NETHER_WOOD));
     public static final DeferredBlock<TableBlock> WARPED_TABLE = registerBlockWithItem("warped_table", p -> inflammableTable(p, MapColor.WARPED_STEM, SoundType.NETHER_WOOD));
+
+    public static final DeferredBlock<BloomingVinesBlock> BLOOMING_VINES = registerBlockWithItem("blooming_vines",
+            p -> new BloomingVinesBlock(p
+                    .mapColor(MapColor.PLANT)
+                    .replaceable()
+                    .noCollission()
+                    .randomTicks()
+                    .strength(0.2F)
+                    .sound(SoundType.CAVE_VINES)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+            ));
 
     //region Aspen Wood
 
