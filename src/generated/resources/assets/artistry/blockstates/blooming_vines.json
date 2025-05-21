@@ -131,15 +131,15 @@
     {
       "apply": [
         {
-          "model": "artistry:block/blooming_vines",
+          "model": "artistry:block/blooming_vines_vertical",
           "x": 270
         },
         {
-          "model": "artistry:block/blooming_vines1",
+          "model": "artistry:block/blooming_vines_vertical1",
           "x": 270
         },
         {
-          "model": "artistry:block/blooming_vines2",
+          "model": "artistry:block/blooming_vines_vertical2",
           "x": 270
         }
       ],
@@ -164,15 +164,15 @@
     {
       "apply": [
         {
-          "model": "artistry:block/blooming_vines",
+          "model": "artistry:block/blooming_vines_vertical",
           "x": 90
         },
         {
-          "model": "artistry:block/blooming_vines1",
+          "model": "artistry:block/blooming_vines_vertical1",
           "x": 90
         },
         {
-          "model": "artistry:block/blooming_vines2",
+          "model": "artistry:block/blooming_vines_vertical2",
           "x": 90
         }
       ],

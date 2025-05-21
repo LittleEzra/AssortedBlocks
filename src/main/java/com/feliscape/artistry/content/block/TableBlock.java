@@ -121,7 +121,7 @@ public class TableBlock extends Block implements SimpleWaterloggedBlock {
     }
 
     public boolean canConnect(BlockState state) {
-        return state.is(ArtistryTags.Blocks.TABLE);
+        return state.is(ArtistryTags.Blocks.TABLES);
     }
 
     @Override

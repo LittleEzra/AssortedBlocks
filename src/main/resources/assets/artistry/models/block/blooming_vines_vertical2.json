@@ -1,0 +1,39 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"render_type": "cutout",
+	"textures": {
+		"1": "artistry:block/blooming_vines_flowers2",
+		"2": "artistry:block/blooming_vines",
+		"3": "artistry:block/blooming_vines_dense_back",
+		"particle": "artistry:block/blooming_vines_dense_back"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0.1],
+			"to": [16, 16, 0.1],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, -1.9]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"east": {"uv": [0, 0, 0, 16], "texture": "#3"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#3"},
+				"west": {"uv": [0, 0, 0, 16], "texture": "#3"},
+				"up": {"uv": [0, 0, 16, 0], "texture": "#3"},
+				"down": {"uv": [0, 0, 16, 0], "texture": "#3"}
+			}
+		},
+		{
+			"from": [0, 0, 1.2],
+			"to": [16, 16, 1.2],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 1.2]},
+			"faces": {
+				"north": {"uv": [16, 0, 0, 16], "texture": "#1"},
+				"east": {"uv": [0, 0, 0, 16], "texture": "#1"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"west": {"uv": [0, 0, 0, 16], "texture": "#1"},
+				"up": {"uv": [0, 0, 16, 0], "texture": "#1"},
+				"down": {"uv": [0, 0, 16, 0], "texture": "#1"}
+			}
+		}
+	]
+}

@@ -41,7 +41,11 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ArtistryBlocks.STONE_PILLAR.get());
         dropSelf(ArtistryBlocks.MOSSY_STONE_PILLAR.get());
 
-        this.add(ArtistryBlocks.BLOOMING_VINES.get(), block -> this.createBloomingVinesDrops(block, HAS_SHEARS));
+        dropOther(ArtistryBlocks.SUNSPROUT.get(), ArtistryItems.SUNSPROUT);
+        this.add(ArtistryBlocks.SUNBURST_VINES.get(), BlockLootSubProvider::createShearsOnlyDrop);
+        this.add(ArtistryBlocks.SUNBURST_VINES_PLANT.get(), BlockLootSubProvider::createShearsOnlyDrop);
+
+        this.add(ArtistryBlocks.BLOOMING_VINES.get(), block -> this.createMultifaceBlockDrops(block, HAS_SHEARS));
 
         dropSelf(ArtistryBlocks.OAK_TABLE.get());
         dropSelf(ArtistryBlocks.SPRUCE_TABLE.get());
@@ -55,6 +59,13 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ArtistryBlocks.BAMBOO_TABLE.get());
         dropSelf(ArtistryBlocks.CRIMSON_TABLE.get());
         dropSelf(ArtistryBlocks.WARPED_TABLE.get());
+
+        dropSelf(ArtistryBlocks.STONE_TABLE.get());
+
+        dropSelf(ArtistryBlocks.STRING_LIGHTS.get());
+
+        this.add(ArtistryBlocks.LARGE_LANTERN.get(), this::createSingleItemTable);
+        this.add(ArtistryBlocks.LARGE_SOUL_LANTERN.get(), this::createSingleItemTable);
 
         this.dropSelf(ArtistryBlocks.ASPEN_LOG.get());
         this.dropSelf(ArtistryBlocks.ASPEN_WOOD.get());
@@ -86,18 +97,6 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ArtistryBlocks.ASPEN_LEAVES.get(),
                 block -> createLeavesDrops(ArtistryBlocks.ASPEN_LEAVES.get(), ArtistryBlocks.ASPEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
-    }
-
-
-    @SuppressWarnings("unchecked")
-    protected LootTable.Builder createBloomingVinesDrops(Block block, LootItemCondition.Builder builder) {
-        return LootTable.lootTable().withPool(LootPool.lootPool().add((LootPoolEntryContainer.Builder)
-                this.applyExplosionDecay(block, ((LootPoolSingletonContainer.Builder)((LootPoolSingletonContainer.Builder)
-                        LootItem.lootTableItem(block)
-                        .when(builder))
-                        .apply(Direction.Plane.HORIZONTAL, (d) -> SetItemCountFunction.setCount(ConstantValue.exactly(1.0F), true)
-                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block).setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(MultifaceBlock.getFaceProperty((Direction) d), true)))))
-                        .apply(SetItemCountFunction.setCount(ConstantValue.exactly(-1.0F), true)))));
     }
 
     protected void dropOtherWithoutSilkTouch(Block block, ItemLike other){

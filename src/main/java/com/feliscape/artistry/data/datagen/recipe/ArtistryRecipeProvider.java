@@ -102,6 +102,33 @@ public class ArtistryRecipeProvider extends RecipeProvider {
         table(recipeOutput, ArtistryBlocks.CRIMSON_TABLE, Blocks.CRIMSON_SLAB);
         table(recipeOutput, ArtistryBlocks.WARPED_TABLE, Blocks.WARPED_SLAB);
 
+        table(recipeOutput, ArtistryBlocks.STONE_TABLE, Blocks.STONE_SLAB, Blocks.STONE);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.LARGE_LANTERN)
+                .define('#', Items.IRON_INGOT)
+                .define('o', Items.IRON_NUGGET)
+                .define('/', Items.TORCH)
+                .pattern("o#o")
+                .pattern("#/#")
+                .pattern("o#o")
+                .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.LARGE_SOUL_LANTERN)
+                .define('#', Items.IRON_INGOT)
+                .define('o', Items.IRON_NUGGET)
+                .define('/', Items.SOUL_TORCH)
+                .pattern("o#o")
+                .pattern("#/#")
+                .pattern("o#o")
+                .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.STRING_LIGHTS, 4)
+                .define('S', Items.STRING)
+                .define('o', Items.GLOWSTONE_DUST)
+                .pattern("SSS")
+                .pattern("ooo")
+                .unlockedBy(getHasName(Items.GLOWSTONE_DUST), has(Items.GLOWSTONE_DUST))
+                .save(recipeOutput);
 
         //region Aspen
         planksFromLog(recipeOutput, ArtistryBlocks.ASPEN_PLANKS.get(), ArtistryTags.Items.ASPEN_LOGS, 4);
@@ -158,14 +185,25 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .save(recipeOutput);
     }
 
-    protected static void table(RecipeOutput recipeOutput, ItemLike table, ItemLike planks) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, table, 2)
-                .define('#', planks)
+    protected static void table(RecipeOutput recipeOutput, ItemLike table, ItemLike slab) {
+        /*ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, table, 2)
+                .define('#', slab)
                 .define('/', Items.STICK)
                 .pattern("###")
                 .pattern("/ /")
                 .pattern("/ /")
-                .unlockedBy(getHasName(planks), has(planks))
+                .unlockedBy(getHasName(slab), has(slab))
+                .save(recipeOutput);*/
+        table(recipeOutput, table, slab, Items.STICK);
+    }
+    protected static void table(RecipeOutput recipeOutput, ItemLike table, ItemLike slab, ItemLike legs) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, table, 2)
+                .define('#', slab)
+                .define('/', legs)
+                .pattern("###")
+                .pattern("/ /")
+                .pattern("/ /")
+                .unlockedBy(getHasName(slab), has(slab))
                 .save(recipeOutput);
     }
 

@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-02T21:38:41.0858462	Item Models: artistry
+// 1.21.1	2025-05-18T15:27:08.6052681	Item Models: artistry
 73fe7333d37ecde4ea79ba093344f9bc4ccda762 assets/artistry/models/item/aspen_boat.json
 9d6e1f6caef8d1fdac13bf1b5333bda820630c89 assets/artistry/models/item/aspen_button.json
 f1af858736483f22fa765b7cd6b9a90fc9db37eb assets/artistry/models/item/aspen_chest_boat.json
@@ -15,7 +15,11 @@ cbad40d6a2a81189e976103fa4dcf5e0b9cb6946 assets/artistry/models/item/aspen_slab.
 6e02be52558d3986cb4e090ec87f8e7239c6e894 assets/artistry/models/item/aspen_trapdoor.json
 becd9d35161297236e46319eb33d79d9cc6b4a96 assets/artistry/models/item/aspen_wood.json
 74b3ebfa0b2a6689f12d5da56e488022db03fe47 assets/artistry/models/item/blooming_vines.json
+d0a596b0b38f0561613761b3a9b28c4d3026061f assets/artistry/models/item/large_lantern.json
+b6b1aa7b7d340cf14a5ee7c77397dab55269a35c assets/artistry/models/item/large_soul_lantern.json
 5d76dc29bb7ccbfc67f0a6740d6e5adc8a92a73e assets/artistry/models/item/mossy_stone_pillar.json
 a6101b855d8f832875b0c5f5637086c52e1cf638 assets/artistry/models/item/stone_pillar.json
 7303ce917bcf0481c1158b278ee859aec5e14363 assets/artistry/models/item/stripped_aspen_log.json
 d225289f4fd7fd64655a14b4219b3ae89bafab89 assets/artistry/models/item/stripped_aspen_wood.json
+07624c97319caa02427b65e5ffbda64d755225d5 assets/artistry/models/item/sunburst_vines.json
+825b2f7c1542f477289a67f7530adc151d5e7982 assets/artistry/models/item/sunsprout.json

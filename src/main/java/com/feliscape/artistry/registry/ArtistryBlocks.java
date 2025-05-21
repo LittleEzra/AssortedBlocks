@@ -6,6 +6,7 @@ import com.feliscape.artistry.content.block.flammable.*;
 import com.feliscape.artistry.data.worldgen.registry.ArtistryTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.util.Mth;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -26,6 +27,7 @@ import java.util.function.Function;
 public class ArtistryBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Artistry.MOD_ID);
 
+    //region Stone Bricks Set
     public static final DeferredBlock<Block> MOSSY_BRICKS = registerBlockWithItem("mossy_bricks", p -> new Block(p
             .mapColor(MapColor.COLOR_RED)
             .instrument(NoteBlockInstrument.BASEDRUM)
@@ -62,6 +64,35 @@ public class ArtistryBlocks {
             .instrument(NoteBlockInstrument.BASEDRUM)
             .requiresCorrectToolForDrops()
             .strength(1.5F, 6.0F)));
+    //endregion
+
+    public static final DeferredBlock<SunsproutBlock> SUNSPROUT = BLOCKS.registerBlock("sunsprout",
+            p -> new SunsproutBlock(p
+                    .mapColor(MapColor.PLANT)
+                    .randomTicks()
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.CAVE_VINES)
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+    public static final DeferredBlock<SunburstVinesBlock> SUNBURST_VINES = BLOCKS.registerBlock("sunburst_vines",
+            p -> new SunburstVinesBlock(p
+                    .mapColor(MapColor.PLANT)
+                    .randomTicks()
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.CAVE_VINES)
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+    public static final DeferredBlock<SunburstVinesPlantBlock> SUNBURST_VINES_PLANT = BLOCKS.registerBlock("sunburst_vines_plant",
+            p -> new SunburstVinesPlantBlock(p
+                    .mapColor(MapColor.PLANT)
+                    .randomTicks()
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.CAVE_VINES)
+                    .pushReaction(PushReaction.DESTROY)
+            ));
 
     public static final DeferredBlock<TableBlock> OAK_TABLE = registerBlockWithItem("oak_table", p -> table(p, MapColor.WOOD));
     public static final DeferredBlock<TableBlock> SPRUCE_TABLE = registerBlockWithItem("spruce_table", p -> table(p, MapColor.PODZOL));
@@ -75,6 +106,40 @@ public class ArtistryBlocks {
     public static final DeferredBlock<TableBlock> BAMBOO_TABLE = registerBlockWithItem("bamboo_table", p -> table(p, MapColor.COLOR_YELLOW, SoundType.BAMBOO_WOOD));
     public static final DeferredBlock<TableBlock> CRIMSON_TABLE = registerBlockWithItem("crimson_table", p -> inflammableTable(p, MapColor.CRIMSON_STEM, SoundType.NETHER_WOOD));
     public static final DeferredBlock<TableBlock> WARPED_TABLE = registerBlockWithItem("warped_table", p -> inflammableTable(p, MapColor.WARPED_STEM, SoundType.NETHER_WOOD));
+
+    public static final DeferredBlock<TableBlock> STONE_TABLE = registerBlockWithItem("stone_table", p -> stoneTable(p, MapColor.STONE, SoundType.STONE));
+
+    public static final DeferredBlock<StringLightsBlock> STRING_LIGHTS = registerBlockWithItem("string_lights",
+            p -> new StringLightsBlock(p
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .instabreak()
+                    .sound(SoundType.WOOL)
+                    .lightLevel(state -> 12)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)
+                    ));
+    public static final DeferredBlock<LargeLanternBlock> LARGE_LANTERN = registerBlockWithItem("large_lantern",
+            p -> new LargeLanternBlock(p
+                    .mapColor(MapColor.METAL)
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(3.5F)
+                    .sound(SoundType.LANTERN)
+                    .lightLevel(state -> 15)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)
+                    ));
+    public static final DeferredBlock<LargeLanternBlock> LARGE_SOUL_LANTERN = registerBlockWithItem("large_soul_lantern",
+            p -> new LargeLanternBlock(p
+                    .mapColor(MapColor.METAL)
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(3.5F)
+                    .sound(SoundType.LANTERN)
+                    .lightLevel(state -> 10)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)
+                    ));
 
     public static final DeferredBlock<BloomingVinesBlock> BLOOMING_VINES = registerBlockWithItem("blooming_vines",
             p -> new BloomingVinesBlock(p
@@ -90,8 +155,8 @@ public class ArtistryBlocks {
 
     //region Aspen Wood
 
-    public static final DeferredBlock<LeavesBlock> ASPEN_LEAVES = registerBlockWithItem("aspen_leaves",
-            p -> leaves(p, SoundType.GRASS));
+    public static final DeferredBlock<FlammableLeavesBlock> ASPEN_LEAVES = registerBlockWithItem("aspen_leaves",
+            p -> flammableLeaves(p, SoundType.GRASS));
 
     public static final DeferredBlock<FlammableLogBlock> ASPEN_LOG = registerBlockWithItem("aspen_log",
             p -> log(p, MapColor.SAND, MapColor.SNOW));
@@ -224,7 +289,6 @@ public class ArtistryBlocks {
                         .strength(2.0F, 3.0F)
                         .sound(soundType)
                         .ignitedByLava()
-                        //.noOcclusion()
         );
     }
     private static TableBlock inflammableTable(BlockBehaviour.Properties properties, MapColor mapColor, SoundType soundType) {
@@ -234,8 +298,16 @@ public class ArtistryBlocks {
                         .instrument(NoteBlockInstrument.BASS)
                         .strength(2.0F, 3.0F)
                         .sound(soundType)
-                        .ignitedByLava()
-                        .noOcclusion()
+        , false);
+    }
+    private static TableBlock stoneTable(BlockBehaviour.Properties properties, MapColor mapColor, SoundType soundType) {
+        return new TableBlock(
+                properties
+                        .mapColor(mapColor)
+                        .instrument(NoteBlockInstrument.BASEDRUM)
+                        .strength(1.5F, 6.0F)
+                        .requiredFeatures()
+                        .sound(soundType)
         , false);
     }
 
@@ -252,6 +324,22 @@ public class ArtistryBlocks {
 
     private static LeavesBlock leaves(BlockBehaviour.Properties properties, SoundType soundType) {
         return new LeavesBlock(
+                properties
+                        .mapColor(MapColor.PLANT)
+                        .strength(0.2F)
+                        .randomTicks()
+                        .sound(soundType)
+                        .noOcclusion()
+                        .isValidSpawn(Blocks::ocelotOrParrot)
+                        .isSuffocating(ArtistryBlocks::never)
+                        .isViewBlocking(ArtistryBlocks::never)
+                        .ignitedByLava()
+                        .pushReaction(PushReaction.DESTROY)
+                        .isRedstoneConductor(ArtistryBlocks::never)
+        );
+    }
+    private static FlammableLeavesBlock flammableLeaves(BlockBehaviour.Properties properties, SoundType soundType) {
+        return new FlammableLeavesBlock(
                 properties
                         .mapColor(MapColor.PLANT)
                         .strength(0.2F)

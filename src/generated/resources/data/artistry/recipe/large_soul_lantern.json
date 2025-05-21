@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "/": {
+      "item": "minecraft:soul_torch"
+    },
+    "o": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    "o#o",
+    "#/#",
+    "o#o"
+  ],
+  "result": {
+    "count": 1,
+    "id": "artistry:large_soul_lantern"
+  }
+}

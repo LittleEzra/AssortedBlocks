@@ -10,8 +10,9 @@ import net.minecraft.world.level.block.Block;
 public class ArtistryTags {
     public static class Blocks{
         public static final TagKey<Block> ASPEN_LOGS = create("aspen_logs");
-        public static final TagKey<Block> WOODEN_TABLE = create("wooden_table");
-        public static final TagKey<Block> TABLE = create("table");
+        public static final TagKey<Block> WOODEN_TABLES = create("wooden_tables");
+        public static final TagKey<Block> TABLES = create("tables");
+        public static final TagKey<Block> STRING_LIGHTS = create("string_lights");
 
         private static TagKey<Block> create(String name){
             return TagKey.create(Registries.BLOCK, Artistry.location(name));

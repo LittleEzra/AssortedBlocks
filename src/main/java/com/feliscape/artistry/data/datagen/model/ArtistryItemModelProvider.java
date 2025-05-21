@@ -30,8 +30,15 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         blockItemSprite(ArtistryBlocks.ASPEN_DOOR);
 
+        simpleItem(ArtistryItems.SUNSPROUT);
+        itemWithBlockTexture(ArtistryItems.SUNBURST_VINES);
+        blockItemSprite(ArtistryBlocks.STRING_LIGHTS);
+
         manualBlockItem(ArtistryBlocks.STONE_PILLAR);
         manualBlockItem(ArtistryBlocks.MOSSY_STONE_PILLAR);
+
+        blockItemSprite(ArtistryBlocks.LARGE_LANTERN);
+        blockItemSprite(ArtistryBlocks.LARGE_SOUL_LANTERN);
 
         blockItemSprite(ArtistryBlocks.BLOOMING_VINES);
 
@@ -70,6 +77,11 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         return withExistingParent(getLocation(item.get()).getPath(),
                 Artistry.location("item/rotated_handheld")).texture("layer0",
                 Artistry.location("item/" + getLocation(item.get()).getPath()));
+    }
+    private ItemModelBuilder itemWithBlockTexture(Supplier<? extends Item> item){
+        return withExistingParent(getLocation(item.get()).getPath(),
+                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
+                Artistry.location("block/" + getLocation(item.get()).getPath()));
     }
 
     public void manualBlockItem(Supplier<? extends Block> block) {

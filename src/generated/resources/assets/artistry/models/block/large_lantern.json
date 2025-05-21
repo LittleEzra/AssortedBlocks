@@ -1,0 +1,6 @@
+{
+  "parent": "artistry:block/template_large_lantern",
+  "textures": {
+    "all": "artistry:block/large_lantern"
+  }
+}

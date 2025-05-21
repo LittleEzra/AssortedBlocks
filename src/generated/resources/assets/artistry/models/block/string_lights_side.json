@@ -1,0 +1,6 @@
+{
+  "parent": "artistry:block/template_string_lights_side",
+  "textures": {
+    "texture": "artistry:block/string_lights"
+  }
+}

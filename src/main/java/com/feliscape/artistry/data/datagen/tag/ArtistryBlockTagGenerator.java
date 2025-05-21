@@ -6,6 +6,7 @@ import com.feliscape.artistry.registry.ArtistryTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -26,12 +27,13 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         ArtistryBlocks.MOSSY_STONE_TILES.get(),
                         ArtistryBlocks.OVERGROWN_STONE_TILES.get(),
                         ArtistryBlocks.STONE_PILLAR.get(),
-                        ArtistryBlocks.MOSSY_STONE_PILLAR.get()
-                        //ArtistryBlocks.STONE_PILLAR.get(),
-                        //ArtistryBlocks.MOSSY_STONE_PILLAR.get(),
-                );
+                        ArtistryBlocks.MOSSY_STONE_PILLAR.get(),
+                        ArtistryBlocks.LARGE_LANTERN.get(),
+                        ArtistryBlocks.LARGE_SOUL_LANTERN.get(),
 
-        this.tag(ArtistryTags.Blocks.WOODEN_TABLE)
+                        ArtistryBlocks.STONE_TABLE.get()
+                );
+        this.tag(ArtistryTags.Blocks.WOODEN_TABLES)
                 .add(ArtistryBlocks.OAK_TABLE.get())
                 .add(ArtistryBlocks.SPRUCE_TABLE.get())
                 .add(ArtistryBlocks.BIRCH_TABLE.get())
@@ -46,10 +48,26 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(ArtistryBlocks.WARPED_TABLE.get())
         ;
         this.tag(BlockTags.MINEABLE_WITH_AXE)
-                .addTag(ArtistryTags.Blocks.WOODEN_TABLE);
-        this.tag(ArtistryTags.Blocks.TABLE)
-                .addTag(ArtistryTags.Blocks.WOODEN_TABLE);
+                .addTag(ArtistryTags.Blocks.WOODEN_TABLES)
+                .add(ArtistryBlocks.BLOOMING_VINES.get())
+                .add(ArtistryBlocks.SUNSPROUT.get())
+                .add(ArtistryBlocks.SUNBURST_VINES.get())
+                .add(ArtistryBlocks.SUNBURST_VINES_PLANT.get())
+        ;
+        this.tag(BlockTags.SWORD_EFFICIENT)
+                .add(ArtistryBlocks.BLOOMING_VINES.get())
+                .add(ArtistryBlocks.SUNSPROUT.get())
+                .add(ArtistryBlocks.SUNBURST_VINES.get())
+                .add(ArtistryBlocks.SUNBURST_VINES_PLANT.get())
+        ;
+        this.tag(ArtistryTags.Blocks.TABLES)
+                .addTag(ArtistryTags.Blocks.WOODEN_TABLES)
+                .add(ArtistryBlocks.STONE_TABLE.get());
 
+        this.tag(BlockTags.CLIMBABLE)
+                .add(ArtistryBlocks.SUNSPROUT.get())
+                .add(ArtistryBlocks.SUNBURST_VINES.get())
+                .add(ArtistryBlocks.SUNBURST_VINES_PLANT.get());
         this.tag(BlockTags.FENCE_GATES)
                 .add(ArtistryBlocks.ASPEN_FENCE_GATE.get());
 
@@ -75,6 +93,10 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .addTag(ArtistryTags.Blocks.ASPEN_LOGS);
+        this.tag(Tags.Blocks.STRIPPED_LOGS)
+                .add(ArtistryBlocks.STRIPPED_ASPEN_LOG.get());
+        this.tag(Tags.Blocks.STRIPPED_WOODS)
+                .add(ArtistryBlocks.STRIPPED_ASPEN_WOOD.get());
 
         this.tag(BlockTags.WOODEN_STAIRS)
                 .add(ArtistryBlocks.ASPEN_STAIRS.get());
@@ -90,8 +112,16 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(ArtistryBlocks.ASPEN_DOOR.get());
         this.tag(BlockTags.WOODEN_TRAPDOORS)
                 .add(ArtistryBlocks.ASPEN_TRAPDOOR.get());
-        /*this.tag(BlockTags.SAPLINGS)
-                .add(ArtistryBlocks.ASPEN_SAPLING.get());*/
+        this.tag(BlockTags.STANDING_SIGNS)
+                .add(ArtistryBlocks.ASPEN_SIGN.get());
+        this.tag(BlockTags.WALL_SIGNS)
+                .add(ArtistryBlocks.ASPEN_WALL_SIGN.get());
+        this.tag(BlockTags.CEILING_HANGING_SIGNS)
+                .add(ArtistryBlocks.ASPEN_HANGING_SIGN.get());
+        this.tag(BlockTags.WALL_HANGING_SIGNS)
+                .add(ArtistryBlocks.ASPEN_WALL_HANGING_SIGN.get());
+        this.tag(BlockTags.SAPLINGS)
+                .add(ArtistryBlocks.ASPEN_SAPLING.get());
 
         this.tag(BlockTags.LEAVES)
                 .add(ArtistryBlocks.ASPEN_LEAVES.get()

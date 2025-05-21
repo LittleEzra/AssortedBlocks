@@ -15,6 +15,8 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.ASPEN_HANGING_SIGN, "Aspen Hanging Sign");
         this.addItem(ArtistryItems.ASPEN_BOAT, "Aspen Boat");
         this.addItem(ArtistryItems.ASPEN_CHEST_BOAT, "Aspen Boat with Chest");
+        this.addItem(ArtistryItems.SUNBURST_VINES, "Sunburst Vines");
+        this.addItem(ArtistryItems.SUNSPROUT, "Sunsprout");
 
         this.addBlock(ArtistryBlocks.MOSSY_BRICKS, "Mossy Bricks");
         this.addBlock(ArtistryBlocks.CRACKED_BRICKS, "Cracked Bricks");
@@ -23,6 +25,10 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.OVERGROWN_STONE_TILES, "Overgrown Stone Tiles");
         this.addBlock(ArtistryBlocks.STONE_PILLAR, "Stone Pillar");
         this.addBlock(ArtistryBlocks.MOSSY_STONE_PILLAR, "Mossy Stone Pillar");
+
+        this.addBlock(ArtistryBlocks.SUNSPROUT, "Sunsprout");
+        this.addBlock(ArtistryBlocks.SUNBURST_VINES, "Sunburst Vines");
+        this.addBlock(ArtistryBlocks.SUNBURST_VINES_PLANT, "Sunburst Vines");
 
         this.addBlock(ArtistryBlocks.BLOOMING_VINES, "Blooming Vines");
 
@@ -38,6 +44,12 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.BAMBOO_TABLE, "Bamboo Table");
         this.addBlock(ArtistryBlocks.CRIMSON_TABLE, "Crimson Table");
         this.addBlock(ArtistryBlocks.WARPED_TABLE, "Warped Table");
+
+        this.addBlock(ArtistryBlocks.STONE_TABLE, "Stone Table");
+
+        this.addBlock(ArtistryBlocks.STRING_LIGHTS, "String Lights");
+        this.addBlock(ArtistryBlocks.LARGE_LANTERN, "Large Lantern");
+        this.addBlock(ArtistryBlocks.LARGE_SOUL_LANTERN, "Large Lantern");
 
         this.addBlock(ArtistryBlocks.ASPEN_LEAVES, "Aspen Leaves");
         this.addBlock(ArtistryBlocks.ASPEN_LOG, "Aspen Log");

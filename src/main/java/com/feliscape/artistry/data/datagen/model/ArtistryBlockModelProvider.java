@@ -1,8 +1,7 @@
 package com.feliscape.artistry.data.datagen.model;
 
 import com.feliscape.artistry.Artistry;
-import com.feliscape.artistry.content.block.BloomingVinesBlock;
-import com.feliscape.artistry.content.block.TableBlock;
+import com.feliscape.artistry.content.block.*;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -11,10 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
-import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
+import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.function.Supplier;
@@ -34,6 +30,10 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         axisBlock(ArtistryBlocks.STONE_PILLAR.get());
         axisBlock(ArtistryBlocks.MOSSY_STONE_PILLAR.get());
 
+        sunsprout(ArtistryBlocks.SUNSPROUT);
+        crossBlockWithRenderType(ArtistryBlocks.SUNBURST_VINES.get(), "cutout");
+        crossBlockWithRenderType(ArtistryBlocks.SUNBURST_VINES_PLANT.get(), "cutout");
+
         table(ArtistryBlocks.OAK_TABLE);
         table(ArtistryBlocks.SPRUCE_TABLE);
         table(ArtistryBlocks.BIRCH_TABLE);
@@ -46,6 +46,13 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         table(ArtistryBlocks.BAMBOO_TABLE);
         table(ArtistryBlocks.CRIMSON_TABLE);
         table(ArtistryBlocks.WARPED_TABLE);
+
+        table(ArtistryBlocks.STONE_TABLE);
+
+        stringLights(ArtistryBlocks.STRING_LIGHTS.get());
+
+        largeLantern(ArtistryBlocks.LARGE_LANTERN);
+        largeLantern(ArtistryBlocks.LARGE_SOUL_LANTERN);
 
         bloomingVines(ArtistryBlocks.BLOOMING_VINES);
 
@@ -82,12 +89,59 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
     }
 
+    private void largeLantern(Supplier<? extends LargeLanternBlock> block){
+        VariantBlockStateBuilder builder = getVariantBuilder(block.get());
+
+        ModelFile standard = models().withExistingParent(getLocation(block).getPath(),
+                        Artistry.stringLocation("block/template_large_lantern"))
+                .texture("all", blockTexture(block.get()));
+        ModelFile hanging = models().withExistingParent(getLocation(block).getPath() + "_hanging",
+                        Artistry.stringLocation("block/template_large_lantern_hanging"))
+                .texture("all", blockTexture(block.get()));
+
+        builder.forAllStates(state -> ConfiguredModel.builder()
+                .modelFile(state.getValue(LargeLanternBlock.HANGING) ? hanging : standard)
+                .build());
+    }
+
+    private void sunsprout(Supplier<SunsproutBlock> block){
+        VariantBlockStateBuilder builder = getVariantBuilder(block.get());
+
+        builder.forAllStates(state -> {
+            int age = state.getValue(SunsproutBlock.AGE);
+            return ConfiguredModel.builder()
+                    .modelFile(models().cross("sunsprout_" + age,
+                            extend(blockTexture(block.get()), "_" + age)).renderType("cutout"))
+                    .build();
+        });
+    }
+
+    public void stringLights(StringLightsBlock block) {
+        ModelFile down = models().withExistingParent(name(block) + "_down",
+                        Artistry.stringLocation("block/template_string_lights_down"))
+                .texture("texture", extend(blockTexture(block), "_down"));
+        ModelFile side = models().withExistingParent(name(block) + "_side",
+                        Artistry.stringLocation("block/template_string_lights_side"))
+                .texture("texture", blockTexture(block));
+
+        MultiPartBlockStateBuilder builder = this.getMultipartBuilder(block)
+                .part()
+                .modelFile(down)
+                .addModel()
+                .condition(StringLightsBlock.DOWN, true)
+                .end();
+        this.fourWayMultipart(builder, side);
+    }
+
     private void bloomingVines(Supplier<BloomingVinesBlock> block){
         MultiPartBlockStateBuilder multipart = getMultipartBuilder(block.get());
 
         ModelFile model0 = models().getExistingFile(Artistry.location("block/blooming_vines"));
         ModelFile model1 = models().getExistingFile(Artistry.location("block/blooming_vines1"));
         ModelFile model2 = models().getExistingFile(Artistry.location("block/blooming_vines2"));
+        ModelFile verticalModel0 = models().getExistingFile(Artistry.location("block/blooming_vines_vertical"));
+        ModelFile verticalModel1 = models().getExistingFile(Artistry.location("block/blooming_vines_vertical1"));
+        ModelFile verticalModel2 = models().getExistingFile(Artistry.location("block/blooming_vines_vertical2"));
 
         addBloomingVinesFaceLoop(multipart, 0, 0, MultifaceBlock.getFaceProperty(Direction.NORTH), model0, model1, model2);
         bloomingVinesAddAllFalse(model0, multipart, 0, 0);
@@ -101,10 +155,10 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         addBloomingVinesFaceLoop(multipart, 0, 270, MultifaceBlock.getFaceProperty(Direction.WEST), model0, model1, model2);
         bloomingVinesAddAllFalse(model0, multipart, 0, 270);
 
-        addBloomingVinesFaceLoop(multipart, 270, 0, MultifaceBlock.getFaceProperty(Direction.UP), model0, model1, model2);
+        addBloomingVinesFaceLoop(multipart, 270, 0, MultifaceBlock.getFaceProperty(Direction.UP), verticalModel0, verticalModel1, verticalModel2);
         bloomingVinesAddAllFalse(model0, multipart, 270, 0);
 
-        addBloomingVinesFaceLoop(multipart, 90, 0, MultifaceBlock.getFaceProperty(Direction.DOWN), model0, model1, model2);
+        addBloomingVinesFaceLoop(multipart, 90, 0, MultifaceBlock.getFaceProperty(Direction.DOWN), verticalModel0, verticalModel1, verticalModel2);
         bloomingVinesAddAllFalse(model0, multipart, 90, 0);
     }
 

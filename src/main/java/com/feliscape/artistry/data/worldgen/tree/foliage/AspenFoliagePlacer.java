@@ -58,7 +58,7 @@ public class AspenFoliagePlacer extends FoliagePlacer {
         if (pLocalY == 2){
             boolean isCorner = pLocalX != 0 && pLocalZ != 0;
             boolean isEdge = pLocalX == pRange || pLocalZ == pRange;
-            return isCorner == isEdge && isCorner;
+            return isCorner && isEdge;
         }
         else if (pLocalX == pRange && pLocalZ == pRange){
             if (pLocalY == 0) return true;

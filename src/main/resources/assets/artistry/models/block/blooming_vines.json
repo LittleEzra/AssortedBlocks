@@ -6,7 +6,7 @@
 		"0": "artistry:block/blooming_vines_back",
 		"1": "artistry:block/blooming_vines_flowers",
 		"2": "artistry:block/blooming_vines",
-		"particle": "artistry:block/blooming_vines_back"
+		"particle": "artistry:block/blooming_vines_dense_back"
 	},
 	"elements": [
 		{

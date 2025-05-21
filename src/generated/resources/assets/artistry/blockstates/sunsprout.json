@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "artistry:block/sunsprout_0"
+    },
+    "age=1": {
+      "model": "artistry:block/sunsprout_1"
+    },
+    "age=2": {
+      "model": "artistry:block/sunsprout_2"
+    },
+    "age=3": {
+      "model": "artistry:block/sunsprout_3"
+    }
+  }
+}
