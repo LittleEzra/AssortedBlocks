@@ -1,6 +1,7 @@
-// 1.21.1	2025-05-21T14:10:43.084088	Tags for minecraft:block mod id artistry
+// 1.21.1	2025-07-20T16:21:28.4849664	Tags for minecraft:block mod id artistry
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/block/aspen_logs.json
-32598243861d3fe74e676550a0adee9eb8cc188a data/artistry/tags/block/tables.json
+c3b39af3db5bc3768608a47a706098d450692fe3 data/artistry/tags/block/string_lights.json
+91d2c47c016f49d48843479d7c62a96b210a3b12 data/artistry/tags/block/tables.json
 1bba110c9fc802713fa42d07e7f1b8bd8ecec799 data/artistry/tags/block/wooden_tables.json
 095de7ea392c97d9f9704510e2daf4ec0aadd87e data/c/tags/block/stripped_logs.json
 1b45115bddb91a660f9e0846f96eb9a3cf3d05c4 data/c/tags/block/stripped_woods.json
@@ -14,13 +15,15 @@ ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/enderman_hold
 2c4e2b63d7ddfa023501a694b0bb7423512a293e data/minecraft/tags/block/leaves.json
 05936648edde2e2b272c6888a1c9dca6bbfb5784 data/minecraft/tags/block/logs_that_burn.json
 260f43275cf9e04e92fce3de993ade53dddb5b49 data/minecraft/tags/block/mineable/axe.json
-4ad5e96c65d3ce78301b8110a58f812c5b1904f2 data/minecraft/tags/block/mineable/pickaxe.json
+ca5a935949f61cadba9921aefd2d31fae837795c data/minecraft/tags/block/mineable/pickaxe.json
 ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/moss_replaceable.json
 ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/nether_carver_replaceables.json
 ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/overworld_carver_replaceables.json
 72a09d8bd065bc541d6ebaf2cee46366bd5476fb data/minecraft/tags/block/planks.json
 eeec39ca4cb20e06e0ab24f9ea72443deadfc030 data/minecraft/tags/block/saplings.json
+1f79e642c7b6eaa66a879db3a0b7f379fbdf771e data/minecraft/tags/block/slabs.json
 af758703c7ee1fde8d49ad581ce4e2762c7bfcb0 data/minecraft/tags/block/sniffer_diggable_block.json
+cb6bf083bf6c078d1f6ce9b4ad3c12205e09d515 data/minecraft/tags/block/stairs.json
 bd8989fdc1712ae18a44bf304694b36084aaf089 data/minecraft/tags/block/standing_signs.json
 27dc5165a45a02cb2b16c7eba2c8b98b910a5404 data/minecraft/tags/block/sword_efficient.json
 f1422dade47371fa2e42377279c7f7761741a692 data/minecraft/tags/block/wall_hanging_signs.json

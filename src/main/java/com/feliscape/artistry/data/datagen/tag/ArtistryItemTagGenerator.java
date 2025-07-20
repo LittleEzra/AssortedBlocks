@@ -1,5 +1,6 @@
 package com.feliscape.artistry.data.datagen.tag;
 
+import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
 import com.feliscape.artistry.registry.ArtistryTags;
 import net.minecraft.core.HolderLookup;
@@ -9,6 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -19,12 +21,52 @@ public class ArtistryItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        this.copy(ArtistryTags.Blocks.ASPEN_LOGS, ArtistryTags.Items.ASPEN_LOGS);
+        this.copy(ArtistryTags.Blocks.WOODEN_TABLES, ArtistryTags.Items.WOODEN_TABLES);
+        this.copy(ArtistryTags.Blocks.TABLES, ArtistryTags.Items.TABLES);
+
+        this.tag(ItemTags.PLANKS)
+                .add(ArtistryBlocks.ASPEN_PLANKS.asItem());
+
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .addTag(ArtistryTags.Items.ASPEN_LOGS);
+        this.tag(Tags.Items.STRIPPED_LOGS)
+                .add(ArtistryBlocks.STRIPPED_ASPEN_LOG.asItem());
+        this.tag(Tags.Items.STRIPPED_WOODS)
+                .add(ArtistryBlocks.STRIPPED_ASPEN_WOOD.asItem());
+
+        this.tag(ItemTags.WOODEN_STAIRS)
+                .add(ArtistryBlocks.ASPEN_STAIRS.asItem());
+        this.tag(ItemTags.WOODEN_SLABS)
+                .add(ArtistryBlocks.ASPEN_SLAB.asItem());
+        this.tag(ItemTags.WOODEN_BUTTONS)
+                .add(ArtistryBlocks.ASPEN_BUTTON.asItem());
+        this.tag(ItemTags.WOODEN_PRESSURE_PLATES)
+                .add(ArtistryBlocks.ASPEN_PRESSURE_PLATE.asItem());
+        this.tag(ItemTags.WOODEN_FENCES)
+                .add(ArtistryBlocks.ASPEN_FENCE.asItem());
+        this.tag(ItemTags.WOODEN_DOORS)
+                .add(ArtistryBlocks.ASPEN_DOOR.asItem());
+        this.tag(ItemTags.WOODEN_TRAPDOORS)
+                .add(ArtistryBlocks.ASPEN_TRAPDOOR.asItem());
+        this.tag(ItemTags.SIGNS)
+                .add(ArtistryBlocks.ASPEN_SIGN.asItem())
+                .add(ArtistryBlocks.ASPEN_WALL_SIGN.asItem());
+        this.tag(ItemTags.HANGING_SIGNS)
+                .add(ArtistryBlocks.ASPEN_HANGING_SIGN.asItem())
+                .add(ArtistryBlocks.ASPEN_WALL_HANGING_SIGN.asItem());
+        this.tag(ItemTags.SAPLINGS)
+                .add(ArtistryBlocks.ASPEN_SAPLING.asItem());
+
+        this.tag(ItemTags.LEAVES)
+                .add(ArtistryBlocks.ASPEN_LEAVES.asItem()
+                );
+
         this.tag(ArtistryTags.Items.CAN_APPLY_MOSS)
                 .add(Items.MOSS_BLOCK)
                 .add(Items.VINE)
                 .addOptional(ResourceLocation.parse("immersive_weathering:moss_clump"))
         ;
-        this.copy(ArtistryTags.Blocks.ASPEN_LOGS, ArtistryTags.Items.ASPEN_LOGS);
         this.tag(ItemTags.BOATS)
                 .add(ArtistryItems.ASPEN_BOAT.get());
         this.tag(ItemTags.CHEST_BOATS)

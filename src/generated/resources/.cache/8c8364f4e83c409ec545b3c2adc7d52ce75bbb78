@@ -1,5 +1,22 @@
-// 1.21.1	2025-05-02T16:17:39.0291778	Tags for minecraft:item mod id vanilla
+// 1.21.1	2025-06-08T18:29:08.0219458	Tags for minecraft:item mod id vanilla
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/item/aspen_logs.json
 13994a7e7e704c24c0cebec3e302b41487842bfa data/artistry/tags/item/can_apply_moss.json
+91d2c47c016f49d48843479d7c62a96b210a3b12 data/artistry/tags/item/tables.json
+1bba110c9fc802713fa42d07e7f1b8bd8ecec799 data/artistry/tags/item/wooden_tables.json
+095de7ea392c97d9f9704510e2daf4ec0aadd87e data/c/tags/item/stripped_logs.json
+1b45115bddb91a660f9e0846f96eb9a3cf3d05c4 data/c/tags/item/stripped_woods.json
 b2db69008ac5a1cbe34a43d8c9c032f722745dac data/minecraft/tags/item/boats.json
 95720c635f77a097a8df88b0a742618bbdf39fe0 data/minecraft/tags/item/chest_boats.json
+a808b659eb94fbf47b5e5dc911502ecebf90b9a4 data/minecraft/tags/item/hanging_signs.json
+2c4e2b63d7ddfa023501a694b0bb7423512a293e data/minecraft/tags/item/leaves.json
+05936648edde2e2b272c6888a1c9dca6bbfb5784 data/minecraft/tags/item/logs_that_burn.json
+72a09d8bd065bc541d6ebaf2cee46366bd5476fb data/minecraft/tags/item/planks.json
+eeec39ca4cb20e06e0ab24f9ea72443deadfc030 data/minecraft/tags/item/saplings.json
+9e543b5226a028b56b5a09e7914cd023e0ce5599 data/minecraft/tags/item/signs.json
+668b2796445d31d23057580325583de0479ff000 data/minecraft/tags/item/wooden_buttons.json
+ade2ce1341c278edf91087d557d05e86b27861ec data/minecraft/tags/item/wooden_doors.json
+4cdb468ea99c988eef201e31cad47acf8a7a3c41 data/minecraft/tags/item/wooden_fences.json
+3d8a414115a2bdbdbe1bbbddac0cfae7b24c10e6 data/minecraft/tags/item/wooden_pressure_plates.json
+1456258522d56b5fe3758cfa0c7b5bc22286d131 data/minecraft/tags/item/wooden_slabs.json
+00fee14b780bd99b1fce22fa970705db59f50905 data/minecraft/tags/item/wooden_stairs.json
+ac1db186f4a076a71c2c2baae21e10444377b968 data/minecraft/tags/item/wooden_trapdoors.json

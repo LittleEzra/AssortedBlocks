@@ -27,6 +27,8 @@ public class ArtistryTags {
     public static class Items{
         public static final TagKey<Item> ASPEN_LOGS = create("aspen_logs");
         public static final TagKey<Item> CAN_APPLY_MOSS = create("can_apply_moss");
+        public static final TagKey<Item> WOODEN_TABLES = create("wooden_tables");
+        public static final TagKey<Item> TABLES = create("tables");
 
         private static TagKey<Item> create(String name){
             return TagKey.create(Registries.ITEM, Artistry.location(name));

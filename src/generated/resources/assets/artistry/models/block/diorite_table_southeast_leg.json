@@ -1,0 +1,6 @@
+{
+  "parent": "artistry:block/template_table_southeast_leg",
+  "textures": {
+    "side": "artistry:block/diorite_table_side"
+  }
+}

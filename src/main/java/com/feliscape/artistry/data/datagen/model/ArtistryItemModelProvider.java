@@ -32,15 +32,23 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
 
         simpleItem(ArtistryItems.SUNSPROUT);
         itemWithBlockTexture(ArtistryItems.SUNBURST_VINES);
-        blockItemSprite(ArtistryBlocks.STRING_LIGHTS);
+        simpleItem(ArtistryItems.STRING_LIGHTS);
 
         manualBlockItem(ArtistryBlocks.STONE_PILLAR);
         manualBlockItem(ArtistryBlocks.MOSSY_STONE_PILLAR);
+        manualBlockItem(ArtistryBlocks.STONE_TILE_STAIRS);
+        manualBlockItem(ArtistryBlocks.STONE_TILE_SLAB);
+        manualBlockItem(ArtistryBlocks.MOSSY_STONE_TILE_STAIRS);
+        manualBlockItem(ArtistryBlocks.MOSSY_STONE_TILE_SLAB);
 
         blockItemSprite(ArtistryBlocks.LARGE_LANTERN);
         blockItemSprite(ArtistryBlocks.LARGE_SOUL_LANTERN);
+        blockItemSprite(ArtistryBlocks.ROUND_LANTERN);
+        generatedBlockItem(ArtistryBlocks.SPARKLER);
+        generatedBlockItem(ArtistryBlocks.AMETHYST_STARS);
 
         blockItemSprite(ArtistryBlocks.BLOOMING_VINES);
+        blockItemSprite(ArtistryBlocks.LUSH_FERN);
 
         manualBlockItem(ArtistryBlocks.ASPEN_LOG);
         manualBlockItem(ArtistryBlocks.ASPEN_WOOD);
@@ -109,12 +117,12 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
                 .texture("wall",  Artistry.location("block/" + BuiltInRegistries.BLOCK.getKey(baseBlock.get()).getPath()));
     }
 
-    private ItemModelBuilder blockItemSprite(Supplier<? extends Block> block) { // Uses a block instead of item (Example: Doors)
+    private ItemModelBuilder blockItemSprite(Supplier<? extends Block> block) { // Uses a block instead of item with a unique item texture (Example: Doors or Lanterns)
         return withExistingParent(getBlockLocation(block.get()).getPath(),
                 ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
                 Artistry.location("item/" + getBlockLocation(block.get()).getPath()));
     }
-    private ItemModelBuilder generatedBlockItem(Supplier<? extends Block> block) { // Uses the texture from textures/block (Example: Saplings)
+    private ItemModelBuilder generatedBlockItem(Supplier<? extends Block> block) { // Uses the texture from textures/block (Example: Saplings or Torches)
         return withExistingParent(getBlockLocation(block.get()).getPath(),
                 ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
                 Artistry.location("block/" + getBlockLocation(block.get()).getPath()));

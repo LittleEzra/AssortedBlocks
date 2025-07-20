@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "tag": "c:glass_blocks"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "o": {
+      "item": "minecraft:glowstone"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#o#",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "artistry:round_lantern"
+  }
+}

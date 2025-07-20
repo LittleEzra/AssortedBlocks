@@ -3,6 +3,7 @@ package com.feliscape.artistry.content.block;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
@@ -72,7 +73,7 @@ public class LargeLanternBlock extends Block implements SimpleWaterloggedBlock {
     @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         Direction direction = getConnectedDirection(state).getOpposite();
-        return Block.canSupportCenter(level, pos.relative(direction), direction.getOpposite());
+        return Block.canSupportCenter(level, pos.relative(direction), direction.getOpposite()) || level.getBlockState(pos.relative(direction)).is(BlockTags.LEAVES);
     }
 
     protected static Direction getConnectedDirection(BlockState state) {

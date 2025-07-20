@@ -4,6 +4,7 @@ import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.data.datagen.language.ArtistryEnUsProvider;
 import com.feliscape.artistry.data.datagen.loot.ArtistryBlockLootTableProvider;
 import com.feliscape.artistry.data.datagen.loot.ArtistryGlobalLootModifierProvider;
+import com.feliscape.artistry.data.datagen.map.ArtistryDataMapProvider;
 import com.feliscape.artistry.data.datagen.model.ArtistryBlockModelProvider;
 import com.feliscape.artistry.data.datagen.model.ArtistryItemModelProvider;
 import com.feliscape.artistry.data.datagen.recipe.ArtistryRecipeProvider;
@@ -45,6 +46,8 @@ public class DataGenerators {
         generator.addProvider(true, blockTags);
         generator.addProvider(true, new ArtistryItemTagGenerator(packOutput, lookupProvider, blockTags.contentsGetter()));
         generator.addProvider(true, new ArtistryDamageTypeTagGenerator(packOutput, lookupProvider, existingFileHelper));
+
+        generator.addProvider(true, new ArtistryDataMapProvider(packOutput, lookupProvider));
 
         generator.addProvider(event.includeServer(), new ArtistryGlobalLootModifierProvider(packOutput, lookupProvider));
 

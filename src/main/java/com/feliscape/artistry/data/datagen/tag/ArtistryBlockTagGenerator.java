@@ -30,8 +30,16 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         ArtistryBlocks.MOSSY_STONE_PILLAR.get(),
                         ArtistryBlocks.LARGE_LANTERN.get(),
                         ArtistryBlocks.LARGE_SOUL_LANTERN.get(),
+                        ArtistryBlocks.ROUND_LANTERN.get(),
+                        ArtistryBlocks.SPARKLER.get(),
 
-                        ArtistryBlocks.STONE_TABLE.get()
+                        ArtistryBlocks.STONE_TABLE.get(),
+                        ArtistryBlocks.ANDESITE_TABLE.get(),
+                        ArtistryBlocks.GRANITE_TABLE.get(),
+                        ArtistryBlocks.DIORITE_TABLE.get(),
+                        ArtistryBlocks.DEEPSLATE_TABLE.get(),
+                        ArtistryBlocks.POLISHED_BLACKSTONE_TABLE.get(),
+                        ArtistryBlocks.TUFF_TABLE.get()
                 );
         this.tag(ArtistryTags.Blocks.WOODEN_TABLES)
                 .add(ArtistryBlocks.OAK_TABLE.get())
@@ -62,7 +70,17 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
         ;
         this.tag(ArtistryTags.Blocks.TABLES)
                 .addTag(ArtistryTags.Blocks.WOODEN_TABLES)
-                .add(ArtistryBlocks.STONE_TABLE.get());
+                .add(ArtistryBlocks.STONE_TABLE.get())
+                .add(ArtistryBlocks.ANDESITE_TABLE.get())
+                .add(ArtistryBlocks.GRANITE_TABLE.get())
+                .add(ArtistryBlocks.DIORITE_TABLE.get())
+                .add(ArtistryBlocks.DEEPSLATE_TABLE.get())
+                .add(ArtistryBlocks.POLISHED_BLACKSTONE_TABLE.get())
+                .add(ArtistryBlocks.TUFF_TABLE.get())
+        ;
+        this.tag(ArtistryTags.Blocks.STRING_LIGHTS)
+                .add(ArtistryBlocks.STRING_LIGHTS.get())
+        ;
 
         this.tag(BlockTags.CLIMBABLE)
                 .add(ArtistryBlocks.SUNSPROUT.get())
@@ -70,6 +88,15 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(ArtistryBlocks.SUNBURST_VINES_PLANT.get());
         this.tag(BlockTags.FENCE_GATES)
                 .add(ArtistryBlocks.ASPEN_FENCE_GATE.get());
+
+        this.tag(BlockTags.STAIRS)
+                .add(ArtistryBlocks.STONE_TILE_STAIRS.get())
+                .add(ArtistryBlocks.MOSSY_STONE_TILE_STAIRS.get())
+        ;
+        this.tag(BlockTags.SLABS)
+                .add(ArtistryBlocks.STONE_TILE_SLAB.get())
+                .add(ArtistryBlocks.MOSSY_STONE_TILE_SLAB.get())
+        ;
 
         this.tag(BlockTags.DIRT)
                 .add(ArtistryBlocks.OVERGROWN_STONE_TILES.get());

@@ -34,16 +34,16 @@ public class AspenFoliagePlacer extends FoliagePlacer {
     }
 
     @Override
-    protected void createFoliage(LevelSimulatedReader pLevel, FoliageSetter pBlockSetter, RandomSource pRandom, TreeConfiguration pConfig,
-                                 int pMaxFreeTreeHeight,FoliageAttachment pAttachment, int pFoliageHeight, int pFoliageRadius, int pOffset) {
+    protected void createFoliage(LevelSimulatedReader level, FoliageSetter blockSetter, RandomSource random, TreeConfiguration config,
+                                 int maxFreeTreeHeight, FoliageAttachment attachment, int foliageHeight, int foliageRadius, int offset) {
 
-        BlockPos blockpos = pAttachment.pos().below(pOffset);
-        int size = leavesHeight.sample(pRandom);
+        BlockPos blockpos = attachment.pos().below(offset);
+        int size = leavesHeight.sample(random);
         for (int i = 0; i < size; i++){
             if (i < 2 || i == size - 1){
-                this.placeLeavesRow(pLevel, pBlockSetter, pRandom, pConfig, blockpos, 1, i, false);
+                this.placeLeavesRow(level, blockSetter, random, config, blockpos, 1, i, attachment.doubleTrunk());
             } else{
-                this.placeLeavesRow(pLevel, pBlockSetter, pRandom, pConfig, blockpos, 2, i, false);
+                this.placeLeavesRow(level, blockSetter, random, config, blockpos, 2, i, attachment.doubleTrunk());
             }
         }
     }

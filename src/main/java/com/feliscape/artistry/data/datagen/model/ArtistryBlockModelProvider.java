@@ -1,6 +1,7 @@
 package com.feliscape.artistry.data.datagen.model;
 
 import com.feliscape.artistry.Artistry;
+import com.feliscape.artistry.content.block.RoundLanternBlock;
 import com.feliscape.artistry.content.block.*;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import net.minecraft.core.Direction;
@@ -9,9 +10,9 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.function.Supplier;
 
@@ -24,8 +25,17 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ArtistryBlocks.CRACKED_BRICKS);
         blockWithItem(ArtistryBlocks.MOSSY_BRICKS);
+
+        ResourceLocation stoneTileTexture = blockTexture(ArtistryBlocks.STONE_TILES.get());
         blockWithItem(ArtistryBlocks.STONE_TILES);
+        stairsBlock(ArtistryBlocks.STONE_TILE_STAIRS.get(), stoneTileTexture);
+        slabBlock(ArtistryBlocks.STONE_TILE_SLAB.get(), stoneTileTexture, stoneTileTexture);
+
+        ResourceLocation mossyStoneTileTexture = blockTexture(ArtistryBlocks.MOSSY_STONE_TILES.get());
         blockWithItem(ArtistryBlocks.MOSSY_STONE_TILES);
+        stairsBlock(ArtistryBlocks.MOSSY_STONE_TILE_STAIRS.get(), mossyStoneTileTexture);
+        slabBlock(ArtistryBlocks.MOSSY_STONE_TILE_SLAB.get(), mossyStoneTileTexture, mossyStoneTileTexture);
+
         blockWithItem(ArtistryBlocks.OVERGROWN_STONE_TILES);
         axisBlock(ArtistryBlocks.STONE_PILLAR.get());
         axisBlock(ArtistryBlocks.MOSSY_STONE_PILLAR.get());
@@ -33,6 +43,8 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         sunsprout(ArtistryBlocks.SUNSPROUT);
         crossBlockWithRenderType(ArtistryBlocks.SUNBURST_VINES.get(), "cutout");
         crossBlockWithRenderType(ArtistryBlocks.SUNBURST_VINES_PLANT.get(), "cutout");
+        simpleBlock(ArtistryBlocks.SPARKLER.get(), models().getExistingFile(Artistry.location("block/sparkler")));
+        amethystStars(ArtistryBlocks.AMETHYST_STARS.get());
 
         table(ArtistryBlocks.OAK_TABLE);
         table(ArtistryBlocks.SPRUCE_TABLE);
@@ -48,13 +60,25 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         table(ArtistryBlocks.WARPED_TABLE);
 
         table(ArtistryBlocks.STONE_TABLE);
+        table(ArtistryBlocks.ANDESITE_TABLE);
+        table(ArtistryBlocks.GRANITE_TABLE);
+        table(ArtistryBlocks.DIORITE_TABLE);
+        table(ArtistryBlocks.DEEPSLATE_TABLE);
+        table(ArtistryBlocks.POLISHED_BLACKSTONE_TABLE);
+        table(ArtistryBlocks.TUFF_TABLE);
 
         stringLights(ArtistryBlocks.STRING_LIGHTS.get());
+        wallStringLights(ArtistryBlocks.WALL_STRING_LIGHTS.get());
 
         largeLantern(ArtistryBlocks.LARGE_LANTERN);
         largeLantern(ArtistryBlocks.LARGE_SOUL_LANTERN);
+        roundLantern(ArtistryBlocks.ROUND_LANTERN);
 
         bloomingVines(ArtistryBlocks.BLOOMING_VINES);
+        getVariantBuilder(ArtistryBlocks.LUSH_FERN.get())
+                .partialState().addModels(ConfiguredModel.builder().modelFile(
+                        models().getExistingFile(Artistry.location("block/lush_fern"))
+                ).buildLast());
 
         leavesBlock(ArtistryBlocks.ASPEN_LEAVES, "cutout_mipped");
 
@@ -74,6 +98,7 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         blockWithItem(ArtistryBlocks.ASPEN_PLANKS);
 
+        pottedCrossPlantBlock(ArtistryBlocks.POTTED_ASPEN_SAPLING);
 
         stairsBlock(ArtistryBlocks.ASPEN_STAIRS.get(), aspenPlanksTexture);
         slabBlock(ArtistryBlocks.ASPEN_SLAB.get(), aspenPlanksTexture, aspenPlanksTexture);
@@ -87,6 +112,14 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         crossBlockWithRenderType(ArtistryBlocks.ASPEN_SAPLING.get(), "cutout");
 
+    }
+
+    private void pottedCrossPlantBlock(Supplier<? extends FlowerPotBlock> block) {
+        ModelFile model = models().withExistingParent(getLocation(block).getPath(),
+                        "minecraft:block/flower_pot_cross")
+                .renderType("cutout")
+                .texture("plant", blockTexture(block.get().getPotted()));
+        simpleBlock(block.get(), model);
     }
 
     private void largeLantern(Supplier<? extends LargeLanternBlock> block){
@@ -103,6 +136,16 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
                 .modelFile(state.getValue(LargeLanternBlock.HANGING) ? hanging : standard)
                 .build());
     }
+    private void roundLantern(Supplier<? extends RoundLanternBlock> block){
+        VariantBlockStateBuilder builder = getVariantBuilder(block.get());
+
+        ModelFile standard = models().getExistingFile(Artistry.location("block/round_lantern"));
+        ModelFile hanging = models().getExistingFile(Artistry.location("block/round_lantern_hanging"));
+
+        builder.forAllStates(state -> ConfiguredModel.builder()
+                .modelFile(state.getValue(RoundLanternBlock.HANGING) ? hanging : standard)
+                .build());
+    }
 
     private void sunsprout(Supplier<SunsproutBlock> block){
         VariantBlockStateBuilder builder = getVariantBuilder(block.get());
@@ -116,6 +159,36 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         });
     }
 
+    public void amethystStars(AmethystStarsBlock block) {
+        ModelFile model = models().getExistingFile(Artistry.location("block/amethyst_stars"));
+        MultiPartBlockStateBuilder builder = this.getMultipartBuilder(block);
+
+        for (Direction direction : Direction.values()) {
+            var part = builder.part().modelFile(model)
+                    .rotationY(((int) direction.toYRot() + 180) % 360);
+            if (direction == Direction.UP){
+                part.rotationX(270);
+            } else if (direction == Direction.DOWN){
+                part.rotationX(90);
+            }
+            part.addModel().condition(MultifaceBlock.getFaceProperty(direction), true);
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    public void wallStringLights(WallStringLightsBlock block) {
+        ModelFile model = models().getExistingFile(Artistry.location("block/wall_string_lights"));
+        MultiPartBlockStateBuilder builder = this.getMultipartBuilder(block);
+
+        WallStringLightsBlock.PROPERTY_BY_DIRECTION.forEach((dir, value) -> {
+            if (dir.getAxis().isHorizontal()) {
+                builder.part().modelFile(model)
+                        .rotationY(((int) dir.toYRot() + 180) % 360).addModel()
+                        .condition(value, true);
+            }
+        });
+    }
+    @SuppressWarnings("unchecked")
     public void stringLights(StringLightsBlock block) {
         ModelFile down = models().withExistingParent(name(block) + "_down",
                         Artistry.stringLocation("block/template_string_lights_down"))
@@ -123,6 +196,15 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         ModelFile side = models().withExistingParent(name(block) + "_side",
                         Artistry.stringLocation("block/template_string_lights_side"))
                 .texture("texture", blockTexture(block));
+        ModelFile side1 = models().withExistingParent(name(block) + "_side_1",
+                        Artistry.stringLocation("block/template_string_lights_side_1"))
+                .texture("texture", blockTexture(block));
+        ModelFile sideLow = models().withExistingParent(name(block) + "_side_low",
+                        Artistry.stringLocation("block/template_string_lights_side"))
+                .texture("texture", blockTexture(block) + "_low");
+        ModelFile sideLow1 = models().withExistingParent(name(block) + "_side_low_1",
+                        Artistry.stringLocation("block/template_string_lights_side_1"))
+                .texture("texture", blockTexture(block) + "_low");
 
         MultiPartBlockStateBuilder builder = this.getMultipartBuilder(block)
                 .part()
@@ -130,7 +212,21 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
                 .addModel()
                 .condition(StringLightsBlock.DOWN, true)
                 .end();
-        this.fourWayMultipart(builder, side);
+
+        PipeBlock.PROPERTY_BY_DIRECTION.forEach((dir, value) -> {
+            if (dir.getAxis().isHorizontal()) {
+                builder.part().modelFile(dir.getAxisDirection() == Direction.AxisDirection.NEGATIVE ? side1 : side)
+                        .rotationY(((int) dir.toYRot() + 180) % 360)
+                        .uvLock(true).addModel()
+                        .condition(value, true)
+                        .condition(StringLightsBlock.SUPPORTED, true);
+                builder.part().modelFile(dir.getAxisDirection() == Direction.AxisDirection.NEGATIVE ? sideLow1 : sideLow)
+                        .rotationY(((int) dir.toYRot() + 180) % 360)
+                        .uvLock(true).addModel()
+                        .condition(value, true)
+                        .condition(StringLightsBlock.SUPPORTED, false);
+            }
+        });
     }
 
     private void bloomingVines(Supplier<BloomingVinesBlock> block){

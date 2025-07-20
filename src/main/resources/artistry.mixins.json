@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "com.feliscape.artistry.content.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "LanternBlockMixin",
+    "MushroomBlockMixin"
+  ],
+  "client": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

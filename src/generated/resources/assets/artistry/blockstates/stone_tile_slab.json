@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "artistry:block/stone_tile_slab"
+    },
+    "type=double": {
+      "model": "artistry:block/stone_tiles"
+    },
+    "type=top": {
+      "model": "artistry:block/stone_tile_slab_top"
+    }
+  }
+}

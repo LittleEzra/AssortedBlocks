@@ -1,12 +1,12 @@
 package com.feliscape.artistry.registry;
 
 import com.feliscape.artistry.Artistry;
+import com.feliscape.artistry.content.block.RoundLanternBlock;
 import com.feliscape.artistry.content.block.*;
 import com.feliscape.artistry.content.block.flammable.*;
 import com.feliscape.artistry.data.worldgen.registry.ArtistryTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.util.Mth;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
@@ -44,11 +44,37 @@ public class ArtistryBlocks {
             .instrument(NoteBlockInstrument.BASEDRUM)
             .requiresCorrectToolForDrops()
             .strength(1.5F, 6.0F)));
+    public static final DeferredBlock<StairBlock> STONE_TILE_STAIRS = registerBlockWithItem("stone_tile_stairs", p -> new StairBlock(
+            STONE_TILES.get().defaultBlockState(), p
+            .mapColor(MapColor.STONE)
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .requiresCorrectToolForDrops()
+            .strength(1.5F, 6.0F)));
+    public static final DeferredBlock<SlabBlock> STONE_TILE_SLAB = registerBlockWithItem("stone_tile_slab", p -> new SlabBlock(p
+            .mapColor(MapColor.STONE)
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .requiresCorrectToolForDrops()
+            .strength(1.5F, 6.0F)));
+
+
     public static final DeferredBlock<Block> MOSSY_STONE_TILES = registerBlockWithItem("mossy_stone_tiles", p -> new Block(p
             .mapColor(MapColor.STONE)
             .instrument(NoteBlockInstrument.BASEDRUM)
             .requiresCorrectToolForDrops()
             .strength(1.5F, 6.0F)));
+    public static final DeferredBlock<StairBlock> MOSSY_STONE_TILE_STAIRS = registerBlockWithItem("mossy_stone_tile_stairs", p -> new StairBlock(
+            STONE_TILES.get().defaultBlockState(), p
+            .mapColor(MapColor.STONE)
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .requiresCorrectToolForDrops()
+            .strength(1.5F, 6.0F)));
+    public static final DeferredBlock<SlabBlock> MOSSY_STONE_TILE_SLAB = registerBlockWithItem("mossy_stone_tile_slab", p -> new SlabBlock(p
+            .mapColor(MapColor.STONE)
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .requiresCorrectToolForDrops()
+            .strength(1.5F, 6.0F)));
+
+
     public static final DeferredBlock<Block> OVERGROWN_STONE_TILES = registerBlockWithItem("overgrown_stone_tiles", p -> new Block(p
             .mapColor(MapColor.PLANT)
             .instrument(NoteBlockInstrument.BASEDRUM)
@@ -108,16 +134,34 @@ public class ArtistryBlocks {
     public static final DeferredBlock<TableBlock> WARPED_TABLE = registerBlockWithItem("warped_table", p -> inflammableTable(p, MapColor.WARPED_STEM, SoundType.NETHER_WOOD));
 
     public static final DeferredBlock<TableBlock> STONE_TABLE = registerBlockWithItem("stone_table", p -> stoneTable(p, MapColor.STONE, SoundType.STONE));
+    public static final DeferredBlock<TableBlock> ANDESITE_TABLE = registerBlockWithItem("andesite_table", p -> stoneTable(p, MapColor.STONE, SoundType.STONE));
+    public static final DeferredBlock<TableBlock> GRANITE_TABLE = registerBlockWithItem("granite_table", p -> stoneTable(p, MapColor.DIRT, SoundType.STONE));
+    public static final DeferredBlock<TableBlock> DIORITE_TABLE = registerBlockWithItem("diorite_table", p -> stoneTable(p, MapColor.QUARTZ, SoundType.STONE));
+    public static final DeferredBlock<TableBlock> DEEPSLATE_TABLE = registerBlockWithItem("deepslate_table", p -> stoneTable(p, MapColor.DEEPSLATE, SoundType.POLISHED_DEEPSLATE));
+    public static final DeferredBlock<TableBlock> POLISHED_BLACKSTONE_TABLE = registerBlockWithItem("polished_blackstone_table", p -> stoneTable(p, MapColor.COLOR_BLACK, SoundType.STONE));
+    public static final DeferredBlock<TableBlock> TUFF_TABLE = registerBlockWithItem("tuff_table", p -> stoneTable(p, MapColor.TERRACOTTA_GRAY, SoundType.POLISHED_TUFF));
 
-    public static final DeferredBlock<StringLightsBlock> STRING_LIGHTS = registerBlockWithItem("string_lights",
+    public static final DeferredBlock<StringLightsBlock> STRING_LIGHTS = BLOCKS.registerBlock("string_lights",
             p -> new StringLightsBlock(p
                     .mapColor(MapColor.COLOR_YELLOW)
                     .instabreak()
                     .sound(SoundType.WOOL)
                     .lightLevel(state -> 12)
+                    .noCollission()
                     .noOcclusion()
                     .pushReaction(PushReaction.DESTROY)
                     ));
+    public static final DeferredBlock<WallStringLightsBlock> WALL_STRING_LIGHTS = BLOCKS.registerBlock("wall_string_lights",
+            p -> new WallStringLightsBlock(p
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .instabreak()
+                    .sound(SoundType.WOOL)
+                    .lightLevel(state -> 12)
+                    .noCollission()
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)
+                    ));
+
     public static final DeferredBlock<LargeLanternBlock> LARGE_LANTERN = registerBlockWithItem("large_lantern",
             p -> new LargeLanternBlock(p
                     .mapColor(MapColor.METAL)
@@ -140,6 +184,37 @@ public class ArtistryBlocks {
                     .noOcclusion()
                     .pushReaction(PushReaction.DESTROY)
                     ));
+    public static final DeferredBlock<RoundLanternBlock> ROUND_LANTERN = registerBlockWithItem("round_lantern",
+            p -> new RoundLanternBlock(p
+                    .mapColor(MapColor.METAL)
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(3.5F)
+                    .sound(SoundType.LANTERN)
+                    .lightLevel(state -> 15)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)
+                    ));
+
+    public static final DeferredBlock<SparklerBlock> SPARKLER = registerBlockWithItem("sparkler",
+            p -> new SparklerBlock(p
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.5F)
+                    .sound(SoundType.AMETHYST_CLUSTER)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+    public static final DeferredBlock<AmethystStarsBlock> AMETHYST_STARS = registerBlockWithItem("amethyst_stars",
+            p -> new AmethystStarsBlock(p
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .instabreak()
+                    .sound(SoundType.AMETHYST_CLUSTER)
+                    .noOcclusion()
+                    .noCollission()
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+
 
     public static final DeferredBlock<BloomingVinesBlock> BLOOMING_VINES = registerBlockWithItem("blooming_vines",
             p -> new BloomingVinesBlock(p
@@ -149,6 +224,17 @@ public class ArtistryBlocks {
                     .randomTicks()
                     .strength(0.2F)
                     .sound(SoundType.CAVE_VINES)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+    public static final DeferredBlock<LushFernBlock> LUSH_FERN = registerBlockWithItem("lush_fern",
+            p -> new LushFernBlock(p
+                    .mapColor(MapColor.PLANT)
+                    .replaceable()
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .offsetType(BlockBehaviour.OffsetType.XZ)
                     .ignitedByLava()
                     .pushReaction(PushReaction.DESTROY)
             ));
@@ -268,12 +354,17 @@ public class ArtistryBlocks {
                     .ignitedByLava()));
 
     public static final DeferredBlock<SaplingBlock> ASPEN_SAPLING = registerBlockWithItem("aspen_sapling",
-            p -> new SaplingBlock(ArtistryTreeGrowers.PRISMA, p
+            p -> new SaplingBlock(ArtistryTreeGrowers.ASPEN, p
                     .mapColor(MapColor.PLANT)
                     .noCollission()
                     .randomTicks()
                     .instabreak()
                     .sound(SoundType.GRASS)
+                    .pushReaction(PushReaction.DESTROY)));
+    public static final DeferredBlock<FlowerPotBlock> POTTED_ASPEN_SAPLING = BLOCKS.registerBlock("potted_aspen_sapling",
+            p -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ASPEN_SAPLING, p
+                    .instabreak()
+                    .noOcclusion()
                     .pushReaction(PushReaction.DESTROY)));
     //endregion
 

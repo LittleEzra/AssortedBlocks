@@ -6,7 +6,7 @@ import net.minecraft.world.level.block.grower.TreeGrower;
 import java.util.Optional;
 
 public class ArtistryTreeGrowers {
-    public static final TreeGrower PRISMA =
+    public static final TreeGrower ASPEN =
             new TreeGrower(Artistry.location("aspen").toString(),
                     Optional.empty(),
                     Optional.of(ArtistryTreeFeatures.ASPEN_TREE),

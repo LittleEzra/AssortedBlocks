@@ -3,6 +3,8 @@ package com.feliscape.artistry;
 import com.feliscape.artistry.data.worldgen.registry.ArtistryFoliagePlacers;
 import com.feliscape.artistry.registry.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -41,7 +43,7 @@ public class Artistry
 
         modEventBus.addListener(this::addCreative);
 
-        //modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     public static String stringLocation(String path){
@@ -53,7 +55,9 @@ public class Artistry
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ArtistryBlocks.ASPEN_SAPLING.getId(), ArtistryBlocks.POTTED_ASPEN_SAPLING);
+        });
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)

@@ -1,0 +1,41 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "artistry:block/andesite_table_base"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/andesite_table_northwest_leg"
+      },
+      "when": {
+        "north_west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/andesite_table_northeast_leg"
+      },
+      "when": {
+        "north_east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/andesite_table_southeast_leg"
+      },
+      "when": {
+        "south_east": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/andesite_table_southwest_leg"
+      },
+      "when": {
+        "south_west": "true"
+      }
+    }
+  ]
+}

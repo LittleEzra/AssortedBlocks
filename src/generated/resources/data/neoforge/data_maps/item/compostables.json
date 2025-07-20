@@ -1,0 +1,22 @@
+{
+  "values": {
+    "artistry:aspen_leaves": {
+      "chance": 0.3
+    },
+    "artistry:aspen_sapling": {
+      "chance": 0.3
+    },
+    "artistry:blooming_vines": {
+      "chance": 0.3
+    },
+    "artistry:lush_fern": {
+      "chance": 0.3
+    },
+    "artistry:sunburst_vines": {
+      "chance": 0.3
+    },
+    "artistry:sunsprout": {
+      "chance": 0.3
+    }
+  }
+}
