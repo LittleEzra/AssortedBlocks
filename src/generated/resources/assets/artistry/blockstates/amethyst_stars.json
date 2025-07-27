@@ -1,0 +1,59 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "artistry:block/amethyst_stars",
+        "x": 90,
+        "y": 90
+      },
+      "when": {
+        "down": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/amethyst_stars",
+        "x": 270,
+        "y": 90
+      },
+      "when": {
+        "up": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/amethyst_stars"
+      },
+      "when": {
+        "north": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/amethyst_stars",
+        "y": 180
+      },
+      "when": {
+        "south": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/amethyst_stars",
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/amethyst_stars",
+        "y": 90
+      },
+      "when": {
+        "east": "true"
+      }
+    }
+  ]
+}

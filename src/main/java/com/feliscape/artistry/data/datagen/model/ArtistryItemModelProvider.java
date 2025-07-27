@@ -4,16 +4,12 @@ package com.feliscape.artistry.data.datagen.model;
 import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
-import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -41,11 +37,27 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         manualBlockItem(ArtistryBlocks.MOSSY_STONE_TILE_STAIRS);
         manualBlockItem(ArtistryBlocks.MOSSY_STONE_TILE_SLAB);
 
+        manualBlockItem(ArtistryBlocks.SMOOTH_CALCITE_STAIRS);
+        manualBlockItem(ArtistryBlocks.SMOOTH_CALCITE_SLAB);
+        manualBlockItem(ArtistryBlocks.CALCITE_STAIRS);
+        manualBlockItem(ArtistryBlocks.CALCITE_SLAB);
+        minecraftBasedWallItem(ArtistryBlocks.CALCITE_WALL, Blocks.CALCITE);
+        manualBlockItem(ArtistryBlocks.POLISHED_CALCITE_STAIRS);
+        manualBlockItem(ArtistryBlocks.POLISHED_CALCITE_SLAB);
+        wallItem(ArtistryBlocks.POLISHED_CALCITE_WALL, ArtistryBlocks.POLISHED_CALCITE);
+        manualBlockItem(ArtistryBlocks.CALCITE_BRICK_STAIRS);
+        manualBlockItem(ArtistryBlocks.CALCITE_BRICK_SLAB);
+        wallItem(ArtistryBlocks.CALCITE_BRICK_WALL, ArtistryBlocks.CALCITE_BRICKS);
+        manualBlockItem(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS);
+        manualBlockItem(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB);
+
         blockItemSprite(ArtistryBlocks.LARGE_LANTERN);
         blockItemSprite(ArtistryBlocks.LARGE_SOUL_LANTERN);
         blockItemSprite(ArtistryBlocks.ROUND_LANTERN);
+        blockItemSprite(ArtistryBlocks.FLAT_LIGHT);
         generatedBlockItem(ArtistryBlocks.SPARKLER);
         generatedBlockItem(ArtistryBlocks.AMETHYST_STARS);
+        blockItemSprite(ArtistryBlocks.SPARK_FOUNTAIN);
 
         blockItemSprite(ArtistryBlocks.BLOOMING_VINES);
         blockItemSprite(ArtistryBlocks.LUSH_FERN);
@@ -115,6 +127,10 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
     public void wallItem(Supplier<? extends Block> block, Supplier<? extends Block> baseBlock) {
         this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall",  Artistry.location("block/" + BuiltInRegistries.BLOCK.getKey(baseBlock.get()).getPath()));
+    }
+    public void minecraftBasedWallItem(Supplier<? extends Block> block, Block baseBlock) {
+        this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall",  ResourceLocation.withDefaultNamespace("block/" + BuiltInRegistries.BLOCK.getKey(baseBlock).getPath()));
     }
 
     private ItemModelBuilder blockItemSprite(Supplier<? extends Block> block) { // Uses a block instead of item with a unique item texture (Example: Doors or Lanterns)

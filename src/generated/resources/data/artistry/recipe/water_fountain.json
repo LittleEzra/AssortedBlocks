@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "tag": "c:stones"
+    },
+    "B": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "pattern": [
+    "#B#",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "count": 1,
+    "id": "artistry:water_fountain"
+  }
+}

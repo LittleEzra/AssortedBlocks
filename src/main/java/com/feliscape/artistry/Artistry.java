@@ -37,6 +37,8 @@ public class Artistry
         ArtistryEntityTypes.register(modEventBus);
         ArtistryLootModifiers.register(modEventBus);
 
+        ArtistryParticles.register(modEventBus);
+
         ArtistryFoliagePlacers.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);

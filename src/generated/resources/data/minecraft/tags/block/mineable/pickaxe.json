@@ -10,13 +10,27 @@
     "artistry:large_lantern",
     "artistry:large_soul_lantern",
     "artistry:round_lantern",
+    "artistry:flat_light",
     "artistry:sparkler",
+    "artistry:water_fountain",
     "artistry:stone_table",
     "artistry:andesite_table",
     "artistry:granite_table",
     "artistry:diorite_table",
     "artistry:deepslate_table",
     "artistry:polished_blackstone_table",
-    "artistry:tuff_table"
+    "artistry:tuff_table",
+    "artistry:rocky_dirt",
+    "artistry:polished_calcite",
+    "artistry:polished_calcite_stairs",
+    "artistry:polished_calcite_slab",
+    "artistry:polished_calcite_wall",
+    "artistry:calcite_bricks",
+    "artistry:calcite_brick_stairs",
+    "artistry:calcite_brick_slab",
+    "artistry:calcite_brick_wall",
+    "artistry:small_calcite_bricks",
+    "artistry:small_calcite_brick_stairs",
+    "artistry:small_calcite_brick_slab"
   ]
 }

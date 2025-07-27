@@ -46,6 +46,9 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         simpleBlock(ArtistryBlocks.SPARKLER.get(), models().getExistingFile(Artistry.location("block/sparkler")));
         amethystStars(ArtistryBlocks.AMETHYST_STARS.get());
 
+        simpleBlock(ArtistryBlocks.SPARK_FOUNTAIN.get(), models().getExistingFile(Artistry.location("block/spark_fountain")));
+        simpleBlockWithItem(ArtistryBlocks.WATER_FOUNTAIN.get(), models().getExistingFile(Artistry.location("block/water_fountain")));
+
         table(ArtistryBlocks.OAK_TABLE);
         table(ArtistryBlocks.SPRUCE_TABLE);
         table(ArtistryBlocks.BIRCH_TABLE);
@@ -73,12 +76,45 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         largeLantern(ArtistryBlocks.LARGE_LANTERN);
         largeLantern(ArtistryBlocks.LARGE_SOUL_LANTERN);
         roundLantern(ArtistryBlocks.ROUND_LANTERN);
+        directionalBlock(ArtistryBlocks.FLAT_LIGHT.get(), models().getExistingFile(Artistry.location("block/flat_light")));
 
         bloomingVines(ArtistryBlocks.BLOOMING_VINES);
         getVariantBuilder(ArtistryBlocks.LUSH_FERN.get())
                 .partialState().addModels(ConfiguredModel.builder().modelFile(
                         models().getExistingFile(Artistry.location("block/lush_fern"))
                 ).buildLast());
+
+        blockWithItem(ArtistryBlocks.ROCKY_DIRT);
+
+        ResourceLocation calciteTexture = blockTexture(Blocks.CALCITE);
+        ResourceLocation smoothCalciteTexture = blockTexture(ArtistryBlocks.SMOOTH_CALCITE.get());
+        ResourceLocation polishedCalciteTexture = blockTexture(ArtistryBlocks.POLISHED_CALCITE.get());
+        ResourceLocation calciteBrickTexture = blockTexture(ArtistryBlocks.CALCITE_BRICKS.get());
+        ResourceLocation smallCalciteBrickTexture = blockTexture(ArtistryBlocks.SMALL_CALCITE_BRICKS.get());
+
+        stairsBlock(ArtistryBlocks.CALCITE_STAIRS.get(), calciteTexture);
+        slabBlock(ArtistryBlocks.CALCITE_SLAB.get(), calciteTexture, calciteTexture);
+        wallBlock(ArtistryBlocks.CALCITE_WALL.get(), calciteTexture);
+
+        blockWithItem(ArtistryBlocks.SMOOTH_CALCITE);
+        stairsBlock(ArtistryBlocks.SMOOTH_CALCITE_STAIRS.get(), smoothCalciteTexture);
+        slabBlock(ArtistryBlocks.SMOOTH_CALCITE_SLAB.get(), smoothCalciteTexture, smoothCalciteTexture);
+
+        blockWithItem(ArtistryBlocks.POLISHED_CALCITE);
+        blockWithItem(ArtistryBlocks.CHISELED_CALCITE);
+        stairsBlock(ArtistryBlocks.POLISHED_CALCITE_STAIRS.get(), polishedCalciteTexture);
+        slabBlock(ArtistryBlocks.POLISHED_CALCITE_SLAB.get(), polishedCalciteTexture, polishedCalciteTexture);
+        wallBlock(ArtistryBlocks.POLISHED_CALCITE_WALL.get(), polishedCalciteTexture);
+
+        blockWithItem(ArtistryBlocks.CALCITE_BRICKS);
+        stairsBlock(ArtistryBlocks.CALCITE_BRICK_STAIRS.get(), calciteBrickTexture);
+        slabBlock(ArtistryBlocks.CALCITE_BRICK_SLAB.get(), calciteBrickTexture, calciteBrickTexture);
+        wallBlock(ArtistryBlocks.CALCITE_BRICK_WALL.get(), calciteBrickTexture);
+
+        ResourceLocation smallCalciteBrickTopTexture = blockTexture(ArtistryBlocks.SMALL_CALCITE_BRICKS.get()).withSuffix("_top");
+        cubeColumn(ArtistryBlocks.SMALL_CALCITE_BRICKS.get());
+        stairsBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get(), smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
+        slabBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get(), smallCalciteBrickTexture, smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
 
         leavesBlock(ArtistryBlocks.ASPEN_LEAVES, "cutout_mipped");
 
@@ -112,6 +148,11 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         crossBlockWithRenderType(ArtistryBlocks.ASPEN_SAPLING.get(), "cutout");
 
+    }
+
+    private void cubeColumn(Block block) {
+        ModelFile modelFile = models().cubeColumn(name(block), blockTexture(block), blockTexture(block).withSuffix("_top"));
+        simpleBlockWithItem(block, modelFile);
     }
 
     private void pottedCrossPlantBlock(Supplier<? extends FlowerPotBlock> block) {

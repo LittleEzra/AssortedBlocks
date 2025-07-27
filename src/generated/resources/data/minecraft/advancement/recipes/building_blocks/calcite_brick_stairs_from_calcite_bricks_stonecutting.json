@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mossy_stone_bricks": {
+    "has_calcite_bricks": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:mossy_stone_bricks"
+            "items": "artistry:calcite_bricks"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "artistry:mossy_stone_tiles"
+        "recipe": "minecraft:calcite_brick_stairs_from_calcite_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_mossy_stone_bricks"
+      "has_calcite_bricks"
     ]
   ],
   "rewards": {
     "recipes": [
-      "artistry:mossy_stone_tiles"
+      "minecraft:calcite_brick_stairs_from_calcite_bricks_stonecutting"
     ]
   }
 }

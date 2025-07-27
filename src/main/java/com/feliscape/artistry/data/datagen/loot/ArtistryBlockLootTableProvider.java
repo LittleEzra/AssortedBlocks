@@ -8,22 +8,16 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
-import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
-import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
-import java.util.Arrays;
 import java.util.Set;
 
 public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
@@ -81,9 +75,38 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ArtistryBlocks.LARGE_LANTERN.get(), this::createSingleItemTable);
         this.add(ArtistryBlocks.LARGE_SOUL_LANTERN.get(), this::createSingleItemTable);
         this.add(ArtistryBlocks.ROUND_LANTERN.get(), this::createSingleItemTable);
+        this.add(ArtistryBlocks.FLAT_LIGHT.get(), this::createSingleItemTable);
 
         this.dropSelf(ArtistryBlocks.SPARKLER.get());
-        this.add(ArtistryBlocks.AMETHYST_STARS.get(), block -> this.createMultifaceBlockDrops(block));
+        this.add(ArtistryBlocks.AMETHYST_STARS.get(), this::createMultifaceBlockDrops);
+
+        this.dropSelf(ArtistryBlocks.SPARK_FOUNTAIN.get());
+        this.dropSelf(ArtistryBlocks.WATER_FOUNTAIN.get());
+
+        this.dropSelf(ArtistryBlocks.ROCKY_DIRT.get());
+
+        this.dropSelf(ArtistryBlocks.CALCITE_STAIRS.get());
+        this.dropSelf(ArtistryBlocks.CALCITE_WALL.get());
+        this.add(ArtistryBlocks.CALCITE_SLAB.get(), this::createSlabItemTable);
+
+        this.dropSelf(ArtistryBlocks.SMOOTH_CALCITE.get());
+        this.dropSelf(ArtistryBlocks.SMOOTH_CALCITE_STAIRS.get());
+        this.add(ArtistryBlocks.SMOOTH_CALCITE_SLAB.get(), this::createSlabItemTable);
+
+        this.dropSelf(ArtistryBlocks.POLISHED_CALCITE.get());
+        this.dropSelf(ArtistryBlocks.CHISELED_CALCITE.get());
+        this.dropSelf(ArtistryBlocks.POLISHED_CALCITE_STAIRS.get());
+        this.dropSelf(ArtistryBlocks.POLISHED_CALCITE_WALL.get());
+        this.add(ArtistryBlocks.POLISHED_CALCITE_SLAB.get(), this::createSlabItemTable);
+
+        this.dropSelf(ArtistryBlocks.CALCITE_BRICKS.get());
+        this.dropSelf(ArtistryBlocks.CALCITE_BRICK_STAIRS.get());
+        this.dropSelf(ArtistryBlocks.CALCITE_BRICK_WALL.get());
+        this.add(ArtistryBlocks.CALCITE_BRICK_SLAB.get(), this::createSlabItemTable);
+
+        this.dropSelf(ArtistryBlocks.SMALL_CALCITE_BRICKS.get());
+        this.dropSelf(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get());
+        this.add(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get(), this::createSlabItemTable);
 
         this.dropSelf(ArtistryBlocks.ASPEN_LOG.get());
         this.dropSelf(ArtistryBlocks.ASPEN_WOOD.get());

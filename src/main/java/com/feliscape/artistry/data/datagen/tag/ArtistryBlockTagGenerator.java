@@ -31,7 +31,10 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         ArtistryBlocks.LARGE_LANTERN.get(),
                         ArtistryBlocks.LARGE_SOUL_LANTERN.get(),
                         ArtistryBlocks.ROUND_LANTERN.get(),
+                        ArtistryBlocks.FLAT_LIGHT.get(),
                         ArtistryBlocks.SPARKLER.get(),
+
+                        ArtistryBlocks.WATER_FOUNTAIN.get(),
 
                         ArtistryBlocks.STONE_TABLE.get(),
                         ArtistryBlocks.ANDESITE_TABLE.get(),
@@ -39,7 +42,21 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         ArtistryBlocks.DIORITE_TABLE.get(),
                         ArtistryBlocks.DEEPSLATE_TABLE.get(),
                         ArtistryBlocks.POLISHED_BLACKSTONE_TABLE.get(),
-                        ArtistryBlocks.TUFF_TABLE.get()
+                        ArtistryBlocks.TUFF_TABLE.get(),
+
+                        ArtistryBlocks.ROCKY_DIRT.get(),
+
+                        ArtistryBlocks.POLISHED_CALCITE.get(),
+                        ArtistryBlocks.POLISHED_CALCITE_STAIRS.get(),
+                        ArtistryBlocks.POLISHED_CALCITE_SLAB.get(),
+                        ArtistryBlocks.POLISHED_CALCITE_WALL.get(),
+                        ArtistryBlocks.CALCITE_BRICKS.get(),
+                        ArtistryBlocks.CALCITE_BRICK_STAIRS.get(),
+                        ArtistryBlocks.CALCITE_BRICK_SLAB.get(),
+                        ArtistryBlocks.CALCITE_BRICK_WALL.get(),
+                        ArtistryBlocks.SMALL_CALCITE_BRICKS.get(),
+                        ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get(),
+                        ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get()
                 );
         this.tag(ArtistryTags.Blocks.WOODEN_TABLES)
                 .add(ArtistryBlocks.OAK_TABLE.get())
@@ -61,6 +78,9 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(ArtistryBlocks.SUNSPROUT.get())
                 .add(ArtistryBlocks.SUNBURST_VINES.get())
                 .add(ArtistryBlocks.SUNBURST_VINES_PLANT.get())
+        ;
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ArtistryBlocks.ROCKY_DIRT.get())
         ;
         this.tag(BlockTags.SWORD_EFFICIENT)
                 .add(ArtistryBlocks.BLOOMING_VINES.get())
@@ -99,16 +119,25 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.DIRT)
-                .add(ArtistryBlocks.OVERGROWN_STONE_TILES.get());
+                .add(ArtistryBlocks.OVERGROWN_STONE_TILES.get())
+                .add(ArtistryBlocks.ROCKY_DIRT.get())
+        ;
         this.tag(BlockTags.SNIFFER_DIGGABLE_BLOCK)
-                .add(ArtistryBlocks.OVERGROWN_STONE_TILES.get());
-        this.tag(BlockTags.OVERWORLD_CARVER_REPLACEABLES).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get());
-        this.tag(BlockTags.NETHER_CARVER_REPLACEABLES).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get());
-        this.tag(BlockTags.ENDERMAN_HOLDABLE).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get());
-        this.tag(BlockTags.MOSS_REPLACEABLE).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get());
-        this.tag(BlockTags.AZALEA_ROOT_REPLACEABLE).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get());
-        this.tag(BlockTags.CONVERTABLE_TO_MUD).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get());
+                .add(ArtistryBlocks.OVERGROWN_STONE_TILES.get())
+                .add(ArtistryBlocks.ROCKY_DIRT.get())
+        ;
+        this.tag(BlockTags.OVERWORLD_CARVER_REPLACEABLES).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get(), ArtistryBlocks.ROCKY_DIRT.get());
+        this.tag(BlockTags.NETHER_CARVER_REPLACEABLES).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get(), ArtistryBlocks.ROCKY_DIRT.get());
+        this.tag(BlockTags.ENDERMAN_HOLDABLE).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get(), ArtistryBlocks.ROCKY_DIRT.get());
+        this.tag(BlockTags.MOSS_REPLACEABLE).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get(), ArtistryBlocks.ROCKY_DIRT.get());
+        this.tag(BlockTags.AZALEA_ROOT_REPLACEABLE).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get(), ArtistryBlocks.ROCKY_DIRT.get());
+        this.tag(BlockTags.CONVERTABLE_TO_MUD).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get(), ArtistryBlocks.ROCKY_DIRT.get());
 
+
+        this.tag(BlockTags.WALLS)
+                .add(ArtistryBlocks.POLISHED_CALCITE_WALL.get())
+                .add(ArtistryBlocks.CALCITE_BRICK_WALL.get())
+        ;
 
         this.tag(BlockTags.PLANKS)
                 .add(ArtistryBlocks.ASPEN_PLANKS.get());

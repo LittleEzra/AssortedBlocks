@@ -117,6 +117,146 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(Items.GOLD_NUGGET), has(Items.GOLD_NUGGET))
                 .save(recipeOutput);
 
+        // Calcite
+
+        stairBuilder(ArtistryBlocks.CALCITE_STAIRS, Ingredient.of(Blocks.CALCITE))
+                .unlockedBy(getHasName(Blocks.CALCITE), has(Blocks.CALCITE))
+                .save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.CALCITE_SLAB, Blocks.CALCITE);
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.CALCITE_WALL, Blocks.CALCITE);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_STAIRS,
+                Blocks.CALCITE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_SLAB,
+                Blocks.CALCITE, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_WALL,
+                Blocks.CALCITE);
+
+        // Smooth Calcite
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.CALCITE), RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SMOOTH_CALCITE, 0.1F, 200)
+                .unlockedBy("has_calcite", has(Blocks.CALCITE))
+                .save(recipeOutput);
+
+        twoByTwoConversion(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_CALCITE,
+                ArtistryBlocks.SMOOTH_CALCITE);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SMOOTH_CALCITE_STAIRS,
+                ArtistryBlocks.SMOOTH_CALCITE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SMOOTH_CALCITE_SLAB,
+                ArtistryBlocks.SMOOTH_CALCITE, 2);
+
+        // Polished Calcite
+        twoByTwoConversion(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_CALCITE,
+                Blocks.CALCITE);
+        stairBuilder(ArtistryBlocks.POLISHED_CALCITE_STAIRS, Ingredient.of(ArtistryBlocks.POLISHED_CALCITE.get()))
+                .unlockedBy(getHasName(ArtistryBlocks.POLISHED_CALCITE), has(ArtistryBlocks.POLISHED_CALCITE))
+                .save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.POLISHED_CALCITE_SLAB, ArtistryBlocks.POLISHED_CALCITE.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.POLISHED_CALCITE_WALL, ArtistryBlocks.POLISHED_CALCITE);
+        chiseled(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.CHISELED_CALCITE, ArtistryBlocks.POLISHED_CALCITE_SLAB);
+
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_CALCITE,
+                Blocks.CALCITE);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_CALCITE_STAIRS,
+                ArtistryBlocks.POLISHED_CALCITE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_CALCITE_SLAB,
+                ArtistryBlocks.POLISHED_CALCITE, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_CALCITE_WALL,
+                ArtistryBlocks.POLISHED_CALCITE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CHISELED_CALCITE,
+                ArtistryBlocks.POLISHED_CALCITE);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_CALCITE_STAIRS,
+                Blocks.CALCITE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_CALCITE_SLAB,
+                Blocks.CALCITE, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_CALCITE_WALL,
+                Blocks.CALCITE);
+
+        // Calcite Bricks
+        twoByTwoConversion(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_BRICKS,
+                ArtistryBlocks.POLISHED_CALCITE);
+        stairBuilder(ArtistryBlocks.CALCITE_BRICK_STAIRS, Ingredient.of(ArtistryBlocks.CALCITE_BRICKS.get()))
+                .unlockedBy(getHasName(ArtistryBlocks.CALCITE_BRICKS), has(ArtistryBlocks.CALCITE_BRICKS))
+                .save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.CALCITE_BRICK_SLAB, ArtistryBlocks.CALCITE_BRICKS.get());
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.CALCITE_BRICK_WALL, ArtistryBlocks.CALCITE_BRICKS);
+
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_BRICKS,
+                ArtistryBlocks.POLISHED_CALCITE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_BRICKS,
+                Blocks.CALCITE);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_BRICK_STAIRS,
+                ArtistryBlocks.CALCITE_BRICKS);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_BRICK_SLAB,
+                ArtistryBlocks.CALCITE_BRICKS, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_BRICK_WALL,
+                ArtistryBlocks.CALCITE_BRICKS);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_BRICK_STAIRS,
+                ArtistryBlocks.POLISHED_CALCITE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_BRICK_SLAB,
+                ArtistryBlocks.POLISHED_CALCITE, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_BRICK_WALL,
+                ArtistryBlocks.POLISHED_CALCITE);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_BRICK_STAIRS,
+                Blocks.CALCITE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_BRICK_SLAB,
+                Blocks.CALCITE, 2);
+        // Small Calcite Bricks
+        twoByTwoConversion(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SMALL_CALCITE_BRICKS,
+                ArtistryBlocks.CALCITE_BRICKS);
+        stairBuilder(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS, Ingredient.of(ArtistryBlocks.SMALL_CALCITE_BRICKS.get()))
+                .unlockedBy(getHasName(ArtistryBlocks.SMALL_CALCITE_BRICKS), has(ArtistryBlocks.SMALL_CALCITE_BRICKS))
+                .save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB, ArtistryBlocks.SMALL_CALCITE_BRICKS.get());
+
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SMALL_CALCITE_BRICKS,
+                ArtistryBlocks.CALCITE_BRICKS);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS,
+                ArtistryBlocks.SMALL_CALCITE_BRICKS);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB,
+                ArtistryBlocks.SMALL_CALCITE_BRICKS, 2);
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS,
+                ArtistryBlocks.CALCITE_BRICKS);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB,
+                ArtistryBlocks.CALCITE_BRICKS, 2);
+
         table(recipeOutput, ArtistryBlocks.OAK_TABLE, Blocks.OAK_SLAB);
         table(recipeOutput, ArtistryBlocks.SPRUCE_TABLE, Blocks.SPRUCE_SLAB);
         table(recipeOutput, ArtistryBlocks.BIRCH_TABLE, Blocks.BIRCH_SLAB);
@@ -165,6 +305,13 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern(" I ")
                 .unlockedBy(getHasName(Blocks.GLOWSTONE), has(Blocks.GLOWSTONE))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.FLAT_LIGHT, 4)
+                .define('I', Items.IRON_INGOT)
+                .define('o', Items.GLOWSTONE_DUST)
+                .pattern("o")
+                .pattern("I")
+                .unlockedBy(getHasName(Items.GLOWSTONE_DUST), has(Items.GLOWSTONE_DUST))
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryItems.STRING_LIGHTS, 4)
                 .define('S', Items.STRING)
                 .define('o', Items.GLOWSTONE_DUST)
@@ -186,6 +333,23 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("A A")
                 .pattern(" A ")
                 .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SPARK_FOUNTAIN)
+                .define('P', Items.PAPER)
+                .define('B', Blocks.BAMBOO)
+                .define('G', Items.GUNPOWDER)
+                .pattern("P")
+                .pattern("B")
+                .pattern("G")
+                .unlockedBy(getHasName(Blocks.BAMBOO), has(Blocks.BAMBOO))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.WATER_FOUNTAIN)
+                .define('#', Tags.Items.STONES)
+                .define('B', Items.WATER_BUCKET)
+                .pattern("#B#")
+                .pattern(" # ")
+                .pattern(" # ")
+                .unlockedBy(getHasName(Items.WATER_BUCKET), has(Items.WATER_BUCKET))
                 .save(recipeOutput);
 
         //region Aspen
@@ -246,7 +410,7 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("##")
                 .pattern("##")
                 .unlockedBy(getHasName(unpacked), has(unpacked))
-                .save(recipeOutput);
+                .save(recipeOutput, getConversionRecipeName(packed, unpacked));
     }
 
     protected static void table(RecipeOutput recipeOutput, ItemLike table, ItemLike slab) {

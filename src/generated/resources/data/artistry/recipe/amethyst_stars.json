@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "pattern": [
+    " A ",
+    "A A",
+    " A "
+  ],
+  "result": {
+    "count": 8,
+    "id": "artistry:amethyst_stars"
+  }
+}

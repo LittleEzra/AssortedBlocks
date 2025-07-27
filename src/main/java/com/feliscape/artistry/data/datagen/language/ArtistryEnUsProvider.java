@@ -66,9 +66,37 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.LARGE_LANTERN, "Large Lantern");
         this.addBlock(ArtistryBlocks.LARGE_SOUL_LANTERN, "Large Soul Lantern");
         this.addBlock(ArtistryBlocks.ROUND_LANTERN, "Round Lantern");
+        this.addBlock(ArtistryBlocks.FLAT_LIGHT, "Flat Light");
 
         this.addBlock(ArtistryBlocks.SPARKLER, "Sparkler");
         this.addBlock(ArtistryBlocks.AMETHYST_STARS, "Amethyst Stars");
+        this.addBlock(ArtistryBlocks.SPARK_FOUNTAIN, "Spark Fountain");
+        this.addBlock(ArtistryBlocks.WATER_FOUNTAIN, "Water Fountain");
+
+        this.addBlock(ArtistryBlocks.ROCKY_DIRT, "Rocky Dirt");
+
+        this.addBlock(ArtistryBlocks.CALCITE_STAIRS, "Calcite Stairs");
+        this.addBlock(ArtistryBlocks.CALCITE_SLAB, "Calcite Slab");
+        this.addBlock(ArtistryBlocks.CALCITE_WALL, "Calcite Wall");
+
+        this.addBlock(ArtistryBlocks.SMOOTH_CALCITE, "Smooth Calcite");
+        this.addBlock(ArtistryBlocks.SMOOTH_CALCITE_STAIRS, "Smooth Calcite Stairs");
+        this.addBlock(ArtistryBlocks.SMOOTH_CALCITE_SLAB, "Smooth Calcite Slab");
+
+        this.addBlock(ArtistryBlocks.POLISHED_CALCITE, "Polished Calcite");
+        this.addBlock(ArtistryBlocks.CHISELED_CALCITE, "Chiseled Calcite");
+        this.addBlock(ArtistryBlocks.POLISHED_CALCITE_STAIRS, "Polished Calcite Stairs");
+        this.addBlock(ArtistryBlocks.POLISHED_CALCITE_SLAB, "Polished Calcite Slab");
+        this.addBlock(ArtistryBlocks.POLISHED_CALCITE_WALL, "Polished Calcite Wall");
+
+        this.addBlock(ArtistryBlocks.CALCITE_BRICKS, "Calcite Bricks");
+        this.addBlock(ArtistryBlocks.CALCITE_BRICK_STAIRS, "Calcite Brick Stairs");
+        this.addBlock(ArtistryBlocks.CALCITE_BRICK_SLAB, "Calcite Brick Slab");
+        this.addBlock(ArtistryBlocks.CALCITE_BRICK_WALL, "Calcite Brick Wall");
+
+        this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICKS, "Small Calcite Bricks");
+        this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS, "Small Calcite Brick Stairs");
+        this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB, "Small Calcite Brick Slab");
 
         this.addBlock(ArtistryBlocks.ASPEN_LEAVES, "Aspen Leaves");
         this.addBlock(ArtistryBlocks.ASPEN_LOG, "Aspen Log");
@@ -82,6 +110,10 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.ASPEN_PRESSURE_PLATE, "Aspen Pressure Plate");
         this.addBlock(ArtistryBlocks.ASPEN_FENCE, "Aspen Fence");
         this.addBlock(ArtistryBlocks.ASPEN_FENCE_GATE, "Aspen Fence Gate");
+
+        this.add("block.artistry.aspen_wall_sign", "Aspen Wall Sign");
+        this.add("block.artistry.aspen_wall_hanging_sign", "Aspen Wall Hanging Sign");
+
         this.addBlock(ArtistryBlocks.ASPEN_DOOR, "Aspen Door");
         this.addBlock(ArtistryBlocks.ASPEN_TRAPDOOR, "Aspen Trapdoor");
         this.addBlock(ArtistryBlocks.ASPEN_SAPLING, "Aspen Sapling");
