@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:short_grass"
+    },
+    "o": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    " # ",
+    "#o#",
+    " # "
+  ],
+  "result": {
+    "count": 4,
+    "id": "artistry:teardrop_grass"
+  }
+}

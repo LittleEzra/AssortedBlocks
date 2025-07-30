@@ -1,9 +1,13 @@
 package com.feliscape.artistry.client;
 
 import com.feliscape.artistry.Artistry;
+import com.feliscape.artistry.client.atlas.ArtistrySheets;
+import com.feliscape.artistry.client.extension.CustomItemRendererExtension;
+import com.feliscape.artistry.client.render.blockentity.PaintedPotRenderer;
 import com.feliscape.artistry.client.render.entity.ModBoatRenderer;
 import com.feliscape.artistry.registry.ArtistryBlockEntityTypes;
 import com.feliscape.artistry.registry.ArtistryEntityTypes;
+import com.feliscape.artistry.registry.ArtistryItems;
 import net.minecraft.client.model.BoatModel;
 import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
@@ -13,6 +17,9 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
+import net.neoforged.neoforge.client.event.RegisterMaterialAtlasesEvent;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 
 public class ClientEvents {
     //@EventBusSubscriber(modid = Artistry.MOD_ID, value = Dist.CLIENT)
@@ -22,6 +29,21 @@ public class ClientEvents {
 
     @EventBusSubscriber(modid = Artistry.MOD_ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
     public static class ClientModBusEvents{
+
+        @SubscribeEvent
+        public static void registerMaterialAtlases(RegisterMaterialAtlasesEvent event){
+            event.register(ArtistrySheets.PAINTED_POT_BASE_SHEET, Artistry.location("painted_pot/pot"));
+            event.register(ArtistrySheets.PAINTED_POT_TRIM_SHEET, Artistry.location("painted_pot/trim"));
+            event.register(ArtistrySheets.PAINTED_POT_PATTERN_SHEET, Artistry.location("painted_pot/pattern"));
+        }
+        @SubscribeEvent
+        public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event){
+            new ArtistryClient.ReloadListener(event);
+        }
+        @SubscribeEvent
+        public static void registerClientExtensions(RegisterClientExtensionsEvent event){
+            event.registerItem(new CustomItemRendererExtension(), ArtistryItems.PAINTED_POT);
+        }
 
         @SubscribeEvent
         public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
@@ -36,6 +58,7 @@ public class ClientEvents {
 
             event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.MOD_SIGN.get(), SignRenderer::new);
             event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
+            event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.PAINTED_POT.get(), PaintedPotRenderer::new);
         }
     }
 }

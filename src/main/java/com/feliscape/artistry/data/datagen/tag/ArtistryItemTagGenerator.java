@@ -24,6 +24,7 @@ public class ArtistryItemTagGenerator extends ItemTagsProvider {
         this.copy(ArtistryTags.Blocks.ASPEN_LOGS, ArtistryTags.Items.ASPEN_LOGS);
         this.copy(ArtistryTags.Blocks.WOODEN_TABLES, ArtistryTags.Items.WOODEN_TABLES);
         this.copy(ArtistryTags.Blocks.TABLES, ArtistryTags.Items.TABLES);
+        this.copy(ArtistryTags.Blocks.FROSTED_GLASS, ArtistryTags.Items.FROSTED_GLASS);
 
         this.tag(ItemTags.PLANKS)
                 .add(ArtistryBlocks.ASPEN_PLANKS.asItem());

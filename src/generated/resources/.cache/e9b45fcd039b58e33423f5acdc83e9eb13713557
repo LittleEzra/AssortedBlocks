@@ -1,8 +1,10 @@
-// 1.21.1	2025-07-26T14:54:36.9335205	Tags for minecraft:block mod id artistry
+// 1.21.1	2025-07-29T09:11:59.1514219	Tags for minecraft:block mod id artistry
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/block/aspen_logs.json
+3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/block/frosted_glass.json
 c3b39af3db5bc3768608a47a706098d450692fe3 data/artistry/tags/block/string_lights.json
-91d2c47c016f49d48843479d7c62a96b210a3b12 data/artistry/tags/block/tables.json
+01a4149b278fed1965636e639f1fcbcb4453d95c data/artistry/tags/block/tables.json
 1bba110c9fc802713fa42d07e7f1b8bd8ecec799 data/artistry/tags/block/wooden_tables.json
+6cdc3b7b9f5016145573e5f0f35fcf333a0272a3 data/c/tags/block/glass_blocks/cheap.json
 095de7ea392c97d9f9704510e2daf4ec0aadd87e data/c/tags/block/stripped_logs.json
 1b45115bddb91a660f9e0846f96eb9a3cf3d05c4 data/c/tags/block/stripped_woods.json
 c2413c0ce4aec075067c5e4a3473db7c6be09e41 data/minecraft/tags/block/azalea_root_replaceable.json
@@ -15,7 +17,7 @@ c2413c0ce4aec075067c5e4a3473db7c6be09e41 data/minecraft/tags/block/enderman_hold
 2c4e2b63d7ddfa023501a694b0bb7423512a293e data/minecraft/tags/block/leaves.json
 05936648edde2e2b272c6888a1c9dca6bbfb5784 data/minecraft/tags/block/logs_that_burn.json
 260f43275cf9e04e92fce3de993ade53dddb5b49 data/minecraft/tags/block/mineable/axe.json
-5439199db3385e96bb764d8114b5a903286c6b0d data/minecraft/tags/block/mineable/pickaxe.json
+658ce322d0fccc1f0032c2d2ea7eb40141f46e5b data/minecraft/tags/block/mineable/pickaxe.json
 e31b6306a860011e95a8b85c92109253a95c5fba data/minecraft/tags/block/mineable/shovel.json
 c2413c0ce4aec075067c5e4a3473db7c6be09e41 data/minecraft/tags/block/moss_replaceable.json
 c2413c0ce4aec075067c5e4a3473db7c6be09e41 data/minecraft/tags/block/nether_carver_replaceables.json

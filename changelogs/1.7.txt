@@ -1,0 +1,17 @@
+Added:
+- Painted Calcite blocks
+    - Crafted by surrounding a piece of lapis with eight Polished Calcite, Calcite Brick, or Small Calcite Brick blocks
+- Calcite Table
+- Frosted Glass
+    - Made by smelting Stained Glass (or dying other Frosted Glass)
+- Teardrop Grass
+    - Crafted by surrounding an Iron Nugget with four Short Grass
+- Painted Pots
+    - Right-clicking on a Decorated Pot without any sherds using a dye paints it.
+    - If you click the bottom or top quarter on the side, it gets a trim.
+    - If you click the center of the side, it gets a pattern
+    - If you click the top or bottom, the pot itself gets dyed
+    - This feature was very difficult to implement, so it might have some issues. If you find one, please report it.
+    You can find the link to the GitHub repository on the main page.
+Changes:
+- Removed the collision from Flat Lights

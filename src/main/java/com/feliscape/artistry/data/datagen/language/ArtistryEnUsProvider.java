@@ -1,8 +1,11 @@
 package com.feliscape.artistry.data.datagen.language;
 
+import com.feliscape.artistry.content.pot.PaintedPotDecorations;
+import com.feliscape.artistry.data.pot.ArtistryPaintedPotDecorations;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.item.DyeColor;
 
 public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
     public ArtistryEnUsProvider(PackOutput output) {
@@ -39,6 +42,8 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
 
         this.addBlock(ArtistryBlocks.BLOOMING_VINES, "Blooming Vines");
         this.addBlock(ArtistryBlocks.LUSH_FERN, "Lush Fern");
+        this.addBlock(ArtistryBlocks.TEARDROP_GRASS, "Teardrop Grass");
+        this.addBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, "Potted Teardrop Grass");
 
         this.addBlock(ArtistryBlocks.OAK_TABLE, "Oak Table");
         this.addBlock(ArtistryBlocks.SPRUCE_TABLE, "Spruce Table");
@@ -60,6 +65,24 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.DEEPSLATE_TABLE, "Deepslate Table");
         this.addBlock(ArtistryBlocks.POLISHED_BLACKSTONE_TABLE, "Polished Blackstone Table");
         this.addBlock(ArtistryBlocks.TUFF_TABLE, "Tuff Table");
+        this.addBlock(ArtistryBlocks.CALCITE_TABLE, "Calcite Table");
+        
+        this.addBlock(ArtistryBlocks.WHITE_FROSTED_GLASS, "White Frosted Glass");
+        this.addBlock(ArtistryBlocks.LIGHT_GRAY_FROSTED_GLASS, "Light Gray Frosted Glass");
+        this.addBlock(ArtistryBlocks.GRAY_FROSTED_GLASS, "Gray Frosted Glass");
+        this.addBlock(ArtistryBlocks.BLACK_FROSTED_GLASS, "Black Frosted Glass");
+        this.addBlock(ArtistryBlocks.BROWN_FROSTED_GLASS, "Brown Frosted Glass");
+        this.addBlock(ArtistryBlocks.RED_FROSTED_GLASS, "Red Frosted Glass");
+        this.addBlock(ArtistryBlocks.ORANGE_FROSTED_GLASS, "Orange Frosted Glass");
+        this.addBlock(ArtistryBlocks.YELLOW_FROSTED_GLASS, "Yellow Frosted Glass");
+        this.addBlock(ArtistryBlocks.LIME_FROSTED_GLASS, "Lime Frosted Glass");
+        this.addBlock(ArtistryBlocks.GREEN_FROSTED_GLASS, "Green Frosted Glass");
+        this.addBlock(ArtistryBlocks.CYAN_FROSTED_GLASS, "Cyan Frosted Glass");
+        this.addBlock(ArtistryBlocks.LIGHT_BLUE_FROSTED_GLASS, "Light Blue Frosted Glass");
+        this.addBlock(ArtistryBlocks.BLUE_FROSTED_GLASS, "Blue Frosted Glass");
+        this.addBlock(ArtistryBlocks.PURPLE_FROSTED_GLASS, "Purple Frosted Glass");
+        this.addBlock(ArtistryBlocks.MAGENTA_FROSTED_GLASS, "Magenta Frosted Glass");
+        this.addBlock(ArtistryBlocks.PINK_FROSTED_GLASS, "Pink Frosted Glass");
 
         this.addBlock(ArtistryBlocks.STRING_LIGHTS, "String Lights");
         this.addBlock(ArtistryBlocks.WALL_STRING_LIGHTS, "Wall String Lights");
@@ -74,6 +97,8 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.WATER_FOUNTAIN, "Water Fountain");
 
         this.addBlock(ArtistryBlocks.ROCKY_DIRT, "Rocky Dirt");
+
+        this.addBlock(ArtistryBlocks.PAINTED_POT, "Painted Pot");
 
         this.addBlock(ArtistryBlocks.CALCITE_STAIRS, "Calcite Stairs");
         this.addBlock(ArtistryBlocks.CALCITE_SLAB, "Calcite Slab");
@@ -98,6 +123,10 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS, "Small Calcite Brick Stairs");
         this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB, "Small Calcite Brick Slab");
 
+        this.addBlock(ArtistryBlocks.PAINTED_POLISHED_CALCITE, "Painted Polished Calcite");
+        this.addBlock(ArtistryBlocks.PAINTED_CALCITE_BRICKS, "Painted Calcite Bricks");
+        this.addBlock(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS, "Painted Small Calcite Bricks");
+
         this.addBlock(ArtistryBlocks.ASPEN_LEAVES, "Aspen Leaves");
         this.addBlock(ArtistryBlocks.ASPEN_LOG, "Aspen Log");
         this.addBlock(ArtistryBlocks.ASPEN_WOOD, "Aspen Wood");
@@ -118,6 +147,37 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.ASPEN_TRAPDOOR, "Aspen Trapdoor");
         this.addBlock(ArtistryBlocks.ASPEN_SAPLING, "Aspen Sapling");
         this.addBlock(ArtistryBlocks.POTTED_ASPEN_SAPLING, "Potted Aspen Sapling");
+
+        this.addPaintedPotBase(DyeColor.WHITE, "White Base");
+        this.addPaintedPotBase(DyeColor.LIGHT_GRAY, "Light Gray Base");
+        this.addPaintedPotBase(DyeColor.GRAY, "Gray Base");
+        this.addPaintedPotBase(DyeColor.BLACK, "Black Base");
+        this.addPaintedPotBase(DyeColor.BROWN, "Brown Base");
+        this.addPaintedPotBase(DyeColor.RED, "Red Base");
+        this.addPaintedPotBase(DyeColor.ORANGE, "Orange Base");
+        this.addPaintedPotBase(DyeColor.YELLOW, "Yellow Base");
+        this.addPaintedPotBase(DyeColor.LIME, "Lime Base");
+        this.addPaintedPotBase(DyeColor.GREEN, "Green Base");
+        this.addPaintedPotBase(DyeColor.CYAN, "Cyan Base");
+        this.addPaintedPotBase(DyeColor.LIGHT_BLUE, "Light Blue Base");
+        this.addPaintedPotBase(DyeColor.BLUE, "Blue Base");
+        this.addPaintedPotBase(DyeColor.PURPLE, "Purple Base");
+        this.addPaintedPotBase(DyeColor.MAGENTA, "Magenta Base");
+        this.addPaintedPotBase(DyeColor.PINK, "Pink Base");
+
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.WAVY_TRIM, "Wavy Trim");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.TICKED_TRIM, "Ticked Trim");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.MAW_TRIM, "Maw Trim");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.PYRAMIDS_TRIM, "Pyramids Trim");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.CORNERS_TRIM, "Corners Trim");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.BOW_TRIM, "Bow Trim");
+
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.FREQUENCY_PATTERN, "Frequency Pattern");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.RINGS_PATTERN, "Rings Pattern");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.DOTS_PATTERN, "Dots Pattern");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.CROSS_PATTERN, "Cross Pattern");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.WAVE_PATTERN, "Wave Pattern");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.WEAVE_PATTERN, "Weave Pattern");
 
         this.add("itemGroup.artistry.base", "Artistry");
 

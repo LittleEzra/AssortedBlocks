@@ -32,6 +32,7 @@ public class Artistry
 
         ArtistryBlocks.register(modEventBus);
         ArtistryItems.register(modEventBus);
+        ArtistryDataComponents.register(modEventBus);
         ArtistryCreativeModeTabs.register(modEventBus);
         ArtistryBlockEntityTypes.register(modEventBus);
         ArtistryEntityTypes.register(modEventBus);
@@ -59,6 +60,7 @@ public class Artistry
     {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ArtistryBlocks.ASPEN_SAPLING.getId(), ArtistryBlocks.POTTED_ASPEN_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ArtistryBlocks.TEARDROP_GRASS.getId(), ArtistryBlocks.POTTED_TEARDROP_GRASS);
         });
     }
 

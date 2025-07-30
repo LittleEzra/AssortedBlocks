@@ -43,6 +43,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         ArtistryBlocks.DEEPSLATE_TABLE.get(),
                         ArtistryBlocks.POLISHED_BLACKSTONE_TABLE.get(),
                         ArtistryBlocks.TUFF_TABLE.get(),
+                        ArtistryBlocks.CALCITE_TABLE.get(),
 
                         ArtistryBlocks.ROCKY_DIRT.get(),
 
@@ -56,8 +57,52 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         ArtistryBlocks.CALCITE_BRICK_WALL.get(),
                         ArtistryBlocks.SMALL_CALCITE_BRICKS.get(),
                         ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get(),
-                        ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get()
+                        ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get(),
+
+                        ArtistryBlocks.WHITE_FROSTED_GLASS.get(),
+                        ArtistryBlocks.LIGHT_GRAY_FROSTED_GLASS.get(),
+                        ArtistryBlocks.GRAY_FROSTED_GLASS.get(),
+                        ArtistryBlocks.BLACK_FROSTED_GLASS.get(),
+                        ArtistryBlocks.BROWN_FROSTED_GLASS.get(),
+                        ArtistryBlocks.RED_FROSTED_GLASS.get(),
+                        ArtistryBlocks.ORANGE_FROSTED_GLASS.get(),
+                        ArtistryBlocks.YELLOW_FROSTED_GLASS.get(),
+                        ArtistryBlocks.LIME_FROSTED_GLASS.get(),
+                        ArtistryBlocks.GREEN_FROSTED_GLASS.get(),
+                        ArtistryBlocks.CYAN_FROSTED_GLASS.get(),
+                        ArtistryBlocks.LIGHT_BLUE_FROSTED_GLASS.get(),
+                        ArtistryBlocks.BLUE_FROSTED_GLASS.get(),
+                        ArtistryBlocks.PURPLE_FROSTED_GLASS.get(),
+                        ArtistryBlocks.MAGENTA_FROSTED_GLASS.get(),
+                        ArtistryBlocks.PINK_FROSTED_GLASS.get(),
+
+                        ArtistryBlocks.PAINTED_POLISHED_CALCITE.get(),
+                        ArtistryBlocks.PAINTED_CALCITE_BRICKS.get(),
+                        ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS.get()
                 );
+
+        this.tag(ArtistryTags.Blocks.FROSTED_GLASS)
+                .add(
+                        ArtistryBlocks.WHITE_FROSTED_GLASS.get(),
+                        ArtistryBlocks.LIGHT_GRAY_FROSTED_GLASS.get(),
+                        ArtistryBlocks.GRAY_FROSTED_GLASS.get(),
+                        ArtistryBlocks.BLACK_FROSTED_GLASS.get(),
+                        ArtistryBlocks.BROWN_FROSTED_GLASS.get(),
+                        ArtistryBlocks.RED_FROSTED_GLASS.get(),
+                        ArtistryBlocks.ORANGE_FROSTED_GLASS.get(),
+                        ArtistryBlocks.YELLOW_FROSTED_GLASS.get(),
+                        ArtistryBlocks.LIME_FROSTED_GLASS.get(),
+                        ArtistryBlocks.GREEN_FROSTED_GLASS.get(),
+                        ArtistryBlocks.CYAN_FROSTED_GLASS.get(),
+                        ArtistryBlocks.LIGHT_BLUE_FROSTED_GLASS.get(),
+                        ArtistryBlocks.BLUE_FROSTED_GLASS.get(),
+                        ArtistryBlocks.PURPLE_FROSTED_GLASS.get(),
+                        ArtistryBlocks.MAGENTA_FROSTED_GLASS.get(),
+                        ArtistryBlocks.PINK_FROSTED_GLASS.get()
+                );
+        this.tag(Tags.Blocks.GLASS_BLOCKS_CHEAP)
+                .addTag(ArtistryTags.Blocks.FROSTED_GLASS);
+
         this.tag(ArtistryTags.Blocks.WOODEN_TABLES)
                 .add(ArtistryBlocks.OAK_TABLE.get())
                 .add(ArtistryBlocks.SPRUCE_TABLE.get())
@@ -97,6 +142,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(ArtistryBlocks.DEEPSLATE_TABLE.get())
                 .add(ArtistryBlocks.POLISHED_BLACKSTONE_TABLE.get())
                 .add(ArtistryBlocks.TUFF_TABLE.get())
+                .add(ArtistryBlocks.CALCITE_TABLE.get())
         ;
         this.tag(ArtistryTags.Blocks.STRING_LIGHTS)
                 .add(ArtistryBlocks.STRING_LIGHTS.get())

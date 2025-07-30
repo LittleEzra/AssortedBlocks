@@ -8,6 +8,7 @@ import com.feliscape.artistry.data.worldgen.registry.ArtistryTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
@@ -92,6 +93,13 @@ public class ArtistryBlocks {
             .strength(1.5F, 6.0F)));
     //endregion
 
+    public static final DeferredBlock<Block> ROCKY_DIRT = registerBlockWithItem("rocky_dirt",
+            p -> new Block(p
+                    .mapColor(MapColor.STONE)
+                    .strength(1.2F)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+            ));
+
     public static final DeferredBlock<SunsproutBlock> SUNSPROUT = BLOCKS.registerBlock("sunsprout",
             p -> new SunsproutBlock(p
                     .mapColor(MapColor.PLANT)
@@ -140,6 +148,24 @@ public class ArtistryBlocks {
     public static final DeferredBlock<TableBlock> DEEPSLATE_TABLE = registerBlockWithItem("deepslate_table", p -> stoneTable(p, MapColor.DEEPSLATE, SoundType.POLISHED_DEEPSLATE));
     public static final DeferredBlock<TableBlock> POLISHED_BLACKSTONE_TABLE = registerBlockWithItem("polished_blackstone_table", p -> stoneTable(p, MapColor.COLOR_BLACK, SoundType.STONE));
     public static final DeferredBlock<TableBlock> TUFF_TABLE = registerBlockWithItem("tuff_table", p -> stoneTable(p, MapColor.TERRACOTTA_GRAY, SoundType.POLISHED_TUFF));
+    public static final DeferredBlock<TableBlock> CALCITE_TABLE = registerBlockWithItem("calcite_table", p -> stoneTable(p, MapColor.TERRACOTTA_WHITE, SoundType.CALCITE));
+
+    public static final DeferredBlock<FrostedGlassBlock> WHITE_FROSTED_GLASS = frostedGlass(DyeColor.WHITE);
+    public static final DeferredBlock<FrostedGlassBlock> LIGHT_GRAY_FROSTED_GLASS = frostedGlass(DyeColor.LIGHT_GRAY);
+    public static final DeferredBlock<FrostedGlassBlock> GRAY_FROSTED_GLASS = frostedGlass(DyeColor.GRAY);
+    public static final DeferredBlock<FrostedGlassBlock> BLACK_FROSTED_GLASS = frostedGlass(DyeColor.BLACK);
+    public static final DeferredBlock<FrostedGlassBlock> BROWN_FROSTED_GLASS = frostedGlass(DyeColor.BROWN);
+    public static final DeferredBlock<FrostedGlassBlock> RED_FROSTED_GLASS = frostedGlass(DyeColor.RED);
+    public static final DeferredBlock<FrostedGlassBlock> ORANGE_FROSTED_GLASS = frostedGlass(DyeColor.ORANGE);
+    public static final DeferredBlock<FrostedGlassBlock> YELLOW_FROSTED_GLASS = frostedGlass(DyeColor.YELLOW);
+    public static final DeferredBlock<FrostedGlassBlock> LIME_FROSTED_GLASS = frostedGlass(DyeColor.LIME);
+    public static final DeferredBlock<FrostedGlassBlock> GREEN_FROSTED_GLASS = frostedGlass(DyeColor.GREEN);
+    public static final DeferredBlock<FrostedGlassBlock> CYAN_FROSTED_GLASS = frostedGlass(DyeColor.CYAN);
+    public static final DeferredBlock<FrostedGlassBlock> LIGHT_BLUE_FROSTED_GLASS = frostedGlass(DyeColor.LIGHT_BLUE);
+    public static final DeferredBlock<FrostedGlassBlock> BLUE_FROSTED_GLASS = frostedGlass(DyeColor.BLUE);
+    public static final DeferredBlock<FrostedGlassBlock> PURPLE_FROSTED_GLASS = frostedGlass(DyeColor.PURPLE);
+    public static final DeferredBlock<FrostedGlassBlock> MAGENTA_FROSTED_GLASS = frostedGlass(DyeColor.MAGENTA);
+    public static final DeferredBlock<FrostedGlassBlock> PINK_FROSTED_GLASS = frostedGlass(DyeColor.PINK);
 
     public static final DeferredBlock<StringLightsBlock> STRING_LIGHTS = BLOCKS.registerBlock("string_lights",
             p -> new StringLightsBlock(p
@@ -204,6 +230,7 @@ public class ArtistryBlocks {
                     .sound(SoundType.LANTERN)
                     .lightLevel(state -> 15)
                     .noOcclusion()
+                    .noCollission()
                     .pushReaction(PushReaction.DESTROY)
                     ));
 
@@ -267,12 +294,31 @@ public class ArtistryBlocks {
                     .ignitedByLava()
                     .pushReaction(PushReaction.DESTROY)
             ));
+    public static final DeferredBlock<TeardropGrassBlock> TEARDROP_GRASS = registerBlockWithItem("teardrop_grass",
+            p -> new TeardropGrassBlock(p
+                    .mapColor(MapColor.PLANT)
+                    .replaceable()
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .offsetType(BlockBehaviour.OffsetType.XZ)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+            ));
 
-    public static final DeferredBlock<Block> ROCKY_DIRT = registerBlockWithItem("rocky_dirt",
-            p -> new Block(p
-                    .mapColor(MapColor.STONE)
-                    .strength(1.2F)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
+    public static final DeferredBlock<FlowerPotBlock> POTTED_TEARDROP_GRASS = BLOCKS.registerBlock("potted_teardrop_grass",
+            p -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, TEARDROP_GRASS, p
+                    .instabreak()
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)));
+
+
+    public static final DeferredBlock<PaintedPotBlock> PAINTED_POT = BLOCKS.registerBlock("painted_pot",
+            p -> new PaintedPotBlock(p
+                    .mapColor(MapColor.TERRACOTTA_RED)
+                    .strength(0.0F, 0.0F)
+                    .pushReaction(PushReaction.DESTROY)
+                    .noOcclusion()
             ));
 
     //region Calcite
@@ -427,6 +473,33 @@ public class ArtistryBlocks {
                     .strength(0.75F)
             ));
 
+
+
+    public static final DeferredBlock<Block> PAINTED_POLISHED_CALCITE = registerBlockWithItem("painted_polished_calcite",
+            p -> new Block(p
+                    .mapColor(MapColor.TERRACOTTA_WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> PAINTED_CALCITE_BRICKS = registerBlockWithItem("painted_calcite_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.LAPIS)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> PAINTED_SMALL_CALCITE_BRICKS = registerBlockWithItem("painted_small_calcite_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.LAPIS)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+
     //endregion
 
     //region Aspen Wood
@@ -558,6 +631,18 @@ public class ArtistryBlocks {
                     .pushReaction(PushReaction.DESTROY)));
     //endregion
 
+    private static DeferredBlock<FrostedGlassBlock> frostedGlass(DyeColor color) {
+        return registerBlockWithItem(color.getName() + "_frosted_glass", p -> new FrostedGlassBlock(color, p
+                .mapColor(color)
+                .instrument(NoteBlockInstrument.HAT)
+                .strength(0.3F)
+                .sound(SoundType.GLASS)
+                .noOcclusion()
+                .isValidSpawn(Blocks::never)
+                .isRedstoneConductor(ArtistryBlocks::never)
+                .isSuffocating(ArtistryBlocks::never)
+        ));
+    }
 
     private static TableBlock table(BlockBehaviour.Properties properties, MapColor mapColor) {
         return ArtistryBlocks.table(properties, mapColor, SoundType.WOOD);

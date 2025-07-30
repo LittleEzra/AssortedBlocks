@@ -13,6 +13,7 @@ public class ArtistryTags {
         public static final TagKey<Block> WOODEN_TABLES = create("wooden_tables");
         public static final TagKey<Block> TABLES = create("tables");
         public static final TagKey<Block> STRING_LIGHTS = create("string_lights");
+        public static final TagKey<Block> FROSTED_GLASS = create("frosted_glass");
 
         private static TagKey<Block> create(String name){
             return TagKey.create(Registries.BLOCK, Artistry.location(name));
@@ -29,6 +30,7 @@ public class ArtistryTags {
         public static final TagKey<Item> CAN_APPLY_MOSS = create("can_apply_moss");
         public static final TagKey<Item> WOODEN_TABLES = create("wooden_tables");
         public static final TagKey<Item> TABLES = create("tables");
+        public static final TagKey<Item> FROSTED_GLASS = create("frosted_glass");
 
         private static TagKey<Item> create(String name){
             return TagKey.create(Registries.ITEM, Artistry.location(name));

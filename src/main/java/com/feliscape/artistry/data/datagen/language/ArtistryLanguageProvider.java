@@ -1,12 +1,15 @@
 package com.feliscape.artistry.data.datagen.language;
 
 import com.feliscape.artistry.Artistry;
+import com.feliscape.artistry.data.pot.PaintedPotDecoration;
+import net.minecraft.Util;
 import net.minecraft.core.Holder;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
@@ -22,6 +25,16 @@ public abstract class ArtistryLanguageProvider extends LanguageProvider {
     protected void addBlockAndItem(Supplier<? extends Block> key, String name) {
         this.addBlock(key, name);
         this.addItem(key.get()::asItem, name);
+    }
+
+    protected void addPaintedPotBase(DyeColor color, String name) {
+        add("artistry.painted_pot.base." + color.getName(), name);
+    }
+    protected void addPaintedPotTrim(ResourceKey<PaintedPotDecoration> key, String name) {
+        add(Util.makeDescriptionId("painted_pot.trim", key.location()), name);
+    }
+    protected void addPaintedPotPattern(ResourceKey<PaintedPotDecoration> key, String name) {
+        add(Util.makeDescriptionId("painted_pot.pattern", key.location()), name);
     }
 
     protected void addItemTooltip(Supplier<? extends Item> key, String name) {

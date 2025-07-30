@@ -3,6 +3,7 @@ package com.feliscape.artistry.registry;
 import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.content.entity.ModBoat;
 import com.feliscape.artistry.content.item.ModBoatItem;
+import com.feliscape.artistry.content.pot.PaintedPotDecorations;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.*;
 import net.neoforged.bus.api.IEventBus;
@@ -11,6 +12,10 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ArtistryItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Artistry.MOD_ID);
+
+    public static final DeferredItem<BlockItem> PAINTED_POT = ITEMS.registerItem("painted_pot",
+            p -> new BlockItem(ArtistryBlocks.PAINTED_POT.get(), p
+                    .component(PaintedPotDecorations.type(), PaintedPotDecorations.EMPTY)));
 
     public static final DeferredItem<ItemNameBlockItem> SUNBURST_VINES = ITEMS.registerItem("sunburst_vines",
             p -> new ItemNameBlockItem(ArtistryBlocks.SUNBURST_VINES.get(), p));

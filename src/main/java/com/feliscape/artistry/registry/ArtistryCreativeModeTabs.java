@@ -7,6 +7,7 @@ import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -47,11 +48,11 @@ public class ArtistryCreativeModeTabs {
             Set<Item> exclusions = new ReferenceOpenHashSet<>();
 
             // Items to exclude from all tabs
-            List<DeferredItem<?>> simpleExclusions = List.of(
-
+            List<ItemLike> simpleExclusions = List.of(
+                ArtistryBlocks.PAINTED_POT
             );
 
-            for (DeferredItem<?> entry : simpleExclusions) {
+            for (ItemLike entry : simpleExclusions) {
                 exclusions.add(entry.asItem());
             }
 

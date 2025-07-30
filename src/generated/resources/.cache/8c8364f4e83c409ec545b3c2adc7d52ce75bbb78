@@ -1,7 +1,8 @@
-// 1.21.1	2025-06-08T18:29:08.0219458	Tags for minecraft:item mod id vanilla
+// 1.21.1	2025-07-29T09:11:59.1151154	Tags for minecraft:item mod id vanilla
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/item/aspen_logs.json
 13994a7e7e704c24c0cebec3e302b41487842bfa data/artistry/tags/item/can_apply_moss.json
-91d2c47c016f49d48843479d7c62a96b210a3b12 data/artistry/tags/item/tables.json
+3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/item/frosted_glass.json
+01a4149b278fed1965636e639f1fcbcb4453d95c data/artistry/tags/item/tables.json
 1bba110c9fc802713fa42d07e7f1b8bd8ecec799 data/artistry/tags/item/wooden_tables.json
 095de7ea392c97d9f9704510e2daf4ec0aadd87e data/c/tags/item/stripped_logs.json
 1b45115bddb91a660f9e0846f96eb9a3cf3d05c4 data/c/tags/item/stripped_woods.json
