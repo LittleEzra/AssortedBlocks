@@ -1,25 +1,16 @@
+<img width="728" height="160" alt="изображение" src="https://github.com/user-attachments/assets/4a7d885b-2c1d-4b7d-b4a9-969830b59ed0" />
 
-Installation information
-=======
+Artistry adds generally minor features in the form of blocks that complement the base game, ranging from extensions to pre-existing block palettes to entirely new block sets!
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+And don't worry - the mod doesn't alter world generation at all, so it can be added at any point in a playthrough.
+## Features
+### Aspen Trees
+Aspen Saplings can be crafted by surrounding any sapling with eight gold nuggets. They can then be grown and propagated just like any other sapling.
+Aspen Trees are similar to Birch, though their leaves are a vibrant yellow color.
+### Mossy and Cracked Bricks
+Crafted just like Mossy and Cracked Stone Bricks, these blocks help to add more variation to brick walls.
+### Tables
+Tables are a simple piece of furniture made out of stone or any wood type.
+Blooming Vines and Sunsprouts
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
-
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
-
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+These are two new plants added to what the Sniffer can dig up. Blooming Vines can be spread similar to Glow Lichen, while Sunsprouts grow into Sunburst Vines, which can be bonemealed to get more.
