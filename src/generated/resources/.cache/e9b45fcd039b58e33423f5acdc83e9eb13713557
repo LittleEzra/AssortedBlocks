@@ -1,6 +1,9 @@
-// 1.21.1	2025-07-29T09:11:59.1514219	Tags for minecraft:block mod id artistry
+// 1.21.1	2025-07-31T10:58:32.8798556	Tags for minecraft:block mod id artistry
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/block/aspen_logs.json
 3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/block/frosted_glass.json
+2b01c878f7df076cc4c1411bf14299f80461cbce data/artistry/tags/block/sniffer_diggable/has_aspen_plants.json
+158a4877fad0ee79d00e8c9f641ad661e822cdb5 data/artistry/tags/block/sniffer_diggable/has_lush_plants.json
+c1a14eff6d6ae90bd58c7ccdab212291e17d5e74 data/artistry/tags/block/sniffer_diggable/has_teardrop_grass.json
 c3b39af3db5bc3768608a47a706098d450692fe3 data/artistry/tags/block/string_lights.json
 01a4149b278fed1965636e639f1fcbcb4453d95c data/artistry/tags/block/tables.json
 1bba110c9fc802713fa42d07e7f1b8bd8ecec799 data/artistry/tags/block/wooden_tables.json
@@ -25,7 +28,7 @@ c2413c0ce4aec075067c5e4a3473db7c6be09e41 data/minecraft/tags/block/overworld_car
 72a09d8bd065bc541d6ebaf2cee46366bd5476fb data/minecraft/tags/block/planks.json
 eeec39ca4cb20e06e0ab24f9ea72443deadfc030 data/minecraft/tags/block/saplings.json
 1f79e642c7b6eaa66a879db3a0b7f379fbdf771e data/minecraft/tags/block/slabs.json
-16af1bd790600979d47a7694c4cec68d5c05b5bc data/minecraft/tags/block/sniffer_diggable_block.json
+729e133b86abd15ff91a981e92e588316a449c62 data/minecraft/tags/block/sniffer_diggable_block.json
 cb6bf083bf6c078d1f6ce9b4ad3c12205e09d515 data/minecraft/tags/block/stairs.json
 bd8989fdc1712ae18a44bf304694b36084aaf089 data/minecraft/tags/block/standing_signs.json
 27dc5165a45a02cb2b16c7eba2c8b98b910a5404 data/minecraft/tags/block/sword_efficient.json

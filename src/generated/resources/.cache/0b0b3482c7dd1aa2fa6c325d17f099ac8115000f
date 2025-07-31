@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-29T16:51:00.8315465	Item Models: artistry
+// 1.21.1	2025-07-31T14:03:31.7970827	Item Models: artistry
 59b250cc8214b86eac1ffb0e41d7d68bec96cde0 assets/artistry/models/item/amethyst_stars.json
 73fe7333d37ecde4ea79ba093344f9bc4ccda762 assets/artistry/models/item/aspen_boat.json
 9d6e1f6caef8d1fdac13bf1b5333bda820630c89 assets/artistry/models/item/aspen_button.json
@@ -22,6 +22,7 @@ becd9d35161297236e46319eb33d79d9cc6b4a96 assets/artistry/models/item/aspen_wood.
 b49dd61e0715bffcdb8be282cb570f49aa889b8c assets/artistry/models/item/calcite_slab.json
 ea208c24655cee91cfb37bd4ed9889e2087785bb assets/artistry/models/item/calcite_stairs.json
 a85f076ec716e06c9dba328f508dbf2fde46ae6d assets/artistry/models/item/calcite_wall.json
+183a4163992ad6bfca6c65eb9b47d6e60e264888 assets/artistry/models/item/fern_seed.json
 571c52d66c1e2f5def0453cb94e1ce676debab1d assets/artistry/models/item/flat_light.json
 d0a596b0b38f0561613761b3a9b28c4d3026061f assets/artistry/models/item/large_lantern.json
 b6b1aa7b7d340cf14a5ee7c77397dab55269a35c assets/artistry/models/item/large_soul_lantern.json
@@ -38,7 +39,7 @@ d78d3fcd23e7c03075db2983c9e3be21d704042d assets/artistry/models/item/polished_ca
 f8c40cc79133a43fb09b156cfa4f311022f95b64 assets/artistry/models/item/smooth_calcite_slab.json
 80c93b0241fabc6545eeff994bc526db26ce7238 assets/artistry/models/item/smooth_calcite_stairs.json
 b835097adb96e67049c4319e6e678db7b5e29999 assets/artistry/models/item/sparkler.json
-ce5f2305f62e37518279e91930bbd4fc43c798d8 assets/artistry/models/item/spark_fountain.json
+dd876da894f20653e057d66d89c770e32816806d assets/artistry/models/item/spark_fountain.json
 a6101b855d8f832875b0c5f5637086c52e1cf638 assets/artistry/models/item/stone_pillar.json
 e589eeae4fc95fc4cbef9f6e5ced83409ce37ecf assets/artistry/models/item/stone_tile_slab.json
 a511bca21f33d628342a6e1ac1d698576a8ffc7d assets/artistry/models/item/stone_tile_stairs.json

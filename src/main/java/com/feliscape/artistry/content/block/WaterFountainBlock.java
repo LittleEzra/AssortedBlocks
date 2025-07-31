@@ -1,6 +1,5 @@
 package com.feliscape.artistry.content.block;
 
-import com.feliscape.artistry.content.block.entity.SparkFountainBlockEntity;
 import com.feliscape.artistry.content.block.entity.WaterFountainBlockEntity;
 import com.feliscape.artistry.registry.ArtistryBlockEntityTypes;
 import com.mojang.serialization.MapCodec;

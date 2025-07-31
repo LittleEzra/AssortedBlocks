@@ -20,6 +20,7 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.ASPEN_CHEST_BOAT, "Aspen Boat with Chest");
         this.addItem(ArtistryItems.SUNBURST_VINES, "Sunburst Vines");
         this.addItem(ArtistryItems.SUNSPROUT, "Sunsprout");
+        this.addItem(ArtistryItems.FERN_SEED, "Fern Seed");
 
         this.addBlock(ArtistryBlocks.MOSSY_BRICKS, "Mossy Bricks");
         this.addBlock(ArtistryBlocks.CRACKED_BRICKS, "Cracked Bricks");
@@ -42,6 +43,7 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
 
         this.addBlock(ArtistryBlocks.BLOOMING_VINES, "Blooming Vines");
         this.addBlock(ArtistryBlocks.LUSH_FERN, "Lush Fern");
+        this.addBlock(ArtistryBlocks.LUSH_FERN_CROP, "Lush Fern");
         this.addBlock(ArtistryBlocks.TEARDROP_GRASS, "Teardrop Grass");
         this.addBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, "Potted Teardrop Grass");
 

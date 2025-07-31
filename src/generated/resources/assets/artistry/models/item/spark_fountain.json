@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "artistry:item/spark_fountain"
+    "layer0": "artistry:item/spark_fountain",
+    "layer1": "artistry:item/spark_fountain_overlay"
   }
 }

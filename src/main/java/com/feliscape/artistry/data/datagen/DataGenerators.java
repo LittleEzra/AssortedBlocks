@@ -5,6 +5,7 @@ import com.feliscape.artistry.data.datagen.language.ArtistryDeDeProvider;
 import com.feliscape.artistry.data.datagen.language.ArtistryEnUsProvider;
 import com.feliscape.artistry.data.datagen.loot.ArtistryBlockLootTableProvider;
 import com.feliscape.artistry.data.datagen.loot.ArtistryGlobalLootModifierProvider;
+import com.feliscape.artistry.data.datagen.loot.ArtistryLootProvider;
 import com.feliscape.artistry.data.datagen.map.ArtistryDataMapProvider;
 import com.feliscape.artistry.data.datagen.model.ArtistryBlockModelProvider;
 import com.feliscape.artistry.data.datagen.model.ArtistryItemModelProvider;
@@ -52,8 +53,7 @@ public class DataGenerators {
 
         generator.addProvider(event.includeServer(), new ArtistryGlobalLootModifierProvider(packOutput, lookupProvider));
 
-        generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(),
-                List.of(new LootTableProvider.SubProviderEntry(ArtistryBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+        generator.addProvider(true, new ArtistryLootProvider(packOutput, lookupProvider));
 
         generator.addProvider(true, new ArtistryBlockModelProvider(packOutput, existingFileHelper));
         generator.addProvider(true, new ArtistryItemModelProvider(packOutput, existingFileHelper));

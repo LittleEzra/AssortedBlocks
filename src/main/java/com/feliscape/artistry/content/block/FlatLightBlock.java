@@ -24,12 +24,12 @@ public class FlatLightBlock extends Block implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
 
-    private static final VoxelShape UP = Block.box(5, 0, 5, 11, 1, 11);
-    private static final VoxelShape DOWN = Block.box(5, 15, 5, 11, 16, 11);
+    private static final VoxelShape UP =    Block.box(5, 0, 5, 11, 1, 11);
+    private static final VoxelShape DOWN =  Block.box(5, 15, 5, 11, 16, 11);
     private static final VoxelShape NORTH = Block.box(5, 5, 15, 11, 11, 16);
-    private static final VoxelShape EAST = Block.box(0, 5, 5, 1, 11, 11);
+    private static final VoxelShape EAST =  Block.box(0, 5, 5, 1, 11, 11);
     private static final VoxelShape SOUTH = Block.box(5, 5, 0, 11, 11, 1);
-    private static final VoxelShape WEST = Block.box(15, 5, 5, 16, 11, 11);
+    private static final VoxelShape WEST =  Block.box(15, 5, 5, 16, 11, 11);
 
     public FlatLightBlock(Properties properties) {
         super(properties);

@@ -254,7 +254,7 @@ public class ArtistryBlocks {
                     .pushReaction(PushReaction.DESTROY)
             ));
 
-    public static final DeferredBlock<SparkFountainBlock> SPARK_FOUNTAIN = registerBlockWithItem("spark_fountain",
+    public static final DeferredBlock<SparkFountainBlock> SPARK_FOUNTAIN = BLOCKS.registerBlock("spark_fountain",
             p -> new SparkFountainBlock(p
                     .mapColor(MapColor.COLOR_BLUE)
                     .instabreak()
@@ -292,6 +292,15 @@ public class ArtistryBlocks {
                     .sound(SoundType.GRASS)
                     .offsetType(BlockBehaviour.OffsetType.XZ)
                     .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+    public static final DeferredBlock<LushFernCropBlock> LUSH_FERN_CROP = BLOCKS.registerBlock("lush_fern_crop",
+            p -> new LushFernCropBlock(p
+                    .mapColor(MapColor.PLANT)
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+                    .sound(SoundType.CROP)
                     .pushReaction(PushReaction.DESTROY)
             ));
     public static final DeferredBlock<TeardropGrassBlock> TEARDROP_GRASS = registerBlockWithItem("teardrop_grass",

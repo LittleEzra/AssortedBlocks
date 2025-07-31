@@ -49,6 +49,7 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.MOSSY_STONE_PILLAR.get());
 
         dropOther(ArtistryBlocks.SUNSPROUT.get(), ArtistryItems.SUNSPROUT);
+        dropOther(ArtistryBlocks.LUSH_FERN_CROP.get(), ArtistryItems.FERN_SEED);
         this.add(ArtistryBlocks.SUNBURST_VINES.get(), BlockLootSubProvider::createShearsOnlyDrop);
         this.add(ArtistryBlocks.SUNBURST_VINES_PLANT.get(), BlockLootSubProvider::createShearsOnlyDrop);
 
@@ -107,7 +108,7 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.SPARKLER.get());
         this.add(ArtistryBlocks.AMETHYST_STARS.get(), this::createMultifaceBlockDrops);
 
-        this.dropSelf(ArtistryBlocks.SPARK_FOUNTAIN.get());
+        this.add(ArtistryBlocks.SPARK_FOUNTAIN.get(), this::createSparkFountain);
         this.dropSelf(ArtistryBlocks.WATER_FOUNTAIN.get());
 
         this.dropSelf(ArtistryBlocks.ROCKY_DIRT.get());
@@ -190,6 +191,16 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
                                         )
                                 )
                 );
+    }
+    private LootTable.Builder createSparkFountain(Block block) {
+        return LootTable.lootTable().withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0F)).add(
+                                LootItem.lootTableItem(block)
+                                        .apply(
+                                                CopyComponentsFunction.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY)
+                                                        .include(DataComponents.DYED_COLOR)
+                                        )
+                ));
     }
 
     protected LootTable.Builder createWallStringLights(Block block) {

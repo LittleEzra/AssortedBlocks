@@ -20,6 +20,7 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.ASPEN_CHEST_BOAT, "Espenholztruhenboot");
         this.addItem(ArtistryItems.SUNBURST_VINES, "Sonnenscheinranken");
         this.addItem(ArtistryItems.SUNSPROUT, "Sonnensprosse");
+        this.addItem(ArtistryItems.FERN_SEED, "Farnsamen");
 
         this.addBlock(ArtistryBlocks.MOSSY_BRICKS, "Bemooste Ziegelsteine");
         this.addBlock(ArtistryBlocks.CRACKED_BRICKS, "Rissige Ziegelsteine");
@@ -42,6 +43,7 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
 
         this.addBlock(ArtistryBlocks.BLOOMING_VINES, "Blühende Ranken");
         this.addBlock(ArtistryBlocks.LUSH_FERN, "Üppiger Farn");
+        this.addBlock(ArtistryBlocks.LUSH_FERN_CROP, "Üppiger Farn");
         this.addBlock(ArtistryBlocks.TEARDROP_GRASS, "Tränengras");
         this.addBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, "Eingetopftes Tränengras");
 

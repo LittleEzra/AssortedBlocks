@@ -398,6 +398,10 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("G")
                 .unlockedBy(getHasName(Blocks.BAMBOO), has(Blocks.BAMBOO))
                 .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ArtistryBlocks.SPARK_FOUNTAIN)
+                .requires(ArtistryBlocks.SPARK_FOUNTAIN)
+                .unlockedBy(getHasName(ArtistryBlocks.SPARK_FOUNTAIN), has(ArtistryBlocks.SPARK_FOUNTAIN))
+                .save(recipeOutput, "spark_fountain_undyeing");
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.WATER_FOUNTAIN)
                 .define('#', Tags.Items.STONES)
                 .define('B', Items.WATER_BUCKET)

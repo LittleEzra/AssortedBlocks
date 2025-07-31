@@ -2,6 +2,7 @@ package com.feliscape.artistry.content.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.Vec3i;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
@@ -17,27 +18,44 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class SparklerBlock extends Block implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    private static final VoxelShape SHAPE = Block.box(6.0, 0.0, 6.0, 10.0, 11.0, 10.0);
+    public static final DirectionProperty FACING = BlockStateProperties.FACING;
+    private static final VoxelShape UP =    Block.box(6, 0, 6, 10, 11, 10);
+    private static final VoxelShape DOWN =  Block.box(6, 5, 6, 10, 16, 10);
+    private static final VoxelShape NORTH = Block.box(6, 6, 5, 10, 10, 16);
+    private static final VoxelShape EAST =  Block.box(0, 6, 6, 11, 10, 10);
+    private static final VoxelShape SOUTH = Block.box(6, 6, 0, 10, 10, 11);
+    private static final VoxelShape WEST =  Block.box(5, 6, 6, 16, 10, 10);
+    //private static final VoxelShape SHAPE = Block.box(6, 0, 6, 10, 11, 10);
 
     public SparklerBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(
-                this.stateDefinition
-                        .any()
-                        .setValue(WATERLOGGED, Boolean.valueOf(false))
+                this.stateDefinition.any()
+                        .setValue(WATERLOGGED, Boolean.FALSE)
+                        .setValue(FACING, Direction.NORTH)
         );
     }
 
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return SHAPE;
+        Direction direction = state.getValue(FACING);
+        return switch (direction) {
+            case NORTH -> NORTH;
+            case SOUTH -> SOUTH;
+            case EAST -> EAST;
+            case WEST -> WEST;
+            case DOWN -> DOWN;
+            default -> UP;
+        };
     }
 
     @Override
@@ -46,9 +64,14 @@ public class SparklerBlock extends Block implements SimpleWaterloggedBlock {
         int y = blockPos.getY();
         int z = blockPos.getZ();
         BlockPos.MutableBlockPos mutableBlockPos = new BlockPos.MutableBlockPos();
+        Direction d = state.getValue(FACING);
 
         for (int i = 0; i < 4; i++) {
-            mutableBlockPos.set(x + Mth.nextInt(random, -10, 10), y + random.nextInt(-2, 10), z + Mth.nextInt(random, -10, 10));
+            Vec3i normal = d.getNormal();
+            int relativeX = normal.getX() != 0 ? normal.getX() * random.nextInt(-2, 10) : Mth.nextInt(random, -10, 10);
+            int relativeY = normal.getY() != 0 ? normal.getY() * random.nextInt(-2, 10) : Mth.nextInt(random, -10, 10);
+            int relativeZ = normal.getZ() != 0 ? normal.getZ() * random.nextInt(-2, 10) : Mth.nextInt(random, -10, 10);
+            mutableBlockPos.set(x + relativeX, y + relativeY, z + relativeZ);
             BlockState blockstate = level.getBlockState(mutableBlockPos);
             if (!blockstate.isCollisionShapeFullBlock(level, mutableBlockPos)) {
                 level.addParticle(
@@ -67,8 +90,10 @@ public class SparklerBlock extends Block implements SimpleWaterloggedBlock {
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
-        boolean flag = fluidstate.getType() == Fluids.WATER;
-        return super.getStateForPlacement(context).setValue(WATERLOGGED, flag);
+        boolean inWater = fluidstate.getType() == Fluids.WATER;
+        return super.getStateForPlacement(context
+                ).setValue(WATERLOGGED, inWater)
+                .setValue(FACING, context.getClickedFace());
     }
 
     @Override
@@ -84,18 +109,20 @@ public class SparklerBlock extends Block implements SimpleWaterloggedBlock {
             level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
         }
 
-        return direction == Direction.DOWN && !this.canSurvive(state, level, pos)
+        return !this.canSurvive(state, level, pos)
                 ? Blocks.AIR.defaultBlockState()
                 : super.updateShape(state, direction, neighborState, level, pos, neighborPos);
     }
 
     @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos blockPos) {
-        return Block.canSupportCenter(level, blockPos.below(), Direction.UP);
+        Direction direction = state.getValue(FACING);
+        BlockPos relative = blockPos.relative(direction.getOpposite());
+        return level.getBlockState(relative).isFaceSturdy(level, relative, direction);
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(WATERLOGGED);
+        builder.add(WATERLOGGED, FACING);
     }
 }

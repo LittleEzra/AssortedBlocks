@@ -27,6 +27,7 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         blockItemSprite(ArtistryBlocks.ASPEN_DOOR);
 
         simpleItem(ArtistryItems.SUNSPROUT);
+        simpleItem(ArtistryItems.FERN_SEED);
         itemWithBlockTexture(ArtistryItems.SUNBURST_VINES);
         simpleItem(ArtistryItems.STRING_LIGHTS);
 
@@ -57,7 +58,7 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         blockItemSprite(ArtistryBlocks.FLAT_LIGHT);
         generatedBlockItem(ArtistryBlocks.SPARKLER);
         generatedBlockItem(ArtistryBlocks.AMETHYST_STARS);
-        blockItemSprite(ArtistryBlocks.SPARK_FOUNTAIN);
+        blockItemSpriteLayered(ArtistryBlocks.SPARK_FOUNTAIN);
 
         blockItemSprite(ArtistryBlocks.BLOOMING_VINES);
         blockItemSprite(ArtistryBlocks.LUSH_FERN);
@@ -86,23 +87,30 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
 
     private ItemModelBuilder simpleItem(Supplier<? extends Item> item){
         return withExistingParent(getLocation(item.get()).getPath(),
-                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
-                Artistry.location("item/" + getLocation(item.get()).getPath()));
+                ResourceLocation.withDefaultNamespace("item/generated"))
+                .texture("layer0", Artistry.location("item/" + getLocation(item.get()).getPath()));
+    }
+    private ItemModelBuilder simpleDoubleLayered(Supplier<? extends Item> item){
+        return withExistingParent(getLocation(item.get()).getPath(),
+                ResourceLocation.withDefaultNamespace("item/generated"))
+                .texture("layer0", Artistry.location("item/" + getLocation(item.get()).getPath()))
+                .texture("layer1", Artistry.location("item/" + getLocation(item.get()).getPath() + "_overlay"))
+                ;
     }
     private ItemModelBuilder handheldItem(Supplier<? extends Item> item){
         return withExistingParent(getLocation(item.get()).getPath(),
-                ResourceLocation.withDefaultNamespace("item/handheld")).texture("layer0",
-                Artistry.location("item/" + getLocation(item.get()).getPath()));
+                ResourceLocation.withDefaultNamespace("item/handheld"))
+                .texture("layer0", Artistry.location("item/" + getLocation(item.get()).getPath()));
     }
     private ItemModelBuilder rotatedHandheldItem(Supplier<? extends Item> item){
         return withExistingParent(getLocation(item.get()).getPath(),
-                Artistry.location("item/rotated_handheld")).texture("layer0",
-                Artistry.location("item/" + getLocation(item.get()).getPath()));
+                Artistry.location("item/rotated_handheld"))
+                .texture("layer0", Artistry.location("item/" + getLocation(item.get()).getPath()));
     }
     private ItemModelBuilder itemWithBlockTexture(Supplier<? extends Item> item){
         return withExistingParent(getLocation(item.get()).getPath(),
-                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
-                Artistry.location("block/" + getLocation(item.get()).getPath()));
+                ResourceLocation.withDefaultNamespace("item/generated"))
+                .texture("layer0", Artistry.location("block/" + getLocation(item.get()).getPath()));
     }
 
     public void manualBlockItem(Supplier<? extends Block> block) {
@@ -138,6 +146,13 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         return withExistingParent(getBlockLocation(block.get()).getPath(),
                 ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
                 Artistry.location("item/" + getBlockLocation(block.get()).getPath()));
+    }
+    private ItemModelBuilder blockItemSpriteLayered(Supplier<? extends Block> block) { // Uses a block instead of item with a unique item texture (Example: Doors or Lanterns)
+        return withExistingParent(getBlockLocation(block.get()).getPath(),
+                ResourceLocation.withDefaultNamespace("item/generated"))
+                .texture("layer0", Artistry.location("item/" + getBlockLocation(block.get()).getPath()))
+                .texture("layer1", Artistry.location("item/" + getBlockLocation(block.get()).getPath()) + "_overlay")
+                ;
     }
     private ItemModelBuilder generatedBlockItem(Supplier<? extends Block> block) { // Uses the texture from textures/block (Example: Saplings or Torches)
         return withExistingParent(getBlockLocation(block.get()).getPath(),

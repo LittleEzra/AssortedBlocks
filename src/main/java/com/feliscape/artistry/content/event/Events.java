@@ -15,11 +15,13 @@ import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 public class Events {
     @EventBusSubscriber(modid = Artistry.MOD_ID, bus = EventBusSubscriber.Bus.GAME)
     public static class GameEvents{
+
         @SubscribeEvent
         public static void rightClickBlock(PlayerInteractEvent.RightClickBlock event){
             Level level = event.getLevel();

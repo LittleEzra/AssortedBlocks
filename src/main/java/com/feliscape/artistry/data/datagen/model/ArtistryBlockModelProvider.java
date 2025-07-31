@@ -43,7 +43,7 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         sunsprout(ArtistryBlocks.SUNSPROUT);
         crossBlockWithRenderType(ArtistryBlocks.SUNBURST_VINES.get(), "cutout");
         crossBlockWithRenderType(ArtistryBlocks.SUNBURST_VINES_PLANT.get(), "cutout");
-        simpleBlock(ArtistryBlocks.SPARKLER.get(), models().getExistingFile(Artistry.location("block/sparkler")));
+        directionalBlock(ArtistryBlocks.SPARKLER.get(), models().getExistingFile(Artistry.location("block/sparkler")));
         amethystStars(ArtistryBlocks.AMETHYST_STARS.get());
 
         simpleBlock(ArtistryBlocks.SPARK_FOUNTAIN.get(), models().getExistingFile(Artistry.location("block/spark_fountain")));
@@ -102,6 +102,7 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
                         models().getExistingFile(Artistry.location("block/lush_fern"))
                 ).buildLast());*/
         simpleBlock(ArtistryBlocks.LUSH_FERN.get(), models().getExistingFile(Artistry.location("block/lush_fern")));
+        lushFernCropBlock(ArtistryBlocks.LUSH_FERN_CROP.get());
         crossBlockWithRenderType(ArtistryBlocks.TEARDROP_GRASS.get(), "cutout");
         pottedCrossPlantBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, Artistry.location("block/potted_teardrop_grass"));
 
@@ -200,6 +201,13 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
                 .renderType("cutout")
                 .texture("plant", plantLocation);
         simpleBlock(block.get(), model);
+    }
+
+    private void lushFernCropBlock(LushFernCropBlock block){
+        VariantBlockStateBuilder builder = getVariantBuilder(block);
+        builder.forAllStates(state -> ConfiguredModel.builder()
+                .modelFile(models().getExistingFile(Artistry.location("block/" + name(block) + "_stage" + state.getValue(LushFernCropBlock.AGE))))
+                .build());
     }
 
     private void largeLantern(Supplier<? extends LargeLanternBlock> block){

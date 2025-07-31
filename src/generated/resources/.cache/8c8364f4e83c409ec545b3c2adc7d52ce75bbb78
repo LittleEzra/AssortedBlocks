@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-29T09:11:59.1151154	Tags for minecraft:item mod id vanilla
+// 1.21.1	2025-07-31T14:03:31.7950466	Tags for minecraft:item mod id vanilla
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/item/aspen_logs.json
 13994a7e7e704c24c0cebec3e302b41487842bfa data/artistry/tags/item/can_apply_moss.json
 3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/item/frosted_glass.json
@@ -8,6 +8,7 @@
 1b45115bddb91a660f9e0846f96eb9a3cf3d05c4 data/c/tags/item/stripped_woods.json
 b2db69008ac5a1cbe34a43d8c9c032f722745dac data/minecraft/tags/item/boats.json
 95720c635f77a097a8df88b0a742618bbdf39fe0 data/minecraft/tags/item/chest_boats.json
+b02690b2f3848859bcde3f4b82ad7f3e0fc49eb5 data/minecraft/tags/item/dyeable.json
 a808b659eb94fbf47b5e5dc911502ecebf90b9a4 data/minecraft/tags/item/hanging_signs.json
 2c4e2b63d7ddfa023501a694b0bb7423512a293e data/minecraft/tags/item/leaves.json
 05936648edde2e2b272c6888a1c9dca6bbfb5784 data/minecraft/tags/item/logs_that_burn.json

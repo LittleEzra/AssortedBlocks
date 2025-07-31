@@ -242,6 +242,7 @@ public class PaintedPotBlockEntity extends BlockEntity implements RandomizableCo
         this.item = ((ItemContainerContents)componentInput.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY)).copyOne();
     }
 
+    @SuppressWarnings("deprecation")
     public void removeComponentsFromTag(CompoundTag tag) {
         super.removeComponentsFromTag(tag);
         tag.remove("layers");

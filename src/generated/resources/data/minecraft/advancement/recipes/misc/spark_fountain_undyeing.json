@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_spark_fountain": {
+      "conditions": {
+        "items": [
+          {
+            "items": "artistry:spark_fountain"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:spark_fountain_undyeing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_spark_fountain"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:spark_fountain_undyeing"
+    ]
+  }
+}

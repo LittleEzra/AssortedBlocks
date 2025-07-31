@@ -6,6 +6,7 @@ import com.feliscape.artistry.registry.ArtistryTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -100,6 +101,24 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         ArtistryBlocks.MAGENTA_FROSTED_GLASS.get(),
                         ArtistryBlocks.PINK_FROSTED_GLASS.get()
                 );
+        this.tag(BlockTags.SNIFFER_DIGGABLE_BLOCK)
+                .add(Blocks.CLAY)
+                .add(Blocks.SAND)
+        ;
+        this.tag(ArtistryTags.Blocks.SNIFFER_HAS_ASPEN_PLANTS)
+                .add(Blocks.PODZOL)
+                .add(Blocks.COARSE_DIRT)
+        ;
+        this.tag(ArtistryTags.Blocks.SNIFFER_HAS_TEARDROP_GRASS)
+                .add(Blocks.MUD)
+                .add(Blocks.MUDDY_MANGROVE_ROOTS)
+                .add(Blocks.CLAY)
+                .add(Blocks.SAND)
+        ;
+        this.tag(ArtistryTags.Blocks.SNIFFER_HAS_LUSH_PLANTS)
+                .add(Blocks.MOSS_BLOCK)
+        ;
+
         this.tag(Tags.Blocks.GLASS_BLOCKS_CHEAP)
                 .addTag(ArtistryTags.Blocks.FROSTED_GLASS);
 

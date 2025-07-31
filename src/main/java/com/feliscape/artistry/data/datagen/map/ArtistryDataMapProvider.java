@@ -24,6 +24,7 @@ public class ArtistryDataMapProvider extends DataMapProvider {
                 .add(ArtistryBlocks.LUSH_FERN.getId(), new Compostable(0.3F), false)
                 .add(ArtistryItems.SUNBURST_VINES.getId(), new Compostable(0.3F), false)
                 .add(ArtistryItems.SUNSPROUT.getId(), new Compostable(0.3F), false)
+                .add(ArtistryItems.FERN_SEED.getId(), new Compostable(0.3F), false)
                 .add(ArtistryBlocks.ASPEN_LEAVES.getId(), new Compostable(0.3F), false)
                 .add(ArtistryBlocks.ASPEN_SAPLING.getId(), new Compostable(0.3F), false)
         ;

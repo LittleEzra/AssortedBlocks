@@ -33,10 +33,14 @@ public class Artistry
         ArtistryBlocks.register(modEventBus);
         ArtistryItems.register(modEventBus);
         ArtistryDataComponents.register(modEventBus);
+
         ArtistryCreativeModeTabs.register(modEventBus);
+
         ArtistryBlockEntityTypes.register(modEventBus);
         ArtistryEntityTypes.register(modEventBus);
+
         ArtistryLootModifiers.register(modEventBus);
+        ArtistryLootConditions.register(modEventBus);
 
         ArtistryParticles.register(modEventBus);
 

@@ -26,6 +26,9 @@ public class ArtistryItemTagGenerator extends ItemTagsProvider {
         this.copy(ArtistryTags.Blocks.TABLES, ArtistryTags.Items.TABLES);
         this.copy(ArtistryTags.Blocks.FROSTED_GLASS, ArtistryTags.Items.FROSTED_GLASS);
 
+        this.tag(ItemTags.DYEABLE)
+                .add(ArtistryBlocks.SPARK_FOUNTAIN.asItem());
+
         this.tag(ItemTags.PLANKS)
                 .add(ArtistryBlocks.ASPEN_PLANKS.asItem());
 
