@@ -1,3 +1,5 @@
-// 1.21.1	2025-07-31T10:58:32.8636306	Data Maps
+// 1.21.1	2025-08-02T10:12:30.7157402	Data Maps
+da91e45ac25a5c24083fd25b1cd71b3abf7dbcef data/neoforge/data_maps/block/oxidizables.json
+cf9b00962bf291cabff7b3c89202dad9d1736a4f data/neoforge/data_maps/block/waxables.json
 7dd2defb5caaef5fb391596fae4403d652434a90 data/neoforge/data_maps/item/compostables.json
 efbb37977c18bd879873febfa6cc03882f9d3056 data/neoforge/data_maps/item/furnace_fuels.json

@@ -1,0 +1,16 @@
+{
+  "values": {
+    "artistry:copper_chain": {
+      "waxed": "artistry:waxed_copper_chain"
+    },
+    "artistry:exposed_copper_chain": {
+      "waxed": "artistry:waxed_exposed_copper_chain"
+    },
+    "artistry:oxidized_copper_chain": {
+      "waxed": "artistry:waxed_oxidized_copper_chain"
+    },
+    "artistry:weathered_copper_chain": {
+      "waxed": "artistry:waxed_weathered_copper_chain"
+    }
+  }
+}

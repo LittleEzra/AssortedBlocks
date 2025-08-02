@@ -167,6 +167,72 @@ public class ArtistryBlocks {
     public static final DeferredBlock<FrostedGlassBlock> MAGENTA_FROSTED_GLASS = frostedGlass(DyeColor.MAGENTA);
     public static final DeferredBlock<FrostedGlassBlock> PINK_FROSTED_GLASS = frostedGlass(DyeColor.PINK);
 
+    public static final DeferredBlock<WeatheringCopperChainBlock> COPPER_CHAIN = registerBlockWithItem("copper_chain",
+            p -> new WeatheringCopperChainBlock(WeatheringCopper.WeatherState.UNAFFECTED, p
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.CHAIN)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<WeatheringCopperChainBlock> EXPOSED_COPPER_CHAIN = registerBlockWithItem("exposed_copper_chain",
+            p -> new WeatheringCopperChainBlock(WeatheringCopper.WeatherState.EXPOSED, p
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.CHAIN)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<WeatheringCopperChainBlock> WEATHERED_COPPER_CHAIN = registerBlockWithItem("weathered_copper_chain",
+            p -> new WeatheringCopperChainBlock(WeatheringCopper.WeatherState.WEATHERED, p
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.CHAIN)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<WeatheringCopperChainBlock> OXIDIZED_COPPER_CHAIN = registerBlockWithItem("oxidized_copper_chain",
+            p -> new WeatheringCopperChainBlock(WeatheringCopper.WeatherState.OXIDIZED, p
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.CHAIN)
+                    .noOcclusion()
+            ));
+
+    public static final DeferredBlock<ChainBlock> WAXED_COPPER_CHAIN = registerBlockWithItem("waxed_copper_chain",
+            p -> new ChainBlock(p
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.CHAIN)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<ChainBlock> WAXED_EXPOSED_COPPER_CHAIN = registerBlockWithItem("waxed_exposed_copper_chain",
+            p -> new ChainBlock(p
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.CHAIN)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<ChainBlock> WAXED_WEATHERED_COPPER_CHAIN = registerBlockWithItem("waxed_weathered_copper_chain",
+            p -> new ChainBlock(p
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.CHAIN)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<ChainBlock> WAXED_OXIDIZED_COPPER_CHAIN = registerBlockWithItem("waxed_oxidized_copper_chain",
+            p -> new ChainBlock(p
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.CHAIN)
+                    .noOcclusion()
+            ));
+
     public static final DeferredBlock<StringLightsBlock> STRING_LIGHTS = BLOCKS.registerBlock("string_lights",
             p -> new StringLightsBlock(p
                     .mapColor(MapColor.COLOR_YELLOW)
@@ -484,6 +550,14 @@ public class ArtistryBlocks {
 
 
 
+    public static final DeferredBlock<Block> PAINTED_SMOOTH_CALCITE = registerBlockWithItem("painted_smooth_calcite",
+            p -> new Block(p
+                    .mapColor(MapColor.TERRACOTTA_WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
     public static final DeferredBlock<Block> PAINTED_POLISHED_CALCITE = registerBlockWithItem("painted_polished_calcite",
             p -> new Block(p
                     .mapColor(MapColor.TERRACOTTA_WHITE)
@@ -507,6 +581,113 @@ public class ArtistryBlocks {
                     .sound(SoundType.CALCITE)
                     .requiresCorrectToolForDrops()
                     .strength(0.75F)
+            ));
+
+    //endregion
+
+    //region Dripstone
+
+
+    public static final DeferredBlock<StairBlock> DRIPSTONE_STAIRS = registerBlockWithItem("dripstone_stairs",
+            p -> new StairBlock(Blocks.DRIPSTONE_BLOCK.defaultBlockState(), p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 1.0F)
+            ));
+    public static final DeferredBlock<SlabBlock> DRIPSTONE_SLAB = registerBlockWithItem("dripstone_slab",
+            p -> new SlabBlock(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 1.0F)
+            ));
+    public static final DeferredBlock<WallBlock> DRIPSTONE_WALL = registerBlockWithItem("dripstone_wall",
+            p -> new WallBlock(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 1.0F)
+            ));
+
+    public static final DeferredBlock<Block> POLISHED_DRIPSTONE = registerBlockWithItem("polished_dripstone",
+            p -> new Block(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 1.0F)
+            ));
+    public static final DeferredBlock<StairBlock> POLISHED_DRIPSTONE_STAIRS = registerBlockWithItem("polished_dripstone_stairs",
+            p -> new StairBlock(ArtistryBlocks.POLISHED_DRIPSTONE.get().defaultBlockState(), p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 1.0F)
+            ));
+    public static final DeferredBlock<SlabBlock> POLISHED_DRIPSTONE_SLAB = registerBlockWithItem("polished_dripstone_slab",
+            p -> new SlabBlock(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 1.0F)
+            ));
+    public static final DeferredBlock<WallBlock> POLISHED_DRIPSTONE_WALL = registerBlockWithItem("polished_dripstone_wall",
+            p -> new WallBlock(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 1.0F)
+            ));
+
+
+    public static final DeferredBlock<Block> DRIPSTONE_BRICKS = registerBlockWithItem("dripstone_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 1.0F)
+            ));
+
+    public static final DeferredBlock<StairBlock> DRIPSTONE_BRICK_STAIRS = registerBlockWithItem("dripstone_brick_stairs",
+            p -> new StairBlock(ArtistryBlocks.DRIPSTONE_BRICKS.get().defaultBlockState(), p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 1.0F)
+            ));
+    public static final DeferredBlock<SlabBlock> DRIPSTONE_BRICK_SLAB = registerBlockWithItem("dripstone_brick_slab",
+            p -> new SlabBlock(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 1.0F)
+            ));
+    public static final DeferredBlock<WallBlock> DRIPSTONE_BRICK_WALL = registerBlockWithItem("dripstone_brick_wall",
+            p -> new WallBlock(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 1.0F)
+            ));
+
+    public static final DeferredBlock<Block> CHISELED_DRIPSTONE = registerBlockWithItem("chiseled_dripstone",
+            p -> new Block(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DRIPSTONE_BLOCK)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 1.0F)
             ));
 
     //endregion

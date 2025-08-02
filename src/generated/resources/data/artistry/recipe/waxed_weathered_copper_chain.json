@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:waxed_weathered_copper"
+    },
+    "|": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "|",
+    "#",
+    "|"
+  ],
+  "result": {
+    "count": 8,
+    "id": "artistry:waxed_weathered_copper_chain"
+  }
+}

@@ -31,6 +31,16 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         itemWithBlockTexture(ArtistryItems.SUNBURST_VINES);
         simpleItem(ArtistryItems.STRING_LIGHTS);
 
+        blockItemSprite(ArtistryBlocks.COPPER_CHAIN);
+        blockItemSprite(ArtistryBlocks.EXPOSED_COPPER_CHAIN);
+        blockItemSprite(ArtistryBlocks.WEATHERED_COPPER_CHAIN);
+        blockItemSprite(ArtistryBlocks.OXIDIZED_COPPER_CHAIN);
+
+        blockItemSprite(ArtistryBlocks.WAXED_COPPER_CHAIN, getBlockItemSpriteLocation(ArtistryBlocks.COPPER_CHAIN));
+        blockItemSprite(ArtistryBlocks.WAXED_EXPOSED_COPPER_CHAIN, getBlockItemSpriteLocation(ArtistryBlocks.EXPOSED_COPPER_CHAIN));
+        blockItemSprite(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN, getBlockItemSpriteLocation(ArtistryBlocks.WEATHERED_COPPER_CHAIN));
+        blockItemSprite(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN, getBlockItemSpriteLocation(ArtistryBlocks.OXIDIZED_COPPER_CHAIN));
+
         manualBlockItem(ArtistryBlocks.STONE_PILLAR);
         manualBlockItem(ArtistryBlocks.MOSSY_STONE_PILLAR);
         manualBlockItem(ArtistryBlocks.STONE_TILE_STAIRS);
@@ -51,6 +61,16 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         wallItem(ArtistryBlocks.CALCITE_BRICK_WALL, ArtistryBlocks.CALCITE_BRICKS);
         manualBlockItem(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS);
         manualBlockItem(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB);
+
+        manualBlockItem(ArtistryBlocks.DRIPSTONE_STAIRS);
+        manualBlockItem(ArtistryBlocks.DRIPSTONE_SLAB);
+        minecraftBasedWallItem(ArtistryBlocks.DRIPSTONE_WALL, Blocks.DRIPSTONE_BLOCK);
+        manualBlockItem(ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS);
+        manualBlockItem(ArtistryBlocks.POLISHED_DRIPSTONE_SLAB);
+        wallItem(ArtistryBlocks.POLISHED_DRIPSTONE_WALL, ArtistryBlocks.POLISHED_DRIPSTONE);
+        manualBlockItem(ArtistryBlocks.DRIPSTONE_BRICK_STAIRS);
+        manualBlockItem(ArtistryBlocks.DRIPSTONE_BRICK_SLAB);
+        wallItem(ArtistryBlocks.DRIPSTONE_BRICK_WALL, ArtistryBlocks.DRIPSTONE_BRICKS);
 
         blockItemSprite(ArtistryBlocks.LARGE_LANTERN);
         blockItemSprite(ArtistryBlocks.LARGE_SOUL_LANTERN);
@@ -147,6 +167,10 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
                 ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
                 Artistry.location("item/" + getBlockLocation(block.get()).getPath()));
     }
+    private ItemModelBuilder blockItemSprite(Supplier<? extends Block> block, ResourceLocation texture) { // Uses a block instead of item with a unique item texture (Example: Doors or Lanterns)
+        return withExistingParent(getBlockLocation(block.get()).getPath(),
+                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0", texture);
+    }
     private ItemModelBuilder blockItemSpriteLayered(Supplier<? extends Block> block) { // Uses a block instead of item with a unique item texture (Example: Doors or Lanterns)
         return withExistingParent(getBlockLocation(block.get()).getPath(),
                 ResourceLocation.withDefaultNamespace("item/generated"))
@@ -172,5 +196,9 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
     }
     private ResourceLocation getBlockLocation(Block block){
         return BuiltInRegistries.BLOCK.getKey(block);
+    }
+
+    private ResourceLocation getBlockItemSpriteLocation(Supplier<? extends Block> block){
+        return Artistry.location("item/" + getBlockLocation(block.get()).getPath());
     }
 }

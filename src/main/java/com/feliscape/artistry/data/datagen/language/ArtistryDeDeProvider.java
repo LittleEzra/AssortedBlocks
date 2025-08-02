@@ -93,6 +93,16 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.ROUND_LANTERN, "Runde Laterne");
         this.addBlock(ArtistryBlocks.FLAT_LIGHT, "Flache Lampe");
 
+        this.addBlock(ArtistryBlocks.COPPER_CHAIN, "Kupferkette");
+        this.addBlock(ArtistryBlocks.EXPOSED_COPPER_CHAIN, "Angelaufene Kupferkette");
+        this.addBlock(ArtistryBlocks.WEATHERED_COPPER_CHAIN, "Verwitterte Kupferkette");
+        this.addBlock(ArtistryBlocks.OXIDIZED_COPPER_CHAIN, "Oxidierte Kupferkette");
+
+        this.addBlock(ArtistryBlocks.WAXED_COPPER_CHAIN, "Gewachste Kupferkette");
+        this.addBlock(ArtistryBlocks.WAXED_EXPOSED_COPPER_CHAIN, "Gewachste angelaufene Kupferkette");
+        this.addBlock(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN, "Gewachste verwitterte Kupferkette");
+        this.addBlock(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN, "Gewachste oxidierte Kupferkette");
+
         this.addBlock(ArtistryBlocks.SPARKLER, "Wunderkerze");
         this.addBlock(ArtistryBlocks.AMETHYST_STARS, "Amethyststerne");
         this.addBlock(ArtistryBlocks.SPARK_FOUNTAIN, "Funkenbrunnen");
@@ -125,9 +135,25 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS, "Kleine Kalzitziegeltreppe");
         this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB, "Kleine Kalzitziegelstufe");
 
+        this.addBlock(ArtistryBlocks.PAINTED_SMOOTH_CALCITE, "Bemalter glatter Kalzit");
         this.addBlock(ArtistryBlocks.PAINTED_POLISHED_CALCITE, "Bemalter polierter Kalzit");
         this.addBlock(ArtistryBlocks.PAINTED_CALCITE_BRICKS, "Bemalte Kalzitziegel");
         this.addBlock(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS, "Kleine bemalte Kalzitziegel");
+
+        this.addBlock(ArtistryBlocks.DRIPSTONE_STAIRS, "Tropfsteintreppen");
+        this.addBlock(ArtistryBlocks.DRIPSTONE_SLAB, "Tropfsteinslab");
+        this.addBlock(ArtistryBlocks.DRIPSTONE_WALL, "Tropfsteinwall");
+
+        this.addBlock(ArtistryBlocks.POLISHED_DRIPSTONE, "Polierter Tropfstein");
+        this.addBlock(ArtistryBlocks.CHISELED_DRIPSTONE, "Gemeißelter Tropfstein");
+        this.addBlock(ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS, "Polierte Tropfsteintreppe");
+        this.addBlock(ArtistryBlocks.POLISHED_DRIPSTONE_SLAB, "Polierte Tropfsteinstufe");
+        this.addBlock(ArtistryBlocks.POLISHED_DRIPSTONE_WALL, "Polierte Tropfsteinmauer");
+
+        this.addBlock(ArtistryBlocks.DRIPSTONE_BRICKS, "Tropfsteinziegel");
+        this.addBlock(ArtistryBlocks.DRIPSTONE_BRICK_STAIRS, "Tropfsteinziegeltreppe");
+        this.addBlock(ArtistryBlocks.DRIPSTONE_BRICK_SLAB, "Tropfsteinziegelstufe");
+        this.addBlock(ArtistryBlocks.DRIPSTONE_BRICK_WALL, "Tropfsteinziegelmauer");
 
         this.addBlock(ArtistryBlocks.ASPEN_LEAVES, "Espenlaub");
         this.addBlock(ArtistryBlocks.ASPEN_LOG, "Espenstamm");
@@ -173,6 +199,8 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addPaintedPotTrim(ArtistryPaintedPotDecorations.PYRAMIDS_TRIM, "Pyramiden Umrandung");
         this.addPaintedPotTrim(ArtistryPaintedPotDecorations.CORNERS_TRIM, "Ecken Umrandung");
         this.addPaintedPotTrim(ArtistryPaintedPotDecorations.BOW_TRIM, "Bogen Umrandung");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.EYE_TRIM, "Augem Umrandung");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.SEAM_TRIM, "Naht Umrandung");
 
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.FREQUENCY_PATTERN, "Frequenz Muster");
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.RINGS_PATTERN, "Ringe Muster");
@@ -180,6 +208,8 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.CROSS_PATTERN, "Kreuz Muster");
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.WAVE_PATTERN, "Wellen Muster");
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.WEAVE_PATTERN, "Gewebe Muster");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.ARROWS_PATTERN, "Pfeile Muster");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.CYCLE_PATTERN, "Zyklus Muster");
 
         this.add("itemGroup.artistry.base", "Artistry");
 

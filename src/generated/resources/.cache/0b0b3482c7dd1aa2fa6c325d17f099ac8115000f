@@ -1,4 +1,4 @@
-// 1.21.1	2025-07-31T14:03:31.7970827	Item Models: artistry
+// 1.21.1	2025-08-02T10:12:30.7237457	Item Models: artistry
 59b250cc8214b86eac1ffb0e41d7d68bec96cde0 assets/artistry/models/item/amethyst_stars.json
 73fe7333d37ecde4ea79ba093344f9bc4ccda762 assets/artistry/models/item/aspen_boat.json
 9d6e1f6caef8d1fdac13bf1b5333bda820630c89 assets/artistry/models/item/aspen_button.json
@@ -22,6 +22,14 @@ becd9d35161297236e46319eb33d79d9cc6b4a96 assets/artistry/models/item/aspen_wood.
 b49dd61e0715bffcdb8be282cb570f49aa889b8c assets/artistry/models/item/calcite_slab.json
 ea208c24655cee91cfb37bd4ed9889e2087785bb assets/artistry/models/item/calcite_stairs.json
 a85f076ec716e06c9dba328f508dbf2fde46ae6d assets/artistry/models/item/calcite_wall.json
+0382bcd9ddec8e25ebb6784a0ca6f2801358fda4 assets/artistry/models/item/copper_chain.json
+b4b200145c4b9480c9f335ab6554589d76177841 assets/artistry/models/item/dripstone_brick_slab.json
+8f62c06c5a80da133cf3036c5cd19607d0a4b0f9 assets/artistry/models/item/dripstone_brick_stairs.json
+666aeb15ba333e2e05d5017471d3b2536d520a1c assets/artistry/models/item/dripstone_brick_wall.json
+994e6ab7e3f54af21dc8900e91a399fd18063668 assets/artistry/models/item/dripstone_slab.json
+3a1a04aa0fdd5be9c819340f7894c6da4b3bf938 assets/artistry/models/item/dripstone_stairs.json
+41feafe832dfc97d882b2efc40f9da42c7a8887f assets/artistry/models/item/dripstone_wall.json
+6d010cb754756ff057e355972090aad636bc1297 assets/artistry/models/item/exposed_copper_chain.json
 183a4163992ad6bfca6c65eb9b47d6e60e264888 assets/artistry/models/item/fern_seed.json
 571c52d66c1e2f5def0453cb94e1ce676debab1d assets/artistry/models/item/flat_light.json
 d0a596b0b38f0561613761b3a9b28c4d3026061f assets/artistry/models/item/large_lantern.json
@@ -30,9 +38,13 @@ b6b1aa7b7d340cf14a5ee7c77397dab55269a35c assets/artistry/models/item/large_soul_
 5d76dc29bb7ccbfc67f0a6740d6e5adc8a92a73e assets/artistry/models/item/mossy_stone_pillar.json
 c99414ca4246d00358c7a781f2999dfc2a2ed8c0 assets/artistry/models/item/mossy_stone_tile_slab.json
 20f4bbaef7a7df8d62fb97387568733ad2c727ac assets/artistry/models/item/mossy_stone_tile_stairs.json
+271189c372f40392d8c0ea0e8140d708385dd547 assets/artistry/models/item/oxidized_copper_chain.json
 d78d3fcd23e7c03075db2983c9e3be21d704042d assets/artistry/models/item/polished_calcite_slab.json
 862a84142a8bec949611c2f81f49c74c56973b0b assets/artistry/models/item/polished_calcite_stairs.json
 7dfe9a567d615686fe67faeac95fcf65227088cf assets/artistry/models/item/polished_calcite_wall.json
+705c9e51e3fa8dc3cb25d7f1ba536c999307094e assets/artistry/models/item/polished_dripstone_slab.json
+0a8ffd1ca32e500df660563d6eef722fdecb2c5a assets/artistry/models/item/polished_dripstone_stairs.json
+43fb6bc0b6e5043e63482cda398f9966ea107799 assets/artistry/models/item/polished_dripstone_wall.json
 9499df4ab05bd4ca7cd721b7d256733530dcf6c2 assets/artistry/models/item/round_lantern.json
 39741a1d118c0c185668e5ab3683c12a041a75a4 assets/artistry/models/item/small_calcite_brick_slab.json
 9d8a046efa6b7120b811691fa0ef2dc720ff7c18 assets/artistry/models/item/small_calcite_brick_stairs.json
@@ -49,3 +61,8 @@ d225289f4fd7fd64655a14b4219b3ae89bafab89 assets/artistry/models/item/stripped_as
 07624c97319caa02427b65e5ffbda64d755225d5 assets/artistry/models/item/sunburst_vines.json
 825b2f7c1542f477289a67f7530adc151d5e7982 assets/artistry/models/item/sunsprout.json
 951af73ccfb7d3a5752e4a96aeb0ded1eea29bae assets/artistry/models/item/teardrop_grass.json
+0382bcd9ddec8e25ebb6784a0ca6f2801358fda4 assets/artistry/models/item/waxed_copper_chain.json
+6d010cb754756ff057e355972090aad636bc1297 assets/artistry/models/item/waxed_exposed_copper_chain.json
+271189c372f40392d8c0ea0e8140d708385dd547 assets/artistry/models/item/waxed_oxidized_copper_chain.json
+becf00466f3f68d421deff8c8b56986159a64771 assets/artistry/models/item/waxed_weathered_copper_chain.json
+becf00466f3f68d421deff8c8b56986159a64771 assets/artistry/models/item/weathered_copper_chain.json

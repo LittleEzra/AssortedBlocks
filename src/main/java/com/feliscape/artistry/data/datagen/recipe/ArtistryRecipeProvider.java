@@ -111,24 +111,6 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_mossy_item", has(ArtistryTags.Items.CAN_APPLY_MOSS))
                 .save(recipeOutput, Artistry.stringLocation("overgrown_stone_tiles_from_stone_tiles"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ArtistryBlocks.ASPEN_SAPLING)
-                .define('o', Items.GOLD_NUGGET)
-                .define('#', ItemTags.SAPLINGS)
-                .pattern("ooo")
-                .pattern("o#o")
-                .pattern("ooo")
-                .unlockedBy(getHasName(Items.GOLD_NUGGET), has(Items.GOLD_NUGGET))
-                .save(recipeOutput);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ArtistryBlocks.TEARDROP_GRASS, 4)
-                .define('o', Items.IRON_NUGGET)
-                .define('#', Items.SHORT_GRASS)
-                .pattern(" # ")
-                .pattern("#o#")
-                .pattern(" # ")
-                .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
-                .save(recipeOutput);
-
         // Calcite
 
         stairBuilder(ArtistryBlocks.CALCITE_STAIRS, Ingredient.of(Blocks.CALCITE))
@@ -269,8 +251,115 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB,
                 ArtistryBlocks.CALCITE_BRICKS, 2);
 
+        // Dripstone
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_STAIRS,
+                Blocks.DRIPSTONE_BLOCK);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_SLAB,
+                Blocks.DRIPSTONE_BLOCK, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_WALL,
+                Blocks.DRIPSTONE_BLOCK);
+
+        // Polished Dripstone
+        twoByTwoConversion(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_DRIPSTONE,
+                Blocks.DRIPSTONE_BLOCK);
+        stairBuilder(ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS, Ingredient.of(ArtistryBlocks.POLISHED_DRIPSTONE.get()))
+                .unlockedBy(getHasName(ArtistryBlocks.POLISHED_DRIPSTONE), has(ArtistryBlocks.POLISHED_DRIPSTONE))
+                .save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.POLISHED_DRIPSTONE_SLAB, ArtistryBlocks.POLISHED_DRIPSTONE.get());
+
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_DRIPSTONE,
+                Blocks.DRIPSTONE_BLOCK);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS,
+                ArtistryBlocks.POLISHED_DRIPSTONE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_DRIPSTONE_SLAB,
+                ArtistryBlocks.POLISHED_DRIPSTONE, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_DRIPSTONE_WALL,
+                ArtistryBlocks.POLISHED_DRIPSTONE);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS,
+                Blocks.DRIPSTONE_BLOCK);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_DRIPSTONE_SLAB,
+                Blocks.DRIPSTONE_BLOCK, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.POLISHED_DRIPSTONE_WALL,
+                Blocks.DRIPSTONE_BLOCK);
+
+        // Dripstone Bricks
+        twoByTwoConversion(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_BRICKS,
+                ArtistryBlocks.POLISHED_DRIPSTONE);
+        stairBuilder(ArtistryBlocks.DRIPSTONE_BRICK_STAIRS, Ingredient.of(ArtistryBlocks.DRIPSTONE_BRICKS.get()))
+                .unlockedBy(getHasName(ArtistryBlocks.DRIPSTONE_BRICKS), has(ArtistryBlocks.DRIPSTONE_BRICKS))
+                .save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.DRIPSTONE_BRICK_SLAB, ArtistryBlocks.DRIPSTONE_BRICKS.get());
+
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_BRICKS,
+                ArtistryBlocks.POLISHED_DRIPSTONE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_BRICKS,
+                Blocks.DRIPSTONE_BLOCK);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_BRICK_STAIRS,
+                ArtistryBlocks.DRIPSTONE_BRICKS);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_BRICK_SLAB,
+                ArtistryBlocks.DRIPSTONE_BRICKS, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_BRICK_WALL,
+                ArtistryBlocks.DRIPSTONE_BRICKS);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_BRICK_STAIRS,
+                ArtistryBlocks.POLISHED_DRIPSTONE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_BRICK_SLAB,
+                ArtistryBlocks.POLISHED_DRIPSTONE, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_BRICK_WALL,
+                ArtistryBlocks.POLISHED_DRIPSTONE);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_BRICK_STAIRS,
+                Blocks.DRIPSTONE_BLOCK);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_BRICK_SLAB,
+                Blocks.DRIPSTONE_BLOCK, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.DRIPSTONE_BRICK_WALL,
+                Blocks.DRIPSTONE_BLOCK);
+
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CHISELED_DRIPSTONE,
+                ArtistryBlocks.POLISHED_DRIPSTONE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CHISELED_DRIPSTONE,
+                Blocks.DRIPSTONE_BLOCK);
+        chiseled(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.CHISELED_DRIPSTONE, ArtistryBlocks.POLISHED_DRIPSTONE_SLAB);
+
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.PAINTED_POLISHED_CALCITE, 8)
                 .define('#', ArtistryBlocks.POLISHED_CALCITE)
+                .define('L', Items.LAPIS_LAZULI)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.PAINTED_SMOOTH_CALCITE, 8)
+                .define('#', ArtistryBlocks.SMOOTH_CALCITE)
                 .define('L', Items.LAPIS_LAZULI)
                 .pattern("###")
                 .pattern("#L#")
@@ -409,6 +498,72 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern(" # ")
                 .pattern(" # ")
                 .unlockedBy(getHasName(Items.WATER_BUCKET), has(Items.WATER_BUCKET))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.COPPER_CHAIN, 8)
+                .define('|', Items.COPPER_INGOT)
+                .define('#', Blocks.COPPER_BLOCK)
+                .pattern("|")
+                .pattern("#")
+                .pattern("|")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.EXPOSED_COPPER_CHAIN, 8)
+                .define('|', Items.COPPER_INGOT)
+                .define('#', Blocks.EXPOSED_COPPER)
+                .pattern("|")
+                .pattern("#")
+                .pattern("|")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.WEATHERED_COPPER_CHAIN, 8)
+                .define('|', Items.COPPER_INGOT)
+                .define('#', Blocks.WEATHERED_COPPER)
+                .pattern("|")
+                .pattern("#")
+                .pattern("|")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.OXIDIZED_COPPER_CHAIN, 8)
+                .define('|', Items.COPPER_INGOT)
+                .define('#', Blocks.OXIDIZED_COPPER)
+                .pattern("|")
+                .pattern("#")
+                .pattern("|")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.WAXED_COPPER_CHAIN, 8)
+                .define('|', Items.COPPER_INGOT)
+                .define('#', Blocks.WAXED_COPPER_BLOCK)
+                .pattern("|")
+                .pattern("#")
+                .pattern("|")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.WAXED_EXPOSED_COPPER_CHAIN, 8)
+                .define('|', Items.COPPER_INGOT)
+                .define('#', Blocks.WAXED_EXPOSED_COPPER)
+                .pattern("|")
+                .pattern("#")
+                .pattern("|")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN, 8)
+                .define('|', Items.COPPER_INGOT)
+                .define('#', Blocks.WAXED_WEATHERED_COPPER)
+                .pattern("|")
+                .pattern("#")
+                .pattern("|")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN, 8)
+                .define('|', Items.COPPER_INGOT)
+                .define('#', Blocks.WAXED_OXIDIZED_COPPER)
+                .pattern("|")
+                .pattern("#")
+                .pattern("|")
+                .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
                 .save(recipeOutput);
 
         //region Aspen

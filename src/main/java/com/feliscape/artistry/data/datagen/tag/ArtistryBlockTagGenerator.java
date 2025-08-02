@@ -34,6 +34,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         ArtistryBlocks.ROUND_LANTERN.get(),
                         ArtistryBlocks.FLAT_LIGHT.get(),
                         ArtistryBlocks.SPARKLER.get(),
+                        ArtistryBlocks.COPPER_CHAIN.get(),
 
                         ArtistryBlocks.WATER_FOUNTAIN.get(),
 
@@ -47,6 +48,10 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         ArtistryBlocks.CALCITE_TABLE.get(),
 
                         ArtistryBlocks.ROCKY_DIRT.get(),
+
+                        ArtistryBlocks.CALCITE_STAIRS.get(),
+                        ArtistryBlocks.CALCITE_SLAB.get(),
+                        ArtistryBlocks.CALCITE_WALL.get(),
 
                         ArtistryBlocks.POLISHED_CALCITE.get(),
                         ArtistryBlocks.POLISHED_CALCITE_STAIRS.get(),
@@ -77,9 +82,23 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         ArtistryBlocks.MAGENTA_FROSTED_GLASS.get(),
                         ArtistryBlocks.PINK_FROSTED_GLASS.get(),
 
+                        ArtistryBlocks.PAINTED_SMOOTH_CALCITE.get(),
                         ArtistryBlocks.PAINTED_POLISHED_CALCITE.get(),
                         ArtistryBlocks.PAINTED_CALCITE_BRICKS.get(),
-                        ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS.get()
+                        ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS.get(),
+
+                        ArtistryBlocks.DRIPSTONE_STAIRS.get(),
+                        ArtistryBlocks.DRIPSTONE_SLAB.get(),
+                        ArtistryBlocks.DRIPSTONE_WALL.get(),
+
+                        ArtistryBlocks.POLISHED_DRIPSTONE.get(),
+                        ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS.get(),
+                        ArtistryBlocks.POLISHED_DRIPSTONE_SLAB.get(),
+                        ArtistryBlocks.POLISHED_DRIPSTONE_WALL.get(),
+                        ArtistryBlocks.DRIPSTONE_BRICKS.get(),
+                        ArtistryBlocks.DRIPSTONE_BRICK_STAIRS.get(),
+                        ArtistryBlocks.DRIPSTONE_BRICK_SLAB.get(),
+                        ArtistryBlocks.DRIPSTONE_BRICK_WALL.get()
                 );
 
         this.tag(ArtistryTags.Blocks.FROSTED_GLASS)
@@ -177,10 +196,28 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.STAIRS)
                 .add(ArtistryBlocks.STONE_TILE_STAIRS.get())
                 .add(ArtistryBlocks.MOSSY_STONE_TILE_STAIRS.get())
+
+                .add(ArtistryBlocks.CALCITE_STAIRS.get())
+                .add(ArtistryBlocks.POLISHED_CALCITE_STAIRS.get())
+                .add(ArtistryBlocks.CALCITE_BRICK_STAIRS.get())
+                .add(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get())
+
+                .add(ArtistryBlocks.DRIPSTONE_STAIRS.get())
+                .add(ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS.get())
+                .add(ArtistryBlocks.DRIPSTONE_BRICK_STAIRS.get())
         ;
         this.tag(BlockTags.SLABS)
                 .add(ArtistryBlocks.STONE_TILE_SLAB.get())
                 .add(ArtistryBlocks.MOSSY_STONE_TILE_SLAB.get())
+
+                .add(ArtistryBlocks.CALCITE_SLAB.get())
+                .add(ArtistryBlocks.POLISHED_CALCITE_SLAB.get())
+                .add(ArtistryBlocks.CALCITE_BRICK_SLAB.get())
+                .add(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get())
+
+                .add(ArtistryBlocks.DRIPSTONE_SLAB.get())
+                .add(ArtistryBlocks.POLISHED_DRIPSTONE_SLAB.get())
+                .add(ArtistryBlocks.DRIPSTONE_BRICK_SLAB.get())
         ;
 
         this.tag(BlockTags.DIRT)
@@ -200,8 +237,12 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
 
 
         this.tag(BlockTags.WALLS)
+                .add(ArtistryBlocks.CALCITE_WALL.get())
                 .add(ArtistryBlocks.POLISHED_CALCITE_WALL.get())
                 .add(ArtistryBlocks.CALCITE_BRICK_WALL.get())
+                .add(ArtistryBlocks.DRIPSTONE_WALL.get())
+                .add(ArtistryBlocks.POLISHED_DRIPSTONE_WALL.get())
+                .add(ArtistryBlocks.DRIPSTONE_BRICK_WALL.get())
         ;
 
         this.tag(BlockTags.PLANKS)

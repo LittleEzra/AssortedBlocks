@@ -12,6 +12,8 @@ public class ArtistryPaintedPotDecorations {
     public static final ResourceKey<PaintedPotDecoration> PYRAMIDS_TRIM = createTrimKey("pyramids");
     public static final ResourceKey<PaintedPotDecoration> CORNERS_TRIM = createTrimKey("corners");
     public static final ResourceKey<PaintedPotDecoration> BOW_TRIM = createTrimKey("bow");
+    public static final ResourceKey<PaintedPotDecoration> EYE_TRIM = createTrimKey("eye");
+    public static final ResourceKey<PaintedPotDecoration> SEAM_TRIM = createTrimKey("seam");
 
     public static final ResourceKey<PaintedPotDecoration> FREQUENCY_PATTERN = createPatternKey("frequency");
     public static final ResourceKey<PaintedPotDecoration> RINGS_PATTERN = createPatternKey("rings");
@@ -19,6 +21,8 @@ public class ArtistryPaintedPotDecorations {
     public static final ResourceKey<PaintedPotDecoration> CROSS_PATTERN = createPatternKey("cross");
     public static final ResourceKey<PaintedPotDecoration> WAVE_PATTERN = createPatternKey("wave");
     public static final ResourceKey<PaintedPotDecoration> WEAVE_PATTERN = createPatternKey("weave");
+    public static final ResourceKey<PaintedPotDecoration> ARROWS_PATTERN = createPatternKey("arrows");
+    public static final ResourceKey<PaintedPotDecoration> CYCLE_PATTERN = createPatternKey("cycle");
 
     public static void bootstrapTrims(BootstrapContext<PaintedPotDecoration> context) {
         context.register(WAVY_TRIM, new PaintedPotDecoration(Artistry.location("wavy")));
@@ -27,6 +31,8 @@ public class ArtistryPaintedPotDecorations {
         context.register(PYRAMIDS_TRIM, new PaintedPotDecoration(Artistry.location("pyramids")));
         context.register(CORNERS_TRIM, new PaintedPotDecoration(Artistry.location("corners")));
         context.register(BOW_TRIM, new PaintedPotDecoration(Artistry.location("bow")));
+        context.register(EYE_TRIM, new PaintedPotDecoration(Artistry.location("eye")));
+        context.register(SEAM_TRIM, new PaintedPotDecoration(Artistry.location("seam")));
     }
     public static void bootstrapPatterns(BootstrapContext<PaintedPotDecoration> context) {
         context.register(FREQUENCY_PATTERN, new PaintedPotDecoration(Artistry.location("frequency")));
@@ -35,6 +41,8 @@ public class ArtistryPaintedPotDecorations {
         context.register(CROSS_PATTERN, new PaintedPotDecoration(Artistry.location("cross")));
         context.register(WAVE_PATTERN, new PaintedPotDecoration(Artistry.location("wave")));
         context.register(WEAVE_PATTERN, new PaintedPotDecoration(Artistry.location("weave")));
+        context.register(ARROWS_PATTERN, new PaintedPotDecoration(Artistry.location("arrows")));
+        context.register(CYCLE_PATTERN, new PaintedPotDecoration(Artistry.location("cycle")));
     }
 
     public static ResourceKey<PaintedPotDecoration> createTrimKey(String name) {

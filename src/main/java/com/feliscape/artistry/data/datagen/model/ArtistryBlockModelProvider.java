@@ -106,6 +106,16 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         crossBlockWithRenderType(ArtistryBlocks.TEARDROP_GRASS.get(), "cutout");
         pottedCrossPlantBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, Artistry.location("block/potted_teardrop_grass"));
 
+        axisBlock(ArtistryBlocks.COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/copper_chain")));
+        axisBlock(ArtistryBlocks.EXPOSED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/exposed_copper_chain")));
+        axisBlock(ArtistryBlocks.WEATHERED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/weathered_copper_chain")));
+        axisBlock(ArtistryBlocks.OXIDIZED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/oxidized_copper_chain")));
+
+        axisBlock(ArtistryBlocks.WAXED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/copper_chain")));
+        axisBlock(ArtistryBlocks.WAXED_EXPOSED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/exposed_copper_chain")));
+        axisBlock(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/weathered_copper_chain")));
+        axisBlock(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/oxidized_copper_chain")));
+
         blockWithItem(ArtistryBlocks.ROCKY_DIRT);
 
         particlesOnly(ArtistryBlocks.PAINTED_POT.get(), blockTexture(Blocks.TERRACOTTA));
@@ -140,9 +150,29 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         stairsBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get(), smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
         slabBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get(), smallCalciteBrickTexture, smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
 
+        blockWithItem(ArtistryBlocks.PAINTED_SMOOTH_CALCITE);
         blockWithItem(ArtistryBlocks.PAINTED_POLISHED_CALCITE);
         blockWithItem(ArtistryBlocks.PAINTED_CALCITE_BRICKS);
         cubeColumn(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS.get());
+
+        ResourceLocation dripstoneTexture = blockTexture(Blocks.DRIPSTONE_BLOCK);
+        ResourceLocation polishedDripstoneTexture = blockTexture(ArtistryBlocks.POLISHED_DRIPSTONE.get());
+        ResourceLocation dripstoneBrickTexture = blockTexture(ArtistryBlocks.DRIPSTONE_BRICKS.get());
+
+        stairsBlock(ArtistryBlocks.DRIPSTONE_STAIRS.get(), dripstoneTexture);
+        slabBlock(ArtistryBlocks.DRIPSTONE_SLAB.get(), dripstoneTexture, dripstoneTexture);
+        wallBlock(ArtistryBlocks.DRIPSTONE_WALL.get(), dripstoneTexture);
+
+        blockWithItem(ArtistryBlocks.POLISHED_DRIPSTONE);
+        blockWithItem(ArtistryBlocks.CHISELED_DRIPSTONE);
+        stairsBlock(ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS.get(), polishedDripstoneTexture);
+        slabBlock(ArtistryBlocks.POLISHED_DRIPSTONE_SLAB.get(), polishedDripstoneTexture, polishedDripstoneTexture);
+        wallBlock(ArtistryBlocks.POLISHED_DRIPSTONE_WALL.get(), polishedDripstoneTexture);
+
+        blockWithItem(ArtistryBlocks.DRIPSTONE_BRICKS);
+        stairsBlock(ArtistryBlocks.DRIPSTONE_BRICK_STAIRS.get(), dripstoneBrickTexture);
+        slabBlock(ArtistryBlocks.DRIPSTONE_BRICK_SLAB.get(), dripstoneBrickTexture, dripstoneBrickTexture);
+        wallBlock(ArtistryBlocks.DRIPSTONE_BRICK_WALL.get(), dripstoneBrickTexture);
 
         leavesBlock(ArtistryBlocks.ASPEN_LEAVES, "cutout_mipped");
 
@@ -176,6 +206,10 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         crossBlockWithRenderType(ArtistryBlocks.ASPEN_SAPLING.get(), "cutout");
 
+    }
+
+    public void axisBlock(RotatedPillarBlock block, ModelFile model) {
+        this.axisBlock(block, model, model);
     }
 
     private void particlesOnly(Block block, ResourceLocation particle) {

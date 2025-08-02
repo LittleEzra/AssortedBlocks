@@ -100,6 +100,16 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
 
         this.dropSelf(ArtistryBlocks.STRING_LIGHTS.get());
 
+        this.dropSelf(ArtistryBlocks.COPPER_CHAIN.get());
+        this.dropSelf(ArtistryBlocks.EXPOSED_COPPER_CHAIN.get());
+        this.dropSelf(ArtistryBlocks.WEATHERED_COPPER_CHAIN.get());
+        this.dropSelf(ArtistryBlocks.OXIDIZED_COPPER_CHAIN.get());
+
+        this.dropSelf(ArtistryBlocks.WAXED_COPPER_CHAIN.get());
+        this.dropSelf(ArtistryBlocks.WAXED_EXPOSED_COPPER_CHAIN.get());
+        this.dropSelf(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN.get());
+        this.dropSelf(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get());
+
         this.add(ArtistryBlocks.LARGE_LANTERN.get(), this::createSingleItemTable);
         this.add(ArtistryBlocks.LARGE_SOUL_LANTERN.get(), this::createSingleItemTable);
         this.add(ArtistryBlocks.ROUND_LANTERN.get(), this::createSingleItemTable);
@@ -139,9 +149,25 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get());
         this.add(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get(), this::createSlabItemTable);
 
+        this.dropSelf(ArtistryBlocks.PAINTED_SMOOTH_CALCITE.get());
         this.dropSelf(ArtistryBlocks.PAINTED_POLISHED_CALCITE.get());
         this.dropSelf(ArtistryBlocks.PAINTED_CALCITE_BRICKS.get());
         this.dropSelf(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS.get());
+
+        this.dropSelf(ArtistryBlocks.DRIPSTONE_STAIRS.get());
+        this.dropSelf(ArtistryBlocks.DRIPSTONE_WALL.get());
+        this.add(ArtistryBlocks.DRIPSTONE_SLAB.get(), this::createSlabItemTable);
+
+        this.dropSelf(ArtistryBlocks.POLISHED_DRIPSTONE.get());
+        this.dropSelf(ArtistryBlocks.CHISELED_DRIPSTONE.get());
+        this.dropSelf(ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS.get());
+        this.dropSelf(ArtistryBlocks.POLISHED_DRIPSTONE_WALL.get());
+        this.add(ArtistryBlocks.POLISHED_DRIPSTONE_SLAB.get(), this::createSlabItemTable);
+
+        this.dropSelf(ArtistryBlocks.DRIPSTONE_BRICKS.get());
+        this.dropSelf(ArtistryBlocks.DRIPSTONE_BRICK_STAIRS.get());
+        this.dropSelf(ArtistryBlocks.DRIPSTONE_BRICK_WALL.get());
+        this.add(ArtistryBlocks.DRIPSTONE_BRICK_SLAB.get(), this::createSlabItemTable);
 
         this.dropSelf(ArtistryBlocks.ASPEN_LOG.get());
         this.dropSelf(ArtistryBlocks.ASPEN_WOOD.get());
