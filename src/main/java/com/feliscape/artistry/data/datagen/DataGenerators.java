@@ -1,6 +1,7 @@
 package com.feliscape.artistry.data.datagen;
 
 import com.feliscape.artistry.Artistry;
+import com.feliscape.artistry.data.datagen.language.ArtistryRuRuProvider;
 import com.feliscape.artistry.data.datagen.language.ArtistryDeDeProvider;
 import com.feliscape.artistry.data.datagen.language.ArtistryEnUsProvider;
 import com.feliscape.artistry.data.datagen.loot.ArtistryBlockLootTableProvider;
