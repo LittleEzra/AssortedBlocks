@@ -1,5 +1,5 @@
 {
-  "type": "artistry:add_random_item",
+  "type": "artistry:replace_loot",
   "conditions": [
     {
       "condition": "neoforge:loot_table_id",
@@ -10,8 +10,5 @@
       "condition": "minecraft:random_chance"
     }
   ],
-  "items": [
-    "artistry:sunsprout",
-    "artistry:blooming_vines"
-  ]
+  "table": "artistry:gameplay/sniffer_additional"
 }

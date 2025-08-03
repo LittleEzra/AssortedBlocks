@@ -1,6 +1,10 @@
 {
   "values": [
+    "artistry:calcite_wall",
     "artistry:polished_calcite_wall",
-    "artistry:calcite_brick_wall"
+    "artistry:calcite_brick_wall",
+    "artistry:dripstone_wall",
+    "artistry:polished_dripstone_wall",
+    "artistry:dripstone_brick_wall"
   ]
 }

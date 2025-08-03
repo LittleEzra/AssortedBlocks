@@ -1,5 +1,7 @@
 {
   "values": [
+    "minecraft:clay",
+    "minecraft:sand",
     "artistry:overgrown_stone_tiles",
     "artistry:rocky_dirt"
   ]

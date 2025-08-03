@@ -1,0 +1,9 @@
+{
+  "sources": [
+    {
+      "type": "directory",
+      "source": "entity/painted_pot/pattern",
+      "prefix": "entity/painted_pot/pattern/"
+    }
+  ]
+}

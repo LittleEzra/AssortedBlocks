@@ -1,8 +1,10 @@
 package com.feliscape.artistry.data.datagen.language;
 
+import com.feliscape.artistry.data.pot.ArtistryPaintedPotDecorations;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.item.DyeColor;
 
 @SuppressWarnings("SpellCheckingInspection")
 public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
@@ -18,6 +20,7 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.ASPEN_CHEST_BOAT, "Espenholztruhenboot");
         this.addItem(ArtistryItems.SUNBURST_VINES, "Sonnenscheinranken");
         this.addItem(ArtistryItems.SUNSPROUT, "Sonnensprosse");
+        this.addItem(ArtistryItems.FERN_SEED, "Farnsamen");
 
         this.addBlock(ArtistryBlocks.MOSSY_BRICKS, "Bemooste Ziegelsteine");
         this.addBlock(ArtistryBlocks.CRACKED_BRICKS, "Rissige Ziegelsteine");
@@ -40,6 +43,9 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
 
         this.addBlock(ArtistryBlocks.BLOOMING_VINES, "Blühende Ranken");
         this.addBlock(ArtistryBlocks.LUSH_FERN, "Üppiger Farn");
+        this.addBlock(ArtistryBlocks.LUSH_FERN_CROP, "Üppiger Farn");
+        this.addBlock(ArtistryBlocks.TEARDROP_GRASS, "Tränengras");
+        this.addBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, "Eingetopftes Tränengras");
 
         this.addBlock(ArtistryBlocks.OAK_TABLE, "Eichenholztisch");
         this.addBlock(ArtistryBlocks.SPRUCE_TABLE, "Fichtenholztisch");
@@ -61,6 +67,24 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.DEEPSLATE_TABLE, "Tiefenschiefertisch");
         this.addBlock(ArtistryBlocks.POLISHED_BLACKSTONE_TABLE, "Polierter Schwarzsteintisch");
         this.addBlock(ArtistryBlocks.TUFF_TABLE, "Tuffsteintisch");
+        this.addBlock(ArtistryBlocks.CALCITE_TABLE, "Kalzittisch");
+
+        this.addBlock(ArtistryBlocks.WHITE_FROSTED_GLASS, "Weißes Milchglas");
+        this.addBlock(ArtistryBlocks.LIGHT_GRAY_FROSTED_GLASS, "Hellgraues Milchglas");
+        this.addBlock(ArtistryBlocks.GRAY_FROSTED_GLASS, "Graues Milchglas");
+        this.addBlock(ArtistryBlocks.BLACK_FROSTED_GLASS, "Schwarzes Milchglas");
+        this.addBlock(ArtistryBlocks.BROWN_FROSTED_GLASS, "Braunes Milchglas");
+        this.addBlock(ArtistryBlocks.RED_FROSTED_GLASS, "Rotes Milchglas");
+        this.addBlock(ArtistryBlocks.ORANGE_FROSTED_GLASS, "Oranges Milchglas");
+        this.addBlock(ArtistryBlocks.YELLOW_FROSTED_GLASS, "Gelbes Milchglas");
+        this.addBlock(ArtistryBlocks.LIME_FROSTED_GLASS, "Hellgrün Milchglas");
+        this.addBlock(ArtistryBlocks.GREEN_FROSTED_GLASS, "Grünes Milchglas");
+        this.addBlock(ArtistryBlocks.CYAN_FROSTED_GLASS, "Türkises Milchglas");
+        this.addBlock(ArtistryBlocks.LIGHT_BLUE_FROSTED_GLASS, "Hellblaues Milchglas");
+        this.addBlock(ArtistryBlocks.BLUE_FROSTED_GLASS, "Blaues Milchglas");
+        this.addBlock(ArtistryBlocks.PURPLE_FROSTED_GLASS, "Violettes Milchglas");
+        this.addBlock(ArtistryBlocks.MAGENTA_FROSTED_GLASS, "Magenta Milchglas");
+        this.addBlock(ArtistryBlocks.PINK_FROSTED_GLASS, "Pinkes Milchglas");
 
         this.addBlock(ArtistryBlocks.STRING_LIGHTS, "Lichterkette");
         this.addBlock(ArtistryBlocks.WALL_STRING_LIGHTS, "Wandlichterkette");
@@ -69,12 +93,24 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.ROUND_LANTERN, "Runde Laterne");
         this.addBlock(ArtistryBlocks.FLAT_LIGHT, "Flache Lampe");
 
+        this.addBlock(ArtistryBlocks.COPPER_CHAIN, "Kupferkette");
+        this.addBlock(ArtistryBlocks.EXPOSED_COPPER_CHAIN, "Angelaufene Kupferkette");
+        this.addBlock(ArtistryBlocks.WEATHERED_COPPER_CHAIN, "Verwitterte Kupferkette");
+        this.addBlock(ArtistryBlocks.OXIDIZED_COPPER_CHAIN, "Oxidierte Kupferkette");
+
+        this.addBlock(ArtistryBlocks.WAXED_COPPER_CHAIN, "Gewachste Kupferkette");
+        this.addBlock(ArtistryBlocks.WAXED_EXPOSED_COPPER_CHAIN, "Gewachste angelaufene Kupferkette");
+        this.addBlock(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN, "Gewachste verwitterte Kupferkette");
+        this.addBlock(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN, "Gewachste oxidierte Kupferkette");
+
         this.addBlock(ArtistryBlocks.SPARKLER, "Wunderkerze");
         this.addBlock(ArtistryBlocks.AMETHYST_STARS, "Amethyststerne");
         this.addBlock(ArtistryBlocks.SPARK_FOUNTAIN, "Funkenbrunnen");
         this.addBlock(ArtistryBlocks.WATER_FOUNTAIN, "Wasserbrunnen");
 
         this.addBlock(ArtistryBlocks.ROCKY_DIRT, "Steinige Erde");
+
+        this.addBlock(ArtistryBlocks.PAINTED_POT, "Bemalter Topf");
 
         this.addBlock(ArtistryBlocks.CALCITE_STAIRS, "Kalzittreppe");
         this.addBlock(ArtistryBlocks.CALCITE_SLAB, "Kalzitstufe");
@@ -99,6 +135,26 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS, "Kleine Kalzitziegeltreppe");
         this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB, "Kleine Kalzitziegelstufe");
 
+        this.addBlock(ArtistryBlocks.PAINTED_SMOOTH_CALCITE, "Bemalter glatter Kalzit");
+        this.addBlock(ArtistryBlocks.PAINTED_POLISHED_CALCITE, "Bemalter polierter Kalzit");
+        this.addBlock(ArtistryBlocks.PAINTED_CALCITE_BRICKS, "Bemalte Kalzitziegel");
+        this.addBlock(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS, "Kleine bemalte Kalzitziegel");
+
+        this.addBlock(ArtistryBlocks.DRIPSTONE_STAIRS, "Tropfsteintreppen");
+        this.addBlock(ArtistryBlocks.DRIPSTONE_SLAB, "Tropfsteinslab");
+        this.addBlock(ArtistryBlocks.DRIPSTONE_WALL, "Tropfsteinwall");
+
+        this.addBlock(ArtistryBlocks.POLISHED_DRIPSTONE, "Polierter Tropfstein");
+        this.addBlock(ArtistryBlocks.CHISELED_DRIPSTONE, "Gemeißelter Tropfstein");
+        this.addBlock(ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS, "Polierte Tropfsteintreppe");
+        this.addBlock(ArtistryBlocks.POLISHED_DRIPSTONE_SLAB, "Polierte Tropfsteinstufe");
+        this.addBlock(ArtistryBlocks.POLISHED_DRIPSTONE_WALL, "Polierte Tropfsteinmauer");
+
+        this.addBlock(ArtistryBlocks.DRIPSTONE_BRICKS, "Tropfsteinziegel");
+        this.addBlock(ArtistryBlocks.DRIPSTONE_BRICK_STAIRS, "Tropfsteinziegeltreppe");
+        this.addBlock(ArtistryBlocks.DRIPSTONE_BRICK_SLAB, "Tropfsteinziegelstufe");
+        this.addBlock(ArtistryBlocks.DRIPSTONE_BRICK_WALL, "Tropfsteinziegelmauer");
+
         this.addBlock(ArtistryBlocks.ASPEN_LEAVES, "Espenlaub");
         this.addBlock(ArtistryBlocks.ASPEN_LOG, "Espenstamm");
         this.addBlock(ArtistryBlocks.ASPEN_WOOD, "Espenholz");
@@ -119,6 +175,41 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.ASPEN_TRAPDOOR, "Espenholzfalltür");
         this.addBlock(ArtistryBlocks.ASPEN_SAPLING, "Espensetzling");
         this.addBlock(ArtistryBlocks.POTTED_ASPEN_SAPLING, "Eingetopfter Espensetzling");
+
+        this.addPaintedPotBase(DyeColor.WHITE, "Weiße Basis");
+        this.addPaintedPotBase(DyeColor.LIGHT_GRAY, "Hellgraue Basis");
+        this.addPaintedPotBase(DyeColor.GRAY, "Graue Basis");
+        this.addPaintedPotBase(DyeColor.BLACK, "Schwarze Basis");
+        this.addPaintedPotBase(DyeColor.BROWN, "Braune Basis");
+        this.addPaintedPotBase(DyeColor.RED, "Rote Basis");
+        this.addPaintedPotBase(DyeColor.ORANGE, "Orange Basis");
+        this.addPaintedPotBase(DyeColor.YELLOW, "Gelbe Basis");
+        this.addPaintedPotBase(DyeColor.LIME, "Hellgrüne Basis");
+        this.addPaintedPotBase(DyeColor.GREEN, "Grüne Basis");
+        this.addPaintedPotBase(DyeColor.CYAN, "Türkise Basis");
+        this.addPaintedPotBase(DyeColor.LIGHT_BLUE, "Hellblaue Basis");
+        this.addPaintedPotBase(DyeColor.BLUE, "Blaue Basis");
+        this.addPaintedPotBase(DyeColor.PURPLE, "Violette Basis");
+        this.addPaintedPotBase(DyeColor.MAGENTA, "Magenta Basis");
+        this.addPaintedPotBase(DyeColor.PINK, "Pinke Basis");
+
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.WAVY_TRIM, "Wellige Umrandung");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.TICKED_TRIM, "Getigerte Umrandung");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.MAW_TRIM, "Maul Umrandung");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.PYRAMIDS_TRIM, "Pyramiden Umrandung");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.CORNERS_TRIM, "Ecken Umrandung");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.BOW_TRIM, "Bogen Umrandung");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.EYE_TRIM, "Augem Umrandung");
+        this.addPaintedPotTrim(ArtistryPaintedPotDecorations.SEAM_TRIM, "Naht Umrandung");
+
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.FREQUENCY_PATTERN, "Frequenz Muster");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.RINGS_PATTERN, "Ringe Muster");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.DOTS_PATTERN, "Punkte Muster");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.CROSS_PATTERN, "Kreuz Muster");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.WAVE_PATTERN, "Wellen Muster");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.WEAVE_PATTERN, "Gewebe Muster");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.ARROWS_PATTERN, "Pfeile Muster");
+        this.addPaintedPotPattern(ArtistryPaintedPotDecorations.CYCLE_PATTERN, "Zyklus Muster");
 
         this.add("itemGroup.artistry.base", "Artistry");
 

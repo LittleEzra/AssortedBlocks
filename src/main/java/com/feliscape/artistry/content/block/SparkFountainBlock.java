@@ -1,5 +1,6 @@
 package com.feliscape.artistry.content.block;
 
+import com.feliscape.artistry.content.block.entity.PaintedPotBlockEntity;
 import com.feliscape.artistry.content.block.entity.SparkFountainBlockEntity;
 import com.feliscape.artistry.registry.ArtistryBlockEntityTypes;
 import com.feliscape.artistry.registry.ArtistryParticles;
@@ -9,10 +10,13 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ColorParticleOption;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityTicker;
@@ -23,6 +27,7 @@ import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
@@ -52,6 +57,7 @@ public class SparkFountainBlock extends BaseEntityBlock implements SimpleWaterlo
     protected RenderShape getRenderShape(BlockState state) {
         return RenderShape.MODEL;
     }
+
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
@@ -86,6 +92,13 @@ public class SparkFountainBlock extends BaseEntityBlock implements SimpleWaterlo
                 level.setBlock(pos, state.setValue(POWERED, hasNeighborSignal), 3);
             }
         }
+    }
+
+    @Override
+    public ItemStack getCloneItemStack(BlockState state, HitResult target, LevelReader level, BlockPos pos, Player player) {
+        return level.getBlockEntity(pos) instanceof SparkFountainBlockEntity fountain
+                ? fountain.getAsItem()
+                : super.getCloneItemStack(state, target, level, pos, player);
     }
 
     @Override

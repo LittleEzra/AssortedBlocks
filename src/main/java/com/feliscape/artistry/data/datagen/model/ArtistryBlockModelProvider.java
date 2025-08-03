@@ -43,7 +43,7 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         sunsprout(ArtistryBlocks.SUNSPROUT);
         crossBlockWithRenderType(ArtistryBlocks.SUNBURST_VINES.get(), "cutout");
         crossBlockWithRenderType(ArtistryBlocks.SUNBURST_VINES_PLANT.get(), "cutout");
-        simpleBlock(ArtistryBlocks.SPARKLER.get(), models().getExistingFile(Artistry.location("block/sparkler")));
+        directionalBlock(ArtistryBlocks.SPARKLER.get(), models().getExistingFile(Artistry.location("block/sparkler")));
         amethystStars(ArtistryBlocks.AMETHYST_STARS.get());
 
         simpleBlock(ArtistryBlocks.SPARK_FOUNTAIN.get(), models().getExistingFile(Artistry.location("block/spark_fountain")));
@@ -69,6 +69,24 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         table(ArtistryBlocks.DEEPSLATE_TABLE);
         table(ArtistryBlocks.POLISHED_BLACKSTONE_TABLE);
         table(ArtistryBlocks.TUFF_TABLE);
+        table(ArtistryBlocks.CALCITE_TABLE);
+
+        blockWithItem(ArtistryBlocks.WHITE_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.LIGHT_GRAY_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.GRAY_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.BLACK_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.BROWN_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.RED_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.ORANGE_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.YELLOW_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.LIME_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.GREEN_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.CYAN_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.LIGHT_BLUE_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.BLUE_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.PURPLE_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.MAGENTA_FROSTED_GLASS, "translucent");
+        blockWithItem(ArtistryBlocks.PINK_FROSTED_GLASS, "translucent");
 
         stringLights(ArtistryBlocks.STRING_LIGHTS.get());
         wallStringLights(ArtistryBlocks.WALL_STRING_LIGHTS.get());
@@ -79,12 +97,28 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         directionalBlock(ArtistryBlocks.FLAT_LIGHT.get(), models().getExistingFile(Artistry.location("block/flat_light")));
 
         bloomingVines(ArtistryBlocks.BLOOMING_VINES);
-        getVariantBuilder(ArtistryBlocks.LUSH_FERN.get())
+        /*getVariantBuilder(ArtistryBlocks.LUSH_FERN.get())
                 .partialState().addModels(ConfiguredModel.builder().modelFile(
                         models().getExistingFile(Artistry.location("block/lush_fern"))
-                ).buildLast());
+                ).buildLast());*/
+        simpleBlock(ArtistryBlocks.LUSH_FERN.get(), models().getExistingFile(Artistry.location("block/lush_fern")));
+        lushFernCropBlock(ArtistryBlocks.LUSH_FERN_CROP.get());
+        crossBlockWithRenderType(ArtistryBlocks.TEARDROP_GRASS.get(), "cutout");
+        pottedCrossPlantBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, Artistry.location("block/potted_teardrop_grass"));
+
+        axisBlock(ArtistryBlocks.COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/copper_chain")));
+        axisBlock(ArtistryBlocks.EXPOSED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/exposed_copper_chain")));
+        axisBlock(ArtistryBlocks.WEATHERED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/weathered_copper_chain")));
+        axisBlock(ArtistryBlocks.OXIDIZED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/oxidized_copper_chain")));
+
+        axisBlock(ArtistryBlocks.WAXED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/copper_chain")));
+        axisBlock(ArtistryBlocks.WAXED_EXPOSED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/exposed_copper_chain")));
+        axisBlock(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/weathered_copper_chain")));
+        axisBlock(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/oxidized_copper_chain")));
 
         blockWithItem(ArtistryBlocks.ROCKY_DIRT);
+
+        particlesOnly(ArtistryBlocks.PAINTED_POT.get(), blockTexture(Blocks.TERRACOTTA));
 
         ResourceLocation calciteTexture = blockTexture(Blocks.CALCITE);
         ResourceLocation smoothCalciteTexture = blockTexture(ArtistryBlocks.SMOOTH_CALCITE.get());
@@ -115,6 +149,30 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         cubeColumn(ArtistryBlocks.SMALL_CALCITE_BRICKS.get());
         stairsBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get(), smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
         slabBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get(), smallCalciteBrickTexture, smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
+
+        blockWithItem(ArtistryBlocks.PAINTED_SMOOTH_CALCITE);
+        blockWithItem(ArtistryBlocks.PAINTED_POLISHED_CALCITE);
+        blockWithItem(ArtistryBlocks.PAINTED_CALCITE_BRICKS);
+        cubeColumn(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS.get());
+
+        ResourceLocation dripstoneTexture = blockTexture(Blocks.DRIPSTONE_BLOCK);
+        ResourceLocation polishedDripstoneTexture = blockTexture(ArtistryBlocks.POLISHED_DRIPSTONE.get());
+        ResourceLocation dripstoneBrickTexture = blockTexture(ArtistryBlocks.DRIPSTONE_BRICKS.get());
+
+        stairsBlock(ArtistryBlocks.DRIPSTONE_STAIRS.get(), dripstoneTexture);
+        slabBlock(ArtistryBlocks.DRIPSTONE_SLAB.get(), dripstoneTexture, dripstoneTexture);
+        wallBlock(ArtistryBlocks.DRIPSTONE_WALL.get(), dripstoneTexture);
+
+        blockWithItem(ArtistryBlocks.POLISHED_DRIPSTONE);
+        blockWithItem(ArtistryBlocks.CHISELED_DRIPSTONE);
+        stairsBlock(ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS.get(), polishedDripstoneTexture);
+        slabBlock(ArtistryBlocks.POLISHED_DRIPSTONE_SLAB.get(), polishedDripstoneTexture, polishedDripstoneTexture);
+        wallBlock(ArtistryBlocks.POLISHED_DRIPSTONE_WALL.get(), polishedDripstoneTexture);
+
+        blockWithItem(ArtistryBlocks.DRIPSTONE_BRICKS);
+        stairsBlock(ArtistryBlocks.DRIPSTONE_BRICK_STAIRS.get(), dripstoneBrickTexture);
+        slabBlock(ArtistryBlocks.DRIPSTONE_BRICK_SLAB.get(), dripstoneBrickTexture, dripstoneBrickTexture);
+        wallBlock(ArtistryBlocks.DRIPSTONE_BRICK_WALL.get(), dripstoneBrickTexture);
 
         leavesBlock(ArtistryBlocks.ASPEN_LEAVES, "cutout_mipped");
 
@@ -150,6 +208,15 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
     }
 
+    public void axisBlock(RotatedPillarBlock block, ModelFile model) {
+        this.axisBlock(block, model, model);
+    }
+
+    private void particlesOnly(Block block, ResourceLocation particle) {
+        ModelFile model = models().getBuilder(name(block)).texture("particle", particle);
+        this.simpleBlock(block, model);
+    }
+
     private void cubeColumn(Block block) {
         ModelFile modelFile = models().cubeColumn(name(block), blockTexture(block), blockTexture(block).withSuffix("_top"));
         simpleBlockWithItem(block, modelFile);
@@ -161,6 +228,20 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
                 .renderType("cutout")
                 .texture("plant", blockTexture(block.get().getPotted()));
         simpleBlock(block.get(), model);
+    }
+    private void pottedCrossPlantBlock(Supplier<? extends FlowerPotBlock> block, ResourceLocation plantLocation) {
+        ModelFile model = models().withExistingParent(getLocation(block).getPath(),
+                        "minecraft:block/flower_pot_cross")
+                .renderType("cutout")
+                .texture("plant", plantLocation);
+        simpleBlock(block.get(), model);
+    }
+
+    private void lushFernCropBlock(LushFernCropBlock block){
+        VariantBlockStateBuilder builder = getVariantBuilder(block);
+        builder.forAllStates(state -> ConfiguredModel.builder()
+                .modelFile(models().getExistingFile(Artistry.location("block/" + name(block) + "_stage" + state.getValue(LushFernCropBlock.AGE))))
+                .build());
     }
 
     private void largeLantern(Supplier<? extends LargeLanternBlock> block){
@@ -384,6 +465,9 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
     private void blockWithItem(Supplier<? extends Block> block){
         simpleBlockWithItem(block.get(), cubeAll(block.get()));
+    }
+    private void blockWithItem(Supplier<? extends Block> block, String renderType){
+        simpleBlockWithItem(block.get(), models().cubeAll(this.name(block.get()), this.blockTexture(block.get())).renderType(renderType));
     }
 
     private void leavesBlock(Supplier<? extends Block> block, String renderType){

@@ -1,2 +1,18 @@
-// 1.21.1	2025-07-20T15:54:50.734998	Registries
+// 1.21.1	2025-08-01T10:35:24.6076856	Registries
+ca20f65789cfc3ad446b9be0ca9a94d9d0716f73 data/artistry/artistry/painted_pot/pattern/arrows.json
+5139b77f8e4a8021b3a974250bf6b18ecd056648 data/artistry/artistry/painted_pot/pattern/cross.json
+be5adf70e85ea7727d9e7d6e700e5c57818838c3 data/artistry/artistry/painted_pot/pattern/cycle.json
+d4f3771ea4476660442723ccbaeca776fa5502e2 data/artistry/artistry/painted_pot/pattern/dots.json
+1ece06bbbe153e4870de3503b35f0e37e1a3ac3a data/artistry/artistry/painted_pot/pattern/frequency.json
+882d26264198875e995f4dff40fe75cc2caa5f8b data/artistry/artistry/painted_pot/pattern/rings.json
+2a54750cd71a2c66a5e3311585818ea8a0c967e6 data/artistry/artistry/painted_pot/pattern/wave.json
+c65cb24d11bb1f8a887ec75bbc9a5c0f7a47aaf3 data/artistry/artistry/painted_pot/pattern/weave.json
+d41ed93ddb5f7f4b1a9d493123225751b744996a data/artistry/artistry/painted_pot/trim/bow.json
+86a3e161719ffcc964f184433e1aac3f23f6fa44 data/artistry/artistry/painted_pot/trim/corners.json
+818d4738c025d6cfb919f8dc77523a495d77fcde data/artistry/artistry/painted_pot/trim/eye.json
+26780904f1fa4a38010f9e6471c0d3846d0652eb data/artistry/artistry/painted_pot/trim/maw.json
+021b3624df04cedc942cfddc95167effd874e22e data/artistry/artistry/painted_pot/trim/pyramids.json
+581d3e82d83380aeed3ae1b016f4744980e7faff data/artistry/artistry/painted_pot/trim/seam.json
+3d8c896a2aae32c78ab5c8dbbe648c210fb573c3 data/artistry/artistry/painted_pot/trim/ticked.json
+1a2a4c315c2804eb27079f4a31678f26c784d095 data/artistry/artistry/painted_pot/trim/wavy.json
 0e3d5ffd3e1dd3cd23ee10136aaae2a0e72d31e2 data/artistry/worldgen/configured_feature/aspen.json
