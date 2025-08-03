@@ -1,0 +1,72 @@
+{
+  "type": "minecraft:gift",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": {
+                "blocks": "#artistry:sniffer_diggable/has_aspen_plants"
+              },
+              "condition": "artistry:entity_on_block"
+            }
+          ],
+          "name": "artistry:sunsprout"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": {
+                "blocks": "#artistry:sniffer_diggable/has_aspen_plants"
+              },
+              "condition": "artistry:entity_on_block"
+            }
+          ],
+          "name": "artistry:aspen_sapling"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": {
+                "blocks": "#artistry:sniffer_diggable/has_teardrop_grass"
+              },
+              "condition": "artistry:entity_on_block"
+            }
+          ],
+          "name": "artistry:teardrop_grass"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": {
+                "blocks": "#artistry:sniffer_diggable/has_lush_plants"
+              },
+              "condition": "artistry:entity_on_block"
+            }
+          ],
+          "name": "artistry:blooming_vines"
+        },
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": {
+                "blocks": "#artistry:sniffer_diggable/has_lush_plants"
+              },
+              "condition": "artistry:entity_on_block"
+            }
+          ],
+          "name": "artistry:fern_seed"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "artistry:gameplay/sniffer_additional"
+}

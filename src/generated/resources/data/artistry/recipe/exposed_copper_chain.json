@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:exposed_copper"
+    },
+    "|": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "|",
+    "#",
+    "|"
+  ],
+  "result": {
+    "count": 8,
+    "id": "artistry:exposed_copper_chain"
+  }
+}

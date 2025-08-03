@@ -1,0 +1,13 @@
+{
+  "values": {
+    "artistry:copper_chain": {
+      "next_oxidation_stage": "artistry:exposed_copper_chain"
+    },
+    "artistry:exposed_copper_chain": {
+      "next_oxidation_stage": "artistry:weathered_copper_chain"
+    },
+    "artistry:weathered_copper_chain": {
+      "next_oxidation_stage": "artistry:oxidized_copper_chain"
+    }
+  }
+}

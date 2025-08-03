@@ -1,8 +1,13 @@
-// 1.21.1	2025-07-26T14:54:36.9335205	Tags for minecraft:block mod id artistry
+// 1.21.1	2025-08-01T22:16:21.2540092	Tags for minecraft:block mod id artistry
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/block/aspen_logs.json
+3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/block/frosted_glass.json
+2b01c878f7df076cc4c1411bf14299f80461cbce data/artistry/tags/block/sniffer_diggable/has_aspen_plants.json
+158a4877fad0ee79d00e8c9f641ad661e822cdb5 data/artistry/tags/block/sniffer_diggable/has_lush_plants.json
+c1a14eff6d6ae90bd58c7ccdab212291e17d5e74 data/artistry/tags/block/sniffer_diggable/has_teardrop_grass.json
 c3b39af3db5bc3768608a47a706098d450692fe3 data/artistry/tags/block/string_lights.json
-91d2c47c016f49d48843479d7c62a96b210a3b12 data/artistry/tags/block/tables.json
+01a4149b278fed1965636e639f1fcbcb4453d95c data/artistry/tags/block/tables.json
 1bba110c9fc802713fa42d07e7f1b8bd8ecec799 data/artistry/tags/block/wooden_tables.json
+6cdc3b7b9f5016145573e5f0f35fcf333a0272a3 data/c/tags/block/glass_blocks/cheap.json
 095de7ea392c97d9f9704510e2daf4ec0aadd87e data/c/tags/block/stripped_logs.json
 1b45115bddb91a660f9e0846f96eb9a3cf3d05c4 data/c/tags/block/stripped_woods.json
 c2413c0ce4aec075067c5e4a3473db7c6be09e41 data/minecraft/tags/block/azalea_root_replaceable.json
@@ -15,19 +20,19 @@ c2413c0ce4aec075067c5e4a3473db7c6be09e41 data/minecraft/tags/block/enderman_hold
 2c4e2b63d7ddfa023501a694b0bb7423512a293e data/minecraft/tags/block/leaves.json
 05936648edde2e2b272c6888a1c9dca6bbfb5784 data/minecraft/tags/block/logs_that_burn.json
 260f43275cf9e04e92fce3de993ade53dddb5b49 data/minecraft/tags/block/mineable/axe.json
-5439199db3385e96bb764d8114b5a903286c6b0d data/minecraft/tags/block/mineable/pickaxe.json
+d274366291ef2df17b6df1afba1d5655cd7bba56 data/minecraft/tags/block/mineable/pickaxe.json
 e31b6306a860011e95a8b85c92109253a95c5fba data/minecraft/tags/block/mineable/shovel.json
 c2413c0ce4aec075067c5e4a3473db7c6be09e41 data/minecraft/tags/block/moss_replaceable.json
 c2413c0ce4aec075067c5e4a3473db7c6be09e41 data/minecraft/tags/block/nether_carver_replaceables.json
 c2413c0ce4aec075067c5e4a3473db7c6be09e41 data/minecraft/tags/block/overworld_carver_replaceables.json
 72a09d8bd065bc541d6ebaf2cee46366bd5476fb data/minecraft/tags/block/planks.json
 eeec39ca4cb20e06e0ab24f9ea72443deadfc030 data/minecraft/tags/block/saplings.json
-1f79e642c7b6eaa66a879db3a0b7f379fbdf771e data/minecraft/tags/block/slabs.json
-16af1bd790600979d47a7694c4cec68d5c05b5bc data/minecraft/tags/block/sniffer_diggable_block.json
-cb6bf083bf6c078d1f6ce9b4ad3c12205e09d515 data/minecraft/tags/block/stairs.json
+9c24cdf41df8008cf28f3e980aa1fcf91eb093b6 data/minecraft/tags/block/slabs.json
+729e133b86abd15ff91a981e92e588316a449c62 data/minecraft/tags/block/sniffer_diggable_block.json
+8dc6bd45468dc6f59d7bddd981f5e03f51938ea5 data/minecraft/tags/block/stairs.json
 bd8989fdc1712ae18a44bf304694b36084aaf089 data/minecraft/tags/block/standing_signs.json
 27dc5165a45a02cb2b16c7eba2c8b98b910a5404 data/minecraft/tags/block/sword_efficient.json
-c3cebd76c21ef49f8c0c768461df3aee9a3fec0f data/minecraft/tags/block/walls.json
+bffaefe5051b62ae8f80827820ad5b1b02f89e52 data/minecraft/tags/block/walls.json
 f1422dade47371fa2e42377279c7f7761741a692 data/minecraft/tags/block/wall_hanging_signs.json
 509cbc7b8627d5ea5f289caf93a7802ffd493e52 data/minecraft/tags/block/wall_signs.json
 668b2796445d31d23057580325583de0479ff000 data/minecraft/tags/block/wooden_buttons.json

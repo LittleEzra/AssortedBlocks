@@ -1,6 +1,13 @@
 {
   "values": [
     "artistry:stone_tile_slab",
-    "artistry:mossy_stone_tile_slab"
+    "artistry:mossy_stone_tile_slab",
+    "artistry:calcite_slab",
+    "artistry:polished_calcite_slab",
+    "artistry:calcite_brick_slab",
+    "artistry:small_calcite_brick_slab",
+    "artistry:dripstone_slab",
+    "artistry:polished_dripstone_slab",
+    "artistry:dripstone_brick_slab"
   ]
 }

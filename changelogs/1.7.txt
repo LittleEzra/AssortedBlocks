@@ -1,0 +1,33 @@
+Added:
+- Painted Calcite blocks
+    - Crafted by surrounding a piece of lapis with eight Polished Calcite, Calcite Brick, or Small Calcite Brick blocks
+- Dripstone Block Set, with Polished Dripstone, Dripstone Bricks, and Chiseled Dripstone
+- Calcite Table
+- Frosted Glass
+    - Made by smelting Stained Glass (or dying other Frosted Glass)
+- Teardrop Grass
+    - Dug up by Sniffers on Clay, Sand, or Mud
+- Fern Seeds
+    - Dug up by Sniffers on Moss
+    - Grows into a Lush Fern when planted on Farmland
+- Painted Pots
+    - Right-clicking on a Decorated Pot without any sherds using a dye paints it.
+    - If you click the bottom or top quarter on the side, it gets a trim.
+    - If you click the center of the side, it gets a pattern
+    - If you click the top or bottom, the pot itself gets dyed
+        /This feature was very difficult to implement, so it might have some issues. If you find one, please report it.
+        You can find the link to the issues page on the sidebar./
+- Copper Chains
+    - Crafted by placing a Copper Ingot above and below any Copper Block
+    - Can oxidize and be waxed
+Changes:
+- Removed the collision from Flat Lights
+- Removed the recipe for Aspen Saplings
+- To replace the Aspen Sapling recipe, it can now be obtained using Sniffers that are digging on Podzol or Coarse Dirt
+- Blooming Vines are now only dug up by Sniffers on Moss Blocks
+- Added Clay and Sand to sniffer diggable blocks
+- Sparklers can now be placed on any face of a block
+- Made Spark Fountains dyeable similar to leather armor
+Fixes:
+- Added the pure calcite blocks to mineable/pickaxe
+- Made pure calcite walls actually connect

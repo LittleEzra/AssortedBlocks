@@ -27,8 +27,19 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         blockItemSprite(ArtistryBlocks.ASPEN_DOOR);
 
         simpleItem(ArtistryItems.SUNSPROUT);
+        simpleItem(ArtistryItems.FERN_SEED);
         itemWithBlockTexture(ArtistryItems.SUNBURST_VINES);
         simpleItem(ArtistryItems.STRING_LIGHTS);
+
+        blockItemSprite(ArtistryBlocks.COPPER_CHAIN);
+        blockItemSprite(ArtistryBlocks.EXPOSED_COPPER_CHAIN);
+        blockItemSprite(ArtistryBlocks.WEATHERED_COPPER_CHAIN);
+        blockItemSprite(ArtistryBlocks.OXIDIZED_COPPER_CHAIN);
+
+        blockItemSprite(ArtistryBlocks.WAXED_COPPER_CHAIN, getBlockItemSpriteLocation(ArtistryBlocks.COPPER_CHAIN));
+        blockItemSprite(ArtistryBlocks.WAXED_EXPOSED_COPPER_CHAIN, getBlockItemSpriteLocation(ArtistryBlocks.EXPOSED_COPPER_CHAIN));
+        blockItemSprite(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN, getBlockItemSpriteLocation(ArtistryBlocks.WEATHERED_COPPER_CHAIN));
+        blockItemSprite(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN, getBlockItemSpriteLocation(ArtistryBlocks.OXIDIZED_COPPER_CHAIN));
 
         manualBlockItem(ArtistryBlocks.STONE_PILLAR);
         manualBlockItem(ArtistryBlocks.MOSSY_STONE_PILLAR);
@@ -51,16 +62,27 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         manualBlockItem(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS);
         manualBlockItem(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB);
 
+        manualBlockItem(ArtistryBlocks.DRIPSTONE_STAIRS);
+        manualBlockItem(ArtistryBlocks.DRIPSTONE_SLAB);
+        minecraftBasedWallItem(ArtistryBlocks.DRIPSTONE_WALL, Blocks.DRIPSTONE_BLOCK);
+        manualBlockItem(ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS);
+        manualBlockItem(ArtistryBlocks.POLISHED_DRIPSTONE_SLAB);
+        wallItem(ArtistryBlocks.POLISHED_DRIPSTONE_WALL, ArtistryBlocks.POLISHED_DRIPSTONE);
+        manualBlockItem(ArtistryBlocks.DRIPSTONE_BRICK_STAIRS);
+        manualBlockItem(ArtistryBlocks.DRIPSTONE_BRICK_SLAB);
+        wallItem(ArtistryBlocks.DRIPSTONE_BRICK_WALL, ArtistryBlocks.DRIPSTONE_BRICKS);
+
         blockItemSprite(ArtistryBlocks.LARGE_LANTERN);
         blockItemSprite(ArtistryBlocks.LARGE_SOUL_LANTERN);
         blockItemSprite(ArtistryBlocks.ROUND_LANTERN);
         blockItemSprite(ArtistryBlocks.FLAT_LIGHT);
         generatedBlockItem(ArtistryBlocks.SPARKLER);
         generatedBlockItem(ArtistryBlocks.AMETHYST_STARS);
-        blockItemSprite(ArtistryBlocks.SPARK_FOUNTAIN);
+        blockItemSpriteLayered(ArtistryBlocks.SPARK_FOUNTAIN);
 
         blockItemSprite(ArtistryBlocks.BLOOMING_VINES);
         blockItemSprite(ArtistryBlocks.LUSH_FERN);
+        generatedBlockItem(ArtistryBlocks.TEARDROP_GRASS);
 
         manualBlockItem(ArtistryBlocks.ASPEN_LOG);
         manualBlockItem(ArtistryBlocks.ASPEN_WOOD);
@@ -85,23 +107,30 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
 
     private ItemModelBuilder simpleItem(Supplier<? extends Item> item){
         return withExistingParent(getLocation(item.get()).getPath(),
-                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
-                Artistry.location("item/" + getLocation(item.get()).getPath()));
+                ResourceLocation.withDefaultNamespace("item/generated"))
+                .texture("layer0", Artistry.location("item/" + getLocation(item.get()).getPath()));
+    }
+    private ItemModelBuilder simpleDoubleLayered(Supplier<? extends Item> item){
+        return withExistingParent(getLocation(item.get()).getPath(),
+                ResourceLocation.withDefaultNamespace("item/generated"))
+                .texture("layer0", Artistry.location("item/" + getLocation(item.get()).getPath()))
+                .texture("layer1", Artistry.location("item/" + getLocation(item.get()).getPath() + "_overlay"))
+                ;
     }
     private ItemModelBuilder handheldItem(Supplier<? extends Item> item){
         return withExistingParent(getLocation(item.get()).getPath(),
-                ResourceLocation.withDefaultNamespace("item/handheld")).texture("layer0",
-                Artistry.location("item/" + getLocation(item.get()).getPath()));
+                ResourceLocation.withDefaultNamespace("item/handheld"))
+                .texture("layer0", Artistry.location("item/" + getLocation(item.get()).getPath()));
     }
     private ItemModelBuilder rotatedHandheldItem(Supplier<? extends Item> item){
         return withExistingParent(getLocation(item.get()).getPath(),
-                Artistry.location("item/rotated_handheld")).texture("layer0",
-                Artistry.location("item/" + getLocation(item.get()).getPath()));
+                Artistry.location("item/rotated_handheld"))
+                .texture("layer0", Artistry.location("item/" + getLocation(item.get()).getPath()));
     }
     private ItemModelBuilder itemWithBlockTexture(Supplier<? extends Item> item){
         return withExistingParent(getLocation(item.get()).getPath(),
-                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
-                Artistry.location("block/" + getLocation(item.get()).getPath()));
+                ResourceLocation.withDefaultNamespace("item/generated"))
+                .texture("layer0", Artistry.location("block/" + getLocation(item.get()).getPath()));
     }
 
     public void manualBlockItem(Supplier<? extends Block> block) {
@@ -138,6 +167,17 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
                 ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
                 Artistry.location("item/" + getBlockLocation(block.get()).getPath()));
     }
+    private ItemModelBuilder blockItemSprite(Supplier<? extends Block> block, ResourceLocation texture) { // Uses a block instead of item with a unique item texture (Example: Doors or Lanterns)
+        return withExistingParent(getBlockLocation(block.get()).getPath(),
+                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0", texture);
+    }
+    private ItemModelBuilder blockItemSpriteLayered(Supplier<? extends Block> block) { // Uses a block instead of item with a unique item texture (Example: Doors or Lanterns)
+        return withExistingParent(getBlockLocation(block.get()).getPath(),
+                ResourceLocation.withDefaultNamespace("item/generated"))
+                .texture("layer0", Artistry.location("item/" + getBlockLocation(block.get()).getPath()))
+                .texture("layer1", Artistry.location("item/" + getBlockLocation(block.get()).getPath()) + "_overlay")
+                ;
+    }
     private ItemModelBuilder generatedBlockItem(Supplier<? extends Block> block) { // Uses the texture from textures/block (Example: Saplings or Torches)
         return withExistingParent(getBlockLocation(block.get()).getPath(),
                 ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
@@ -156,5 +196,9 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
     }
     private ResourceLocation getBlockLocation(Block block){
         return BuiltInRegistries.BLOCK.getKey(block);
+    }
+
+    private ResourceLocation getBlockItemSpriteLocation(Supplier<? extends Block> block){
+        return Artistry.location("item/" + getBlockLocation(block.get()).getPath());
     }
 }

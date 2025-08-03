@@ -1,10 +1,7 @@
 package com.feliscape.artistry.registry;
 
 import com.feliscape.artistry.Artistry;
-import com.feliscape.artistry.content.block.entity.ModHangingSignBlockEntity;
-import com.feliscape.artistry.content.block.entity.ModSignBlockEntity;
-import com.feliscape.artistry.content.block.entity.SparkFountainBlockEntity;
-import com.feliscape.artistry.content.block.entity.WaterFountainBlockEntity;
+import com.feliscape.artistry.content.block.entity.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
@@ -28,6 +25,9 @@ public class ArtistryBlockEntityTypes {
     public static final Supplier<BlockEntityType<WaterFountainBlockEntity>> WATER_FOUNTAIN =
             BLOCK_ENTITIES.register("water_fountain", () -> BlockEntityType.Builder.of(WaterFountainBlockEntity::new,
                     ArtistryBlocks.WATER_FOUNTAIN.get()).build(null));
+    public static final Supplier<BlockEntityType<PaintedPotBlockEntity>> PAINTED_POT =
+            BLOCK_ENTITIES.register("painted_pot", () -> BlockEntityType.Builder.of(PaintedPotBlockEntity::new,
+                    ArtistryBlocks.PAINTED_POT.get()).build(null));
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

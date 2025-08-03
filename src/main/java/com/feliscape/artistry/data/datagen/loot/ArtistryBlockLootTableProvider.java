@@ -1,19 +1,26 @@
 package com.feliscape.artistry.data.datagen.loot;
 
+import com.feliscape.artistry.content.pot.PaintedPotDecorations;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DecoratedPotBlock;
 import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.DynamicLoot;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
+import net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
@@ -42,12 +49,15 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.MOSSY_STONE_PILLAR.get());
 
         dropOther(ArtistryBlocks.SUNSPROUT.get(), ArtistryItems.SUNSPROUT);
+        dropOther(ArtistryBlocks.LUSH_FERN_CROP.get(), ArtistryItems.FERN_SEED);
         this.add(ArtistryBlocks.SUNBURST_VINES.get(), BlockLootSubProvider::createShearsOnlyDrop);
         this.add(ArtistryBlocks.SUNBURST_VINES_PLANT.get(), BlockLootSubProvider::createShearsOnlyDrop);
 
         this.add(ArtistryBlocks.BLOOMING_VINES.get(), block -> this.createMultifaceBlockDrops(block, HAS_SHEARS));
         this.add(ArtistryBlocks.WALL_STRING_LIGHTS.get(), this::createWallStringLights);
         this.add(ArtistryBlocks.LUSH_FERN.get(), BlockLootSubProvider::createShearsOnlyDrop);
+        this.add(ArtistryBlocks.TEARDROP_GRASS.get(), BlockLootSubProvider::createShearsOnlyDrop);
+        this.dropPottedContents(ArtistryBlocks.POTTED_TEARDROP_GRASS.get());
 
         this.dropSelf(ArtistryBlocks.OAK_TABLE.get());
         this.dropSelf(ArtistryBlocks.SPRUCE_TABLE.get());
@@ -69,8 +79,36 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.DEEPSLATE_TABLE.get());
         this.dropSelf(ArtistryBlocks.POLISHED_BLACKSTONE_TABLE.get());
         this.dropSelf(ArtistryBlocks.TUFF_TABLE.get());
+        this.dropSelf(ArtistryBlocks.CALCITE_TABLE.get());
+
+        this.dropWhenSilkTouch(ArtistryBlocks.WHITE_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.LIGHT_GRAY_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.GRAY_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.BLACK_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.BROWN_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.RED_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.ORANGE_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.YELLOW_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.LIME_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.GREEN_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.CYAN_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.LIGHT_BLUE_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.BLUE_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.PURPLE_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.MAGENTA_FROSTED_GLASS.get());
+        this.dropWhenSilkTouch(ArtistryBlocks.PINK_FROSTED_GLASS.get());
 
         this.dropSelf(ArtistryBlocks.STRING_LIGHTS.get());
+
+        this.dropSelf(ArtistryBlocks.COPPER_CHAIN.get());
+        this.dropSelf(ArtistryBlocks.EXPOSED_COPPER_CHAIN.get());
+        this.dropSelf(ArtistryBlocks.WEATHERED_COPPER_CHAIN.get());
+        this.dropSelf(ArtistryBlocks.OXIDIZED_COPPER_CHAIN.get());
+
+        this.dropSelf(ArtistryBlocks.WAXED_COPPER_CHAIN.get());
+        this.dropSelf(ArtistryBlocks.WAXED_EXPOSED_COPPER_CHAIN.get());
+        this.dropSelf(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN.get());
+        this.dropSelf(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get());
 
         this.add(ArtistryBlocks.LARGE_LANTERN.get(), this::createSingleItemTable);
         this.add(ArtistryBlocks.LARGE_SOUL_LANTERN.get(), this::createSingleItemTable);
@@ -80,10 +118,13 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.SPARKLER.get());
         this.add(ArtistryBlocks.AMETHYST_STARS.get(), this::createMultifaceBlockDrops);
 
-        this.dropSelf(ArtistryBlocks.SPARK_FOUNTAIN.get());
+        this.add(ArtistryBlocks.SPARK_FOUNTAIN.get(), this::createSparkFountain);
         this.dropSelf(ArtistryBlocks.WATER_FOUNTAIN.get());
 
         this.dropSelf(ArtistryBlocks.ROCKY_DIRT.get());
+
+        this.add(ArtistryBlocks.PAINTED_POT.get(), this::createPaintedPotTable);
+
 
         this.dropSelf(ArtistryBlocks.CALCITE_STAIRS.get());
         this.dropSelf(ArtistryBlocks.CALCITE_WALL.get());
@@ -108,6 +149,26 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get());
         this.add(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get(), this::createSlabItemTable);
 
+        this.dropSelf(ArtistryBlocks.PAINTED_SMOOTH_CALCITE.get());
+        this.dropSelf(ArtistryBlocks.PAINTED_POLISHED_CALCITE.get());
+        this.dropSelf(ArtistryBlocks.PAINTED_CALCITE_BRICKS.get());
+        this.dropSelf(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS.get());
+
+        this.dropSelf(ArtistryBlocks.DRIPSTONE_STAIRS.get());
+        this.dropSelf(ArtistryBlocks.DRIPSTONE_WALL.get());
+        this.add(ArtistryBlocks.DRIPSTONE_SLAB.get(), this::createSlabItemTable);
+
+        this.dropSelf(ArtistryBlocks.POLISHED_DRIPSTONE.get());
+        this.dropSelf(ArtistryBlocks.CHISELED_DRIPSTONE.get());
+        this.dropSelf(ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS.get());
+        this.dropSelf(ArtistryBlocks.POLISHED_DRIPSTONE_WALL.get());
+        this.add(ArtistryBlocks.POLISHED_DRIPSTONE_SLAB.get(), this::createSlabItemTable);
+
+        this.dropSelf(ArtistryBlocks.DRIPSTONE_BRICKS.get());
+        this.dropSelf(ArtistryBlocks.DRIPSTONE_BRICK_STAIRS.get());
+        this.dropSelf(ArtistryBlocks.DRIPSTONE_BRICK_WALL.get());
+        this.add(ArtistryBlocks.DRIPSTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+
         this.dropSelf(ArtistryBlocks.ASPEN_LOG.get());
         this.dropSelf(ArtistryBlocks.ASPEN_WOOD.get());
         this.dropSelf(ArtistryBlocks.STRIPPED_ASPEN_LOG.get());
@@ -130,13 +191,42 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.ASPEN_FENCE.get());
         this.dropSelf(ArtistryBlocks.ASPEN_FENCE_GATE.get());
         this.dropSelf(ArtistryBlocks.ASPEN_SAPLING.get());
-        dropPottedContents(ArtistryBlocks.POTTED_ASPEN_SAPLING.get());
+        this.dropPottedContents(ArtistryBlocks.POTTED_ASPEN_SAPLING.get());
 
         this.add(ArtistryBlocks.ASPEN_SLAB.get(), this::createSlabItemTable);
         this.add(ArtistryBlocks.ASPEN_DOOR.get(), this::createDoorTable);
 
         this.add(ArtistryBlocks.ASPEN_LEAVES.get(),
                 block -> createLeavesDrops(ArtistryBlocks.ASPEN_LEAVES.get(), ArtistryBlocks.ASPEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+    }
+
+
+
+    private LootTable.Builder createPaintedPotTable(Block block) {
+        return LootTable.lootTable().withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0F)).add(
+                                LootItem.lootTableItem(Items.BRICK).apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F))) // No sherds can be applied, so just drop 4 bricks
+                                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                                                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DecoratedPotBlock.CRACKED, true)))
+                                        .otherwise(
+                                                LootItem.lootTableItem(block)
+                                                        .apply(
+                                                                CopyComponentsFunction.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY)
+                                                                        .include(PaintedPotDecorations.type())
+                                                        )
+                                        )
+                                )
+                );
+    }
+    private LootTable.Builder createSparkFountain(Block block) {
+        return LootTable.lootTable().withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0F)).add(
+                                LootItem.lootTableItem(block)
+                                        .apply(
+                                                CopyComponentsFunction.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY)
+                                                        .include(DataComponents.DYED_COLOR)
+                                        )
+                ));
     }
 
     protected LootTable.Builder createWallStringLights(Block block) {
