@@ -4,7 +4,7 @@ import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
 import net.minecraft.data.PackOutput;
 
-public class ArtistryRuRUProvider extends ArtistryLanguageProvider {
+public class ArtistryRuRuProvider extends ArtistryLanguageProvider {
     public ArtistryRuRuProvider(PackOutput output) {
         super(output, "ru_ru");
     }
