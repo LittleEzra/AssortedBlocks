@@ -60,5 +60,6 @@ public class DataGenerators {
 
         generator.addProvider(true, new ArtistryEnUsProvider(packOutput));
         generator.addProvider(true, new ArtistryDeDeProvider(packOutput));
+        generator.addProvider(true, new ArtistryRuRuProvider(packOutput));
     }
 }
