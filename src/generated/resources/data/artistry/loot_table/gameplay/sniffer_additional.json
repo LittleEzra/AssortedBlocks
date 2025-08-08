@@ -38,7 +38,7 @@
               "condition": "artistry:entity_on_block"
             }
           ],
-          "name": "artistry:teardrop_grass"
+          "name": "artistry:ancient_tear"
         },
         {
           "type": "minecraft:item",

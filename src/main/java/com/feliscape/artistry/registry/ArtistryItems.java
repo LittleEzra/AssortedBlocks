@@ -3,6 +3,7 @@ package com.feliscape.artistry.registry;
 import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.content.block.entity.SparkFountainBlockEntity;
 import com.feliscape.artistry.content.entity.ModBoat;
+import com.feliscape.artistry.content.item.AncientTearItem;
 import com.feliscape.artistry.content.item.ModBoatItem;
 import com.feliscape.artistry.content.pot.PaintedPotDecorations;
 import net.minecraft.core.Direction;
@@ -26,6 +27,8 @@ public class ArtistryItems {
             p -> new ItemNameBlockItem(ArtistryBlocks.SUNSPROUT.get(), p));
     public static final DeferredItem<ItemNameBlockItem> FERN_SEED = ITEMS.registerItem("fern_seed",
             p -> new ItemNameBlockItem(ArtistryBlocks.LUSH_FERN_CROP.get(), p));
+    public static final DeferredItem<AncientTearItem> ANCIENT_TEAR = ITEMS.registerItem("ancient_tear",
+            AncientTearItem::new);
 
     public static final DeferredItem<StandingAndWallBlockItem> STRING_LIGHTS = ITEMS.registerItem("string_lights",
             p -> new StandingAndWallBlockItem(ArtistryBlocks.STRING_LIGHTS.get(), ArtistryBlocks.WALL_STRING_LIGHTS.get(), p.stacksTo(16), Direction.UP));

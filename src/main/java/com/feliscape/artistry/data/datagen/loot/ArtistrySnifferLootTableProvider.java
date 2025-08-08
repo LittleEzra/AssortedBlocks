@@ -6,10 +6,8 @@ import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
 import com.feliscape.artistry.registry.ArtistryTags;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.data.loot.LootTableSubProvider;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
@@ -36,7 +34,7 @@ public class ArtistrySnifferLootTableProvider implements LootTableSubProvider {
                 .withPool(lootPool()
                         .add(LootItem.lootTableItem(ArtistryBlocks.SUNSPROUT).when(ON_ASPEN_PLANT_BLOCK))
                         .add(LootItem.lootTableItem(ArtistryBlocks.ASPEN_SAPLING).when(ON_ASPEN_PLANT_BLOCK))
-                        .add(LootItem.lootTableItem(ArtistryBlocks.TEARDROP_GRASS).when(ON_TEARDROP_GRASS_BLOCK))
+                        .add(LootItem.lootTableItem(ArtistryItems.ANCIENT_TEAR).when(ON_TEARDROP_GRASS_BLOCK))
                         .add(LootItem.lootTableItem(ArtistryBlocks.BLOOMING_VINES).when(ON_LUSH_PLANT_BLOCK))
                         .add(LootItem.lootTableItem(ArtistryItems.FERN_SEED).when(ON_LUSH_PLANT_BLOCK))
                 )

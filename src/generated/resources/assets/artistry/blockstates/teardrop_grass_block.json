@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "artistry:block/teardrop_grass_block"
+      },
+      {
+        "model": "artistry:block/teardrop_grass_block",
+        "y": 90
+      },
+      {
+        "model": "artistry:block/teardrop_grass_block",
+        "y": 180
+      },
+      {
+        "model": "artistry:block/teardrop_grass_block",
+        "y": 270
+      },
+      {
+        "model": "artistry:block/teardrop_grass_block"
+      },
+      {
+        "model": "artistry:block/teardrop_grass_block",
+        "y": 90
+      },
+      {
+        "model": "artistry:block/teardrop_grass_block",
+        "y": 180
+      },
+      {
+        "model": "artistry:block/teardrop_grass_block",
+        "y": 270
+      }
+    ]
+  }
+}

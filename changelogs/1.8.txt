@@ -1,0 +1,12 @@
+Added:
+- Teardrop Grass Block
+- Tall Teardrop Grass
+    - Made by bonemealing Short Teardrop Grass
+- Ancient Tear
+    - Now dug up by Sniffers instead of Teardrop Grass directly
+    - Can be applied onto a Dirt block to make a Teardrop Grass block
+Changes:
+- Made Teardrop Grass flammable (30 spread speed, 60 flammability), being slightly less so than Short Grass
+- Renamed Teardrop Grass to Short Teardrop Grass (this _might_ result in all currently existing Teardrop Grass disappearing)
+Fixes:
+- Made Short Teardrop Grass (and Tall Teardrop) Grass compostable

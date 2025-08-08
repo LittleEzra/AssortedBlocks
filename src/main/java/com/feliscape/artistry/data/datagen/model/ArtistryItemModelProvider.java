@@ -28,6 +28,7 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
 
         simpleItem(ArtistryItems.SUNSPROUT);
         simpleItem(ArtistryItems.FERN_SEED);
+        simpleItem(ArtistryItems.ANCIENT_TEAR);
         itemWithBlockTexture(ArtistryItems.SUNBURST_VINES);
         simpleItem(ArtistryItems.STRING_LIGHTS);
 
@@ -82,7 +83,8 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
 
         blockItemSprite(ArtistryBlocks.BLOOMING_VINES);
         blockItemSprite(ArtistryBlocks.LUSH_FERN);
-        generatedBlockItem(ArtistryBlocks.TEARDROP_GRASS);
+        generatedBlockItem(ArtistryBlocks.SHORT_TEARDROP_GRASS);
+        generatedBlockItem(ArtistryBlocks.TALL_TEARDROP_GRASS, blockTexture(ArtistryBlocks.TALL_TEARDROP_GRASS).withSuffix("_top"));
 
         manualBlockItem(ArtistryBlocks.ASPEN_LOG);
         manualBlockItem(ArtistryBlocks.ASPEN_WOOD);
@@ -183,6 +185,11 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
                 ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
                 Artistry.location("block/" + getBlockLocation(block.get()).getPath()));
     }
+    private ItemModelBuilder generatedBlockItem(Supplier<? extends Block> block, ResourceLocation sprite) { // Uses the texture from textures/block (Example: Saplings or Torches)
+        return withExistingParent(getBlockLocation(block.get()).getPath(),
+                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
+                sprite);
+    }
 
     private ResourceLocation getLocation(Supplier<? extends Item> item){
         return BuiltInRegistries.ITEM.getKey(item.get());
@@ -191,11 +198,20 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         return BuiltInRegistries.ITEM.getKey(item);
     }
 
-    private ResourceLocation getBlockLocation(Supplier<Block> block){
+    private ResourceLocation getBlockLocation(Supplier<? extends Block> block){
         return BuiltInRegistries.BLOCK.getKey(block.get());
     }
     private ResourceLocation getBlockLocation(Block block){
         return BuiltInRegistries.BLOCK.getKey(block);
+    }
+
+    private ResourceLocation blockTexture(Supplier<? extends Block> block){
+        ResourceLocation location = getBlockLocation(block);
+        return ResourceLocation.fromNamespaceAndPath(location.getNamespace(), "block/" + location.getPath());
+    }
+    private ResourceLocation blockTexture(Block block){
+        ResourceLocation location = getBlockLocation(block);
+        return ResourceLocation.fromNamespaceAndPath(location.getNamespace(), "block/" + location.getPath());
     }
 
     private ResourceLocation getBlockItemSpriteLocation(Supplier<? extends Block> block){

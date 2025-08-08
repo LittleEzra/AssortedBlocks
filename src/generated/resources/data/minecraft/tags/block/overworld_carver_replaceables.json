@@ -1,7 +1,6 @@
 {
   "remove": [
-    "artistry:overgrown_stone_tiles",
-    "artistry:rocky_dirt"
+    "artistry:overgrown_stone_tiles"
   ],
   "values": []
 }

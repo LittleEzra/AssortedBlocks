@@ -26,6 +26,13 @@ public class ArtistryItemTagGenerator extends ItemTagsProvider {
         this.copy(ArtistryTags.Blocks.TABLES, ArtistryTags.Items.TABLES);
         this.copy(ArtistryTags.Blocks.FROSTED_GLASS, ArtistryTags.Items.FROSTED_GLASS);
 
+        this.tag(ItemTags.CHICKEN_FOOD)
+                .add(ArtistryItems.FERN_SEED.get());
+        this.tag(ItemTags.PARROT_FOOD)
+                .add(ArtistryItems.FERN_SEED.get());
+        this.tag(ItemTags.VILLAGER_PLANTABLE_SEEDS)
+                .add(ArtistryItems.FERN_SEED.get());
+
         this.tag(ItemTags.DYEABLE)
                 .add(ArtistryBlocks.SPARK_FOUNTAIN.asItem());
 

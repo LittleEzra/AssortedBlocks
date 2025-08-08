@@ -1,0 +1,10 @@
+A hotfix for multiple tag issues
+
+Exact Fixes:
+- Made some parts of the Calcite and Dripstone sets mineable with pickaxes
+- Added Teardrop Grass, Lush Fern, and Blooming Vines to #minecraft:block/replaceable and #minecraft:block/sword_efficient
+- Added Teardrop Grass, Lush Fern, and Blooming Vines to #minecraft:block/enchantment_power_transmitter
+- Added Lush Fern Crop to #minecraft:block/crops, #minecraft:block/bee_growables, #minecraft:block/maintains_farmland, and #minecraft:block/sword_efficient
+- Added Fern Seed to #minecraft:item/chicken_food, #minecraft:item/parrot_food, #minecraft:item/villager_plantable_seeds
+- Made weathered and waxed Copper Chains mineable with pickaxes
+- Added copper chains to #c:block/chains

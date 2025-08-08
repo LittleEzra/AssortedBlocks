@@ -1,7 +1,8 @@
 {
   "remove": [
     "artistry:overgrown_stone_tiles",
-    "artistry:rocky_dirt"
+    "artistry:rocky_dirt",
+    "artistry:teardrop_grass_block"
   ],
   "values": []
 }

@@ -1,51 +1,93 @@
 package com.feliscape.artistry.content.block;
 
+import com.feliscape.artistry.data.worldgen.registry.ArtistryConfiguredFeatures;
+import com.feliscape.artistry.registry.ArtistryBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.features.NetherFeatures;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.BonemealableBlock;
+import net.minecraft.world.level.block.GrassBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.material.FluidState;
-import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.chunk.ChunkGenerator;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.lighting.LightEngine;
 
-public class TeardropGrassBlock extends TallGrassBlock implements SimpleWaterloggedBlock {
-    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+import java.util.Optional;
 
+public class TeardropGrassBlock extends Block implements BonemealableBlock {
     public TeardropGrassBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
+    }
+
+    private static boolean canBeGrass(BlockState state, LevelReader reader, BlockPos pos) {
+        BlockPos blockpos = pos.above();
+        BlockState blockstate = reader.getBlockState(blockpos);
+        int light = LightEngine.getLightBlockInto(reader, state, pos, blockstate, blockpos, Direction.UP, blockstate.getLightBlock(reader, blockpos));
+        return light < reader.getMaxLightLevel();
     }
 
     @Override
-    protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
-        return state.isFaceSturdy(level, pos, Direction.UP) && !state.is(Blocks.MAGMA_BLOCK);
-    }
-
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
-        FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
-        boolean flag = fluidstate.getType() == Fluids.WATER;
-        return this.defaultBlockState().setValue(WATERLOGGED, flag);
-    }
-
-    protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
-        if (state.getValue(WATERLOGGED)) {
-            level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+    protected void randomTick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        if (!canBeGrass(state, level, pos)) {
+            level.setBlockAndUpdate(pos, Blocks.DIRT.defaultBlockState());
         }
-
-        return super.updateShape(state, direction, neighborState, level, pos, neighborPos);
     }
 
-    protected FluidState getFluidState(BlockState state) {
-        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    @Override
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
+        return levelReader.getBlockState(blockPos.above()).isAir();
     }
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(WATERLOGGED);
+
+    @Override
+    public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
+        return true;
+    }
+
+    @Override
+    public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
+
+        Optional<Direction> optionalDirection = Direction.allShuffled(random).stream().filter(d -> {
+            BlockPos blockPos = pos.relative(d);
+            BlockState blockState = level.getBlockState(blockPos);
+
+            return blockState.is(Blocks.DIRT) && canBeGrass(blockState, level, blockPos);
+        }).findFirst();
+        if (optionalDirection.isPresent()){
+            BlockPos blockPos = pos.relative(optionalDirection.get());
+            level.setBlockAndUpdate(blockPos, ArtistryBlocks.TEARDROP_GRASS_BLOCK.get().defaultBlockState());
+        } else{
+            BlockPos abovePos = pos.above();
+            BlockState aboveState = level.getBlockState(abovePos);
+
+            ChunkGenerator chunkgenerator = level.getChunkSource().getGenerator();
+            Registry<ConfiguredFeature<?, ?>> registry = level.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE);
+
+            this.place(registry, ArtistryConfiguredFeatures.TEARDROP_GRASS_BONEMEAL, level, chunkgenerator, random, abovePos);
+        }
+    }
+
+    private void place(
+            Registry<ConfiguredFeature<?, ?>> featureRegistry,
+            ResourceKey<ConfiguredFeature<?, ?>> featureKey,
+            ServerLevel level,
+            ChunkGenerator chunkGenerator,
+            RandomSource random,
+            BlockPos pos
+    ) {
+        featureRegistry.getHolder(featureKey).ifPresent(p_255920_ -> p_255920_.value().place(level, chunkGenerator, random, pos));
+    }
+
+    @Override
+    public Type getType() {
+        return Type.NEIGHBOR_SPREADER;
     }
 }

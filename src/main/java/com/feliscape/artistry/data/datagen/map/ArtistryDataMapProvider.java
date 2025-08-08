@@ -25,6 +25,8 @@ public class ArtistryDataMapProvider extends DataMapProvider {
                 .add(ArtistryItems.FERN_SEED.getId(), new Compostable(0.3F), false)
                 .add(ArtistryBlocks.ASPEN_LEAVES.getId(), new Compostable(0.3F), false)
                 .add(ArtistryBlocks.ASPEN_SAPLING.getId(), new Compostable(0.3F), false)
+                .add(ArtistryBlocks.SHORT_TEARDROP_GRASS.getId(), new Compostable(0.3F), false)
+                .add(ArtistryBlocks.TALL_TEARDROP_GRASS.getId(), new Compostable(0.3F), false)
         ;
         this.builder(NeoForgeDataMaps.FURNACE_FUELS)
                 .add(ArtistryTags.Items.WOODEN_TABLES, new FurnaceFuel(300), false)
