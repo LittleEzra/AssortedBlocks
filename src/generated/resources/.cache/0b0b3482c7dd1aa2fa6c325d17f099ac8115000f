@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-08T10:04:49.4793525	Item Models: artistry
+// 1.21.1	2025-08-10T23:52:20.5591017	Item Models: artistry
 59b250cc8214b86eac1ffb0e41d7d68bec96cde0 assets/artistry/models/item/amethyst_stars.json
 32c080b7db66c98dba7d11435dd2233670f58c10 assets/artistry/models/item/ancient_tear.json
 73fe7333d37ecde4ea79ba093344f9bc4ccda762 assets/artistry/models/item/aspen_boat.json
@@ -52,6 +52,7 @@ f2dba199b979db817daf9c6fd28d1cb150a021c5 assets/artistry/models/item/short_teard
 9d8a046efa6b7120b811691fa0ef2dc720ff7c18 assets/artistry/models/item/small_calcite_brick_stairs.json
 f8c40cc79133a43fb09b156cfa4f311022f95b64 assets/artistry/models/item/smooth_calcite_slab.json
 80c93b0241fabc6545eeff994bc526db26ce7238 assets/artistry/models/item/smooth_calcite_stairs.json
+680b4ceb6700b45d1bd33e72143b33788ba3f8b6 assets/artistry/models/item/sniffer_cake.json
 b835097adb96e67049c4319e6e678db7b5e29999 assets/artistry/models/item/sparkler.json
 dd876da894f20653e057d66d89c770e32816806d assets/artistry/models/item/spark_fountain.json
 a6101b855d8f832875b0c5f5637086c52e1cf638 assets/artistry/models/item/stone_pillar.json

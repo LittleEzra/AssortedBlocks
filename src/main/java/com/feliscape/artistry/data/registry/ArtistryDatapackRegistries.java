@@ -10,7 +10,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.DataPackRegistryEvent;
 import net.neoforged.neoforge.registries.RegistryBuilder;
 
-@EventBusSubscriber(modid = Artistry.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = Artistry.MOD_ID)
 public class ArtistryDatapackRegistries {
     public static final ResourceKey<Registry<PaintedPotDecoration>> PAINTED_POT_PATTERN = ResourceKey.createRegistryKey(Artistry.location("painted_pot/pattern"));
     public static final ResourceKey<Registry<PaintedPotDecoration>> PAINTED_POT_TRIM = ResourceKey.createRegistryKey(Artistry.location("painted_pot/trim"));

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "artistry:block/tall_teardrop_grass_bottom"
+    },
+    "half=upper": {
+      "model": "artistry:block/tall_teardrop_grass_top"
+    }
+  }
+}

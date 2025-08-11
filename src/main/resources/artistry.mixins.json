@@ -4,10 +4,10 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "LanternBlockMixin",
-    "MushroomBlockMixin"
+    "MushroomBlockMixin",
+    "SnifferMixin"
   ],
   "client": [
-
   ],
   "injectors": {
     "defaultRequire": 1

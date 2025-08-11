@@ -565,6 +565,23 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("|")
                 .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.ROCKY_DIRT, 4)
+                .define('D', Blocks.DIRT)
+                .define('C', Blocks.COBBLESTONE)
+                .pattern("DC")
+                .pattern("CD")
+                .unlockedBy(getHasName(Blocks.COBBLESTONE), has(Blocks.COBBLESTONE))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryItems.SNIFFER_CAKE)
+                .define('#', Items.WHEAT)
+                .define('T', Items.TORCHFLOWER_SEEDS)
+                .define('L', ItemTags.LEAVES)
+                .pattern("L#L")
+                .pattern("T#T")
+                .pattern("L#L")
+                .unlockedBy(getHasName(Items.TORCHFLOWER_SEEDS), has(Items.TORCHFLOWER_SEEDS))
+                .save(recipeOutput);
 
         //region Aspen
         planksFromLog(recipeOutput, ArtistryBlocks.ASPEN_PLANKS.get(), ArtistryTags.Items.ASPEN_LOGS, 4);

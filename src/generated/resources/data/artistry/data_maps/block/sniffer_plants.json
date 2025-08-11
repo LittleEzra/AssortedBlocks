@@ -1,0 +1,15 @@
+{
+  "values": {
+    "#artistry:sniffer_diggable/has_aspen_plants": [
+      "artistry:sunsprout",
+      "artistry:aspen_sapling"
+    ],
+    "#artistry:sniffer_diggable/has_lush_plants": [
+      "artistry:fern_seed",
+      "artistry:blooming_vines"
+    ],
+    "#artistry:sniffer_diggable/has_teardrop_grass": [
+      "artistry:ancient_tear"
+    ]
+  }
+}

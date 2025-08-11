@@ -22,6 +22,8 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.SUNSPROUT, "Sonnensprosse");
         this.addItem(ArtistryItems.FERN_SEED, "Farnsamen");
         this.addItem(ArtistryItems.ANCIENT_TEAR, "Antike Träne");
+        this.addItem(ArtistryItems.SNIFFER_CAKE, "Schnüffler-Kuchen");
+        this.addItemTooltip(ArtistryItems.SNIFFER_CAKE, "Das Lieblingsessen eines Schnüfflers");
 
         this.addBlock(ArtistryBlocks.MOSSY_BRICKS, "Bemooste Ziegelsteine");
         this.addBlock(ArtistryBlocks.CRACKED_BRICKS, "Rissige Ziegelsteine");

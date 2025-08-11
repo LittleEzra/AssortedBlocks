@@ -1,6 +1,6 @@
 
 
-<p align="center"><img src="./src/main/resources/logo_x8.png" alt="Logo" width="400"></p>
+<p align="center"><img src="./src/main/resources/logo_x8.png" alt="Logo" width="364"></p>
 
 <p>A mod to add some blocks I thought might be useful</p>
 

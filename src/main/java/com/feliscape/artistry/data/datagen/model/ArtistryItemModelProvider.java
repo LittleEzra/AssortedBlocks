@@ -29,6 +29,7 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         simpleItem(ArtistryItems.SUNSPROUT);
         simpleItem(ArtistryItems.FERN_SEED);
         simpleItem(ArtistryItems.ANCIENT_TEAR);
+        simpleItem(ArtistryItems.SNIFFER_CAKE);
         itemWithBlockTexture(ArtistryItems.SUNBURST_VINES);
         simpleItem(ArtistryItems.STRING_LIGHTS);
 

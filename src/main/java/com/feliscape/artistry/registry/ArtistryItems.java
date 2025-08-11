@@ -5,6 +5,7 @@ import com.feliscape.artistry.content.block.entity.SparkFountainBlockEntity;
 import com.feliscape.artistry.content.entity.ModBoat;
 import com.feliscape.artistry.content.item.AncientTearItem;
 import com.feliscape.artistry.content.item.ModBoatItem;
+import com.feliscape.artistry.content.item.SnifferCakeItem;
 import com.feliscape.artistry.content.pot.PaintedPotDecorations;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;
@@ -29,6 +30,8 @@ public class ArtistryItems {
             p -> new ItemNameBlockItem(ArtistryBlocks.LUSH_FERN_CROP.get(), p));
     public static final DeferredItem<AncientTearItem> ANCIENT_TEAR = ITEMS.registerItem("ancient_tear",
             AncientTearItem::new);
+    public static final DeferredItem<SnifferCakeItem> SNIFFER_CAKE = ITEMS.registerItem("sniffer_cake",
+            SnifferCakeItem::new);
 
     public static final DeferredItem<StandingAndWallBlockItem> STRING_LIGHTS = ITEMS.registerItem("string_lights",
             p -> new StandingAndWallBlockItem(ArtistryBlocks.STRING_LIGHTS.get(), ArtistryBlocks.WALL_STRING_LIGHTS.get(), p.stacksTo(16), Direction.UP));
@@ -45,7 +48,6 @@ public class ArtistryItems {
             p -> new ModBoatItem(false, ModBoat.Type.ASPEN, new Item.Properties().stacksTo(1)));
     public static final DeferredItem<ModBoatItem> ASPEN_CHEST_BOAT = ITEMS.register("aspen_chest_boat",
             p -> new ModBoatItem(true, ModBoat.Type.ASPEN, new Item.Properties().stacksTo(1)));
-
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

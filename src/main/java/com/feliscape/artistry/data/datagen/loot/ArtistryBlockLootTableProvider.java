@@ -58,7 +58,7 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropOtherWithoutSilkTouch(ArtistryBlocks.TEARDROP_GRASS_BLOCK.get(), Blocks.DIRT);
         this.add(ArtistryBlocks.SHORT_TEARDROP_GRASS.get(), BlockLootSubProvider::createShearsOnlyDrop);
         this.dropPottedContents(ArtistryBlocks.POTTED_TEARDROP_GRASS.get());
-        this.add(ArtistryBlocks.TALL_TEARDROP_GRASS.get(), this::createDoublePlantShearsDrop);
+        this.add(ArtistryBlocks.TALL_TEARDROP_GRASS.get(), block -> this.createDoublePlantShearsDrop(ArtistryBlocks.SHORT_TEARDROP_GRASS.get()));
 
         this.dropSelf(ArtistryBlocks.OAK_TABLE.get());
         this.dropSelf(ArtistryBlocks.SPRUCE_TABLE.get());

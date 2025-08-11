@@ -1,5 +1,7 @@
 {
   "artistry.config.common.survivability_changes": "Survivability Changes",
+  "artistry.jei.sniffer_dig.found_in": "Found In:",
+  "artistry.jei.sniffer_dig.title": "Sniffer Digging",
   "artistry.painted_pot.base.black": "Black Base",
   "artistry.painted_pot.base.blue": "Blue Base",
   "artistry.painted_pot.base.brown": "Brown Base",
@@ -151,6 +153,8 @@
   "item.artistry.aspen_boat": "Aspen Boat",
   "item.artistry.aspen_chest_boat": "Aspen Boat with Chest",
   "item.artistry.fern_seed": "Fern Seed",
+  "item.artistry.sniffer_cake": "Sniffer Cake",
+  "item.artistry.sniffer_cake.tooltip": "A Sniffer's favorite food",
   "item.artistry.sunburst_vines": "Sunburst Vines",
   "item.artistry.sunsprout": "Sunsprout",
   "itemGroup.artistry.base": "Artistry",

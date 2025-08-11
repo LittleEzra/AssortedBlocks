@@ -21,6 +21,8 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.SUNSPROUT, "Sunsprout");
         this.addItem(ArtistryItems.FERN_SEED, "Fern Seed");
         this.addItem(ArtistryItems.ANCIENT_TEAR, "Ancient Tear");
+        this.addItem(ArtistryItems.SNIFFER_CAKE, "Sniffer Cake");
+        this.addItemTooltip(ArtistryItems.SNIFFER_CAKE, "A Sniffer's favorite food");
 
         this.addBlock(ArtistryBlocks.MOSSY_BRICKS, "Mossy Bricks");
         this.addBlock(ArtistryBlocks.CRACKED_BRICKS, "Cracked Bricks");
@@ -213,6 +215,9 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.WEAVE_PATTERN, "Weave Pattern");
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.ARROWS_PATTERN, "Arrows Pattern");
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.CYCLE_PATTERN, "Cycle Pattern");
+
+        this.add("artistry.jei.sniffer_dig.title", "Sniffer Digging");
+        this.add("artistry.jei.sniffer_dig.found_in", "Found In:");
 
         this.add("itemGroup.artistry.base", "Artistry");
 

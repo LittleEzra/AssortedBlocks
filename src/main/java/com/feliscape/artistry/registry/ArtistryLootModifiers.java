@@ -4,7 +4,7 @@ import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.content.loot.modifiers.AddEnchantmentModifier;
 import com.feliscape.artistry.content.loot.modifiers.AddItemModifier;
 import com.feliscape.artistry.content.loot.modifiers.ReplaceWithRandomItemModifier;
-import com.feliscape.artistry.content.loot.modifiers.ReplaceWithTableLootModifier;
+import com.feliscape.artistry.content.loot.modifiers.ReplaceSnifferLootModifier;
 import com.mojang.serialization.MapCodec;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
@@ -23,8 +23,8 @@ public class ArtistryLootModifiers {
             () -> AddEnchantmentModifier.CODEC);
     public static final Supplier<MapCodec<ReplaceWithRandomItemModifier>> ADD_RANDOM_ITEM = LOOT_MODIFIERS.register("add_random_item",
             () -> ReplaceWithRandomItemModifier.CODEC);
-    public static final Supplier<MapCodec<ReplaceWithTableLootModifier>> REPLACE_LOOT = LOOT_MODIFIERS.register("replace_loot",
-            () -> ReplaceWithTableLootModifier.CODEC);
+    public static final Supplier<MapCodec<ReplaceSnifferLootModifier>> REPLACE_SNIFFER_LOOT = LOOT_MODIFIERS.register("replace_sniffer_loot",
+            () -> ReplaceSnifferLootModifier.CODEC);
 
     public static void register(IEventBus eventBus){
         LOOT_MODIFIERS.register(eventBus);

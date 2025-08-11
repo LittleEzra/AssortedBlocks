@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-08T10:04:49.475007	Loot Tables
+// 1.21.1	2025-08-11T23:32:34.9699169	Loot Tables
 47b6b4ddb80a89fa9150b4f209f8c1912ba8fd04 data/artistry/loot_table/blocks/acacia_table.json
 c17e141140c72bb4ad538245b3bc5de5e3b91093 data/artistry/loot_table/blocks/amethyst_stars.json
 8472b2e2149ff7987014f0ebdfb5631626250e58 data/artistry/loot_table/blocks/andesite_table.json
@@ -117,7 +117,7 @@ c910532f72e467fd6e7a663a5e4ef968d2549758 data/artistry/loot_table/blocks/stone_t
 015c13d889bcda44a69b4e04ecf3b87b324e667a data/artistry/loot_table/blocks/sunburst_vines.json
 316d268e8bc0f249691e107daab74cdff4a66991 data/artistry/loot_table/blocks/sunburst_vines_plant.json
 8c150f4a24e8ddb64570fc429395de605eb1fa6e data/artistry/loot_table/blocks/sunsprout.json
-062785a9a5ce38e0265fa58d112c9279fe8888e8 data/artistry/loot_table/blocks/tall_teardrop_grass.json
+1476611e40a0497bb6f4a2c72f4e19f064976660 data/artistry/loot_table/blocks/tall_teardrop_grass.json
 8f807997899ad0a3c4783a029a0cf4f30d0a2b2f data/artistry/loot_table/blocks/teardrop_grass_block.json
 a69e65e4607bcd0eb4b3135656fddb5b8b7057d9 data/artistry/loot_table/blocks/tuff_table.json
 c55418b246e884539a571ddd37a932d01831b080 data/artistry/loot_table/blocks/wall_string_lights.json
@@ -130,4 +130,3 @@ d1ca11d7858fc3caadbeedf37479c6d7f9ab7e80 data/artistry/loot_table/blocks/water_f
 cbf4df4e0fd6646498be5a9219bb2b3b3de0ac8e data/artistry/loot_table/blocks/weathered_copper_chain.json
 839adfa984c6d54def9ad50998073dc25d8e163d data/artistry/loot_table/blocks/white_frosted_glass.json
 1a8ab4e9e7f2a697df0a6ab4223036ef2de561c3 data/artistry/loot_table/blocks/yellow_frosted_glass.json
-709e91e567b2827f7d95c354e7c5bb39f56d4b84 data/artistry/loot_table/gameplay/sniffer_additional.json

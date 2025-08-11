@@ -151,6 +151,8 @@
   "item.artistry.aspen_boat": "Espenholzboot",
   "item.artistry.aspen_chest_boat": "Espenholztruhenboot",
   "item.artistry.fern_seed": "Farnsamen",
+  "item.artistry.sniffer_cake": "Schnüffler-Kuchen",
+  "item.artistry.sniffer_cake.tooltip": "Das Lieblingsessen eines Schnüfflers",
   "item.artistry.sunburst_vines": "Sonnenscheinranken",
   "item.artistry.sunsprout": "Sonnensprosse",
   "itemGroup.artistry.base": "Artistry",
