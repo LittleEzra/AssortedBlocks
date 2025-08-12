@@ -12,7 +12,7 @@ public class Config
     static final ModConfigSpec SPEC;
 
     static {
-        BUILDER.push("Common Config");
+        BUILDER.push("tweaks");
 
         SURVIVABILITY_CHANGES = BUILDER
                 .comment("Toggles some changes to how blocks can be placed, such as Lanterns being placed on the underside of leaves.")

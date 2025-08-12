@@ -2,20 +2,19 @@
   "multipart": [
     {
       "apply": {
-        "model": "artistry:block/wall_string_lights",
-        "y": 270
+        "model": "artistry:block/wall_string_lights"
       },
       "when": {
-        "west": "true"
+        "north": "true"
       }
     },
     {
       "apply": {
         "model": "artistry:block/wall_string_lights",
-        "y": 90
+        "y": 270
       },
       "when": {
-        "east": "true"
+        "west": "true"
       }
     },
     {
@@ -29,10 +28,11 @@
     },
     {
       "apply": {
-        "model": "artistry:block/wall_string_lights"
+        "model": "artistry:block/wall_string_lights",
+        "y": 90
       },
       "when": {
-        "north": "true"
+        "east": "true"
       }
     }
   ]

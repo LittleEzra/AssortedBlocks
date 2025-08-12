@@ -26,6 +26,7 @@ import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.crafting.IngredientType;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.List;
 import java.util.Optional;
 
 public class SnifferDigCategory implements IRecipeCategory<SnifferDigEntry> {
@@ -49,7 +50,7 @@ public class SnifferDigCategory implements IRecipeCategory<SnifferDigEntry> {
 
     @Override
     public int getWidth() {
-        return 96;
+        return 120;
     }
 
     @Override
@@ -69,29 +70,16 @@ public class SnifferDigCategory implements IRecipeCategory<SnifferDigEntry> {
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, SnifferDigEntry entry, IFocusGroup focuses) {
-        builder.addInputSlot(6, 4).addItemLike(entry.item());
-        if (entry.block() == null){
-            //if (Minecraft.getInstance().getConnection() == null) return;
-            //var registryAccess = Minecraft.getInstance().getConnection().registryAccess();
-            Optional<HolderSet.Named<Block>> registry = BuiltInRegistries.BLOCK.getTag(BlockTags.SNIFFER_DIGGABLE_BLOCK);
-            if (registry.isPresent()){
-                addHolderSetSlot(builder, 74, 4, registry.get());
-            }
-
-        } else if (entry.block().blocks().isPresent()){
-            builder.addSlot(RecipeIngredientRole.RENDER_ONLY, 74, 4).addItemStacks(entry.block().blocks().get().stream().map(Holder::value).map(ItemStack::new).toList());
-        }
-    }
-
-    private void addHolderSetSlot(IRecipeLayoutBuilder builder, int x, int y, HolderSet.Named<Block> holders) {
-        builder.addInputSlot(74, 4).addItemStacks(holders.stream().map(holder -> new ItemStack(holder.value())).toList());
+        builder.addOutputSlot(6, 4).addItemLike(entry.item());
+        builder.addSlot(RecipeIngredientRole.CATALYST, 98, 4).addItemStacks(entry.block().stream().map(holder -> new ItemStack(holder.value())).toList());
     }
 
     @Override
     public void draw(SnifferDigEntry entry, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
         background.draw(guiGraphics);
 
-        guiGraphics.drawString(Minecraft.getInstance().font, Component.translatable("artistry.jei.sniffer_dig.found_in"),
-                27, 9, 0x8b8b8b, false);
+        Component text = Component.translatable("artistry.jei.sniffer_dig.found_in");
+        guiGraphics.drawString(Minecraft.getInstance().font, text,
+                60 - Minecraft.getInstance().font.width(text) / 2, 9, 0x8b8b8b, false);
     }
 }

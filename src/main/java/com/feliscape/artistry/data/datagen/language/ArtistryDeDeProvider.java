@@ -216,8 +216,12 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.ARROWS_PATTERN, "Pfeile Muster");
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.CYCLE_PATTERN, "Zyklus Muster");
 
+        this.add("artistry.jei.sniffer_dig.title", "Schnüffler-Graben");
+        this.add("artistry.jei.sniffer_dig.found_in", "Gefunden In:");
+
         this.add("itemGroup.artistry.base", "Artistry");
 
+        this.add("artistry.configuration.tweaks", "Änderungen");
         this.add("artistry.config.common.survivability_changes", "Stabilitätsänderungen");
     }
 }

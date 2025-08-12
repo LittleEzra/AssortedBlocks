@@ -7,6 +7,8 @@ Added:
     - Can be applied onto a Dirt block to make a Teardrop Grass block
 - Sniffer Cake
     - Can be fed to Sniffers to make them dig sooner
+- Sniffer Dig JEI Category
+    - This shows where the different plants that sniffers dig up can be found
 Changes:
 - Made Teardrop Grass flammable (30 spread speed, 60 flammability), being slightly less so than Short Grass
 - Renamed Teardrop Grass to Short Teardrop Grass (this _might_ result in all currently existing Teardrop Grass disappearing)
@@ -17,3 +19,4 @@ Fixes:
 Technical:
 - Updated to NeoForge 21.1.200
 - Moved the additional Sniffer loot to a data map instead
+- Moved the Survivability Changes to server config
