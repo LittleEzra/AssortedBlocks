@@ -1,6 +1,7 @@
 package com.feliscape.artistry.registry;
 
 import com.feliscape.artistry.Artistry;
+import com.feliscape.artistry.data.map.SnifferPlants;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item;
@@ -14,11 +15,11 @@ import java.util.List;
 
 @EventBusSubscriber(modid = Artistry.MOD_ID)
 public class ArtistryDataMapTypes {
-    public static final AdvancedDataMapType<Block, List<Item>, Default<List<Item>, Block>> SNIFFER_PLANTS = AdvancedDataMapType.builder(
+    public static final AdvancedDataMapType<Block, SnifferPlants, Default<SnifferPlants, Block>> SNIFFER_PLANTS = AdvancedDataMapType.builder(
             Artistry.location("sniffer_plants"),
             Registries.BLOCK,
-            BuiltInRegistries.ITEM.byNameCodec().listOf()
-    ).merger(DataMapValueMerger.listMerger()).build();
+            SnifferPlants.CODEC
+    ).merger(SnifferPlants.merger()).build();
 
     @SubscribeEvent
     private static void registerDataMapTypes(RegisterDataMapTypesEvent event){

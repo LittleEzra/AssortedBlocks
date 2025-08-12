@@ -35,7 +35,7 @@ public class SnifferDigEntryCollector {
         var lookup = level.registryAccess().lookupOrThrow(Registries.BLOCK);
         var hashMap = new HashMap<ItemLike, List<Holder<Block>>>();
         dataMap.forEach((key, value) -> {
-            for (ItemLike item : value){
+            for (ItemLike item : value.items()){
                 if (!hashMap.containsKey(item)){
                     hashMap.put(item, List.of(lookup.getOrThrow(key)));
                 } else{

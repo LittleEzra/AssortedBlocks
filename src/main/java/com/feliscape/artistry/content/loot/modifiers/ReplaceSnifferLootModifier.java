@@ -8,6 +8,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootContext;
@@ -16,6 +17,8 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
 import net.neoforged.neoforge.common.loot.LootModifier;
+
+import java.util.List;
 
 public class ReplaceSnifferLootModifier extends LootModifier {
     public static final MapCodec<ReplaceSnifferLootModifier> CODEC = RecordCodecBuilder.mapCodec(instance -> LootModifier.codecStart(instance).apply(instance, ReplaceSnifferLootModifier::new));
@@ -50,9 +53,10 @@ public class ReplaceSnifferLootModifier extends LootModifier {
             return generatedLoot;
         }
 
-        float chance = ((float) data.size() / ((float) data.size() + 2.0F));
-        if (context.getRandom().nextFloat() <= chance){
-            var item = data.get(context.getRandom().nextInt(data.size()));
+        List<Item> items = data.items();
+        float chance = ((float) items.size() / ((float) items.size() + 2.0F));
+        if (!data.hasDefault() || context.getRandom().nextFloat() <= chance){
+            var item = items.get(context.getRandom().nextInt(items.size()));
             generatedLoot.clear();
             generatedLoot.add(item.getDefaultInstance());
         }
