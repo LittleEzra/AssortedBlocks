@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_clean_glass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:red_stained_glass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:red_frosted_glass_from_smelting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_clean_glass"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:red_frosted_glass_from_smelting"
+    ]
+  }
+}

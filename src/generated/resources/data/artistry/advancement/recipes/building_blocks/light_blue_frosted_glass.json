@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_frosted_glass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#artistry:frosted_glass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "artistry:light_blue_frosted_glass"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_frosted_glass"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "artistry:light_blue_frosted_glass"
+    ]
+  }
+}

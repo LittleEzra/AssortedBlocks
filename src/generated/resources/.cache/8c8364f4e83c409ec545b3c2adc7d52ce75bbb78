@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-10T23:52:20.5527963	Tags for minecraft:item mod id vanilla
+// 1.21.1	2025-08-12T11:26:39.6687167	Tags for minecraft:item mod id vanilla
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/item/aspen_logs.json
 13994a7e7e704c24c0cebec3e302b41487842bfa data/artistry/tags/item/can_apply_moss.json
 3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/item/frosted_glass.json
@@ -17,6 +17,7 @@ a808b659eb94fbf47b5e5dc911502ecebf90b9a4 data/minecraft/tags/item/hanging_signs.
 72a09d8bd065bc541d6ebaf2cee46366bd5476fb data/minecraft/tags/item/planks.json
 eeec39ca4cb20e06e0ab24f9ea72443deadfc030 data/minecraft/tags/item/saplings.json
 9e543b5226a028b56b5a09e7914cd023e0ce5599 data/minecraft/tags/item/signs.json
+9ff7a226a7b2cd0bbec6beea2963d09b6cbc8532 data/minecraft/tags/item/sniffer_food.json
 4b51608237d06b9005437625fd944e0ff5bc0a8e data/minecraft/tags/item/villager_plantable_seeds.json
 668b2796445d31d23057580325583de0479ff000 data/minecraft/tags/item/wooden_buttons.json
 ade2ce1341c278edf91087d557d05e86b27861ec data/minecraft/tags/item/wooden_doors.json
