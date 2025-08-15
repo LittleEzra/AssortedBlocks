@@ -1,6 +1,6 @@
 package com.feliscape.artistry.content.mixin;
 
-import com.feliscape.artistry.Config;
+import com.feliscape.artistry.ServerConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
@@ -13,7 +13,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LanternBlock.class)
@@ -24,7 +23,7 @@ public abstract class LanternBlockMixin extends Block implements SimpleWaterlogg
 
     @Inject(method = "canSurvive", at = @At("HEAD"), cancellable = true)
     protected void overrideSurvive(BlockState state, LevelReader level, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-        if (Config.SURVIVABILITY_CHANGES.get() && level.getBlockState(pos.relative(getConnectedDirection(state).getOpposite())).is(BlockTags.LEAVES)){
+        if (ServerConfig.SURVIVABILITY_CHANGES.get() && level.getBlockState(pos.relative(getConnectedDirection(state).getOpposite())).is(BlockTags.LEAVES)){
             cir.setReturnValue(true);
         }
     }

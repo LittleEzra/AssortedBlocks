@@ -236,6 +236,7 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.add("itemGroup.artistry.base", "Artistry");
 
         this.add("artistry.configuration.tweaks", "Tweaks");
-        this.add("artistry.config.common.survivability_changes", "Survivability Changes");
+        this.add("artistry.config.server.survivability_changes", "Survivability Changes");
+        this.add("artistry.config.server.sniffer_cake_motivation", "Sniffer Cake Motivation");
     }
 }

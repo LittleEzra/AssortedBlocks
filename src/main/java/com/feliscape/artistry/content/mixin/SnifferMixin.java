@@ -1,6 +1,7 @@
 package com.feliscape.artistry.content.mixin;
 
 import com.feliscape.artistry.Artistry;
+import com.feliscape.artistry.registry.ArtistryAttachmentTypes;
 import com.feliscape.artistry.registry.ArtistryItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -46,10 +47,11 @@ public abstract class SnifferMixin extends Animal {
                     Mth.randomBetween(this.level().random, 0.8F, 1.2F));
 
             if (!this.level().isClientSide()){
-                var brain = this.getBrain();
-                if (brain.hasMemoryValue(MemoryModuleType.SNIFF_COOLDOWN)) {
+                //var brain = this.getBrain();
+                /*if (brain.hasMemoryValue(MemoryModuleType.SNIFF_COOLDOWN)) {
                     brain.eraseMemory(MemoryModuleType.SNIFF_COOLDOWN);
-                }
+                }*/
+                this.setData(ArtistryAttachmentTypes.SNIFFER_MOTIVATION, 3);
             } else{
                 for (int i = 0; i < 10; i++){
                     this.level().addParticle(ParticleTypes.HAPPY_VILLAGER,

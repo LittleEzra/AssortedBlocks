@@ -3,6 +3,7 @@ package com.feliscape.artistry.content.event;
 import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.content.block.entity.PaintedPotBlockEntity;
 import com.feliscape.artistry.content.entity.ai.RunAwayFromBlockGoal;
+import com.feliscape.artistry.registry.ArtistryAttachmentTypes;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
 import com.feliscape.artistry.registry.ArtistryTags;
@@ -31,6 +32,7 @@ import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import net.neoforged.neoforge.event.entity.living.MobSpawnEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 @EventBusSubscriber(modid = Artistry.MOD_ID)
 public class Events {
@@ -69,6 +71,18 @@ public class Events {
                     runAway.block().test(ArtistryBlocks.CORPSE_FLOWER.get().defaultBlockState()))) return;
 
             mob.goalSelector.addGoal(3, new RunAwayFromBlockGoal(mob, ArtistryBlocks.CORPSE_FLOWER.get(), 1.2D));
+        }
+    }
+
+    @SubscribeEvent
+    public static void onEntityTick(EntityTickEvent.Post event){
+        Entity entity = event.getEntity();
+        if (entity instanceof Sniffer sniffer && sniffer.tickCount % 10 == 0){
+            int motivation = sniffer.getData(ArtistryAttachmentTypes.SNIFFER_MOTIVATION);
+            if (motivation > 0 && sniffer.getBrain().hasMemoryValue(MemoryModuleType.SNIFF_COOLDOWN)){
+                sniffer.getBrain().eraseMemory(MemoryModuleType.SNIFF_COOLDOWN);
+                sniffer.setData(ArtistryAttachmentTypes.SNIFFER_MOTIVATION, motivation - 1);
+            }
         }
     }
 }

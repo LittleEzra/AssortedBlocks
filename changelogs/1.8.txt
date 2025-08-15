@@ -10,3 +10,7 @@
 - Spiral Fungus
     - Dug up by Sniffers in Crimson and Warped Nylium
     - Bounces players up when stepped on
+## Changes:
+- Changed the texture of Aspen Leaves
+- Made Sniffer Cakes remove the cooldown of the next 3 digs instead of just one
+    - This number can be adjusted in the Server Config

@@ -226,5 +226,6 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
 
         this.add("artistry.configuration.tweaks", "Änderungen");
         this.add("artistry.config.common.survivability_changes", "Stabilitätsänderungen");
+        this.add("artistry.config.server.sniffer_cake_motivation", "Schnüffler-Kuchen Motivation");
     }
 }

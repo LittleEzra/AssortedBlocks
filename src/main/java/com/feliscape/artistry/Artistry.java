@@ -38,6 +38,7 @@ public class Artistry
 
         ArtistryBlockEntityTypes.register(modEventBus);
         ArtistryEntityTypes.register(modEventBus);
+        ArtistryAttachmentTypes.register(modEventBus);
 
         ArtistryLootModifiers.register(modEventBus);
         ArtistryLootConditions.register(modEventBus);
@@ -50,7 +51,7 @@ public class Artistry
 
         modEventBus.addListener(this::addCreative);
 
-        modContainer.registerConfig(ModConfig.Type.SERVER, Config.SPEC);
+        modContainer.registerConfig(ModConfig.Type.SERVER, ServerConfig.SPEC);
     }
 
     public static String stringLocation(String path){

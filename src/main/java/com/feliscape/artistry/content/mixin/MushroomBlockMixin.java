@@ -1,6 +1,6 @@
 package com.feliscape.artistry.content.mixin;
 
-import com.feliscape.artistry.Config;
+import com.feliscape.artistry.ServerConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
@@ -12,9 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 @Mixin(MushroomBlock.class)
 public abstract class MushroomBlockMixin extends BushBlock implements BonemealableBlock {
@@ -24,7 +22,7 @@ public abstract class MushroomBlockMixin extends BushBlock implements Bonemealab
 
     @Inject(method = "canSurvive", at = @At("RETURN"), cancellable = true)
     protected void overrideCanSurvive(BlockState state, LevelReader level, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-        if (Config.SURVIVABILITY_CHANGES.get()){
+        if (ServerConfig.SURVIVABILITY_CHANGES.get()){
             if (level.getBlockState(pos.below()).is(BlockTags.LOGS)) cir.setReturnValue(true);
             else {
                 BlockPos below = pos.below();

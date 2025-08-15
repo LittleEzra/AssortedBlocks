@@ -1,7 +1,6 @@
 package com.feliscape.artistry.data.datagen.model;
 
 import com.feliscape.artistry.Artistry;
-import com.feliscape.artistry.Config;
 import com.feliscape.artistry.content.block.RoundLanternBlock;
 import com.feliscape.artistry.content.block.*;
 import com.feliscape.artistry.content.block.plant.*;
