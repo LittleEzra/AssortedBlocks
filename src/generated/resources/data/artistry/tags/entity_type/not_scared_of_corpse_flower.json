@@ -1,0 +1,11 @@
+{
+  "values": [
+    "minecraft:iron_golem",
+    "minecraft:snow_golem",
+    "minecraft:slime",
+    "minecraft:magma_cube",
+    "minecraft:piglin",
+    "minecraft:hoglin",
+    "#c:bosses"
+  ]
+}

@@ -4,6 +4,7 @@ import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.content.block.RoundLanternBlock;
 import com.feliscape.artistry.content.block.*;
 import com.feliscape.artistry.content.block.flammable.*;
+import com.feliscape.artistry.content.block.plant.*;
 import com.feliscape.artistry.data.worldgen.registry.ArtistryTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -396,6 +397,32 @@ public class ArtistryBlocks {
                     .sound(SoundType.GRASS)
                     .offsetType(BlockBehaviour.OffsetType.XZ)
                     .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+    public static final DeferredBlock<CorpseFlowerBlock> CORPSE_FLOWER = registerBlockWithItem("corpse_flower",
+            p -> new CorpseFlowerBlock(p
+                    .mapColor(MapColor.TERRACOTTA_WHITE)
+                    .replaceable()
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+    public static final DeferredBlock<FlyLureBlock> FLY_LURE = registerBlockWithItem("fly_lure",
+            p -> new FlyLureBlock(p
+                    .mapColor(MapColor.METAL)
+                    .sound(SoundType.WOOD)
+                    .pushReaction(PushReaction.DESTROY)
+                    .noOcclusion()
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(3.5F)
+            ));
+    public static final DeferredBlock<SpiralFungusBlock> SPIRAL_FUNGUS = registerBlockWithItem("spiral_fungus",
+            p -> new SpiralFungusBlock(p
+                    .mapColor(MapColor.NETHER)
+                    .strength(1.5F)
+                    .sound(SoundType.FUNGUS)
                     .pushReaction(PushReaction.DESTROY)
             ));
 
@@ -839,6 +866,29 @@ public class ArtistryBlocks {
                     .pushReaction(PushReaction.DESTROY)));
     //endregion
 
+
+    //region Woven Wood
+    public static final DeferredBlock<LeavesBlock> WOVEN_LEAVES = registerBlockWithItem("woven_leaves",
+            p -> leaves(p, SoundType.GRASS, MapColor.COLOR_LIGHT_BLUE));
+
+    public static final DeferredBlock<FlammableLogBlock> WOVEN_LOG = registerBlockWithItem("woven_log",
+            p -> log(p, MapColor.TERRACOTTA_BLUE, MapColor.COLOR_BLACK));
+    public static final DeferredBlock<FlammableLogBlock> WOVEN_WOOD = registerBlockWithItem("woven_wood",
+            p -> log(p, MapColor.COLOR_BLACK, MapColor.COLOR_BLACK));
+    public static final DeferredBlock<FlammableLogBlock> STRIPPED_WOVEN_LOG = registerBlockWithItem("stripped_woven_log",
+            p -> log(p, MapColor.TERRACOTTA_BLUE, MapColor.TERRACOTTA_BLUE));
+    public static final DeferredBlock<FlammableLogBlock> STRIPPED_WOVEN_WOOD = registerBlockWithItem("stripped_woven_wood",
+            p -> log(p, MapColor.TERRACOTTA_BLUE, MapColor.TERRACOTTA_BLUE));
+
+    public static final DeferredBlock<Block> WOVEN_PLANKS = registerBlockWithItem("woven_planks",
+            p -> new Block(p
+                    .mapColor(MapColor.TERRACOTTA_BLUE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.WOOD)
+            ));
+    //endregion
+
     private static DeferredBlock<FrostedGlassBlock> frostedGlass(DyeColor color) {
         return registerBlockWithItem(color.getName() + "_frosted_glass", p -> new FrostedGlassBlock(color, p
                 .mapColor(color)
@@ -912,10 +962,42 @@ public class ArtistryBlocks {
                         .isRedstoneConductor(ArtistryBlocks::never)
         );
     }
+    private static LeavesBlock leaves(BlockBehaviour.Properties properties, SoundType soundType, MapColor mapColor) {
+        return new LeavesBlock(
+                properties
+                        .mapColor(mapColor)
+                        .strength(0.2F)
+                        .randomTicks()
+                        .sound(soundType)
+                        .noOcclusion()
+                        .isValidSpawn(Blocks::ocelotOrParrot)
+                        .isSuffocating(ArtistryBlocks::never)
+                        .isViewBlocking(ArtistryBlocks::never)
+                        .ignitedByLava()
+                        .pushReaction(PushReaction.DESTROY)
+                        .isRedstoneConductor(ArtistryBlocks::never)
+        );
+    }
     private static FlammableLeavesBlock flammableLeaves(BlockBehaviour.Properties properties, SoundType soundType) {
         return new FlammableLeavesBlock(
                 properties
                         .mapColor(MapColor.PLANT)
+                        .strength(0.2F)
+                        .randomTicks()
+                        .sound(soundType)
+                        .noOcclusion()
+                        .isValidSpawn(Blocks::ocelotOrParrot)
+                        .isSuffocating(ArtistryBlocks::never)
+                        .isViewBlocking(ArtistryBlocks::never)
+                        .ignitedByLava()
+                        .pushReaction(PushReaction.DESTROY)
+                        .isRedstoneConductor(ArtistryBlocks::never)
+        );
+    }
+    private static FlammableLeavesBlock flammableLeaves(BlockBehaviour.Properties properties, SoundType soundType, MapColor mapColor) {
+        return new FlammableLeavesBlock(
+                properties
+                        .mapColor(mapColor)
                         .strength(0.2F)
                         .randomTicks()
                         .sound(soundType)

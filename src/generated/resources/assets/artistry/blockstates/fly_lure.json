@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "artistry:block/fly_lure_hanging"
+    },
+    "facing=east": {
+      "model": "artistry:block/wall_fly_lure",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "artistry:block/wall_fly_lure"
+    },
+    "facing=south": {
+      "model": "artistry:block/wall_fly_lure",
+      "y": 180
+    },
+    "facing=up": {
+      "model": "artistry:block/fly_lure"
+    },
+    "facing=west": {
+      "model": "artistry:block/wall_fly_lure",
+      "y": 270
+    }
+  }
+}

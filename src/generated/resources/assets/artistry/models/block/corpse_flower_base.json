@@ -1,0 +1,8 @@
+{
+  "parent": "artistry:block/template_corpse_flower_base",
+  "textures": {
+    "cross": "artistry:block/corpse_flower_bloom_base",
+    "inside": "artistry:block/corpse_flower_leaves_inside",
+    "outside": "artistry:block/corpse_flower_leaves_outside"
+  }
+}

@@ -9,7 +9,7 @@
       "tag": "minecraft:leaves"
     },
     "T": {
-      "item": "minecraft:torchflower_seeds"
+      "tag": "minecraft:sniffer_food"
     }
   },
   "pattern": [

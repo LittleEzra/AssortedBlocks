@@ -1,8 +1,11 @@
 package com.feliscape.artistry.data.datagen.model;
 
 import com.feliscape.artistry.Artistry;
+import com.feliscape.artistry.Config;
 import com.feliscape.artistry.content.block.RoundLanternBlock;
 import com.feliscape.artistry.content.block.*;
+import com.feliscape.artistry.content.block.plant.*;
+import com.feliscape.artistry.content.block.properties.TriplePlantPart;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -11,7 +14,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
-import net.minecraft.world.level.block.state.properties.Half;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -108,6 +110,9 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         crossBlockWithRenderType(ArtistryBlocks.SHORT_TEARDROP_GRASS.get(), "cutout");
         doublePlantBlock(ArtistryBlocks.TALL_TEARDROP_GRASS.get(), "cutout");
         pottedCrossPlantBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, Artistry.location("block/potted_teardrop_grass"));
+        corpseFlowerBlock(ArtistryBlocks.CORPSE_FLOWER.get());
+        flyLureBlock(ArtistryBlocks.FLY_LURE.get());
+        simpleBlock(ArtistryBlocks.SPIRAL_FUNGUS.get(), models().getExistingFile(Artistry.location("block/spiral_fungus")));
 
         axisBlock(ArtistryBlocks.COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/copper_chain")));
         axisBlock(ArtistryBlocks.EXPOSED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/exposed_copper_chain")));
@@ -177,6 +182,8 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         slabBlock(ArtistryBlocks.DRIPSTONE_BRICK_SLAB.get(), dripstoneBrickTexture, dripstoneBrickTexture);
         wallBlock(ArtistryBlocks.DRIPSTONE_BRICK_WALL.get(), dripstoneBrickTexture);
 
+        // Aspen Wood
+
         leavesBlock(ArtistryBlocks.ASPEN_LEAVES, "cutout_mipped");
 
         ResourceLocation aspenLogTexture = blockTexture(ArtistryBlocks.ASPEN_LOG.get());
@@ -209,6 +216,42 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         crossBlockWithRenderType(ArtistryBlocks.ASPEN_SAPLING.get(), "cutout");
 
+        // Woven Wood
+
+        leavesBlock(ArtistryBlocks.WOVEN_LEAVES, "cutout_mipped");
+
+        ResourceLocation wovenLogTexture = blockTexture(ArtistryBlocks.WOVEN_LOG.get());
+        ResourceLocation strippedWovenLogTexture = blockTexture(ArtistryBlocks.STRIPPED_WOVEN_LOG.get());
+        ResourceLocation wovenPlanksTexture = blockTexture(ArtistryBlocks.WOVEN_PLANKS.get());
+
+        logBlock(ArtistryBlocks.WOVEN_LOG.get());
+        axisBlock(ArtistryBlocks.WOVEN_WOOD.get(), wovenLogTexture, wovenLogTexture);
+        logBlock(ArtistryBlocks.STRIPPED_WOVEN_LOG.get());
+        axisBlock(ArtistryBlocks.STRIPPED_WOVEN_WOOD.get(), strippedWovenLogTexture, strippedWovenLogTexture);
+
+        blockWithItem(ArtistryBlocks.WOVEN_PLANKS);
+
+
+    }
+
+    private void flyLureBlock(FlyLureBlock block) {
+        ModelFile wallModel = models().getExistingFile(Artistry.location("block/wall_fly_lure"));
+        ModelFile floorModel = models().getExistingFile(Artistry.location("block/fly_lure"));
+        ModelFile hangingModel = models().getExistingFile(Artistry.location("block/fly_lure_hanging"));
+
+        getVariantBuilder(block).forAllStatesExcept(state -> {
+            Direction d = state.getValue(FlyLureBlock.FACING);
+            if (d == Direction.DOWN){
+                return ConfiguredModel.builder().modelFile(hangingModel).build();
+            }
+            if (d == Direction.UP){
+                return ConfiguredModel.builder().modelFile(floorModel).build();
+            }
+
+            return ConfiguredModel.builder().modelFile(wallModel)
+                    .rotationY((((int) d.toYRot()) + 180) % 360)
+                    .build();
+        }, FlyLureBlock.WATERLOGGED);
     }
 
 
@@ -262,6 +305,35 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         builder.forAllStates(state -> ConfiguredModel.builder()
                 .modelFile(models().getExistingFile(Artistry.location("block/" + name(block) + "_stage" + state.getValue(LushFernCropBlock.AGE))))
                 .build());
+    }
+
+    private void corpseFlowerBlock(CorpseFlowerBlock block){
+        ResourceLocation inside = blockTexture(block).withSuffix("_leaves_inside");
+        ResourceLocation outside = blockTexture(block).withSuffix("_leaves_outside");
+
+        VariantBlockStateBuilder builder = getVariantBuilder(block);
+        builder.forAllStates(state -> {
+            TriplePlantPart part = state.getValue(TriplePlantBlock.PART);
+            String modelName = Artistry.stringLocation("block/" + name(block) + "_" + part);
+            if (part == TriplePlantPart.BASE) {
+                return ConfiguredModel.builder()
+                        .modelFile(
+                                models().withExistingParent(modelName,
+                                                Artistry.stringLocation("block/template_corpse_flower_base"))
+                                        .texture("cross", blockTexture(block).withSuffix("_bloom_" + part))
+                                        .texture("inside", inside)
+                                        .texture("outside", outside)
+                        )
+                        .build();
+            } else{
+                return ConfiguredModel.builder()
+                        .modelFile(models().cross(
+                                modelName,
+                                blockTexture(block).withSuffix("_bloom_" + part))
+                                .renderType("cutout"))
+                        .build();
+            }
+        });
     }
 
     private void largeLantern(Supplier<? extends LargeLanternBlock> block){

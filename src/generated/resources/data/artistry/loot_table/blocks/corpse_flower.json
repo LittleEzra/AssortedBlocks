@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "artistry:corpse_flower",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "part": "base"
+              }
+            }
+          ],
+          "name": "artistry:corpse_flower"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "artistry:blocks/corpse_flower"
+}

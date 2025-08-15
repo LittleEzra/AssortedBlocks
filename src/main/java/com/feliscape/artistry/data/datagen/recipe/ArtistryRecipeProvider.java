@@ -575,12 +575,22 @@ public class ArtistryRecipeProvider extends RecipeProvider {
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryItems.SNIFFER_CAKE)
                 .define('#', Items.WHEAT)
-                .define('T', Items.TORCHFLOWER_SEEDS)
+                .define('T', ItemTags.SNIFFER_FOOD)
                 .define('L', ItemTags.LEAVES)
                 .pattern("L#L")
                 .pattern("T#T")
                 .pattern("L#L")
-                .unlockedBy(getHasName(Items.TORCHFLOWER_SEEDS), has(Items.TORCHFLOWER_SEEDS))
+                .unlockedBy("has_sniffer_food", has(ItemTags.SNIFFER_FOOD))
+                .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.FLY_LURE)
+                .define('/', Tags.Items.RODS_WOODEN)
+                .define('C', ArtistryBlocks.CORPSE_FLOWER)
+                .define('o', Items.IRON_NUGGET)
+                .pattern(" o ")
+                .pattern("oCo")
+                .pattern(" / ")
+                .unlockedBy(getHasName(ArtistryBlocks.CORPSE_FLOWER), has(ArtistryBlocks.CORPSE_FLOWER))
                 .save(recipeOutput);
 
         //region Aspen

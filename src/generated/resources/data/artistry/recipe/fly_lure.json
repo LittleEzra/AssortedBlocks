@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "/": {
+      "tag": "c:rods/wooden"
+    },
+    "C": {
+      "item": "artistry:corpse_flower"
+    },
+    "o": {
+      "item": "minecraft:iron_nugget"
+    }
+  },
+  "pattern": [
+    " o ",
+    "oCo",
+    " / "
+  ],
+  "result": {
+    "count": 1,
+    "id": "artistry:fly_lure"
+  }
+}

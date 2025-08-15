@@ -1,5 +1,7 @@
 package com.feliscape.artistry.data.datagen.loot;
 
+import com.feliscape.artistry.content.block.plant.TriplePlantBlock;
+import com.feliscape.artistry.content.block.properties.TriplePlantPart;
 import com.feliscape.artistry.content.pot.PaintedPotDecorations;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
@@ -59,6 +61,9 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ArtistryBlocks.SHORT_TEARDROP_GRASS.get(), BlockLootSubProvider::createShearsOnlyDrop);
         this.dropPottedContents(ArtistryBlocks.POTTED_TEARDROP_GRASS.get());
         this.add(ArtistryBlocks.TALL_TEARDROP_GRASS.get(), block -> this.createDoublePlantShearsDrop(ArtistryBlocks.SHORT_TEARDROP_GRASS.get()));
+        this.add(ArtistryBlocks.CORPSE_FLOWER.get(), block -> this.createSinglePropConditionTable(block, TriplePlantBlock.PART, TriplePlantPart.BASE));
+        this.dropSelf(ArtistryBlocks.FLY_LURE.get());
+        this.dropSelf(ArtistryBlocks.SPIRAL_FUNGUS.get());
 
         this.dropSelf(ArtistryBlocks.OAK_TABLE.get());
         this.dropSelf(ArtistryBlocks.SPRUCE_TABLE.get());
@@ -170,6 +175,8 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.DRIPSTONE_BRICK_WALL.get());
         this.add(ArtistryBlocks.DRIPSTONE_BRICK_SLAB.get(), this::createSlabItemTable);
 
+        // Aspen
+
         this.dropSelf(ArtistryBlocks.ASPEN_LOG.get());
         this.dropSelf(ArtistryBlocks.ASPEN_WOOD.get());
         this.dropSelf(ArtistryBlocks.STRIPPED_ASPEN_LOG.get());
@@ -198,9 +205,26 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ArtistryBlocks.ASPEN_DOOR.get(), this::createDoorTable);
 
         this.add(ArtistryBlocks.ASPEN_LEAVES.get(),
-                block -> createLeavesDrops(ArtistryBlocks.ASPEN_LEAVES.get(), ArtistryBlocks.ASPEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                block -> createLeavesDrops(block, ArtistryBlocks.ASPEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        // Woven Wood
+
+        this.dropSelf(ArtistryBlocks.WOVEN_LOG.get());
+        this.dropSelf(ArtistryBlocks.WOVEN_WOOD.get());
+        this.dropSelf(ArtistryBlocks.STRIPPED_WOVEN_LOG.get());
+        this.dropSelf(ArtistryBlocks.STRIPPED_WOVEN_WOOD.get());
+        this.dropSelf(ArtistryBlocks.WOVEN_PLANKS.get());
+
+        this.add(ArtistryBlocks.WOVEN_LEAVES.get(),
+                block -> createLeavesDrops(block, ArtistryBlocks.ASPEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
+    protected LootTable.Builder createSingleTriplePlantShearsDrop(Block sheared) {
+        return LootTable.lootTable()
+                .withPool(
+                        LootPool.lootPool().when(HAS_SHEARS).add(LootItem.lootTableItem(sheared).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))
+                );
+    }
 
 
     private LootTable.Builder createPaintedPotTable(Block block) {

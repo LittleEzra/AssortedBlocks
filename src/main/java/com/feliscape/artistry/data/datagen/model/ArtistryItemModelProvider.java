@@ -87,6 +87,12 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         generatedBlockItem(ArtistryBlocks.SHORT_TEARDROP_GRASS);
         generatedBlockItem(ArtistryBlocks.TALL_TEARDROP_GRASS, blockTexture(ArtistryBlocks.TALL_TEARDROP_GRASS).withSuffix("_top"));
 
+        blockItemSprite(ArtistryBlocks.CORPSE_FLOWER);
+        blockItemSprite(ArtistryBlocks.FLY_LURE);
+        blockItemSprite(ArtistryBlocks.SPIRAL_FUNGUS);
+
+        // Aspen
+
         manualBlockItem(ArtistryBlocks.ASPEN_LOG);
         manualBlockItem(ArtistryBlocks.ASPEN_WOOD);
         manualBlockItem(ArtistryBlocks.STRIPPED_ASPEN_LOG);
@@ -106,6 +112,13 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         simpleItem(ArtistryItems.ASPEN_HANGING_SIGN);
         simpleItem(ArtistryItems.ASPEN_BOAT);
         simpleItem(ArtistryItems.ASPEN_CHEST_BOAT);
+
+        // Woven Wood
+
+        manualBlockItem(ArtistryBlocks.WOVEN_LOG);
+        manualBlockItem(ArtistryBlocks.WOVEN_WOOD);
+        manualBlockItem(ArtistryBlocks.STRIPPED_WOVEN_LOG);
+        manualBlockItem(ArtistryBlocks.STRIPPED_WOVEN_WOOD);
     }
 
     private ItemModelBuilder simpleItem(Supplier<? extends Item> item){

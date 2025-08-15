@@ -2,15 +2,19 @@ package com.feliscape.artistry.content.event;
 
 import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.content.block.entity.PaintedPotBlockEntity;
+import com.feliscape.artistry.content.entity.ai.RunAwayFromBlockGoal;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
+import com.feliscape.artistry.registry.ArtistryTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.animal.sniffer.Sniffer;
+import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
@@ -23,6 +27,9 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
+import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
+import net.neoforged.neoforge.event.entity.living.MobSpawnEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 @EventBusSubscriber(modid = Artistry.MOD_ID)
@@ -51,6 +58,17 @@ public class Events {
                 ArtistryBlocks.PAINTED_POT.get().applyItem(itemStack, paintedPot, newState, level, pos, event.getEntity(), event.getHitVec());
                 paintedPot.setTheItem(stackToTransfer);
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onEntitySpawn(EntityJoinLevelEvent event){
+        Entity entity = event.getEntity();
+        if (entity instanceof PathfinderMob mob && entity.isAlive() && !entity.getType().is(ArtistryTags.EntityTypes.NOT_SCARED_OF_CORPSE_FLOWER)){
+            if (mob.goalSelector.getAvailableGoals().stream().anyMatch(goal -> goal.getGoal() instanceof RunAwayFromBlockGoal runAway &&
+                    runAway.block().test(ArtistryBlocks.CORPSE_FLOWER.get().defaultBlockState()))) return;
+
+            mob.goalSelector.addGoal(3, new RunAwayFromBlockGoal(mob, ArtistryBlocks.CORPSE_FLOWER.get(), 1.2D));
         }
     }
 }

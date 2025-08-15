@@ -1,6 +1,7 @@
 package com.feliscape.artistry.registry;
 
 import com.feliscape.artistry.Artistry;
+import com.feliscape.artistry.client.particle.FlyParticle;
 import com.feliscape.artistry.client.particle.FountainParticle;
 import com.feliscape.artistry.client.particle.SparkParticle;
 import com.mojang.serialization.MapCodec;
@@ -30,12 +31,19 @@ public class ArtistryParticles {
             false, ColorParticleOption::codec, ColorParticleOption::streamCodec);
     public static final Supplier<SimpleParticleType> WATER_FOUNTAIN = PARTICLE_TYPES.register("water_fountain",
             () -> new SimpleParticleType(false));
+    public static final Supplier<SimpleParticleType> FLY = PARTICLE_TYPES.register("fly",
+            () -> new SimpleParticleType(false));
+    public static final Supplier<SimpleParticleType> NETHER_FLY = PARTICLE_TYPES.register("nether_fly",
+            () -> new SimpleParticleType(false));
 
     @SubscribeEvent
     public static void registerParticleProviders(RegisterParticleProvidersEvent event)
     {
         event.registerSpriteSet(ArtistryParticles.SPARK.get(), SparkParticle.Provider::new);
         event.registerSprite(ArtistryParticles.WATER_FOUNTAIN.get(), FountainParticle::createWaterFountainParticle);
+
+        event.registerSpriteSet(ArtistryParticles.FLY.get(), FlyParticle.Provider::new);
+        event.registerSpriteSet(ArtistryParticles.NETHER_FLY.get(), FlyParticle.Provider::new);
     }
 
     private static <T extends ParticleOptions> Supplier<ParticleType<T>> register(

@@ -36,6 +36,9 @@ public class LargeLanternBlock extends Block implements SimpleWaterloggedBlock {
 
     public LargeLanternBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(this.getStateDefinition().any()
+                .setValue(HANGING, false)
+                .setValue(WATERLOGGED, false));
     }
 
     @Override

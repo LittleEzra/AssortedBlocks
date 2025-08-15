@@ -1,12 +1,9 @@
 package com.feliscape.artistry.content.block;
 
+import com.feliscape.artistry.content.block.plant.EmptyMultifaceSpreader;
 import com.mojang.serialization.MapCodec;
-import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.block.MultifaceSpreader;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-
-import java.util.Map;
 
 public class AmethystStarsBlock extends MultifaceBlock {
     private static final MapCodec<AmethystStarsBlock> CODEC = simpleCodec(AmethystStarsBlock::new);

@@ -50,6 +50,9 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.SHORT_TEARDROP_GRASS, "Short Teardrop Grass");
         this.addBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, "Potted Teardrop Grass");
         this.addBlock(ArtistryBlocks.TALL_TEARDROP_GRASS, "Tall Teardrop Grass");
+        this.addBlock(ArtistryBlocks.CORPSE_FLOWER, "Corpse Flower");
+        this.addBlock(ArtistryBlocks.FLY_LURE, "Fly Lure");
+        this.addBlock(ArtistryBlocks.SPIRAL_FUNGUS, "Spiral Fungus");
 
         this.addBlock(ArtistryBlocks.OAK_TABLE, "Oak Table");
         this.addBlock(ArtistryBlocks.SPRUCE_TABLE, "Spruce Table");
@@ -159,6 +162,8 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.DRIPSTONE_BRICK_SLAB, "Dripstone Brick Slab");
         this.addBlock(ArtistryBlocks.DRIPSTONE_BRICK_WALL, "Dripstone Brick Wall");
 
+        // Aspen
+
         this.addBlock(ArtistryBlocks.ASPEN_LEAVES, "Aspen Leaves");
         this.addBlock(ArtistryBlocks.ASPEN_LOG, "Aspen Log");
         this.addBlock(ArtistryBlocks.ASPEN_WOOD, "Aspen Wood");
@@ -179,6 +184,15 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.ASPEN_TRAPDOOR, "Aspen Trapdoor");
         this.addBlock(ArtistryBlocks.ASPEN_SAPLING, "Aspen Sapling");
         this.addBlock(ArtistryBlocks.POTTED_ASPEN_SAPLING, "Potted Aspen Sapling");
+
+        // Woven Wood
+
+        this.addBlock(ArtistryBlocks.WOVEN_LEAVES, "Woven Leaves");
+        this.addBlock(ArtistryBlocks.WOVEN_LOG, "Woven Log");
+        this.addBlock(ArtistryBlocks.WOVEN_WOOD, "Woven Wood");
+        this.addBlock(ArtistryBlocks.STRIPPED_WOVEN_LOG, "Stripped Woven Log");
+        this.addBlock(ArtistryBlocks.STRIPPED_WOVEN_WOOD, "Stripped Woven Wood");
+        this.addBlock(ArtistryBlocks.WOVEN_PLANKS, "Woven Planks");
 
         this.addPaintedPotBase(DyeColor.WHITE, "White Base");
         this.addPaintedPotBase(DyeColor.LIGHT_GRAY, "Light Gray Base");

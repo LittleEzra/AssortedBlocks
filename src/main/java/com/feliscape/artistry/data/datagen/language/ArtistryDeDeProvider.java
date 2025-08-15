@@ -51,6 +51,9 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.SHORT_TEARDROP_GRASS, "Kurzes Tränengras");
         this.addBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, "Eingetopftes Tränengras");
         this.addBlock(ArtistryBlocks.TALL_TEARDROP_GRASS, "Hohes Tränengras");
+        this.addBlock(ArtistryBlocks.CORPSE_FLOWER, "Leichenblume");
+        this.addBlock(ArtistryBlocks.FLY_LURE, "Fliegenköder");
+        this.addBlock(ArtistryBlocks.SPIRAL_FUNGUS, "Spiralpilz");
 
         this.addBlock(ArtistryBlocks.OAK_TABLE, "Eichenholztisch");
         this.addBlock(ArtistryBlocks.SPRUCE_TABLE, "Fichtenholztisch");

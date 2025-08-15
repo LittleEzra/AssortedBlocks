@@ -46,6 +46,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         ROUND_LANTERN.get(),
                         FLAT_LIGHT.get(),
                         SPARKLER.get(),
+                        FLY_LURE.get(),
 
                         COPPER_CHAIN.get(),
                         EXPOSED_COPPER_CHAIN.get(),
@@ -136,6 +137,9 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(SHORT_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())
                 .add(LUSH_FERN_CROP.get())
+                .add(CORPSE_FLOWER.get())
+                .add(FLY_LURE.get())
+                .add(SPIRAL_FUNGUS.get())
         ;
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ROCKY_DIRT.get())
@@ -201,6 +205,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(SHORT_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())
                 .add(LUSH_FERN_CROP.get())
+                .add(CORPSE_FLOWER.get())
                 .add(SUNSPROUT.get())
                 .add(SUNBURST_VINES.get())
                 .add(SUNBURST_VINES_PLANT.get())
@@ -282,19 +287,32 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.PLANKS)
-                .add(ASPEN_PLANKS.get());
+                .add(ASPEN_PLANKS.get())
+                .add(WOVEN_PLANKS.get())
+        ;
         this.tag(ArtistryTags.Blocks.ASPEN_LOGS)
                 .add(ASPEN_LOG.get())
                 .add(ASPEN_WOOD.get())
                 .add(STRIPPED_ASPEN_LOG.get())
                 .add(STRIPPED_ASPEN_WOOD.get());
+        this.tag(ArtistryTags.Blocks.WOVEN_LOGS)
+                .add(WOVEN_LOG.get())
+                .add(WOVEN_WOOD.get())
+                .add(STRIPPED_WOVEN_LOG.get())
+                .add(STRIPPED_WOVEN_WOOD.get());
 
+        this.tag(BlockTags.LOGS)
+                .addTag(ArtistryTags.Blocks.WOVEN_LOGS);
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .addTag(ArtistryTags.Blocks.ASPEN_LOGS);
         this.tag(Tags.Blocks.STRIPPED_LOGS)
-                .add(STRIPPED_ASPEN_LOG.get());
+                .add(STRIPPED_ASPEN_LOG.get())
+                .add(STRIPPED_WOVEN_LOG.get())
+        ;
         this.tag(Tags.Blocks.STRIPPED_WOODS)
-                .add(STRIPPED_ASPEN_WOOD.get());
+                .add(STRIPPED_ASPEN_WOOD.get())
+                .add(STRIPPED_WOVEN_WOOD.get())
+        ;
 
         this.tag(BlockTags.WOODEN_STAIRS)
                 .add(ASPEN_STAIRS.get());
@@ -325,21 +343,31 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(ASPEN_LEAVES.get()
                 );
 
+        this.tag(BlockTags.HOGLIN_REPELLENTS)
+                .add(CORPSE_FLOWER.get())
+        ;
+        this.tag(BlockTags.PIGLIN_REPELLENTS)
+                .add(CORPSE_FLOWER.get())
+        ;
+
         this.tag(BlockTags.REPLACEABLE)
                 .add(BLOOMING_VINES.get())
                 .add(SHORT_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())
+                .add(CORPSE_FLOWER.get())
         ;
         this.tag(BlockTags.ENCHANTMENT_POWER_TRANSMITTER)
                 .add(BLOOMING_VINES.get())
                 .add(SHORT_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())
                 .add(LUSH_FERN_CROP.get())
+                .add(CORPSE_FLOWER.get())
         ;
         this.tag(BlockTags.REPLACEABLE_BY_TREES)
                 .add(BLOOMING_VINES.get())
                 .add(SHORT_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())
+                .add(CORPSE_FLOWER.get())
         ;
         this.tag(BlockTags.MAINTAINS_FARMLAND)
                 .add(LUSH_FERN_CROP.get())

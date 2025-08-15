@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "part=base": {
+      "model": "artistry:block/corpse_flower_base"
+    },
+    "part=middle": {
+      "model": "artistry:block/corpse_flower_middle"
+    },
+    "part=tip": {
+      "model": "artistry:block/corpse_flower_tip"
+    }
+  }
+}

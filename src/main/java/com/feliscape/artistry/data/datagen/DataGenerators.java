@@ -12,6 +12,7 @@ import com.feliscape.artistry.data.datagen.model.ArtistryItemModelProvider;
 import com.feliscape.artistry.data.datagen.recipe.ArtistryRecipeProvider;
 import com.feliscape.artistry.data.datagen.tag.ArtistryBlockTagGenerator;
 import com.feliscape.artistry.data.datagen.tag.ArtistryDamageTypeTagGenerator;
+import com.feliscape.artistry.data.datagen.tag.ArtistryEntityTypeTagGenerator;
 import com.feliscape.artistry.data.datagen.tag.ArtistryItemTagGenerator;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -47,6 +48,7 @@ public class DataGenerators {
         generator.addProvider(true, blockTags);
         generator.addProvider(true, new ArtistryItemTagGenerator(packOutput, lookupProvider, blockTags.contentsGetter()));
         generator.addProvider(true, new ArtistryDamageTypeTagGenerator(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(true, new ArtistryEntityTypeTagGenerator(packOutput, lookupProvider, existingFileHelper));
 
         generator.addProvider(true, new ArtistryDataMapProvider(packOutput, lookupProvider));
 

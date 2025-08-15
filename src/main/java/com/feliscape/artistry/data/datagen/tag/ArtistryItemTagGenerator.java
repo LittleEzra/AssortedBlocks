@@ -22,6 +22,7 @@ public class ArtistryItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.copy(ArtistryTags.Blocks.ASPEN_LOGS, ArtistryTags.Items.ASPEN_LOGS);
+        this.copy(ArtistryTags.Blocks.WOVEN_LOGS, ArtistryTags.Items.WOVEN_LOGS);
         this.copy(ArtistryTags.Blocks.WOODEN_TABLES, ArtistryTags.Items.WOODEN_TABLES);
         this.copy(ArtistryTags.Blocks.TABLES, ArtistryTags.Items.TABLES);
         this.copy(ArtistryTags.Blocks.FROSTED_GLASS, ArtistryTags.Items.FROSTED_GLASS);
