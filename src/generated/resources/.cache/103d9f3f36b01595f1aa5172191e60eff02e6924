@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-01T10:35:24.6076856	Registries
+// 1.21.1	2025-08-10T23:52:20.5611307	Registries
 ca20f65789cfc3ad446b9be0ca9a94d9d0716f73 data/artistry/artistry/painted_pot/pattern/arrows.json
 5139b77f8e4a8021b3a974250bf6b18ecd056648 data/artistry/artistry/painted_pot/pattern/cross.json
 be5adf70e85ea7727d9e7d6e700e5c57818838c3 data/artistry/artistry/painted_pot/pattern/cycle.json
@@ -16,3 +16,4 @@ d41ed93ddb5f7f4b1a9d493123225751b744996a data/artistry/artistry/painted_pot/trim
 3d8c896a2aae32c78ab5c8dbbe648c210fb573c3 data/artistry/artistry/painted_pot/trim/ticked.json
 1a2a4c315c2804eb27079f4a31678f26c784d095 data/artistry/artistry/painted_pot/trim/wavy.json
 0e3d5ffd3e1dd3cd23ee10136aaae2a0e72d31e2 data/artistry/worldgen/configured_feature/aspen.json
+86c5ab6417ece9b7bc5547bcbeb3da4bdfc3d274 data/artistry/worldgen/configured_feature/teardrop_grass_bonemeal.json

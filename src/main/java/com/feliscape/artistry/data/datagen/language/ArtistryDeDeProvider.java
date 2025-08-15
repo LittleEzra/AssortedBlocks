@@ -21,6 +21,9 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.SUNBURST_VINES, "Sonnenscheinranken");
         this.addItem(ArtistryItems.SUNSPROUT, "Sonnensprosse");
         this.addItem(ArtistryItems.FERN_SEED, "Farnsamen");
+        this.addItem(ArtistryItems.ANCIENT_TEAR, "Antike Träne");
+        this.addItem(ArtistryItems.SNIFFER_CAKE, "Schnüffler-Kuchen");
+        this.addItemTooltip(ArtistryItems.SNIFFER_CAKE, "Das Lieblingsessen eines Schnüfflers");
 
         this.addBlock(ArtistryBlocks.MOSSY_BRICKS, "Bemooste Ziegelsteine");
         this.addBlock(ArtistryBlocks.CRACKED_BRICKS, "Rissige Ziegelsteine");
@@ -44,8 +47,10 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.BLOOMING_VINES, "Blühende Ranken");
         this.addBlock(ArtistryBlocks.LUSH_FERN, "Üppiger Farn");
         this.addBlock(ArtistryBlocks.LUSH_FERN_CROP, "Üppiger Farn");
-        this.addBlock(ArtistryBlocks.TEARDROP_GRASS, "Tränengras");
+        this.addBlock(ArtistryBlocks.TEARDROP_GRASS_BLOCK, "Tränengrasblock");
+        this.addBlock(ArtistryBlocks.SHORT_TEARDROP_GRASS, "Kurzes Tränengras");
         this.addBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, "Eingetopftes Tränengras");
+        this.addBlock(ArtistryBlocks.TALL_TEARDROP_GRASS, "Hohes Tränengras");
 
         this.addBlock(ArtistryBlocks.OAK_TABLE, "Eichenholztisch");
         this.addBlock(ArtistryBlocks.SPRUCE_TABLE, "Fichtenholztisch");
@@ -211,8 +216,12 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.ARROWS_PATTERN, "Pfeile Muster");
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.CYCLE_PATTERN, "Zyklus Muster");
 
+        this.add("artistry.jei.sniffer_dig.title", "Schnüffler-Graben");
+        this.add("artistry.jei.sniffer_dig.found_in", "Gefunden In:");
+
         this.add("itemGroup.artistry.base", "Artistry");
 
+        this.add("artistry.configuration.tweaks", "Änderungen");
         this.add("artistry.config.common.survivability_changes", "Stabilitätsänderungen");
     }
 }

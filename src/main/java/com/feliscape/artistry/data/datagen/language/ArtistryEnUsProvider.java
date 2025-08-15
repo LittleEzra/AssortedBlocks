@@ -20,6 +20,9 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.SUNBURST_VINES, "Sunburst Vines");
         this.addItem(ArtistryItems.SUNSPROUT, "Sunsprout");
         this.addItem(ArtistryItems.FERN_SEED, "Fern Seed");
+        this.addItem(ArtistryItems.ANCIENT_TEAR, "Ancient Tear");
+        this.addItem(ArtistryItems.SNIFFER_CAKE, "Sniffer Cake");
+        this.addItemTooltip(ArtistryItems.SNIFFER_CAKE, "A Sniffer's favorite food");
 
         this.addBlock(ArtistryBlocks.MOSSY_BRICKS, "Mossy Bricks");
         this.addBlock(ArtistryBlocks.CRACKED_BRICKS, "Cracked Bricks");
@@ -43,8 +46,10 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.BLOOMING_VINES, "Blooming Vines");
         this.addBlock(ArtistryBlocks.LUSH_FERN, "Lush Fern");
         this.addBlock(ArtistryBlocks.LUSH_FERN_CROP, "Lush Fern");
-        this.addBlock(ArtistryBlocks.TEARDROP_GRASS, "Teardrop Grass");
+        this.addBlock(ArtistryBlocks.TEARDROP_GRASS_BLOCK, "Teardrop Grass Block");
+        this.addBlock(ArtistryBlocks.SHORT_TEARDROP_GRASS, "Short Teardrop Grass");
         this.addBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, "Potted Teardrop Grass");
+        this.addBlock(ArtistryBlocks.TALL_TEARDROP_GRASS, "Tall Teardrop Grass");
 
         this.addBlock(ArtistryBlocks.OAK_TABLE, "Oak Table");
         this.addBlock(ArtistryBlocks.SPRUCE_TABLE, "Spruce Table");
@@ -211,8 +216,12 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.ARROWS_PATTERN, "Arrows Pattern");
         this.addPaintedPotPattern(ArtistryPaintedPotDecorations.CYCLE_PATTERN, "Cycle Pattern");
 
+        this.add("artistry.jei.sniffer_dig.title", "Sniffer Digging");
+        this.add("artistry.jei.sniffer_dig.found_in", "Found In:");
+
         this.add("itemGroup.artistry.base", "Artistry");
 
+        this.add("artistry.configuration.tweaks", "Tweaks");
         this.add("artistry.config.common.survivability_changes", "Survivability Changes");
     }
 }

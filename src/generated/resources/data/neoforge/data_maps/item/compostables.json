@@ -15,10 +15,16 @@
     "artistry:lush_fern": {
       "chance": 0.3
     },
+    "artistry:short_teardrop_grass": {
+      "chance": 0.3
+    },
     "artistry:sunburst_vines": {
       "chance": 0.3
     },
     "artistry:sunsprout": {
+      "chance": 0.3
+    },
+    "artistry:tall_teardrop_grass": {
       "chance": 0.3
     }
   }

@@ -26,61 +26,53 @@ import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.event.RegisterMaterialAtlasesEvent;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 
+@EventBusSubscriber(modid = Artistry.MOD_ID, value = Dist.CLIENT)
 public class ClientEvents {
-    //@EventBusSubscriber(modid = Artistry.MOD_ID, value = Dist.CLIENT)
-    public static class ClientGameEvents{
-
+    @SubscribeEvent
+    public static void registerMaterialAtlases(RegisterMaterialAtlasesEvent event){
+        event.register(ArtistrySheets.PAINTED_POT_BASE_SHEET, Artistry.location("painted_pot/pot"));
+        event.register(ArtistrySheets.PAINTED_POT_TRIM_SHEET, Artistry.location("painted_pot/trim"));
+        event.register(ArtistrySheets.PAINTED_POT_PATTERN_SHEET, Artistry.location("painted_pot/pattern"));
+    }
+    @SubscribeEvent
+    public static void registerItemColors(RegisterColorHandlersEvent.Item event){
+        event.register(((itemStack, index) -> index > 0 ? -1 : DyedItemColor.getOrDefault(itemStack, SparkFountainBlockEntity.DEFAULT_SPARK_COLOR_RGB)),
+                ArtistryBlocks.SPARK_FOUNTAIN);
+    }
+    @SubscribeEvent
+    public static void registerBlockColors(RegisterColorHandlersEvent.Block event){
+        event.register(((blockState, blockAndTintGetter, blockPos, index) -> {
+            if (index > 0 && blockAndTintGetter != null && blockPos != null){
+                BlockEntity entity = blockAndTintGetter.getBlockEntity(blockPos);
+                if (entity instanceof SparkFountainBlockEntity fountain){
+                    return fountain.getColor();
+                }
+            }
+            return -1;
+        }), ArtistryBlocks.SPARK_FOUNTAIN.get());
+    }
+    @SubscribeEvent
+    public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event){
+        new ArtistryClient.ReloadListener(event);
+    }
+    @SubscribeEvent
+    public static void registerClientExtensions(RegisterClientExtensionsEvent event){
+        event.registerItem(new CustomItemRendererExtension(), ArtistryItems.PAINTED_POT);
     }
 
-    @EventBusSubscriber(modid = Artistry.MOD_ID, value = Dist.CLIENT, bus = EventBusSubscriber.Bus.MOD)
-    public static class ClientModBusEvents{
+    @SubscribeEvent
+    public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
+        event.registerLayerDefinition(ArtistryModelLayers.ASPEN_BOAT, BoatModel::createBodyModel);
+        event.registerLayerDefinition(ArtistryModelLayers.ASPEN_CHEST_BOAT, ChestBoatModel::createBodyModel);
+    }
 
-        @SubscribeEvent
-        public static void registerMaterialAtlases(RegisterMaterialAtlasesEvent event){
-            event.register(ArtistrySheets.PAINTED_POT_BASE_SHEET, Artistry.location("painted_pot/pot"));
-            event.register(ArtistrySheets.PAINTED_POT_TRIM_SHEET, Artistry.location("painted_pot/trim"));
-            event.register(ArtistrySheets.PAINTED_POT_PATTERN_SHEET, Artistry.location("painted_pot/pattern"));
-        }
-        @SubscribeEvent
-        public static void registerItemColors(RegisterColorHandlersEvent.Item event){
-            event.register(((itemStack, index) -> index > 0 ? -1 : DyedItemColor.getOrDefault(itemStack, SparkFountainBlockEntity.DEFAULT_SPARK_COLOR_RGB)),
-                    ArtistryBlocks.SPARK_FOUNTAIN);
-        }
-        @SubscribeEvent
-        public static void registerBlockColors(RegisterColorHandlersEvent.Block event){
-            event.register(((blockState, blockAndTintGetter, blockPos, index) -> {
-                if (index > 0 && blockAndTintGetter != null && blockPos != null){
-                    BlockEntity entity = blockAndTintGetter.getBlockEntity(blockPos);
-                    if (entity instanceof SparkFountainBlockEntity fountain){
-                        return fountain.getColor();
-                    }
-                }
-                return -1;
-            }), ArtistryBlocks.SPARK_FOUNTAIN.get());
-        }
-        @SubscribeEvent
-        public static void registerClientReloadListeners(RegisterClientReloadListenersEvent event){
-            new ArtistryClient.ReloadListener(event);
-        }
-        @SubscribeEvent
-        public static void registerClientExtensions(RegisterClientExtensionsEvent event){
-            event.registerItem(new CustomItemRendererExtension(), ArtistryItems.PAINTED_POT);
-        }
+    @SubscribeEvent
+    public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event){
+        event.registerEntityRenderer(ArtistryEntityTypes.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
+        event.registerEntityRenderer(ArtistryEntityTypes.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
 
-        @SubscribeEvent
-        public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
-            event.registerLayerDefinition(ArtistryModelLayers.ASPEN_BOAT, BoatModel::createBodyModel);
-            event.registerLayerDefinition(ArtistryModelLayers.ASPEN_CHEST_BOAT, ChestBoatModel::createBodyModel);
-        }
-
-        @SubscribeEvent
-        public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event){
-            event.registerEntityRenderer(ArtistryEntityTypes.MOD_BOAT.get(), pContext -> new ModBoatRenderer(pContext, false));
-            event.registerEntityRenderer(ArtistryEntityTypes.MOD_CHEST_BOAT.get(), pContext -> new ModBoatRenderer(pContext, true));
-
-            event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.MOD_SIGN.get(), SignRenderer::new);
-            event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
-            event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.PAINTED_POT.get(), PaintedPotRenderer::new);
-        }
+        event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.MOD_SIGN.get(), SignRenderer::new);
+        event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
+        event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.PAINTED_POT.get(), PaintedPotRenderer::new);
     }
 }

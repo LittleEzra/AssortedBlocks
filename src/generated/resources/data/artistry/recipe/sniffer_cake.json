@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:wheat"
+    },
+    "L": {
+      "tag": "minecraft:leaves"
+    },
+    "T": {
+      "item": "minecraft:torchflower_seeds"
+    }
+  },
+  "pattern": [
+    "L#L",
+    "T#T",
+    "L#L"
+  ],
+  "result": {
+    "count": 1,
+    "id": "artistry:sniffer_cake"
+  }
+}

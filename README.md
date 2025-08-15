@@ -1,6 +1,6 @@
 <img width="728" height="160" alt="изображение" src="https://github.com/user-attachments/assets/4a7d885b-2c1d-4b7d-b4a9-969830b59ed0" />
 
-<p align="center"><img src="./src/main/resources/logo_x8.png" alt="Logo" width="400"></p>
+<p align="center"><img src="./src/main/resources/logo_x8.png" alt="Logo" width="364"></p>
 
 <p>A mod to add some blocks I thought might be useful</p>
 

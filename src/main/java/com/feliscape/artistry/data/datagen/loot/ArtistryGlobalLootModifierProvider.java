@@ -1,20 +1,14 @@
 package com.feliscape.artistry.data.datagen.loot;
 
 import com.feliscape.artistry.Artistry;
-import com.feliscape.artistry.content.loot.EntityOnBlockLootCondition;
-import com.feliscape.artistry.content.loot.modifiers.ReplaceWithRandomItemModifier;
-import com.feliscape.artistry.content.loot.modifiers.ReplaceWithTableLootModifier;
+import com.feliscape.artistry.content.loot.modifiers.ReplaceSnifferLootModifier;
 import com.feliscape.artistry.data.loot.ArtistryLootTables;
-import com.feliscape.artistry.registry.ArtistryBlocks;
-import com.feliscape.artistry.registry.ArtistryTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.neoforged.neoforge.common.data.GlobalLootModifierProvider;
-import net.neoforged.neoforge.common.loot.AddTableLootModifier;
 import net.neoforged.neoforge.common.loot.LootTableIdCondition;
 
 import java.util.List;
@@ -56,11 +50,9 @@ public class ArtistryGlobalLootModifierProvider extends GlobalLootModifierProvid
                 );*/
 
         add("add_to_sniffer_loot",
-                new ReplaceWithTableLootModifier(new LootItemCondition[]{
-                        LootTableIdCondition.builder(ResourceLocation.withDefaultNamespace("gameplay/sniffer_digging")).build(),
-                        LootItemRandomChanceCondition.randomChance(0.5F).build()
-                },
-                        ArtistryLootTables.SNIFFER_ADDITIONAL),
+                new ReplaceSnifferLootModifier(new LootItemCondition[]{
+                        LootTableIdCondition.builder(ResourceLocation.withDefaultNamespace("gameplay/sniffer_digging")).build()
+                }),
                 List.of()
         );
     }

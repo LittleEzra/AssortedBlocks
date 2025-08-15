@@ -28,7 +28,6 @@ import java.util.function.Function;
 public class ArtistryBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Artistry.MOD_ID);
 
-    //region Stone Bricks Set
     public static final DeferredBlock<Block> MOSSY_BRICKS = registerBlockWithItem("mossy_bricks", p -> new Block(p
             .mapColor(MapColor.COLOR_RED)
             .instrument(NoteBlockInstrument.BASEDRUM)
@@ -40,6 +39,7 @@ public class ArtistryBlocks {
             .requiresCorrectToolForDrops()
             .strength(2.0F, 6.0F)));
 
+    //region Stone Bricks Set
     public static final DeferredBlock<Block> STONE_TILES = registerBlockWithItem("stone_tiles", p -> new Block(p
             .mapColor(MapColor.STONE)
             .instrument(NoteBlockInstrument.BASEDRUM)
@@ -369,8 +369,26 @@ public class ArtistryBlocks {
                     .sound(SoundType.CROP)
                     .pushReaction(PushReaction.DESTROY)
             ));
-    public static final DeferredBlock<TeardropGrassBlock> TEARDROP_GRASS = registerBlockWithItem("teardrop_grass",
+    public static final DeferredBlock<TeardropGrassBlock> TEARDROP_GRASS_BLOCK = registerBlockWithItem("teardrop_grass_block",
             p -> new TeardropGrassBlock(p
+                    .mapColor(MapColor.GRASS)
+                    .randomTicks()
+                    .strength(0.6F)
+                    .sound(SoundType.WET_GRASS)
+            ));
+    public static final DeferredBlock<TallTeardropGrassBlock> SHORT_TEARDROP_GRASS = registerBlockWithItem("short_teardrop_grass",
+            p -> new TallTeardropGrassBlock(p
+                    .mapColor(MapColor.PLANT)
+                    .replaceable()
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .offsetType(BlockBehaviour.OffsetType.XZ)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+    public static final DeferredBlock<DoubleTeardropGrassBlock> TALL_TEARDROP_GRASS = registerBlockWithItem("tall_teardrop_grass",
+            p -> new DoubleTeardropGrassBlock(p
                     .mapColor(MapColor.PLANT)
                     .replaceable()
                     .noCollission()
@@ -382,7 +400,7 @@ public class ArtistryBlocks {
             ));
 
     public static final DeferredBlock<FlowerPotBlock> POTTED_TEARDROP_GRASS = BLOCKS.registerBlock("potted_teardrop_grass",
-            p -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, TEARDROP_GRASS, p
+            p -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SHORT_TEARDROP_GRASS, p
                     .instabreak()
                     .noOcclusion()
                     .pushReaction(PushReaction.DESTROY)));
@@ -940,6 +958,8 @@ public class ArtistryBlocks {
     }
 
     public static void register(IEventBus eventBus){
+        BLOCKS.addAlias(Artistry.location("teardrop_grass"), Artistry.location("short_teardrop_grass"));
+
         BLOCKS.register(eventBus);
     }
 }

@@ -50,7 +50,7 @@ public class Artistry
 
         modEventBus.addListener(this::addCreative);
 
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        modContainer.registerConfig(ModConfig.Type.SERVER, Config.SPEC);
     }
 
     public static String stringLocation(String path){
@@ -64,7 +64,7 @@ public class Artistry
     {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ArtistryBlocks.ASPEN_SAPLING.getId(), ArtistryBlocks.POTTED_ASPEN_SAPLING);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ArtistryBlocks.TEARDROP_GRASS.getId(), ArtistryBlocks.POTTED_TEARDROP_GRASS);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ArtistryBlocks.SHORT_TEARDROP_GRASS.getId(), ArtistryBlocks.POTTED_TEARDROP_GRASS);
         });
     }
 

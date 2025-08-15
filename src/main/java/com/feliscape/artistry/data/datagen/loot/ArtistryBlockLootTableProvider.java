@@ -13,13 +13,12 @@ import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DecoratedPotBlock;
 import net.minecraft.world.level.block.MultifaceBlock;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
-import net.minecraft.world.level.storage.loot.entries.DynamicLoot;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
 import net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
@@ -56,8 +55,10 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ArtistryBlocks.BLOOMING_VINES.get(), block -> this.createMultifaceBlockDrops(block, HAS_SHEARS));
         this.add(ArtistryBlocks.WALL_STRING_LIGHTS.get(), this::createWallStringLights);
         this.add(ArtistryBlocks.LUSH_FERN.get(), BlockLootSubProvider::createShearsOnlyDrop);
-        this.add(ArtistryBlocks.TEARDROP_GRASS.get(), BlockLootSubProvider::createShearsOnlyDrop);
+        this.dropOtherWithoutSilkTouch(ArtistryBlocks.TEARDROP_GRASS_BLOCK.get(), Blocks.DIRT);
+        this.add(ArtistryBlocks.SHORT_TEARDROP_GRASS.get(), BlockLootSubProvider::createShearsOnlyDrop);
         this.dropPottedContents(ArtistryBlocks.POTTED_TEARDROP_GRASS.get());
+        this.add(ArtistryBlocks.TALL_TEARDROP_GRASS.get(), block -> this.createDoublePlantShearsDrop(ArtistryBlocks.SHORT_TEARDROP_GRASS.get()));
 
         this.dropSelf(ArtistryBlocks.OAK_TABLE.get());
         this.dropSelf(ArtistryBlocks.SPRUCE_TABLE.get());

@@ -1,14 +1,9 @@
 {
-  "type": "artistry:replace_loot",
+  "type": "artistry:replace_sniffer_loot",
   "conditions": [
     {
       "condition": "neoforge:loot_table_id",
       "loot_table_id": "minecraft:gameplay/sniffer_digging"
-    },
-    {
-      "chance": 0.5,
-      "condition": "minecraft:random_chance"
     }
-  ],
-  "table": "artistry:gameplay/sniffer_additional"
+  ]
 }

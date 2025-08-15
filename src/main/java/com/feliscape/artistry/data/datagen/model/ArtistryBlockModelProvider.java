@@ -10,9 +10,10 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
+import net.minecraft.world.level.block.state.properties.Half;
 import net.neoforged.neoforge.client.model.generators.*;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.function.Supplier;
 
@@ -103,7 +104,9 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
                 ).buildLast());*/
         simpleBlock(ArtistryBlocks.LUSH_FERN.get(), models().getExistingFile(Artistry.location("block/lush_fern")));
         lushFernCropBlock(ArtistryBlocks.LUSH_FERN_CROP.get());
-        crossBlockWithRenderType(ArtistryBlocks.TEARDROP_GRASS.get(), "cutout");
+        teardropGrassBlock(ArtistryBlocks.TEARDROP_GRASS_BLOCK.get());
+        crossBlockWithRenderType(ArtistryBlocks.SHORT_TEARDROP_GRASS.get(), "cutout");
+        doublePlantBlock(ArtistryBlocks.TALL_TEARDROP_GRASS.get(), "cutout");
         pottedCrossPlantBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, Artistry.location("block/potted_teardrop_grass"));
 
         axisBlock(ArtistryBlocks.COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/copper_chain")));
@@ -206,6 +209,23 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         crossBlockWithRenderType(ArtistryBlocks.ASPEN_SAPLING.get(), "cutout");
 
+    }
+
+
+    private void teardropGrassBlock(Block block) {
+        ModelFile variant0 = models().cubeBottomTop(name(block),
+                blockTexture(block).withSuffix("_side"),
+                blockTexture(Blocks.DIRT),
+                blockTexture(block).withSuffix("_top_0"));
+        ModelFile variant1 = models().cubeBottomTop(name(block),
+                blockTexture(block).withSuffix("_side"),
+                blockTexture(Blocks.DIRT),
+                blockTexture(block).withSuffix("_top_1"));
+        getVariantBuilder(block).partialState()
+                .addModels(ConfiguredModel.allYRotations(variant0, 0, false, 1))
+                .addModels(ConfiguredModel.allYRotations(variant1, 0, false, 1))
+        ;
+        simpleBlockItem(block, variant0);
     }
 
     public void axisBlock(RotatedPillarBlock block, ModelFile model) {
@@ -478,6 +498,19 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         simpleBlockItem(block.get(), model);
     }
 
+
+    public void doublePlantBlock(Block block, String renderType) {
+        ModelFile top = models().cross(name(block) + "_top", blockTexture(block).withSuffix("_top")).renderType(renderType);
+        ModelFile bottom = models().cross(name(block) + "_bottom", blockTexture(block).withSuffix("_bottom")).renderType(renderType);
+
+        getVariantBuilder(block).forAllStatesExcept(state -> {
+            var half = state.getValue(DoublePlantBlock.HALF);
+            return ConfiguredModel.builder()
+                    .modelFile(half == DoubleBlockHalf.UPPER ? top : bottom).build();
+            }
+            , DoubleTeardropGrassBlock.WATERLOGGED)
+        ;
+    }
 
     public void crossBlockWithRenderType(Block block, String renderType) {
         getVariantBuilder(block).partialState().setModels(new ConfiguredModel(models().cross(name(block), blockTexture(block)).renderType(renderType)));

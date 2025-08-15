@@ -13,6 +13,8 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.concurrent.CompletableFuture;
 
+import static com.feliscape.artistry.registry.ArtistryBlocks.*;
+
 public class ArtistryBlockTagGenerator extends BlockTagsProvider {
     public ArtistryBlockTagGenerator(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, Artistry.MOD_ID, existingFileHelper);
@@ -20,105 +22,144 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        this.tag(BlockTags.MINEABLE_WITH_HOE)
+                .add(
+                        ASPEN_LEAVES.get()
+        );
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(
-                        ArtistryBlocks.CRACKED_BRICKS.get(),
-                        ArtistryBlocks.MOSSY_BRICKS.get(),
-                        ArtistryBlocks.STONE_TILES.get(),
-                        ArtistryBlocks.MOSSY_STONE_TILES.get(),
-                        ArtistryBlocks.OVERGROWN_STONE_TILES.get(),
-                        ArtistryBlocks.STONE_PILLAR.get(),
-                        ArtistryBlocks.MOSSY_STONE_PILLAR.get(),
-                        ArtistryBlocks.LARGE_LANTERN.get(),
-                        ArtistryBlocks.LARGE_SOUL_LANTERN.get(),
-                        ArtistryBlocks.ROUND_LANTERN.get(),
-                        ArtistryBlocks.FLAT_LIGHT.get(),
-                        ArtistryBlocks.SPARKLER.get(),
-                        ArtistryBlocks.COPPER_CHAIN.get(),
+                        CRACKED_BRICKS.get(),
+                        MOSSY_BRICKS.get(),
+                        STONE_TILES.get(),
+                        STONE_TILE_STAIRS.get(),
+                        STONE_TILE_SLAB.get(),
 
-                        ArtistryBlocks.WATER_FOUNTAIN.get(),
+                        MOSSY_STONE_TILES.get(),
+                        MOSSY_STONE_TILE_STAIRS.get(),
+                        MOSSY_STONE_TILE_SLAB.get(),
 
-                        ArtistryBlocks.STONE_TABLE.get(),
-                        ArtistryBlocks.ANDESITE_TABLE.get(),
-                        ArtistryBlocks.GRANITE_TABLE.get(),
-                        ArtistryBlocks.DIORITE_TABLE.get(),
-                        ArtistryBlocks.DEEPSLATE_TABLE.get(),
-                        ArtistryBlocks.POLISHED_BLACKSTONE_TABLE.get(),
-                        ArtistryBlocks.TUFF_TABLE.get(),
-                        ArtistryBlocks.CALCITE_TABLE.get(),
+                        OVERGROWN_STONE_TILES.get(),
+                        STONE_PILLAR.get(),
+                        MOSSY_STONE_PILLAR.get(),
+                        LARGE_LANTERN.get(),
+                        LARGE_SOUL_LANTERN.get(),
+                        ROUND_LANTERN.get(),
+                        FLAT_LIGHT.get(),
+                        SPARKLER.get(),
 
-                        ArtistryBlocks.ROCKY_DIRT.get(),
+                        COPPER_CHAIN.get(),
+                        EXPOSED_COPPER_CHAIN.get(),
+                        WEATHERED_COPPER_CHAIN.get(),
+                        OXIDIZED_COPPER_CHAIN.get(),
+                        WAXED_COPPER_CHAIN.get(),
+                        WAXED_EXPOSED_COPPER_CHAIN.get(),
+                        WAXED_WEATHERED_COPPER_CHAIN.get(),
+                        WAXED_OXIDIZED_COPPER_CHAIN.get(),
 
-                        ArtistryBlocks.CALCITE_STAIRS.get(),
-                        ArtistryBlocks.CALCITE_SLAB.get(),
-                        ArtistryBlocks.CALCITE_WALL.get(),
+                        WATER_FOUNTAIN.get(),
 
-                        ArtistryBlocks.POLISHED_CALCITE.get(),
-                        ArtistryBlocks.POLISHED_CALCITE_STAIRS.get(),
-                        ArtistryBlocks.POLISHED_CALCITE_SLAB.get(),
-                        ArtistryBlocks.POLISHED_CALCITE_WALL.get(),
-                        ArtistryBlocks.CALCITE_BRICKS.get(),
-                        ArtistryBlocks.CALCITE_BRICK_STAIRS.get(),
-                        ArtistryBlocks.CALCITE_BRICK_SLAB.get(),
-                        ArtistryBlocks.CALCITE_BRICK_WALL.get(),
-                        ArtistryBlocks.SMALL_CALCITE_BRICKS.get(),
-                        ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get(),
-                        ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get(),
+                        STONE_TABLE.get(),
+                        ANDESITE_TABLE.get(),
+                        GRANITE_TABLE.get(),
+                        DIORITE_TABLE.get(),
+                        DEEPSLATE_TABLE.get(),
+                        POLISHED_BLACKSTONE_TABLE.get(),
+                        TUFF_TABLE.get(),
+                        CALCITE_TABLE.get(),
 
-                        ArtistryBlocks.WHITE_FROSTED_GLASS.get(),
-                        ArtistryBlocks.LIGHT_GRAY_FROSTED_GLASS.get(),
-                        ArtistryBlocks.GRAY_FROSTED_GLASS.get(),
-                        ArtistryBlocks.BLACK_FROSTED_GLASS.get(),
-                        ArtistryBlocks.BROWN_FROSTED_GLASS.get(),
-                        ArtistryBlocks.RED_FROSTED_GLASS.get(),
-                        ArtistryBlocks.ORANGE_FROSTED_GLASS.get(),
-                        ArtistryBlocks.YELLOW_FROSTED_GLASS.get(),
-                        ArtistryBlocks.LIME_FROSTED_GLASS.get(),
-                        ArtistryBlocks.GREEN_FROSTED_GLASS.get(),
-                        ArtistryBlocks.CYAN_FROSTED_GLASS.get(),
-                        ArtistryBlocks.LIGHT_BLUE_FROSTED_GLASS.get(),
-                        ArtistryBlocks.BLUE_FROSTED_GLASS.get(),
-                        ArtistryBlocks.PURPLE_FROSTED_GLASS.get(),
-                        ArtistryBlocks.MAGENTA_FROSTED_GLASS.get(),
-                        ArtistryBlocks.PINK_FROSTED_GLASS.get(),
+                        ROCKY_DIRT.get(),
 
-                        ArtistryBlocks.PAINTED_SMOOTH_CALCITE.get(),
-                        ArtistryBlocks.PAINTED_POLISHED_CALCITE.get(),
-                        ArtistryBlocks.PAINTED_CALCITE_BRICKS.get(),
-                        ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS.get(),
+                        CALCITE_STAIRS.get(),
+                        CALCITE_SLAB.get(),
+                        CALCITE_WALL.get(),
 
-                        ArtistryBlocks.DRIPSTONE_STAIRS.get(),
-                        ArtistryBlocks.DRIPSTONE_SLAB.get(),
-                        ArtistryBlocks.DRIPSTONE_WALL.get(),
+                        SMOOTH_CALCITE.get(),
+                        SMOOTH_CALCITE_STAIRS.get(),
+                        SMOOTH_CALCITE_SLAB.get(),
 
-                        ArtistryBlocks.POLISHED_DRIPSTONE.get(),
-                        ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS.get(),
-                        ArtistryBlocks.POLISHED_DRIPSTONE_SLAB.get(),
-                        ArtistryBlocks.POLISHED_DRIPSTONE_WALL.get(),
-                        ArtistryBlocks.DRIPSTONE_BRICKS.get(),
-                        ArtistryBlocks.DRIPSTONE_BRICK_STAIRS.get(),
-                        ArtistryBlocks.DRIPSTONE_BRICK_SLAB.get(),
-                        ArtistryBlocks.DRIPSTONE_BRICK_WALL.get()
+                        POLISHED_CALCITE.get(),
+                        CHISELED_CALCITE.get(),
+                        POLISHED_CALCITE_STAIRS.get(),
+                        POLISHED_CALCITE_SLAB.get(),
+                        POLISHED_CALCITE_WALL.get(),
+                        CALCITE_BRICKS.get(),
+                        CALCITE_BRICK_STAIRS.get(),
+                        CALCITE_BRICK_SLAB.get(),
+                        CALCITE_BRICK_WALL.get(),
+                        SMALL_CALCITE_BRICKS.get(),
+                        SMALL_CALCITE_BRICK_STAIRS.get(),
+                        SMALL_CALCITE_BRICK_SLAB.get(),
+
+                        WHITE_FROSTED_GLASS.get(),
+                        LIGHT_GRAY_FROSTED_GLASS.get(),
+                        GRAY_FROSTED_GLASS.get(),
+                        BLACK_FROSTED_GLASS.get(),
+                        BROWN_FROSTED_GLASS.get(),
+                        RED_FROSTED_GLASS.get(),
+                        ORANGE_FROSTED_GLASS.get(),
+                        YELLOW_FROSTED_GLASS.get(),
+                        LIME_FROSTED_GLASS.get(),
+                        GREEN_FROSTED_GLASS.get(),
+                        CYAN_FROSTED_GLASS.get(),
+                        LIGHT_BLUE_FROSTED_GLASS.get(),
+                        BLUE_FROSTED_GLASS.get(),
+                        PURPLE_FROSTED_GLASS.get(),
+                        MAGENTA_FROSTED_GLASS.get(),
+                        PINK_FROSTED_GLASS.get(),
+
+                        PAINTED_SMOOTH_CALCITE.get(),
+                        PAINTED_POLISHED_CALCITE.get(),
+                        PAINTED_CALCITE_BRICKS.get(),
+                        PAINTED_SMALL_CALCITE_BRICKS.get(),
+
+                        DRIPSTONE_STAIRS.get(),
+                        DRIPSTONE_SLAB.get(),
+                        DRIPSTONE_WALL.get(),
+
+                        POLISHED_DRIPSTONE.get(),
+                        CHISELED_DRIPSTONE.get(),
+                        POLISHED_DRIPSTONE_STAIRS.get(),
+                        POLISHED_DRIPSTONE_SLAB.get(),
+                        POLISHED_DRIPSTONE_WALL.get(),
+                        DRIPSTONE_BRICKS.get(),
+                        DRIPSTONE_BRICK_STAIRS.get(),
+                        DRIPSTONE_BRICK_SLAB.get(),
+                        DRIPSTONE_BRICK_WALL.get()
                 );
+        this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(ArtistryTags.Blocks.WOODEN_TABLES)
+                .add(BLOOMING_VINES.get())
+                .add(SUNSPROUT.get())
+                .add(SUNBURST_VINES.get())
+                .add(SUNBURST_VINES_PLANT.get())
+                .add(BLOOMING_VINES.get())
+                .add(SHORT_TEARDROP_GRASS.get())
+                .add(LUSH_FERN.get())
+                .add(LUSH_FERN_CROP.get())
+        ;
+        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ROCKY_DIRT.get())
+                .add(TEARDROP_GRASS_BLOCK.get())
+        ;
 
         this.tag(ArtistryTags.Blocks.FROSTED_GLASS)
                 .add(
-                        ArtistryBlocks.WHITE_FROSTED_GLASS.get(),
-                        ArtistryBlocks.LIGHT_GRAY_FROSTED_GLASS.get(),
-                        ArtistryBlocks.GRAY_FROSTED_GLASS.get(),
-                        ArtistryBlocks.BLACK_FROSTED_GLASS.get(),
-                        ArtistryBlocks.BROWN_FROSTED_GLASS.get(),
-                        ArtistryBlocks.RED_FROSTED_GLASS.get(),
-                        ArtistryBlocks.ORANGE_FROSTED_GLASS.get(),
-                        ArtistryBlocks.YELLOW_FROSTED_GLASS.get(),
-                        ArtistryBlocks.LIME_FROSTED_GLASS.get(),
-                        ArtistryBlocks.GREEN_FROSTED_GLASS.get(),
-                        ArtistryBlocks.CYAN_FROSTED_GLASS.get(),
-                        ArtistryBlocks.LIGHT_BLUE_FROSTED_GLASS.get(),
-                        ArtistryBlocks.BLUE_FROSTED_GLASS.get(),
-                        ArtistryBlocks.PURPLE_FROSTED_GLASS.get(),
-                        ArtistryBlocks.MAGENTA_FROSTED_GLASS.get(),
-                        ArtistryBlocks.PINK_FROSTED_GLASS.get()
+                        WHITE_FROSTED_GLASS.get(),
+                        LIGHT_GRAY_FROSTED_GLASS.get(),
+                        GRAY_FROSTED_GLASS.get(),
+                        BLACK_FROSTED_GLASS.get(),
+                        BROWN_FROSTED_GLASS.get(),
+                        RED_FROSTED_GLASS.get(),
+                        ORANGE_FROSTED_GLASS.get(),
+                        YELLOW_FROSTED_GLASS.get(),
+                        LIME_FROSTED_GLASS.get(),
+                        GREEN_FROSTED_GLASS.get(),
+                        CYAN_FROSTED_GLASS.get(),
+                        LIGHT_BLUE_FROSTED_GLASS.get(),
+                        BLUE_FROSTED_GLASS.get(),
+                        PURPLE_FROSTED_GLASS.get(),
+                        MAGENTA_FROSTED_GLASS.get(),
+                        PINK_FROSTED_GLASS.get()
                 );
         this.tag(BlockTags.SNIFFER_DIGGABLE_BLOCK)
                 .add(Blocks.CLAY)
@@ -142,151 +183,187 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ArtistryTags.Blocks.FROSTED_GLASS);
 
         this.tag(ArtistryTags.Blocks.WOODEN_TABLES)
-                .add(ArtistryBlocks.OAK_TABLE.get())
-                .add(ArtistryBlocks.SPRUCE_TABLE.get())
-                .add(ArtistryBlocks.BIRCH_TABLE.get())
-                .add(ArtistryBlocks.JUNGLE_TABLE.get())
-                .add(ArtistryBlocks.ACACIA_TABLE.get())
-                .add(ArtistryBlocks.CHERRY_TABLE.get())
-                .add(ArtistryBlocks.DARK_OAK_TABLE.get())
-                .add(ArtistryBlocks.MANGROVE_TABLE.get())
-                .add(ArtistryBlocks.ASPEN_TABLE.get())
-                .add(ArtistryBlocks.BAMBOO_TABLE.get())
-                .add(ArtistryBlocks.CRIMSON_TABLE.get())
-                .add(ArtistryBlocks.WARPED_TABLE.get())
-        ;
-        this.tag(BlockTags.MINEABLE_WITH_AXE)
-                .addTag(ArtistryTags.Blocks.WOODEN_TABLES)
-                .add(ArtistryBlocks.BLOOMING_VINES.get())
-                .add(ArtistryBlocks.SUNSPROUT.get())
-                .add(ArtistryBlocks.SUNBURST_VINES.get())
-                .add(ArtistryBlocks.SUNBURST_VINES_PLANT.get())
-        ;
-        this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ArtistryBlocks.ROCKY_DIRT.get())
+                .add(OAK_TABLE.get())
+                .add(SPRUCE_TABLE.get())
+                .add(BIRCH_TABLE.get())
+                .add(JUNGLE_TABLE.get())
+                .add(ACACIA_TABLE.get())
+                .add(CHERRY_TABLE.get())
+                .add(DARK_OAK_TABLE.get())
+                .add(MANGROVE_TABLE.get())
+                .add(ASPEN_TABLE.get())
+                .add(BAMBOO_TABLE.get())
+                .add(CRIMSON_TABLE.get())
+                .add(WARPED_TABLE.get())
         ;
         this.tag(BlockTags.SWORD_EFFICIENT)
-                .add(ArtistryBlocks.BLOOMING_VINES.get())
-                .add(ArtistryBlocks.SUNSPROUT.get())
-                .add(ArtistryBlocks.SUNBURST_VINES.get())
-                .add(ArtistryBlocks.SUNBURST_VINES_PLANT.get())
+                .add(BLOOMING_VINES.get())
+                .add(SHORT_TEARDROP_GRASS.get())
+                .add(LUSH_FERN.get())
+                .add(LUSH_FERN_CROP.get())
+                .add(SUNSPROUT.get())
+                .add(SUNBURST_VINES.get())
+                .add(SUNBURST_VINES_PLANT.get())
         ;
         this.tag(ArtistryTags.Blocks.TABLES)
                 .addTag(ArtistryTags.Blocks.WOODEN_TABLES)
-                .add(ArtistryBlocks.STONE_TABLE.get())
-                .add(ArtistryBlocks.ANDESITE_TABLE.get())
-                .add(ArtistryBlocks.GRANITE_TABLE.get())
-                .add(ArtistryBlocks.DIORITE_TABLE.get())
-                .add(ArtistryBlocks.DEEPSLATE_TABLE.get())
-                .add(ArtistryBlocks.POLISHED_BLACKSTONE_TABLE.get())
-                .add(ArtistryBlocks.TUFF_TABLE.get())
-                .add(ArtistryBlocks.CALCITE_TABLE.get())
+                .add(STONE_TABLE.get())
+                .add(ANDESITE_TABLE.get())
+                .add(GRANITE_TABLE.get())
+                .add(DIORITE_TABLE.get())
+                .add(DEEPSLATE_TABLE.get())
+                .add(POLISHED_BLACKSTONE_TABLE.get())
+                .add(TUFF_TABLE.get())
+                .add(CALCITE_TABLE.get())
         ;
         this.tag(ArtistryTags.Blocks.STRING_LIGHTS)
-                .add(ArtistryBlocks.STRING_LIGHTS.get())
+                .add(STRING_LIGHTS.get())
         ;
 
         this.tag(BlockTags.CLIMBABLE)
-                .add(ArtistryBlocks.SUNSPROUT.get())
-                .add(ArtistryBlocks.SUNBURST_VINES.get())
-                .add(ArtistryBlocks.SUNBURST_VINES_PLANT.get());
+                .add(SUNSPROUT.get())
+                .add(SUNBURST_VINES.get())
+                .add(SUNBURST_VINES_PLANT.get());
         this.tag(BlockTags.FENCE_GATES)
-                .add(ArtistryBlocks.ASPEN_FENCE_GATE.get());
+                .add(ASPEN_FENCE_GATE.get());
 
         this.tag(BlockTags.STAIRS)
-                .add(ArtistryBlocks.STONE_TILE_STAIRS.get())
-                .add(ArtistryBlocks.MOSSY_STONE_TILE_STAIRS.get())
+                .add(STONE_TILE_STAIRS.get())
+                .add(MOSSY_STONE_TILE_STAIRS.get())
 
-                .add(ArtistryBlocks.CALCITE_STAIRS.get())
-                .add(ArtistryBlocks.POLISHED_CALCITE_STAIRS.get())
-                .add(ArtistryBlocks.CALCITE_BRICK_STAIRS.get())
-                .add(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get())
+                .add(CALCITE_STAIRS.get())
+                .add(SMOOTH_CALCITE_STAIRS.get())
+                .add(POLISHED_CALCITE_STAIRS.get())
+                .add(CALCITE_BRICK_STAIRS.get())
+                .add(SMALL_CALCITE_BRICK_STAIRS.get())
 
-                .add(ArtistryBlocks.DRIPSTONE_STAIRS.get())
-                .add(ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS.get())
-                .add(ArtistryBlocks.DRIPSTONE_BRICK_STAIRS.get())
+                .add(DRIPSTONE_STAIRS.get())
+                .add(POLISHED_DRIPSTONE_STAIRS.get())
+                .add(DRIPSTONE_BRICK_STAIRS.get())
         ;
         this.tag(BlockTags.SLABS)
-                .add(ArtistryBlocks.STONE_TILE_SLAB.get())
-                .add(ArtistryBlocks.MOSSY_STONE_TILE_SLAB.get())
+                .add(STONE_TILE_SLAB.get())
+                .add(MOSSY_STONE_TILE_SLAB.get())
 
-                .add(ArtistryBlocks.CALCITE_SLAB.get())
-                .add(ArtistryBlocks.POLISHED_CALCITE_SLAB.get())
-                .add(ArtistryBlocks.CALCITE_BRICK_SLAB.get())
-                .add(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get())
+                .add(CALCITE_SLAB.get())
+                .add(SMOOTH_CALCITE_SLAB.get())
+                .add(POLISHED_CALCITE_SLAB.get())
+                .add(CALCITE_BRICK_SLAB.get())
+                .add(SMALL_CALCITE_BRICK_SLAB.get())
 
-                .add(ArtistryBlocks.DRIPSTONE_SLAB.get())
-                .add(ArtistryBlocks.POLISHED_DRIPSTONE_SLAB.get())
-                .add(ArtistryBlocks.DRIPSTONE_BRICK_SLAB.get())
+                .add(DRIPSTONE_SLAB.get())
+                .add(POLISHED_DRIPSTONE_SLAB.get())
+                .add(DRIPSTONE_BRICK_SLAB.get())
         ;
 
         this.tag(BlockTags.DIRT)
-                .add(ArtistryBlocks.OVERGROWN_STONE_TILES.get())
-                .add(ArtistryBlocks.ROCKY_DIRT.get())
+                .add(OVERGROWN_STONE_TILES.get())
+                .add(ROCKY_DIRT.get())
+                .add(TEARDROP_GRASS_BLOCK.get())
         ;
         this.tag(BlockTags.SNIFFER_DIGGABLE_BLOCK)
-                .add(ArtistryBlocks.OVERGROWN_STONE_TILES.get())
-                .add(ArtistryBlocks.ROCKY_DIRT.get())
+                .add(OVERGROWN_STONE_TILES.get())
+                .add(ROCKY_DIRT.get())
         ;
-        this.tag(BlockTags.OVERWORLD_CARVER_REPLACEABLES).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get(), ArtistryBlocks.ROCKY_DIRT.get());
-        this.tag(BlockTags.NETHER_CARVER_REPLACEABLES).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get(), ArtistryBlocks.ROCKY_DIRT.get());
-        this.tag(BlockTags.ENDERMAN_HOLDABLE).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get(), ArtistryBlocks.ROCKY_DIRT.get());
-        this.tag(BlockTags.MOSS_REPLACEABLE).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get(), ArtistryBlocks.ROCKY_DIRT.get());
-        this.tag(BlockTags.AZALEA_ROOT_REPLACEABLE).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get(), ArtistryBlocks.ROCKY_DIRT.get());
-        this.tag(BlockTags.CONVERTABLE_TO_MUD).remove(ArtistryBlocks.OVERGROWN_STONE_TILES.get(), ArtistryBlocks.ROCKY_DIRT.get());
+        this.tag(BlockTags.OVERWORLD_CARVER_REPLACEABLES).remove(OVERGROWN_STONE_TILES.get());
+        this.tag(BlockTags.NETHER_CARVER_REPLACEABLES).remove(OVERGROWN_STONE_TILES.get());
+        this.tag(BlockTags.ENDERMAN_HOLDABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get());
+        this.tag(BlockTags.MOSS_REPLACEABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get());
+        this.tag(BlockTags.AZALEA_ROOT_REPLACEABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get());
 
 
         this.tag(BlockTags.WALLS)
-                .add(ArtistryBlocks.CALCITE_WALL.get())
-                .add(ArtistryBlocks.POLISHED_CALCITE_WALL.get())
-                .add(ArtistryBlocks.CALCITE_BRICK_WALL.get())
-                .add(ArtistryBlocks.DRIPSTONE_WALL.get())
-                .add(ArtistryBlocks.POLISHED_DRIPSTONE_WALL.get())
-                .add(ArtistryBlocks.DRIPSTONE_BRICK_WALL.get())
+                .add(CALCITE_WALL.get())
+                .add(POLISHED_CALCITE_WALL.get())
+                .add(CALCITE_BRICK_WALL.get())
+                .add(DRIPSTONE_WALL.get())
+                .add(POLISHED_DRIPSTONE_WALL.get())
+                .add(DRIPSTONE_BRICK_WALL.get())
         ;
 
         this.tag(BlockTags.PLANKS)
-                .add(ArtistryBlocks.ASPEN_PLANKS.get());
+                .add(ASPEN_PLANKS.get());
         this.tag(ArtistryTags.Blocks.ASPEN_LOGS)
-                .add(ArtistryBlocks.ASPEN_LOG.get())
-                .add(ArtistryBlocks.ASPEN_WOOD.get())
-                .add(ArtistryBlocks.STRIPPED_ASPEN_LOG.get())
-                .add(ArtistryBlocks.STRIPPED_ASPEN_WOOD.get());
+                .add(ASPEN_LOG.get())
+                .add(ASPEN_WOOD.get())
+                .add(STRIPPED_ASPEN_LOG.get())
+                .add(STRIPPED_ASPEN_WOOD.get());
 
         this.tag(BlockTags.LOGS_THAT_BURN)
                 .addTag(ArtistryTags.Blocks.ASPEN_LOGS);
         this.tag(Tags.Blocks.STRIPPED_LOGS)
-                .add(ArtistryBlocks.STRIPPED_ASPEN_LOG.get());
+                .add(STRIPPED_ASPEN_LOG.get());
         this.tag(Tags.Blocks.STRIPPED_WOODS)
-                .add(ArtistryBlocks.STRIPPED_ASPEN_WOOD.get());
+                .add(STRIPPED_ASPEN_WOOD.get());
 
         this.tag(BlockTags.WOODEN_STAIRS)
-                .add(ArtistryBlocks.ASPEN_STAIRS.get());
+                .add(ASPEN_STAIRS.get());
         this.tag(BlockTags.WOODEN_SLABS)
-                .add(ArtistryBlocks.ASPEN_SLAB.get());
+                .add(ASPEN_SLAB.get());
         this.tag(BlockTags.WOODEN_BUTTONS)
-                .add(ArtistryBlocks.ASPEN_BUTTON.get());
+                .add(ASPEN_BUTTON.get());
         this.tag(BlockTags.WOODEN_PRESSURE_PLATES)
-                .add(ArtistryBlocks.ASPEN_PRESSURE_PLATE.get());
+                .add(ASPEN_PRESSURE_PLATE.get());
         this.tag(BlockTags.WOODEN_FENCES)
-                .add(ArtistryBlocks.ASPEN_FENCE.get());
+                .add(ASPEN_FENCE.get());
         this.tag(BlockTags.WOODEN_DOORS)
-                .add(ArtistryBlocks.ASPEN_DOOR.get());
+                .add(ASPEN_DOOR.get());
         this.tag(BlockTags.WOODEN_TRAPDOORS)
-                .add(ArtistryBlocks.ASPEN_TRAPDOOR.get());
+                .add(ASPEN_TRAPDOOR.get());
         this.tag(BlockTags.STANDING_SIGNS)
-                .add(ArtistryBlocks.ASPEN_SIGN.get());
+                .add(ASPEN_SIGN.get());
         this.tag(BlockTags.WALL_SIGNS)
-                .add(ArtistryBlocks.ASPEN_WALL_SIGN.get());
+                .add(ASPEN_WALL_SIGN.get());
         this.tag(BlockTags.CEILING_HANGING_SIGNS)
-                .add(ArtistryBlocks.ASPEN_HANGING_SIGN.get());
+                .add(ASPEN_HANGING_SIGN.get());
         this.tag(BlockTags.WALL_HANGING_SIGNS)
-                .add(ArtistryBlocks.ASPEN_WALL_HANGING_SIGN.get());
+                .add(ASPEN_WALL_HANGING_SIGN.get());
         this.tag(BlockTags.SAPLINGS)
-                .add(ArtistryBlocks.ASPEN_SAPLING.get());
+                .add(ASPEN_SAPLING.get());
 
         this.tag(BlockTags.LEAVES)
-                .add(ArtistryBlocks.ASPEN_LEAVES.get()
+                .add(ASPEN_LEAVES.get()
                 );
+
+        this.tag(BlockTags.REPLACEABLE)
+                .add(BLOOMING_VINES.get())
+                .add(SHORT_TEARDROP_GRASS.get())
+                .add(LUSH_FERN.get())
+        ;
+        this.tag(BlockTags.ENCHANTMENT_POWER_TRANSMITTER)
+                .add(BLOOMING_VINES.get())
+                .add(SHORT_TEARDROP_GRASS.get())
+                .add(LUSH_FERN.get())
+                .add(LUSH_FERN_CROP.get())
+        ;
+        this.tag(BlockTags.REPLACEABLE_BY_TREES)
+                .add(BLOOMING_VINES.get())
+                .add(SHORT_TEARDROP_GRASS.get())
+                .add(LUSH_FERN.get())
+        ;
+        this.tag(BlockTags.MAINTAINS_FARMLAND)
+                .add(LUSH_FERN_CROP.get())
+                .add(LUSH_FERN.get())
+        ;
+        this.tag(BlockTags.CROPS)
+                .add(LUSH_FERN_CROP.get())
+        ;
+        this.tag(BlockTags.BEE_GROWABLES)
+                .add(LUSH_FERN_CROP.get())
+        ;
+
+
+        this.tag(Tags.Blocks.CHAINS)
+                .add(
+                        COPPER_CHAIN.get(),
+                        EXPOSED_COPPER_CHAIN.get(),
+                        WEATHERED_COPPER_CHAIN.get(),
+                        OXIDIZED_COPPER_CHAIN.get(),
+                        WAXED_COPPER_CHAIN.get(),
+                        WAXED_EXPOSED_COPPER_CHAIN.get(),
+                        WAXED_WEATHERED_COPPER_CHAIN.get(),
+                        WAXED_OXIDIZED_COPPER_CHAIN.get()
+                )
+        ;
     }
 }
