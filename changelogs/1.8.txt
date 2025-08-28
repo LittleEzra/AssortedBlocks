@@ -7,10 +7,12 @@
     - Crafted with a Corpse Flower
     - Makes fly particles (in a larger radius than the Corpse Flower)
     - Doesn't scare mobs
-- Spiral Fungus
-    - Dug up by Sniffers in Crimson and Warped Nylium
-    - Bounces players up when stepped on
+- Honeydew Fruit
+    - Found as a random drop alongside Raw Gold in Gold Ore
+    - Must be planted on any stone-like block (including Rocky Dirt)
 ## Changes:
 - Changed the texture of Aspen Leaves
 - Made Sniffer Cakes remove the cooldown of the next 3 digs instead of just one
     - This number can be adjusted in the Server Config
+## Fixes:
+- Made String Lights stackable to 64

@@ -111,7 +111,9 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         pottedCrossPlantBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, Artistry.location("block/potted_teardrop_grass"));
         corpseFlowerBlock(ArtistryBlocks.CORPSE_FLOWER.get());
         flyLureBlock(ArtistryBlocks.FLY_LURE.get());
-        simpleBlock(ArtistryBlocks.SPIRAL_FUNGUS.get(), models().getExistingFile(Artistry.location("block/spiral_fungus")));
+
+        honeydewFruitBlock(ArtistryBlocks.HONEYDEW_FRUIT.get());
+        crossCropBlock(ArtistryBlocks.HONEYDEW_STALK.get());
 
         axisBlock(ArtistryBlocks.COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/copper_chain")));
         axisBlock(ArtistryBlocks.EXPOSED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/exposed_copper_chain")));
@@ -153,14 +155,14 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         wallBlock(ArtistryBlocks.CALCITE_BRICK_WALL.get(), calciteBrickTexture);
 
         ResourceLocation smallCalciteBrickTopTexture = blockTexture(ArtistryBlocks.SMALL_CALCITE_BRICKS.get()).withSuffix("_top");
-        cubeColumn(ArtistryBlocks.SMALL_CALCITE_BRICKS.get());
+        simpleCubeColumn(ArtistryBlocks.SMALL_CALCITE_BRICKS.get());
         stairsBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get(), smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
         slabBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get(), smallCalciteBrickTexture, smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
 
         blockWithItem(ArtistryBlocks.PAINTED_SMOOTH_CALCITE);
         blockWithItem(ArtistryBlocks.PAINTED_POLISHED_CALCITE);
         blockWithItem(ArtistryBlocks.PAINTED_CALCITE_BRICKS);
-        cubeColumn(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS.get());
+        simpleCubeColumn(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS.get());
 
         ResourceLocation dripstoneTexture = blockTexture(Blocks.DRIPSTONE_BLOCK);
         ResourceLocation polishedDripstoneTexture = blockTexture(ArtistryBlocks.POLISHED_DRIPSTONE.get());
@@ -233,6 +235,16 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
     }
 
+    private void honeydewFruitBlock(HoneydewFruitBlock block) {
+        ModelFile planted = models().cubeAll(name(block) + "_planted", blockTexture(block));
+        ModelFile placed = models().cubeColumn(name(block), blockTexture(block), blockTexture(block).withSuffix("_top"));
+        getVariantBuilder(block)
+                .forAllStates(
+                        state -> ConfiguredModel.builder().modelFile(state.getValue(HoneydewFruitBlock.PLANTED) ? planted : placed).build()
+                );
+        simpleBlockItem(block, placed);
+    }
+
     private void flyLureBlock(FlyLureBlock block) {
         ModelFile wallModel = models().getExistingFile(Artistry.location("block/wall_fly_lure"));
         ModelFile floorModel = models().getExistingFile(Artistry.location("block/fly_lure"));
@@ -279,9 +291,12 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         this.simpleBlock(block, model);
     }
 
-    private void cubeColumn(Block block) {
+    private void simpleCubeColumn(Block block) {
         ModelFile modelFile = models().cubeColumn(name(block), blockTexture(block), blockTexture(block).withSuffix("_top"));
         simpleBlockWithItem(block, modelFile);
+    }
+    private ModelFile cubeColumn(Block block) {
+        return models().cubeColumn(name(block), blockTexture(block), blockTexture(block).withSuffix("_top"));
     }
 
     private void pottedCrossPlantBlock(Supplier<? extends FlowerPotBlock> block) {
@@ -299,6 +314,14 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         simpleBlock(block.get(), model);
     }
 
+    private void crossCropBlock(CropBlock block){
+        VariantBlockStateBuilder builder = getVariantBuilder(block);
+        builder.forAllStates(state -> ConfiguredModel.builder()
+                .modelFile(models().cross(name(block) + "_stage" + block.getAge(state),
+                                blockTexture(block).withSuffix("_stage" + block.getAge(state)))
+                        .renderType("cutout"))
+                .build());
+    }
     private void lushFernCropBlock(LushFernCropBlock block){
         VariantBlockStateBuilder builder = getVariantBuilder(block);
         builder.forAllStates(state -> ConfiguredModel.builder()

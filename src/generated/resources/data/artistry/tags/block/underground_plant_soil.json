@@ -1,0 +1,14 @@
+{
+  "values": [
+    "#c:stones",
+    "minecraft:calcite",
+    "minecraft:gravel",
+    "minecraft:infested_stone",
+    "minecraft:infested_deepslate",
+    "minecraft:suspicious_gravel",
+    "minecraft:cobblestone",
+    "minecraft:mossy_cobblestone",
+    "minecraft:infested_cobblestone",
+    "artistry:rocky_dirt"
+  ]
+}

@@ -28,13 +28,15 @@ public class ArtistryItems {
             p -> new ItemNameBlockItem(ArtistryBlocks.SUNSPROUT.get(), p));
     public static final DeferredItem<ItemNameBlockItem> FERN_SEED = ITEMS.registerItem("fern_seed",
             p -> new ItemNameBlockItem(ArtistryBlocks.LUSH_FERN_CROP.get(), p));
+    public static final DeferredItem<ItemNameBlockItem> GOLDEN_BULB = ITEMS.registerItem("golden_bulb",
+            p -> new ItemNameBlockItem(ArtistryBlocks.HONEYDEW_STALK.get(), p));
     public static final DeferredItem<AncientTearItem> ANCIENT_TEAR = ITEMS.registerItem("ancient_tear",
             AncientTearItem::new);
     public static final DeferredItem<SnifferCakeItem> SNIFFER_CAKE = ITEMS.registerItem("sniffer_cake",
             SnifferCakeItem::new);
 
     public static final DeferredItem<StandingAndWallBlockItem> STRING_LIGHTS = ITEMS.registerItem("string_lights",
-            p -> new StandingAndWallBlockItem(ArtistryBlocks.STRING_LIGHTS.get(), ArtistryBlocks.WALL_STRING_LIGHTS.get(), p.stacksTo(16), Direction.UP));
+            p -> new StandingAndWallBlockItem(ArtistryBlocks.STRING_LIGHTS.get(), ArtistryBlocks.WALL_STRING_LIGHTS.get(), p, Direction.UP));
 
     public static final DeferredItem<BlockItem> SPARK_FOUNTAIN = ITEMS.registerItem("spark_fountain",
             p -> new BlockItem(ArtistryBlocks.SPARK_FOUNTAIN.get(), p.component(DataComponents.DYED_COLOR, new DyedItemColor(SparkFountainBlockEntity.DEFAULT_SPARK_COLOR_RGB, true))));

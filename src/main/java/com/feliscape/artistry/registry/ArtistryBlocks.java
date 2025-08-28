@@ -418,11 +418,21 @@ public class ArtistryBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(3.5F)
             ));
-    public static final DeferredBlock<SpiralFungusBlock> SPIRAL_FUNGUS = registerBlockWithItem("spiral_fungus",
-            p -> new SpiralFungusBlock(p
-                    .mapColor(MapColor.NETHER)
+
+    public static final DeferredBlock<HoneydewFruitBlock> HONEYDEW_FRUIT = registerBlockWithItem("honeydew_fruit",
+            p -> new HoneydewFruitBlock(p
+                    .mapColor(MapColor.GOLD)
                     .strength(1.5F)
-                    .sound(SoundType.FUNGUS)
+                    .sound(SoundType.WOOD)
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+    public static final DeferredBlock<HoneydewPlantBlock> HONEYDEW_STALK = BLOCKS.registerBlock("honeydew_stalk",
+            p -> new HoneydewPlantBlock(p
+                    .mapColor(MapColor.GOLD)
+                    .instabreak()
+                    .noCollission()
+                    .noOcclusion()
+                    .sound(SoundType.HARD_CROP)
                     .pushReaction(PushReaction.DESTROY)
             ));
 

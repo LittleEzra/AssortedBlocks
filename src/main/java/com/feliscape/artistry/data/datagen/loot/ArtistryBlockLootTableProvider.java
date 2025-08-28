@@ -63,7 +63,8 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ArtistryBlocks.TALL_TEARDROP_GRASS.get(), block -> this.createDoublePlantShearsDrop(ArtistryBlocks.SHORT_TEARDROP_GRASS.get()));
         this.add(ArtistryBlocks.CORPSE_FLOWER.get(), block -> this.createSinglePropConditionTable(block, TriplePlantBlock.PART, TriplePlantPart.BASE));
         this.dropSelf(ArtistryBlocks.FLY_LURE.get());
-        this.dropSelf(ArtistryBlocks.SPIRAL_FUNGUS.get());
+        this.dropSelf(ArtistryBlocks.HONEYDEW_FRUIT.get());
+        this.dropOther(ArtistryBlocks.HONEYDEW_STALK.get(), ArtistryItems.GOLDEN_BULB);
 
         this.dropSelf(ArtistryBlocks.OAK_TABLE.get());
         this.dropSelf(ArtistryBlocks.SPRUCE_TABLE.get());

@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-13T19:29:17.6419314	Loot Tables
+// 1.21.1	2025-08-28T17:17:58.8856481	Loot Tables
 47b6b4ddb80a89fa9150b4f209f8c1912ba8fd04 data/artistry/loot_table/blocks/acacia_table.json
 c17e141140c72bb4ad538245b3bc5de5e3b91093 data/artistry/loot_table/blocks/amethyst_stars.json
 8472b2e2149ff7987014f0ebdfb5631626250e58 data/artistry/loot_table/blocks/andesite_table.json
@@ -58,6 +58,8 @@ a6a7face90aed4490eee21ab888ae96b773cab54 data/artistry/loot_table/blocks/fly_lur
 e235759b905a1d7240603ae29389e80e4842d22b data/artistry/loot_table/blocks/granite_table.json
 9cc7b6aaef84316eacaedfc259fb40286d454070 data/artistry/loot_table/blocks/gray_frosted_glass.json
 20da980d46590c7fc4c77f65b4b177ce7fe95762 data/artistry/loot_table/blocks/green_frosted_glass.json
+a54aa3ba921b322688739db79f221bec9353e811 data/artistry/loot_table/blocks/honeydew_fruit.json
+cb4bfcbe889c0fe5e10f4ea7d38dd4272796d2fa data/artistry/loot_table/blocks/honeydew_stalk.json
 a59bb02cdae51ba553a890a0796036572a1fda89 data/artistry/loot_table/blocks/jungle_table.json
 572c575c87ce525e8db4fab0cbeab182c7115b6b data/artistry/loot_table/blocks/large_lantern.json
 30678ce73520f6a9ce755beb03710e9d53108c22 data/artistry/loot_table/blocks/large_soul_lantern.json

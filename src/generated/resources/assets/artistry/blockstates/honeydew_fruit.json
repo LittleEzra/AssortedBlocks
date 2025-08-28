@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "planted=false": {
+      "model": "artistry:block/honeydew_fruit"
+    },
+    "planted=true": {
+      "model": "artistry:block/honeydew_fruit_planted"
+    }
+  }
+}

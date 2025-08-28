@@ -139,7 +139,8 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(LUSH_FERN_CROP.get())
                 .add(CORPSE_FLOWER.get())
                 .add(FLY_LURE.get())
-                .add(SPIRAL_FUNGUS.get())
+                .add(HONEYDEW_FRUIT.get())
+                .add(HONEYDEW_STALK.get())
         ;
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ROCKY_DIRT.get())
@@ -165,6 +166,20 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         MAGENTA_FROSTED_GLASS.get(),
                         PINK_FROSTED_GLASS.get()
                 );
+
+        this.tag(ArtistryTags.Blocks.UNDERGROUND_PLANT_SOIL)
+                .addTag(Tags.Blocks.STONES)
+                .add(Blocks.CALCITE)
+                .add(Blocks.GRAVEL)
+                .add(Blocks.INFESTED_STONE)
+                .add(Blocks.INFESTED_DEEPSLATE)
+                .add(Blocks.SUSPICIOUS_GRAVEL)
+                .add(Blocks.COBBLESTONE)
+                .add(Blocks.MOSSY_COBBLESTONE)
+                .add(Blocks.INFESTED_COBBLESTONE)
+                .add(ROCKY_DIRT.get())
+        ;
+
         this.tag(BlockTags.SNIFFER_DIGGABLE_BLOCK)
                 .add(Blocks.CLAY)
                 .add(Blocks.SAND)
@@ -209,6 +224,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(SUNSPROUT.get())
                 .add(SUNBURST_VINES.get())
                 .add(SUNBURST_VINES_PLANT.get())
+                .add(HONEYDEW_STALK.get())
         ;
         this.tag(ArtistryTags.Blocks.TABLES)
                 .addTag(ArtistryTags.Blocks.WOODEN_TABLES)
@@ -361,6 +377,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(SHORT_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())
                 .add(LUSH_FERN_CROP.get())
+                .add(HONEYDEW_STALK.get())
                 .add(CORPSE_FLOWER.get())
         ;
         this.tag(BlockTags.REPLACEABLE_BY_TREES)
@@ -372,12 +389,15 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MAINTAINS_FARMLAND)
                 .add(LUSH_FERN_CROP.get())
                 .add(LUSH_FERN.get())
+                .add(HONEYDEW_STALK.get())
         ;
         this.tag(BlockTags.CROPS)
                 .add(LUSH_FERN_CROP.get())
+                .add(HONEYDEW_STALK.get())
         ;
         this.tag(BlockTags.BEE_GROWABLES)
                 .add(LUSH_FERN_CROP.get())
+                .add(HONEYDEW_STALK.get())
         ;
 
 

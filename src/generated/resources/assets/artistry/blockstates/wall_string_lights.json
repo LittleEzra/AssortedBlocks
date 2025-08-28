@@ -11,10 +11,10 @@
     {
       "apply": {
         "model": "artistry:block/wall_string_lights",
-        "y": 270
+        "y": 180
       },
       "when": {
-        "west": "true"
+        "south": "true"
       }
     },
     {
@@ -29,10 +29,10 @@
     {
       "apply": {
         "model": "artistry:block/wall_string_lights",
-        "y": 180
+        "y": 270
       },
       "when": {
-        "south": "true"
+        "west": "true"
       }
     }
   ]

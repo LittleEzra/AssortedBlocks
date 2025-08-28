@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-13T19:29:17.6610434	Tags for minecraft:block mod id artistry
+// 1.21.1	2025-08-28T17:30:45.9414986	Tags for minecraft:block mod id artistry
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/block/aspen_logs.json
 3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/block/frosted_glass.json
 2b01c878f7df076cc4c1411bf14299f80461cbce data/artistry/tags/block/sniffer_diggable/has_aspen_plants.json
@@ -6,6 +6,7 @@
 c1a14eff6d6ae90bd58c7ccdab212291e17d5e74 data/artistry/tags/block/sniffer_diggable/has_teardrop_grass.json
 c3b39af3db5bc3768608a47a706098d450692fe3 data/artistry/tags/block/string_lights.json
 01a4149b278fed1965636e639f1fcbcb4453d95c data/artistry/tags/block/tables.json
+b2150163dab67f2b8eb4a5471269cb87e24fca39 data/artistry/tags/block/underground_plant_soil.json
 1bba110c9fc802713fa42d07e7f1b8bd8ecec799 data/artistry/tags/block/wooden_tables.json
 0b9eaa424b07ec0154bc4d0ccc316af7d2f9aa0a data/artistry/tags/block/woven_logs.json
 a26f989d9d2559d9e0e8694fb535d8abfc90c9ae data/c/tags/block/chains.json
@@ -13,20 +14,20 @@ a26f989d9d2559d9e0e8694fb535d8abfc90c9ae data/c/tags/block/chains.json
 2b0ce08e6fae2e3deea47f330a2a44c41da6898a data/c/tags/block/stripped_logs.json
 973f8f455acc3e6a04169b0120445dce38b89c37 data/c/tags/block/stripped_woods.json
 c5d41783e04f224f9d0c23163ab71327bbb75f45 data/minecraft/tags/block/azalea_root_replaceable.json
-e56d56e03c7ad399d358e93b97e0aba754fb2d6e data/minecraft/tags/block/bee_growables.json
+0402c717ebd67ad1b5e488e22107d87de73bde6d data/minecraft/tags/block/bee_growables.json
 6a313920b7d79b30d98cc96a15933f7003d4e398 data/minecraft/tags/block/ceiling_hanging_signs.json
 18901fb99991fa198524b1b985825fb4fa3dd545 data/minecraft/tags/block/climbable.json
-e56d56e03c7ad399d358e93b97e0aba754fb2d6e data/minecraft/tags/block/crops.json
+0402c717ebd67ad1b5e488e22107d87de73bde6d data/minecraft/tags/block/crops.json
 1740d928635a81364bc986bb79a151a9ec9da5df data/minecraft/tags/block/dirt.json
-f8697e237397ee549db1b76b3ceed9e911110744 data/minecraft/tags/block/enchantment_power_transmitter.json
+5e6e27d22654b5a7a369eefeb53082b3f6b65b65 data/minecraft/tags/block/enchantment_power_transmitter.json
 c5d41783e04f224f9d0c23163ab71327bbb75f45 data/minecraft/tags/block/enderman_holdable.json
 8ddba52279f4616e62ac049cc3e02386bcf14cfa data/minecraft/tags/block/fence_gates.json
 e9b2b4e7962ab80d7efeab43fbed187f75c59a91 data/minecraft/tags/block/hoglin_repellents.json
 2c4e2b63d7ddfa023501a694b0bb7423512a293e data/minecraft/tags/block/leaves.json
 12e0590757d1dcdfe0d6fb56ac17bd09e357a6da data/minecraft/tags/block/logs.json
 05936648edde2e2b272c6888a1c9dca6bbfb5784 data/minecraft/tags/block/logs_that_burn.json
-3461b63cb872077dea9e5ea7f482a54e48a246ff data/minecraft/tags/block/maintains_farmland.json
-7d5a6160c25c04397fe5a568c7d5f7e5747c70e9 data/minecraft/tags/block/mineable/axe.json
+407b677ec2ac7e153c7b3ffc64573110796ea34b data/minecraft/tags/block/maintains_farmland.json
+9c7f4a7be61874a014011468c4077b9406120cf1 data/minecraft/tags/block/mineable/axe.json
 2c4e2b63d7ddfa023501a694b0bb7423512a293e data/minecraft/tags/block/mineable/hoe.json
 b9a380ef546cf6075de1d2bde5703c2442ca8561 data/minecraft/tags/block/mineable/pickaxe.json
 0e25bb8f022446521f23915397d2584201deeae0 data/minecraft/tags/block/mineable/shovel.json
@@ -42,7 +43,7 @@ b1977e19a874a0184a24ba1e18ac7d402da9e845 data/minecraft/tags/block/slabs.json
 729e133b86abd15ff91a981e92e588316a449c62 data/minecraft/tags/block/sniffer_diggable_block.json
 c9d0a9836dfa87b0ba6da08377e35f3e99591925 data/minecraft/tags/block/stairs.json
 bd8989fdc1712ae18a44bf304694b36084aaf089 data/minecraft/tags/block/standing_signs.json
-816f9d402b7ac493f751d39a698f4b9697fcb937 data/minecraft/tags/block/sword_efficient.json
+8d47840cb4287c5c0ae71c49afb4e84c8810cf2d data/minecraft/tags/block/sword_efficient.json
 bffaefe5051b62ae8f80827820ad5b1b02f89e52 data/minecraft/tags/block/walls.json
 f1422dade47371fa2e42377279c7f7761741a692 data/minecraft/tags/block/wall_hanging_signs.json
 509cbc7b8627d5ea5f289caf93a7802ffd493e52 data/minecraft/tags/block/wall_signs.json
