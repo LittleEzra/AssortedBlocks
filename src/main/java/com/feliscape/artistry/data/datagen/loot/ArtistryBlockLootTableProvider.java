@@ -218,6 +218,8 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ArtistryBlocks.WOVEN_LEAVES.get(),
                 block -> createLeavesDrops(block, ArtistryBlocks.ASPEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ArtistryBlocks.HEADSTONE.get());
     }
 
     protected LootTable.Builder createSingleTriplePlantShearsDrop(Block sheared) {

@@ -196,6 +196,8 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.STRIPPED_WOVEN_WOOD, "Stripped Woven Wood");
         this.addBlock(ArtistryBlocks.WOVEN_PLANKS, "Woven Planks");
 
+        this.addBlock(ArtistryBlocks.HEADSTONE, "Headstone");
+
         this.addPaintedPotBase(DyeColor.WHITE, "White Base");
         this.addPaintedPotBase(DyeColor.LIGHT_GRAY, "Light Gray Base");
         this.addPaintedPotBase(DyeColor.GRAY, "Gray Base");
@@ -209,7 +211,6 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addPaintedPotBase(DyeColor.CYAN, "Cyan Base");
         this.addPaintedPotBase(DyeColor.LIGHT_BLUE, "Light Blue Base");
         this.addPaintedPotBase(DyeColor.BLUE, "Blue Base");
-
         this.addPaintedPotBase(DyeColor.PURPLE, "Purple Base");
         this.addPaintedPotBase(DyeColor.MAGENTA, "Magenta Base");
         this.addPaintedPotBase(DyeColor.PINK, "Pink Base");

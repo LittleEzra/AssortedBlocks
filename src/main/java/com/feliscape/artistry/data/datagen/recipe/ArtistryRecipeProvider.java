@@ -593,6 +593,15 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ArtistryBlocks.CORPSE_FLOWER), has(ArtistryBlocks.CORPSE_FLOWER))
                 .save(recipeOutput);
 
+        // Seasonal
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.HEADSTONE, 4)
+                .define('#', Blocks.STONE_BRICKS)
+                .pattern("##")
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy(getHasName(Blocks.STONE_BRICKS), has(Blocks.STONE_BRICKS))
+                .save(recipeOutput);
+
         //region Aspen
         planksFromLog(recipeOutput, ArtistryBlocks.ASPEN_PLANKS.get(), ArtistryTags.Items.ASPEN_LOGS, 4);
         woodFromLogs(recipeOutput, ArtistryBlocks.ASPEN_WOOD.get(), ArtistryBlocks.ASPEN_LOG.get());

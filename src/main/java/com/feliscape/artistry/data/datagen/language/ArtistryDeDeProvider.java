@@ -187,6 +187,8 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.ASPEN_SAPLING, "Espensetzling");
         this.addBlock(ArtistryBlocks.POTTED_ASPEN_SAPLING, "Eingetopfter Espensetzling");
 
+        this.addBlock(ArtistryBlocks.HEADSTONE, "Grabstein");
+
         this.addPaintedPotBase(DyeColor.WHITE, "Weiße Basis");
         this.addPaintedPotBase(DyeColor.LIGHT_GRAY, "Hellgraue Basis");
         this.addPaintedPotBase(DyeColor.GRAY, "Graue Basis");

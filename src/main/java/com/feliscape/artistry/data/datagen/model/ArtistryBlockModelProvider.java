@@ -111,6 +111,7 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         pottedCrossPlantBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, Artistry.location("block/potted_teardrop_grass"));
         corpseFlowerBlock(ArtistryBlocks.CORPSE_FLOWER.get());
         flyLureBlock(ArtistryBlocks.FLY_LURE.get());
+        horizontalBlock(ArtistryBlocks.HEADSTONE.get(), models().getExistingFile(Artistry.location("block/headstone")));
 
         honeydewFruitBlock(ArtistryBlocks.HONEYDEW_FRUIT.get());
         crossCropBlock(ArtistryBlocks.HONEYDEW_STALK.get());

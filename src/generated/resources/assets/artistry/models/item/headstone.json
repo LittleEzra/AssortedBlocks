@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "artistry:item/spiral_fungus"
+    "layer0": "artistry:item/headstone"
   }
 }

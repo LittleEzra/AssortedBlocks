@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-28T17:41:45.1433664	Block States: artistry
+// 1.21.1	2025-08-29T00:09:10.8371986	Block States: artistry
 04648a511f6ea4a4e9ce6b834b5734def6a42b97 assets/artistry/blockstates/acacia_table.json
 648e73aacc0168ea4989507dab5b341f43dde90f assets/artistry/blockstates/amethyst_stars.json
 5e0b15704b52e3808a2bf8ef14982c76af6f93a5 assets/artistry/blockstates/andesite_table.json
@@ -58,6 +58,7 @@ d60beb1dfc384ab59266a2b96debb65e4fb2c03f assets/artistry/blockstates/fly_lure.js
 c3d6b39f45d73741feca990ee92e2664b955fe49 assets/artistry/blockstates/granite_table.json
 675244d804ecaf540ed6342dec719908e5ad3698 assets/artistry/blockstates/gray_frosted_glass.json
 2e83751b6f1eae9b5069d91e2c4b9424eaac01bc assets/artistry/blockstates/green_frosted_glass.json
+db788c236669357284a61208fc944470b88b7059 assets/artistry/blockstates/headstone.json
 74f6a3138a590c1e3796d786c6688e36bcbab1f3 assets/artistry/blockstates/honeydew_fruit.json
 2cfc4ac642a8642cc48957c7157d233c1abcf4de assets/artistry/blockstates/honeydew_stalk.json
 1de4dd958ed1c81c68382de78686f20a8945f052 assets/artistry/blockstates/jungle_table.json
@@ -109,7 +110,6 @@ b94434eea5e8689c0a9f06961d2ce4b43f75936f assets/artistry/blockstates/small_calci
 2d931635f3767d0ea0a48c608975e6ff1964ea30 assets/artistry/blockstates/smooth_calcite_stairs.json
 d0a2f815df825743d2093c24ddf157f6017dca5d assets/artistry/blockstates/sparkler.json
 556b6c1954f4ccd8ce201fd93f26f3c1f9e5508b assets/artistry/blockstates/spark_fountain.json
-3310c2ccf7ab84cbce5e5e63775d6fc319199663 assets/artistry/blockstates/spiral_fungus.json
 e2f90d8b814ea14d5d19d4a4ae18e01bf1ee8d1e assets/artistry/blockstates/spruce_table.json
 bcead0cc005a1a3c754a56203400d71bee51a671 assets/artistry/blockstates/stone_pillar.json
 4d06d39af57fb81a31fa7ec9fc53c495484dc5bc assets/artistry/blockstates/stone_table.json
@@ -127,7 +127,7 @@ d80c562f5750b201adb2dfae8c4687cc1d6c42c5 assets/artistry/blockstates/sunsprout.j
 95c705ee77d42180cfaabb304158a26983902ea2 assets/artistry/blockstates/tall_teardrop_grass.json
 2730f50a5adb24d8802c314e5a5e11cb6ec1aa69 assets/artistry/blockstates/teardrop_grass_block.json
 7165de8933b79a65ca8332b8661de1dbc0dab9fe assets/artistry/blockstates/tuff_table.json
-d762c0d8b7159b2afe3564118bb9b72657ab7f4a assets/artistry/blockstates/wall_string_lights.json
+9aa36d9e87ff2f2c8a314411ba3705a974cc62cf assets/artistry/blockstates/wall_string_lights.json
 1690a4356b7826b1d5f59592e0aa6d81a4568ceb assets/artistry/blockstates/warped_table.json
 67459ccfb6f7401d144fdeacc1e9f1b5cb76c2f0 assets/artistry/blockstates/water_fountain.json
 e51c4f6bcdef6046bc454de7266cd06f06564cd2 assets/artistry/blockstates/waxed_copper_chain.json

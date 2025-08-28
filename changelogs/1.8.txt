@@ -1,6 +1,6 @@
 ## Added:
 - Corpse Flower
-    - Dug up by Sniffers in Crimson and Warped Nylium
+    - Seed dug up by Sniffers in Crimson and Warped Nylium
     - Makes fly particles
     - Scares nearby mobs away
 - Fly Lure

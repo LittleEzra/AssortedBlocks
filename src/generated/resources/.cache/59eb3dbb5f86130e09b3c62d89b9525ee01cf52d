@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-28T17:17:58.8856481	Loot Tables
+// 1.21.1	2025-08-29T00:05:23.3175648	Loot Tables
 47b6b4ddb80a89fa9150b4f209f8c1912ba8fd04 data/artistry/loot_table/blocks/acacia_table.json
 c17e141140c72bb4ad538245b3bc5de5e3b91093 data/artistry/loot_table/blocks/amethyst_stars.json
 8472b2e2149ff7987014f0ebdfb5631626250e58 data/artistry/loot_table/blocks/andesite_table.json
@@ -58,6 +58,7 @@ a6a7face90aed4490eee21ab888ae96b773cab54 data/artistry/loot_table/blocks/fly_lur
 e235759b905a1d7240603ae29389e80e4842d22b data/artistry/loot_table/blocks/granite_table.json
 9cc7b6aaef84316eacaedfc259fb40286d454070 data/artistry/loot_table/blocks/gray_frosted_glass.json
 20da980d46590c7fc4c77f65b4b177ce7fe95762 data/artistry/loot_table/blocks/green_frosted_glass.json
+b72430e46716d10e8a9dd9ac82573a8fae193f4f data/artistry/loot_table/blocks/headstone.json
 a54aa3ba921b322688739db79f221bec9353e811 data/artistry/loot_table/blocks/honeydew_fruit.json
 cb4bfcbe889c0fe5e10f4ea7d38dd4272796d2fa data/artistry/loot_table/blocks/honeydew_stalk.json
 a59bb02cdae51ba553a890a0796036572a1fda89 data/artistry/loot_table/blocks/jungle_table.json
@@ -109,7 +110,6 @@ a2326dae4b21a60c23df8ff7165d039caef48a36 data/artistry/loot_table/blocks/smooth_
 8c946a19e6df9d36d63740db3e13aeedd226af8f data/artistry/loot_table/blocks/smooth_calcite_stairs.json
 5273d877f7773c1c3ec78741c4044627c301345d data/artistry/loot_table/blocks/sparkler.json
 8b8a34f3b6eb37ada0dcc3d2b95ea6b26d2ece46 data/artistry/loot_table/blocks/spark_fountain.json
-8e74763ff1593cd6b0aba883a2758fd62787e1e4 data/artistry/loot_table/blocks/spiral_fungus.json
 79c4aabceac71602a285c46799926c359a27ceb9 data/artistry/loot_table/blocks/spruce_table.json
 eb6a05b1e357fca2ad7f3310c9ef1cf09ca3632b data/artistry/loot_table/blocks/stone_pillar.json
 c910532f72e467fd6e7a663a5e4ef968d2549758 data/artistry/loot_table/blocks/stone_table.json

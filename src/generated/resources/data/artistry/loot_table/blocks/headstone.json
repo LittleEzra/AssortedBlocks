@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "artistry:spiral_fungus"
+          "name": "artistry:headstone"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "artistry:blocks/spiral_fungus"
+  "random_sequence": "artistry:blocks/headstone"
 }

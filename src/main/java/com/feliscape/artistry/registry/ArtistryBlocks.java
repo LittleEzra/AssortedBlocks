@@ -899,6 +899,15 @@ public class ArtistryBlocks {
             ));
     //endregion
 
+    public static final DeferredBlock<HeadstoneBlock> HEADSTONE = registerBlockWithItem("headstone",
+            p -> new HeadstoneBlock(p
+                    .mapColor(MapColor.STONE)
+                    .pushReaction(PushReaction.DESTROY)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+            ));
+
     private static DeferredBlock<FrostedGlassBlock> frostedGlass(DyeColor color) {
         return registerBlockWithItem(color.getName() + "_frosted_glass", p -> new FrostedGlassBlock(color, p
                 .mapColor(color)

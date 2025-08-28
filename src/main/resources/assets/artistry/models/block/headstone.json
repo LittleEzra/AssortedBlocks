@@ -1,0 +1,25 @@
+{
+	"format_version": "1.9.0",
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"particle": "artistry:block/headstone",
+		"main": "artistry:block/headstone",
+		"back": "artistry:block/headstone_back"
+	},
+	"elements": [
+		{
+			"from": [3, 0, 7],
+			"to": [13, 14, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, 7]},
+			"faces": {
+				"north": {"uv": [0, 2, 10, 16], "texture": "#main"},
+				"east": {"uv": [10, 2, 12, 16], "texture": "#main"},
+				"south": {"uv": [0, 2, 10, 16], "texture": "#back"},
+				"west": {"uv": [10, 2, 12, 16], "texture": "#main"},
+				"up": {"uv": [0, 0, 10, 2], "texture": "#main"},
+				"down": {"uv": [0, 0, 10, 2], "texture": "#main"}
+			}
+		}
+	]
+}
