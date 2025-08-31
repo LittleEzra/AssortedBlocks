@@ -92,7 +92,9 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
 
         blockItemSprite(ArtistryBlocks.CORPSE_FLOWER);
         blockItemSprite(ArtistryBlocks.FLY_LURE);
+
         blockItemSprite(ArtistryBlocks.HEADSTONE);
+        generatedBlockItem(ArtistryBlocks.MARIGOLD);
 
         // Aspen
 

@@ -619,6 +619,8 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .save(recipeOutput);
         ;
 
+        oneToOneConversionRecipe(recipeOutput, Items.ORANGE_DYE, ArtistryBlocks.MARIGOLD, "orange_dye");
+
         jackOLantern(recipeOutput, ArtistryBlocks.WICKED_CARVED_PUMPKIN, ArtistryBlocks.WICKED_JACK_O_LANTERN);
         jackOLantern(recipeOutput, ArtistryBlocks.HUNGRY_CARVED_PUMPKIN, ArtistryBlocks.HUNGRY_JACK_O_LANTERN);
         jackOLantern(recipeOutput, ArtistryBlocks.HAPPY_CARVED_PUMPKIN, ArtistryBlocks.HAPPY_JACK_O_LANTERN);

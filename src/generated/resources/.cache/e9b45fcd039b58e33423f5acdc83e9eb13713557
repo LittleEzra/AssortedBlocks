@@ -1,7 +1,8 @@
-// 1.21.1	2025-08-31T22:17:41.0712645	Tags for minecraft:block mod id artistry
+// 1.21.1	2025-08-31T23:18:56.7396892	Tags for minecraft:block mod id artistry
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/block/aspen_logs.json
 cb8f42934e5133f862b85f346da074f586ebab6b data/artistry/tags/block/carvable_pumpkins.json
 3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/block/frosted_glass.json
+ea8e9fdb0690b92ec61ee838c074078609c892e6 data/artistry/tags/block/leechable_flowers.json
 bc49eaf7b496dee41800ce76feab00786862c54a data/artistry/tags/block/leechable_saplings.json
 babf96531eb9053c8504bf5d0eb1315fa6001385 data/artistry/tags/block/rotten_logs.json
 2b01c878f7df076cc4c1411bf14299f80461cbce data/artistry/tags/block/sniffer_diggable/has_aspen_plants.json
@@ -43,6 +44,7 @@ e9b2b4e7962ab80d7efeab43fbed187f75c59a91 data/minecraft/tags/block/piglin_repell
 85357039af916763302e1f7b835ca56e1b8d7d55 data/minecraft/tags/block/replaceable_by_trees.json
 55fbd68b31cdc5344669d843dc351d53321c9d4a data/minecraft/tags/block/saplings.json
 b1977e19a874a0184a24ba1e18ac7d402da9e845 data/minecraft/tags/block/slabs.json
+0891f75d862bbc6fd3d1e62dc36c0499a9e7a5c1 data/minecraft/tags/block/small_flowers.json
 729e133b86abd15ff91a981e92e588316a449c62 data/minecraft/tags/block/sniffer_diggable_block.json
 c9d0a9836dfa87b0ba6da08377e35f3e99591925 data/minecraft/tags/block/stairs.json
 eaca041177e0dab9eff3572e8c7be316025438d8 data/minecraft/tags/block/standing_signs.json

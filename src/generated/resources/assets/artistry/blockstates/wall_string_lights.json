@@ -3,6 +3,15 @@
     {
       "apply": {
         "model": "artistry:block/wall_string_lights",
+        "y": 270
+      },
+      "when": {
+        "west": "true"
+      }
+    },
+    {
+      "apply": {
+        "model": "artistry:block/wall_string_lights",
         "y": 90
       },
       "when": {
@@ -15,15 +24,6 @@
       },
       "when": {
         "north": "true"
-      }
-    },
-    {
-      "apply": {
-        "model": "artistry:block/wall_string_lights",
-        "y": 270
-      },
-      "when": {
-        "west": "true"
       }
     },
     {

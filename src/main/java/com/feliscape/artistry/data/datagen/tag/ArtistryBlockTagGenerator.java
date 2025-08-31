@@ -202,6 +202,14 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .addTag(BlockTags.SAPLINGS)
                 .remove(ROTTEN_SAPLING.get())
         ;
+        this.tag(ArtistryTags.Blocks.LEECHABLE_FLOWERS)
+                .addTag(BlockTags.SMALL_FLOWERS)
+                .remove(MARIGOLD.get())
+        ;
+
+        this.tag(BlockTags.SMALL_FLOWERS)
+                .add(MARIGOLD.get());
+
         this.tag(ArtistryTags.Blocks.CARVABLE_PUMPKINS).add(
                         Blocks.PUMPKIN,
                         Blocks.CARVED_PUMPKIN,
@@ -245,6 +253,10 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
         ;
         this.tag(ArtistryTags.Blocks.SNIFFER_HAS_LUSH_PLANTS)
                 .add(Blocks.MOSS_BLOCK)
+        ;
+        this.tag(ArtistryTags.Blocks.SNIFFER_HAS_NYLIUM_PLANTS)
+                .add(Blocks.CRIMSON_NYLIUM)
+                .add(Blocks.WARPED_NYLIUM)
         ;
 
         this.tag(Tags.Blocks.GLASS_BLOCKS_CHEAP)

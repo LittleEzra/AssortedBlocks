@@ -3,9 +3,13 @@
     - Crafted with 2 Soul Sand or Soul Soil, two Dirt, and two Bones
     - Will change certain blocks above itself
     - Can be waxed like copper to stop this
+    - This feature is data-driven using a data map with the id "artistry:leechables" for blocks
 - Rotten Trees
     - The sapling is obtained by placing any non-rotten sapling on Leeching Soil
     - Can be grown like any other tree
+- Marigold
+    - Obtained by placing a small flower on Leeching Soil
+    - Gives Slow Falling when used for Suspicious Stew
 - Corpse Flower
     - Seed dug up by Sniffers in Crimson and Warped Nylium
     - Makes fly particles

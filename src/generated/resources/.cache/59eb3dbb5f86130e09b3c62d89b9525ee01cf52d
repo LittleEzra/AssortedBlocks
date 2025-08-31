@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-31T22:17:41.0533329	Loot Tables
+// 1.21.1	2025-08-31T23:18:56.7167321	Loot Tables
 47b6b4ddb80a89fa9150b4f209f8c1912ba8fd04 data/artistry/loot_table/blocks/acacia_table.json
 c17e141140c72bb4ad538245b3bc5de5e3b91093 data/artistry/loot_table/blocks/amethyst_stars.json
 8472b2e2149ff7987014f0ebdfb5631626250e58 data/artistry/loot_table/blocks/andesite_table.json
@@ -78,6 +78,7 @@ b042fd5df805f275b2014a60f93bff60f078e7d9 data/artistry/loot_table/blocks/lime_fr
 5ebd448520e9aa0814b1f900ac8cae982717f74c data/artistry/loot_table/blocks/lush_fern_crop.json
 65724f9734b96a0005fded8808e83ac72d09977f data/artistry/loot_table/blocks/magenta_frosted_glass.json
 67103904551cd9d06e0b712969d3a8f494eb0233 data/artistry/loot_table/blocks/mangrove_table.json
+1c94d4997aa498cd24af2336f25d0fd2b3815f33 data/artistry/loot_table/blocks/marigold.json
 1afaa20950cabadc983c30e6c98a7af0aa83aa2c data/artistry/loot_table/blocks/mossy_bricks.json
 9d6f602d5a4bd633d74cee87094afa98c53733d9 data/artistry/loot_table/blocks/mossy_stone_pillar.json
 ed32550e3c0fdfe234831190494b093910176753 data/artistry/loot_table/blocks/mossy_stone_tiles.json
@@ -105,6 +106,7 @@ d321d9b147eb39542c88b534655a9d723940bce6 data/artistry/loot_table/blocks/polishe
 ca3f933152a564f5d75c38c1226b2c542c664540 data/artistry/loot_table/blocks/polished_dripstone_stairs.json
 fe258204d0ff16987cd7e02d22d2e4c5f5515961 data/artistry/loot_table/blocks/polished_dripstone_wall.json
 56b33af101217b8e02c3748b1a5fa995eaeb0a49 data/artistry/loot_table/blocks/potted_aspen_sapling.json
+097d61459901a165cc5fedba4a9d0758cf18cf26 data/artistry/loot_table/blocks/potted_marigold.json
 8dbe61baf9833fcc496da3cbadc9bcbc9d281d05 data/artistry/loot_table/blocks/potted_rotten_sapling.json
 4541613c76503abae020b246f9e5beba8de5cce8 data/artistry/loot_table/blocks/potted_teardrop_grass.json
 7e1e6c0f119435d61569e8e5c8acf1b28efa242b data/artistry/loot_table/blocks/purple_frosted_glass.json

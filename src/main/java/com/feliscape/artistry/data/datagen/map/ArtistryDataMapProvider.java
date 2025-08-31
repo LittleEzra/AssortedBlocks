@@ -69,6 +69,7 @@ public class ArtistryDataMapProvider extends DataMapProvider {
         this.builder(ArtistryDataMapTypes.LEECHABLES)
                 .add(ArtistryBlocks.BLOOMING_VINES, new Leechable(Blocks.GLOW_LICHEN), false)
                 .add(ArtistryTags.Blocks.LEECHABLE_SAPLINGS, new Leechable(ArtistryBlocks.ROTTEN_SAPLING), false)
+                .add(ArtistryTags.Blocks.LEECHABLE_FLOWERS, new Leechable(ArtistryBlocks.MARIGOLD), false)
         ;
         this.builder(ArtistryDataMapTypes.STRIPPABLES)
                 .add(ArtistryBlocks.ASPEN_LOG, new Strippable(ArtistryBlocks.STRIPPED_ASPEN_LOG), false)

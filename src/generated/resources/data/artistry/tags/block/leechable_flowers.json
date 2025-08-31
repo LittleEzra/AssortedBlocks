@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "artistry:marigold"
+  ],
+  "values": [
+    "#minecraft:small_flowers"
+  ]
+}

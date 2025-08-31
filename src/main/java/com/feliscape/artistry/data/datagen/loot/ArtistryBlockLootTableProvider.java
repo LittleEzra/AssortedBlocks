@@ -212,7 +212,8 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.HEADSTONE.get());
         this.dropSelf(ArtistryBlocks.LEECHING_SOIL.get());
         this.dropSelf(ArtistryBlocks.WAXED_LEECHING_SOIL.get());
-        this.dropSelf(ArtistryBlocks.ROTTEN_PLANKS.get());
+        this.dropSelf(ArtistryBlocks.MARIGOLD.get());
+        this.dropPottedContents(ArtistryBlocks.POTTED_MARIGOLD.get());
 
         this.dropSelf(ArtistryBlocks.WICKED_CARVED_PUMPKIN.get());
         this.dropSelf(ArtistryBlocks.HUNGRY_CARVED_PUMPKIN.get());

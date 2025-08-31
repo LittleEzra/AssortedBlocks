@@ -198,6 +198,8 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.HEADSTONE, "Headstone");
         this.addBlock(ArtistryBlocks.LEECHING_SOIL, "Leeching Soil");
         this.addBlock(ArtistryBlocks.WAXED_LEECHING_SOIL, "Waxed Leeching Soil");
+        this.addBlock(ArtistryBlocks.MARIGOLD, "Marigold");
+        this.addBlock(ArtistryBlocks.POTTED_MARIGOLD, "Potted Marigold");
 
         this.addBlock(ArtistryBlocks.WICKED_CARVED_PUMPKIN, "Wicked Carved Pumpkin");
         this.addBlock(ArtistryBlocks.HUNGRY_CARVED_PUMPKIN, "Hungry Carved Pumpkin");

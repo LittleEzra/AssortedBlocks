@@ -19,6 +19,7 @@ public class ArtistryTags {
         public static final TagKey<Block> FROSTED_GLASS = create("frosted_glass");
 
         public static final TagKey<Block> LEECHABLE_SAPLINGS = create("leechable_saplings");
+        public static final TagKey<Block> LEECHABLE_FLOWERS = create("leechable_flowers");
         public static final TagKey<Block> CARVABLE_PUMPKINS = create("carvable_pumpkins");
 
         public static final TagKey<Block> UNDERGROUND_PLANT_SOIL = create("underground_plant_soil");
@@ -26,6 +27,7 @@ public class ArtistryTags {
         public static final TagKey<Block> SNIFFER_HAS_ASPEN_PLANTS = create("sniffer_diggable/has_aspen_plants");
         public static final TagKey<Block> SNIFFER_HAS_TEARDROP_GRASS = create("sniffer_diggable/has_teardrop_grass");
         public static final TagKey<Block> SNIFFER_HAS_LUSH_PLANTS = create("sniffer_diggable/has_lush_plants");
+        public static final TagKey<Block> SNIFFER_HAS_NYLIUM_PLANTS = create("sniffer_diggable/has_nylium_plants");
 
         private static TagKey<Block> create(String name){
             return TagKey.create(Registries.BLOCK, Artistry.location(name));

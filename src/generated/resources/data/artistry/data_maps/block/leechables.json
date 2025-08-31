@@ -1,5 +1,8 @@
 {
   "values": {
+    "#artistry:leechable_flowers": {
+      "block": "artistry:marigold"
+    },
     "#artistry:leechable_saplings": {
       "block": "artistry:rotten_sapling"
     },

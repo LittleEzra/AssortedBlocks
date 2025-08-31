@@ -219,9 +219,14 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         crossBlockWithRenderType(ASPEN_SAPLING.get(), "cutout");
 
+
+
         horizontalBlock(HEADSTONE.get(), models().getExistingFile(Artistry.location("block/headstone")));
         blockWithItem(LEECHING_SOIL);
         simpleBlockWithItem(WAXED_LEECHING_SOIL.get(), cubeAll(LEECHING_SOIL.get()));
+
+        crossBlockWithRenderType(MARIGOLD.get(), "cutout");
+        pottedCrossPlantBlock(POTTED_MARIGOLD);
 
         carvedPumpkin(WICKED_CARVED_PUMPKIN.get());
         carvedPumpkin(HUNGRY_CARVED_PUMPKIN.get());

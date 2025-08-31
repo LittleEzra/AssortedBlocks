@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-31T22:10:42.5111166	Item Models: artistry
+// 1.21.1	2025-08-31T23:21:26.0791005	Item Models: artistry
 59b250cc8214b86eac1ffb0e41d7d68bec96cde0 assets/artistry/models/item/amethyst_stars.json
 32c080b7db66c98dba7d11435dd2233670f58c10 assets/artistry/models/item/ancient_tear.json
 73fe7333d37ecde4ea79ba093344f9bc4ccda762 assets/artistry/models/item/aspen_boat.json
@@ -41,6 +41,7 @@ eeb2f1d8d1155e7646bb428740979a8f22f0f3ff assets/artistry/models/item/golden_bulb
 d0a596b0b38f0561613761b3a9b28c4d3026061f assets/artistry/models/item/large_lantern.json
 b6b1aa7b7d340cf14a5ee7c77397dab55269a35c assets/artistry/models/item/large_soul_lantern.json
 676b8f11acb23087665461fd26e8937530228dcd assets/artistry/models/item/lush_fern.json
+98d9150adf9a951399b3da9c9f46c8cb05d2687e assets/artistry/models/item/marigold.json
 5d76dc29bb7ccbfc67f0a6740d6e5adc8a92a73e assets/artistry/models/item/mossy_stone_pillar.json
 c99414ca4246d00358c7a781f2999dfc2a2ed8c0 assets/artistry/models/item/mossy_stone_tile_slab.json
 20f4bbaef7a7df8d62fb97387568733ad2c727ac assets/artistry/models/item/mossy_stone_tile_stairs.json

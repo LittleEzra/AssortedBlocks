@@ -8,6 +8,7 @@ import com.feliscape.artistry.content.block.plant.*;
 import com.feliscape.artistry.data.worldgen.registry.ArtistryTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -899,6 +900,20 @@ public class ArtistryBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(1.5F, 6.0F)
             ));
+
+    public static final DeferredBlock<FlowerBlock> MARIGOLD = registerBlockWithItem("marigold",
+            p -> new FlowerBlock(MobEffects.SLOW_FALLING, 5.0F, p
+                    .mapColor(MapColor.PLANT)
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .offsetType(BlockBehaviour.OffsetType.XZ)
+                    .pushReaction(PushReaction.DESTROY)));
+    public static final DeferredBlock<FlowerPotBlock> POTTED_MARIGOLD = BLOCKS.registerBlock("potted_marigold",
+            p -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, MARIGOLD, p
+                    .instabreak()
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<CarvedPumpkinBlock> WICKED_CARVED_PUMPKIN = registerBlockWithItem("wicked_carved_pumpkin",
             p -> new CarvedPumpkinBlock(carvedPumpkinProperties(p)));
