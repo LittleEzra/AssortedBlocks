@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bellowing_carved_pumpkin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "artistry:bellowing_carved_pumpkin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "artistry:bellowing_jack_o_lantern"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bellowing_carved_pumpkin"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "artistry:bellowing_jack_o_lantern"
+    ]
+  }
+}

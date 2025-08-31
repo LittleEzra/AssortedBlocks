@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_logs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "artistry:rotten_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "artistry:rotten_hanging_sign"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripped_logs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "artistry:rotten_hanging_sign"
+    ]
+  }
+}

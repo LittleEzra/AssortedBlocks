@@ -138,6 +138,7 @@ public class ArtistryBlocks {
     public static final DeferredBlock<TableBlock> DARK_OAK_TABLE = registerBlockWithItem("dark_oak_table", p -> table(p, MapColor.COLOR_BROWN));
     public static final DeferredBlock<TableBlock> MANGROVE_TABLE = registerBlockWithItem("mangrove_table", p -> table(p, MapColor.COLOR_RED));
     public static final DeferredBlock<TableBlock> ASPEN_TABLE = registerBlockWithItem("aspen_table", p -> table(p, MapColor.SAND));
+    public static final DeferredBlock<TableBlock> ROTTEN_TABLE = registerBlockWithItem("rotten_table", p -> table(p, MapColor.WOOD));
     public static final DeferredBlock<TableBlock> BAMBOO_TABLE = registerBlockWithItem("bamboo_table", p -> table(p, MapColor.COLOR_YELLOW, SoundType.BAMBOO_WOOD));
     public static final DeferredBlock<TableBlock> CRIMSON_TABLE = registerBlockWithItem("crimson_table", p -> inflammableTable(p, MapColor.CRIMSON_STEM, SoundType.NETHER_WOOD));
     public static final DeferredBlock<TableBlock> WARPED_TABLE = registerBlockWithItem("warped_table", p -> inflammableTable(p, MapColor.WARPED_STEM, SoundType.NETHER_WOOD));
@@ -876,29 +877,20 @@ public class ArtistryBlocks {
                     .pushReaction(PushReaction.DESTROY)));
     //endregion
 
-
-    //region Woven Wood
-    public static final DeferredBlock<LeavesBlock> WOVEN_LEAVES = registerBlockWithItem("woven_leaves",
-            p -> leaves(p, SoundType.GRASS, MapColor.COLOR_LIGHT_BLUE));
-
-    public static final DeferredBlock<FlammableLogBlock> WOVEN_LOG = registerBlockWithItem("woven_log",
-            p -> log(p, MapColor.TERRACOTTA_BLUE, MapColor.COLOR_BLACK));
-    public static final DeferredBlock<FlammableLogBlock> WOVEN_WOOD = registerBlockWithItem("woven_wood",
-            p -> log(p, MapColor.COLOR_BLACK, MapColor.COLOR_BLACK));
-    public static final DeferredBlock<FlammableLogBlock> STRIPPED_WOVEN_LOG = registerBlockWithItem("stripped_woven_log",
-            p -> log(p, MapColor.TERRACOTTA_BLUE, MapColor.TERRACOTTA_BLUE));
-    public static final DeferredBlock<FlammableLogBlock> STRIPPED_WOVEN_WOOD = registerBlockWithItem("stripped_woven_wood",
-            p -> log(p, MapColor.TERRACOTTA_BLUE, MapColor.TERRACOTTA_BLUE));
-
-    public static final DeferredBlock<Block> WOVEN_PLANKS = registerBlockWithItem("woven_planks",
-            p -> new Block(p
-                    .mapColor(MapColor.TERRACOTTA_BLUE)
-                    .instrument(NoteBlockInstrument.BASS)
-                    .strength(2.0F, 3.0F)
-                    .sound(SoundType.WOOD)
+    public static final DeferredBlock<LeechingSoilBlock> LEECHING_SOIL = registerBlockWithItem("leeching_soil",
+            p -> new LeechingSoilBlock(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .sound(SoundType.SOUL_SOIL)
+                    .randomTicks()
+                    .strength(0.5F)
             ));
-    //endregion
-
+    public static final DeferredBlock<Block> WAXED_LEECHING_SOIL = registerBlockWithItem("waxed_leeching_soil",
+            p -> new Block(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .sound(SoundType.SOUL_SOIL)
+                    .randomTicks()
+                    .strength(0.5F)
+            ));
     public static final DeferredBlock<HeadstoneBlock> HEADSTONE = registerBlockWithItem("headstone",
             p -> new HeadstoneBlock(p
                     .mapColor(MapColor.STONE)
@@ -907,6 +899,178 @@ public class ArtistryBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(1.5F, 6.0F)
             ));
+
+    public static final DeferredBlock<CarvedPumpkinBlock> WICKED_CARVED_PUMPKIN = registerBlockWithItem("wicked_carved_pumpkin",
+            p -> new CarvedPumpkinBlock(carvedPumpkinProperties(p)));
+    public static final DeferredBlock<CarvedPumpkinBlock> HUNGRY_CARVED_PUMPKIN = registerBlockWithItem("hungry_carved_pumpkin",
+            p -> new CarvedPumpkinBlock(carvedPumpkinProperties(p)));
+    public static final DeferredBlock<CarvedPumpkinBlock> HAPPY_CARVED_PUMPKIN = registerBlockWithItem("happy_carved_pumpkin",
+            p -> new CarvedPumpkinBlock(carvedPumpkinProperties(p)));
+    public static final DeferredBlock<CarvedPumpkinBlock> STALWART_CARVED_PUMPKIN = registerBlockWithItem("stalwart_carved_pumpkin",
+            p -> new CarvedPumpkinBlock(carvedPumpkinProperties(p)));
+    public static final DeferredBlock<CarvedPumpkinBlock> PEEKING_CARVED_PUMPKIN = registerBlockWithItem("peeking_carved_pumpkin",
+            p -> new CarvedPumpkinBlock(carvedPumpkinProperties(p)));
+    public static final DeferredBlock<CarvedPumpkinBlock> BELLOWING_CARVED_PUMPKIN = registerBlockWithItem("bellowing_carved_pumpkin",
+            p -> new CarvedPumpkinBlock(carvedPumpkinProperties(p)));
+
+    public static final DeferredBlock<CarvedPumpkinBlock> WICKED_JACK_O_LANTERN = registerBlockWithItem("wicked_jack_o_lantern",
+            p -> new CarvedPumpkinBlock(jackOLanternProperties(p)));
+    public static final DeferredBlock<CarvedPumpkinBlock> HUNGRY_JACK_O_LANTERN = registerBlockWithItem("hungry_jack_o_lantern",
+            p -> new CarvedPumpkinBlock(jackOLanternProperties(p)));
+    public static final DeferredBlock<CarvedPumpkinBlock> HAPPY_JACK_O_LANTERN = registerBlockWithItem("happy_jack_o_lantern",
+            p -> new CarvedPumpkinBlock(jackOLanternProperties(p)));
+    public static final DeferredBlock<CarvedPumpkinBlock> STALWART_JACK_O_LANTERN = registerBlockWithItem("stalwart_jack_o_lantern",
+            p -> new CarvedPumpkinBlock(jackOLanternProperties(p)));
+    public static final DeferredBlock<CarvedPumpkinBlock> PEEKING_JACK_O_LANTERN = registerBlockWithItem("peeking_jack_o_lantern",
+            p -> new CarvedPumpkinBlock(jackOLanternProperties(p)));
+    public static final DeferredBlock<CarvedPumpkinBlock> BELLOWING_JACK_O_LANTERN = registerBlockWithItem("bellowing_jack_o_lantern",
+            p -> new CarvedPumpkinBlock(jackOLanternProperties(p)));
+
+    //region Rotten Wood
+    public static final DeferredBlock<FlammableBlock> ROTTEN_PLANKS = registerBlockWithItem("rotten_planks",
+            p -> new FlammableBlock(p
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+            ));
+    public static final DeferredBlock<FlammableLogBlock> ROTTEN_LOG = registerBlockWithItem("rotten_log",
+            p -> log(p, MapColor.WOOD, MapColor.PODZOL));
+    public static final DeferredBlock<FlammableLogBlock> ROTTEN_WOOD = registerBlockWithItem("rotten_wood",
+            p -> log(p, MapColor.PODZOL, MapColor.PODZOL));
+    public static final DeferredBlock<FlammableLogBlock> STRIPPED_ROTTEN_LOG = registerBlockWithItem("stripped_rotten_log",
+            p -> log(p, MapColor.WOOD, MapColor.WOOD));
+    public static final DeferredBlock<FlammableLogBlock> STRIPPED_ROTTEN_WOOD = registerBlockWithItem("stripped_rotten_wood",
+            p -> log(p, MapColor.WOOD, MapColor.WOOD));
+
+    public static final DeferredBlock<FlammableLeavesBlock> ROTTEN_LEAVES = registerBlockWithItem("rotten_leaves",
+            p -> flammableLeaves(p, SoundType.GRASS));
+
+
+    public static final DeferredBlock<ModStandingSignBlock> ROTTEN_SIGN = BLOCKS.registerBlock("rotten_sign",
+            p -> new ModStandingSignBlock(ArtistryWoodTypes.ROTTEN, p
+                    .mapColor(MapColor.WOOD)
+                    .forceSolidOn()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollission()
+                    .strength(1.0F)
+                    .ignitedByLava()));
+    public static final DeferredBlock<ModWallSignBlock> ROTTEN_WALL_SIGN = BLOCKS.registerBlock("rotten_wall_sign",
+            p -> new ModWallSignBlock(ArtistryWoodTypes.ROTTEN, p
+                    .mapColor(MapColor.WOOD)
+                    .forceSolidOn()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollission()
+                    .strength(1.0F)
+                    .ignitedByLava()));
+
+    public static final DeferredBlock<ModHangingSignBlock> ROTTEN_HANGING_SIGN = BLOCKS.registerBlock("rotten_hanging_sign",
+            p -> new ModHangingSignBlock(ArtistryWoodTypes.ROTTEN, p
+                    .mapColor(MapColor.WOOD)
+                    .forceSolidOn()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollission()
+                    .strength(1.0F)
+                    .ignitedByLava()));
+    public static final DeferredBlock<ModWallHangingSignBlock> ROTTEN_WALL_HANGING_SIGN = BLOCKS.registerBlock("rotten_wall_hanging_sign",
+            p -> new ModWallHangingSignBlock(ArtistryWoodTypes.ROTTEN, p
+                    .mapColor(MapColor.WOOD)
+                    .forceSolidOn()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollission()
+                    .strength(1.0F)
+                    .ignitedByLava()));
+
+    public static final DeferredBlock<FlammableStairBlock> ROTTEN_STAIRS = registerBlockWithItem("rotten_stairs",
+            p -> flammableStair(ROTTEN_PLANKS.get()));
+    public static final DeferredBlock<FlammableSlabBlock> ROTTEN_SLAB = registerBlockWithItem("rotten_slab",
+            p -> new FlammableSlabBlock(p
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
+
+    public static final DeferredBlock<ButtonBlock> ROTTEN_BUTTON = registerBlockWithItem("rotten_button",
+            p -> woodenButton(ArtistryBlockSetTypes.ROTTEN));
+    public static final DeferredBlock<PressurePlateBlock> ROTTEN_PRESSURE_PLATE = registerBlockWithItem("rotten_pressure_plate",
+            p -> new PressurePlateBlock(ArtistryBlockSetTypes.ROTTEN, p
+                    .mapColor(ROTTEN_PLANKS.get().defaultMapColor())
+                    .forceSolidOn()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollission()
+                    .strength(0.5F)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+
+    public static final DeferredBlock<FlammableFenceBlock> ROTTEN_FENCE = registerBlockWithItem("rotten_fence",
+            p -> new FlammableFenceBlock(p
+                    .mapColor(ROTTEN_PLANKS.get().defaultMapColor())
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .ignitedByLava()
+                    .sound(SoundType.WOOD)
+            ));
+    public static final DeferredBlock<FlammableFenceGateBlock> ROTTEN_FENCE_GATE = registerBlockWithItem("rotten_fence_gate",
+            p -> new FlammableFenceGateBlock(ArtistryWoodTypes.ROTTEN, p
+                    .mapColor(ROTTEN_PLANKS.get().defaultMapColor())
+                    .forceSolidOn()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .ignitedByLava()));
+
+    public static final DeferredBlock<FlammableDoorBlock> ROTTEN_DOOR = registerBlockWithItem("rotten_door",
+            p -> new FlammableDoorBlock(ArtistryBlockSetTypes.ROTTEN, p
+                    .mapColor(ROTTEN_PLANKS.get().defaultMapColor())
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .noOcclusion()
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)));
+
+    public static final DeferredBlock<FlammableTrapdoorBlock> ROTTEN_TRAPDOOR = registerBlockWithItem("rotten_trapdoor",
+            p -> new FlammableTrapdoorBlock(ArtistryBlockSetTypes.ROTTEN, p
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(3.0F)
+                    .noOcclusion()
+                    .isValidSpawn(Blocks::never)
+                    .ignitedByLava()));
+
+    public static final DeferredBlock<SaplingBlock> ROTTEN_SAPLING = registerBlockWithItem("rotten_sapling",
+            p -> new SaplingBlock(ArtistryTreeGrowers.ROTTEN, p
+                    .mapColor(MapColor.PLANT)
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .pushReaction(PushReaction.DESTROY)));
+    public static final DeferredBlock<FlowerPotBlock> POTTED_ROTTEN_SAPLING = BLOCKS.registerBlock("potted_rotten_sapling",
+            p -> new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, ROTTEN_SAPLING, p
+                    .instabreak()
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)));
+
+    //endregion
+
+
+    private static BlockBehaviour.Properties carvedPumpkinProperties(BlockBehaviour.Properties properties) {
+        return properties.mapColor(MapColor.COLOR_ORANGE)
+                .strength(1.0F)
+                .sound(SoundType.WOOD)
+                .isValidSpawn(Blocks::always)
+                .pushReaction(PushReaction.DESTROY);
+    }
+    private static BlockBehaviour.Properties jackOLanternProperties(BlockBehaviour.Properties properties) {
+        return properties.mapColor(MapColor.COLOR_ORANGE)
+                .strength(1.0F)
+                .sound(SoundType.WOOD)
+                .lightLevel(p_50876_ -> 15)
+                .isValidSpawn(Blocks::always)
+                .pushReaction(PushReaction.DESTROY);
+    }
 
     private static DeferredBlock<FrostedGlassBlock> frostedGlass(DyeColor color) {
         return registerBlockWithItem(color.getName() + "_frosted_glass", p -> new FrostedGlassBlock(color, p

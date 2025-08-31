@@ -10,11 +10,16 @@ import net.minecraft.world.level.block.Block;
 public class ArtistryTags {
     public static class Blocks{
         public static final TagKey<Block> ASPEN_LOGS = create("aspen_logs");
-        public static final TagKey<Block> WOVEN_LOGS = create("woven_logs");
+        public static final TagKey<Block> ROTTEN_LOGS = create("rotten_logs");
+
         public static final TagKey<Block> WOODEN_TABLES = create("wooden_tables");
         public static final TagKey<Block> TABLES = create("tables");
+
         public static final TagKey<Block> STRING_LIGHTS = create("string_lights");
         public static final TagKey<Block> FROSTED_GLASS = create("frosted_glass");
+
+        public static final TagKey<Block> LEECHABLE_SAPLINGS = create("leechable_saplings");
+        public static final TagKey<Block> CARVABLE_PUMPKINS = create("carvable_pumpkins");
 
         public static final TagKey<Block> UNDERGROUND_PLANT_SOIL = create("underground_plant_soil");
 
@@ -35,7 +40,7 @@ public class ArtistryTags {
     }
     public static class Items{
         public static final TagKey<Item> ASPEN_LOGS = create("aspen_logs");
-        public static final TagKey<Item> WOVEN_LOGS = create("woven_logs");
+        public static final TagKey<Item> ROTTEN_LOGS = create("rotten_logs");
         public static final TagKey<Item> CAN_APPLY_MOSS = create("can_apply_moss");
         public static final TagKey<Item> WOODEN_TABLES = create("wooden_tables");
         public static final TagKey<Item> TABLES = create("tables");

@@ -13,6 +13,9 @@ public class ArtistryModelLayers {
     public static final ModelLayerLocation ASPEN_BOAT = register("boat/aspen");
     public static final ModelLayerLocation ASPEN_CHEST_BOAT = register("chest_boat/aspen");
 
+    public static final ModelLayerLocation ROTTEN_BOAT = register("boat/rotten");
+    public static final ModelLayerLocation ROTTEN_CHEST_BOAT = register("chest_boat/rotten");
+
     public static final ModelLayerLocation PAINTED_POT_TRIM = register("painted_pot/trim");
     public static final ModelLayerLocation PAINTED_POT_PATTERN = register("painted_pot/pattern");
 

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "artistry:block/rotten_planks"
+      },
+      {
+        "model": "artistry:block/rotten_planks_0"
+      },
+      {
+        "model": "artistry:block/rotten_planks_1"
+      },
+      {
+        "model": "artistry:block/rotten_planks_2"
+      }
+    ]
+  }
+}

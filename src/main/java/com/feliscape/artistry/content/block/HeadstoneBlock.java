@@ -25,8 +25,8 @@ public class HeadstoneBlock extends HorizontalDirectionalBlock implements Simple
     public static final MapCodec<HeadstoneBlock> CODEC = simpleCodec(HeadstoneBlock::new);
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-    private static final VoxelShape Z_SHAPE = Block.box(3, 0, 7, 13, 14, 9);
-    private static final VoxelShape X_SHAPE = Block.box(7, 0, 3, 9, 14, 13);
+    private static final VoxelShape Z_SHAPE = Block.box(2, 0, 6, 14, 16, 10);
+    private static final VoxelShape X_SHAPE = Block.box(6, 0, 2, 10, 16, 14);
 
     public HeadstoneBlock(Properties properties) {
         super(properties);

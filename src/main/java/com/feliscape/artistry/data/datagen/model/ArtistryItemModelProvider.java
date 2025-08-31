@@ -25,6 +25,7 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         blockItemSprite(ArtistryBlocks.ASPEN_DOOR);
+        blockItemSprite(ArtistryBlocks.ROTTEN_DOOR);
 
         simpleItem(ArtistryItems.SUNSPROUT);
         simpleItem(ArtistryItems.FERN_SEED);
@@ -33,6 +34,7 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         simpleItem(ArtistryItems.SNIFFER_CAKE);
         itemWithBlockTexture(ArtistryItems.SUNBURST_VINES);
         simpleItem(ArtistryItems.STRING_LIGHTS);
+        handheldItem(ArtistryItems.CARVING_KNIFE);
 
         blockItemSprite(ArtistryBlocks.COPPER_CHAIN);
         blockItemSprite(ArtistryBlocks.EXPOSED_COPPER_CHAIN);
@@ -114,12 +116,27 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         simpleItem(ArtistryItems.ASPEN_BOAT);
         simpleItem(ArtistryItems.ASPEN_CHEST_BOAT);
 
-        // Woven Wood
+        // Rotten Wood
 
-        manualBlockItem(ArtistryBlocks.WOVEN_LOG);
-        manualBlockItem(ArtistryBlocks.WOVEN_WOOD);
-        manualBlockItem(ArtistryBlocks.STRIPPED_WOVEN_LOG);
-        manualBlockItem(ArtistryBlocks.STRIPPED_WOVEN_WOOD);
+        manualBlockItem(ArtistryBlocks.ROTTEN_LOG);
+        manualBlockItem(ArtistryBlocks.ROTTEN_WOOD);
+        manualBlockItem(ArtistryBlocks.STRIPPED_ROTTEN_LOG);
+        manualBlockItem(ArtistryBlocks.STRIPPED_ROTTEN_WOOD);
+
+        manualBlockItem(ArtistryBlocks.ROTTEN_STAIRS);
+        manualBlockItem(ArtistryBlocks.ROTTEN_SLAB);
+        manualBlockItem(ArtistryBlocks.ROTTEN_PRESSURE_PLATE);
+        manualBlockItem(ArtistryBlocks.ROTTEN_FENCE_GATE);
+        buttonItem(ArtistryBlocks.ROTTEN_BUTTON, ArtistryBlocks.ROTTEN_PLANKS);
+        fenceItem(ArtistryBlocks.ROTTEN_FENCE, ArtistryBlocks.ROTTEN_PLANKS);
+        trapdoorItem(ArtistryBlocks.ROTTEN_TRAPDOOR);
+
+        simpleItem(ArtistryItems.ROTTEN_SIGN);
+        simpleItem(ArtistryItems.ROTTEN_HANGING_SIGN);
+        simpleItem(ArtistryItems.ROTTEN_BOAT);
+        simpleItem(ArtistryItems.ROTTEN_CHEST_BOAT);
+
+        generatedBlockItem(ArtistryBlocks.ROTTEN_SAPLING);
     }
 
     private ItemModelBuilder simpleItem(Supplier<? extends Item> item){

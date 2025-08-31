@@ -65,6 +65,7 @@ public class Artistry
     {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ArtistryBlocks.ASPEN_SAPLING.getId(), ArtistryBlocks.POTTED_ASPEN_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ArtistryBlocks.ROTTEN_SAPLING.getId(), ArtistryBlocks.POTTED_ROTTEN_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ArtistryBlocks.SHORT_TEARDROP_GRASS.getId(), ArtistryBlocks.POTTED_TEARDROP_GRASS);
         });
     }

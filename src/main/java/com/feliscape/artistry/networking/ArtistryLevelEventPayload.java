@@ -36,7 +36,7 @@ public record ArtistryLevelEventPayload(int id, double x, double y, double z, in
         send(id, position.x, position.y, position.z);
     }
     public static void send(int id, BlockPos blockPos){
-        send(id, blockPos.getBottomCenter());
+        send(id, blockPos.getX(), blockPos.getY(), blockPos.getZ());
     }
     public static void send(int id, Vec3 position, int data){
         send(id, position.x, position.y, position.z, data);
@@ -62,7 +62,6 @@ public record ArtistryLevelEventPayload(int id, double x, double y, double z, in
             ArtistryLevelEventPayload::new
     );
 
-    @SuppressWarnings("SwitchStatementWithTooFewBranches")
     public static void handle(ArtistryLevelEventPayload payload, IPayloadContext context) {
         Level level = context.player().level();
         Player player = context.player();
@@ -72,7 +71,7 @@ public record ArtistryLevelEventPayload(int id, double x, double y, double z, in
         double z = payload.z;
         Vec3 location = new Vec3(x, y, z);
         switch (payload.id()){
-            case ArtistryLevelEvents.SPIRAL_FUNGUS_BOUNCE:{
+            case ArtistryLevelEvents.SPIRAL_FUNGUS_BOUNCE: {
                 int particleCount = random.nextInt(4) + 6;
                 for (int i = 0; i < particleCount; i++){
                     double theta = random.nextDouble() * Math.TAU;
@@ -80,10 +79,21 @@ public record ArtistryLevelEventPayload(int id, double x, double y, double z, in
                     double yVelocity = random.nextDouble() * 0.2D + 0.1D;
                     double zVelocity = Math.cos(theta) * (random.nextDouble() * 0.4D + 0.1D);
 
-                    level.addParticle(ParticleTypes.CLOUD, location.x, location.z + 0.5D, location.y,
+                    level.addParticle(ParticleTypes.CLOUD, location.x + 0.5D, location.z + 0.5D, location.y + 0.5D,
                             xVelocity, yVelocity, zVelocity);
                 }
                 break;
+            }
+            case ArtistryLevelEvents.LEECHING_SOIL_LEECH: {
+                int particleCount = random.nextInt(8) + 10;
+                for (int i = 0; i < particleCount; i++) {
+                    level.addParticle(ParticleTypes.SOUL_FIRE_FLAME,
+                            location.x + random.nextDouble(),
+                            location.y + random.nextDouble(),
+                            location.z + random.nextDouble(),
+                            0.0D, 0.0D, 0.0D
+                    );
+                }
             }
             default:
                 break;

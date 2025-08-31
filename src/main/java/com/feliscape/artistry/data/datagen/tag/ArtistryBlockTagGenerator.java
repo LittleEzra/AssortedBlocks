@@ -24,7 +24,8 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(
-                        ASPEN_LEAVES.get()
+                        ASPEN_LEAVES.get(),
+                        ROTTEN_LEAVES.get()
         );
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(
@@ -130,23 +131,39 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         HEADSTONE.get()
                 );
         this.tag(BlockTags.MINEABLE_WITH_AXE)
-                .addTag(ArtistryTags.Blocks.WOODEN_TABLES)
-                .add(BLOOMING_VINES.get())
-                .add(SUNSPROUT.get())
-                .add(SUNBURST_VINES.get())
-                .add(SUNBURST_VINES_PLANT.get())
-                .add(BLOOMING_VINES.get())
-                .add(SHORT_TEARDROP_GRASS.get())
-                .add(LUSH_FERN.get())
-                .add(LUSH_FERN_CROP.get())
-                .add(CORPSE_FLOWER.get())
-                .add(FLY_LURE.get())
-                .add(HONEYDEW_FRUIT.get())
-                .add(HONEYDEW_STALK.get())
-        ;
+                .addTag(ArtistryTags.Blocks.WOODEN_TABLES).add(
+                        WICKED_CARVED_PUMPKIN.get(),
+                        HUNGRY_CARVED_PUMPKIN.get(),
+                        HAPPY_CARVED_PUMPKIN.get(),
+                        STALWART_CARVED_PUMPKIN.get(),
+                        PEEKING_CARVED_PUMPKIN.get(),
+                        BELLOWING_CARVED_PUMPKIN.get(),
+
+                        WICKED_JACK_O_LANTERN.get(),
+                        HUNGRY_JACK_O_LANTERN.get(),
+                        HAPPY_JACK_O_LANTERN.get(),
+                        STALWART_JACK_O_LANTERN.get(),
+                        PEEKING_JACK_O_LANTERN.get(),
+                        BELLOWING_JACK_O_LANTERN.get(),
+
+                        BLOOMING_VINES.get(),
+                        SUNSPROUT.get(),
+                        SUNBURST_VINES.get(),
+                        SUNBURST_VINES_PLANT.get(),
+                        BLOOMING_VINES.get(),
+                        SHORT_TEARDROP_GRASS.get(),
+                        LUSH_FERN.get(),
+                        LUSH_FERN_CROP.get(),
+                        CORPSE_FLOWER.get(),
+                        FLY_LURE.get(),
+                        HONEYDEW_FRUIT.get(),
+                        HONEYDEW_STALK.get()
+                );
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ROCKY_DIRT.get())
                 .add(TEARDROP_GRASS_BLOCK.get())
+                .add(LEECHING_SOIL.get())
+                .add(WAXED_LEECHING_SOIL.get())
         ;
 
         this.tag(ArtistryTags.Blocks.FROSTED_GLASS)
@@ -181,6 +198,36 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(Blocks.INFESTED_COBBLESTONE)
                 .add(ROCKY_DIRT.get())
         ;
+        this.tag(ArtistryTags.Blocks.LEECHABLE_SAPLINGS)
+                .addTag(BlockTags.SAPLINGS)
+                .remove(ROTTEN_SAPLING.get())
+        ;
+        this.tag(ArtistryTags.Blocks.CARVABLE_PUMPKINS).add(
+                        Blocks.PUMPKIN,
+                        Blocks.CARVED_PUMPKIN,
+                        ArtistryBlocks.WICKED_CARVED_PUMPKIN.get(),
+                        ArtistryBlocks.HUNGRY_CARVED_PUMPKIN.get(),
+                        ArtistryBlocks.HAPPY_CARVED_PUMPKIN.get(),
+                        ArtistryBlocks.STALWART_CARVED_PUMPKIN.get(),
+                        ArtistryBlocks.PEEKING_CARVED_PUMPKIN.get(),
+                        ArtistryBlocks.BELLOWING_CARVED_PUMPKIN.get()
+        );
+        this.tag(Tags.Blocks.PUMPKINS_CARVED).add(
+                        ArtistryBlocks.WICKED_CARVED_PUMPKIN.get(),
+                        ArtistryBlocks.HUNGRY_CARVED_PUMPKIN.get(),
+                        ArtistryBlocks.HAPPY_CARVED_PUMPKIN.get(),
+                        ArtistryBlocks.STALWART_CARVED_PUMPKIN.get(),
+                        ArtistryBlocks.PEEKING_CARVED_PUMPKIN.get(),
+                        ArtistryBlocks.BELLOWING_CARVED_PUMPKIN.get()
+        );
+        this.tag(Tags.Blocks.PUMPKINS_JACK_O_LANTERNS).add(
+                        ArtistryBlocks.WICKED_JACK_O_LANTERN.get(),
+                        ArtistryBlocks.HUNGRY_JACK_O_LANTERN.get(),
+                        ArtistryBlocks.HAPPY_JACK_O_LANTERN.get(),
+                        ArtistryBlocks.STALWART_JACK_O_LANTERN.get(),
+                        ArtistryBlocks.PEEKING_JACK_O_LANTERN.get(),
+                        ArtistryBlocks.BELLOWING_JACK_O_LANTERN.get()
+        );
 
         this.tag(BlockTags.SNIFFER_DIGGABLE_BLOCK)
                 .add(Blocks.CLAY)
@@ -213,6 +260,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(DARK_OAK_TABLE.get())
                 .add(MANGROVE_TABLE.get())
                 .add(ASPEN_TABLE.get())
+                .add(ROTTEN_TABLE.get())
                 .add(BAMBOO_TABLE.get())
                 .add(CRIMSON_TABLE.get())
                 .add(WARPED_TABLE.get())
@@ -248,7 +296,9 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(SUNBURST_VINES.get())
                 .add(SUNBURST_VINES_PLANT.get());
         this.tag(BlockTags.FENCE_GATES)
-                .add(ASPEN_FENCE_GATE.get());
+                .add(ASPEN_FENCE_GATE.get())
+                .add(ROTTEN_FENCE_GATE.get())
+        ;
 
         this.tag(BlockTags.STAIRS)
                 .add(STONE_TILE_STAIRS.get())
@@ -283,6 +333,8 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(OVERGROWN_STONE_TILES.get())
                 .add(ROCKY_DIRT.get())
                 .add(TEARDROP_GRASS_BLOCK.get())
+                .add(LEECHING_SOIL.get())
+                .add(WAXED_LEECHING_SOIL.get())
         ;
         this.tag(BlockTags.SNIFFER_DIGGABLE_BLOCK)
                 .add(OVERGROWN_STONE_TILES.get())
@@ -290,9 +342,9 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
         ;
         this.tag(BlockTags.OVERWORLD_CARVER_REPLACEABLES).remove(OVERGROWN_STONE_TILES.get());
         this.tag(BlockTags.NETHER_CARVER_REPLACEABLES).remove(OVERGROWN_STONE_TILES.get());
-        this.tag(BlockTags.ENDERMAN_HOLDABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get());
-        this.tag(BlockTags.MOSS_REPLACEABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get());
-        this.tag(BlockTags.AZALEA_ROOT_REPLACEABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get());
+        this.tag(BlockTags.ENDERMAN_HOLDABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get(), LEECHING_SOIL.get());
+        this.tag(BlockTags.MOSS_REPLACEABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get(), LEECHING_SOIL.get());
+        this.tag(BlockTags.AZALEA_ROOT_REPLACEABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get(), LEECHING_SOIL.get());
 
 
         this.tag(BlockTags.WALLS)
@@ -305,61 +357,73 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.PLANKS)
+                .add(ROTTEN_PLANKS.get())
                 .add(ASPEN_PLANKS.get())
-                .add(WOVEN_PLANKS.get())
         ;
         this.tag(ArtistryTags.Blocks.ASPEN_LOGS)
                 .add(ASPEN_LOG.get())
                 .add(ASPEN_WOOD.get())
                 .add(STRIPPED_ASPEN_LOG.get())
                 .add(STRIPPED_ASPEN_WOOD.get());
-        this.tag(ArtistryTags.Blocks.WOVEN_LOGS)
-                .add(WOVEN_LOG.get())
-                .add(WOVEN_WOOD.get())
-                .add(STRIPPED_WOVEN_LOG.get())
-                .add(STRIPPED_WOVEN_WOOD.get());
+        this.tag(ArtistryTags.Blocks.ROTTEN_LOGS)
+                .add(ROTTEN_LOG.get())
+                .add(ROTTEN_WOOD.get())
+                .add(STRIPPED_ROTTEN_LOG.get())
+                .add(STRIPPED_ROTTEN_WOOD.get());
 
-        this.tag(BlockTags.LOGS)
-                .addTag(ArtistryTags.Blocks.WOVEN_LOGS);
         this.tag(BlockTags.LOGS_THAT_BURN)
-                .addTag(ArtistryTags.Blocks.ASPEN_LOGS);
+                .addTag(ArtistryTags.Blocks.ASPEN_LOGS)
+                .addTag(ArtistryTags.Blocks.ROTTEN_LOGS);
         this.tag(Tags.Blocks.STRIPPED_LOGS)
                 .add(STRIPPED_ASPEN_LOG.get())
-                .add(STRIPPED_WOVEN_LOG.get())
+                .add(STRIPPED_ROTTEN_LOG.get())
         ;
         this.tag(Tags.Blocks.STRIPPED_WOODS)
                 .add(STRIPPED_ASPEN_WOOD.get())
-                .add(STRIPPED_WOVEN_WOOD.get())
+                .add(STRIPPED_ROTTEN_WOOD.get())
         ;
 
         this.tag(BlockTags.WOODEN_STAIRS)
-                .add(ASPEN_STAIRS.get());
+                .add(ASPEN_STAIRS.get())
+                .add(ROTTEN_STAIRS.get());
         this.tag(BlockTags.WOODEN_SLABS)
-                .add(ASPEN_SLAB.get());
+                .add(ASPEN_SLAB.get())
+                .add(ROTTEN_SLAB.get());
         this.tag(BlockTags.WOODEN_BUTTONS)
-                .add(ASPEN_BUTTON.get());
+                .add(ASPEN_BUTTON.get())
+                .add(ROTTEN_BUTTON.get());
         this.tag(BlockTags.WOODEN_PRESSURE_PLATES)
-                .add(ASPEN_PRESSURE_PLATE.get());
+                .add(ASPEN_PRESSURE_PLATE.get())
+                .add(ROTTEN_PRESSURE_PLATE.get());
         this.tag(BlockTags.WOODEN_FENCES)
-                .add(ASPEN_FENCE.get());
+                .add(ASPEN_FENCE.get())
+                .add(ROTTEN_FENCE.get());
         this.tag(BlockTags.WOODEN_DOORS)
-                .add(ASPEN_DOOR.get());
+                .add(ASPEN_DOOR.get())
+                .add(ROTTEN_DOOR.get());
         this.tag(BlockTags.WOODEN_TRAPDOORS)
-                .add(ASPEN_TRAPDOOR.get());
+                .add(ASPEN_TRAPDOOR.get())
+                .add(ROTTEN_TRAPDOOR.get());
         this.tag(BlockTags.STANDING_SIGNS)
-                .add(ASPEN_SIGN.get());
+                .add(ASPEN_SIGN.get())
+                .add(ROTTEN_SIGN.get());
         this.tag(BlockTags.WALL_SIGNS)
-                .add(ASPEN_WALL_SIGN.get());
+                .add(ASPEN_WALL_SIGN.get())
+                .add(ROTTEN_WALL_SIGN.get());
         this.tag(BlockTags.CEILING_HANGING_SIGNS)
-                .add(ASPEN_HANGING_SIGN.get());
+                .add(ASPEN_HANGING_SIGN.get())
+                .add(ROTTEN_HANGING_SIGN.get());
         this.tag(BlockTags.WALL_HANGING_SIGNS)
-                .add(ASPEN_WALL_HANGING_SIGN.get());
+                .add(ASPEN_WALL_HANGING_SIGN.get())
+                .add(ROTTEN_WALL_HANGING_SIGN.get());
         this.tag(BlockTags.SAPLINGS)
-                .add(ASPEN_SAPLING.get());
+                .add(ASPEN_SAPLING.get())
+                .add(ROTTEN_SAPLING.get());
 
         this.tag(BlockTags.LEAVES)
-                .add(ASPEN_LEAVES.get()
-                );
+                .add(ASPEN_LEAVES.get())
+                .add(ROTTEN_LEAVES.get())
+        ;
 
         this.tag(BlockTags.HOGLIN_REPELLENTS)
                 .add(CORPSE_FLOWER.get())

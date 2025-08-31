@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_rotten_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "artistry:rotten_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "artistry:rotten_table"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_rotten_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "artistry:rotten_table"
+    ]
+  }
+}

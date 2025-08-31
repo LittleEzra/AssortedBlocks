@@ -1,0 +1,16 @@
+{
+  "values": {
+    "artistry:aspen_log": {
+      "stripped": "artistry:stripped_aspen_log"
+    },
+    "artistry:aspen_wood": {
+      "stripped": "artistry:stripped_aspen_wood"
+    },
+    "artistry:rotten_log": {
+      "stripped": "artistry:stripped_rotten_log"
+    },
+    "artistry:rotten_wood": {
+      "stripped": "artistry:stripped_rotten_wood"
+    }
+  }
+}

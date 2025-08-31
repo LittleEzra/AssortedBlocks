@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-29T00:05:23.3208935	Item Models: artistry
+// 1.21.1	2025-08-31T22:10:42.5111166	Item Models: artistry
 59b250cc8214b86eac1ffb0e41d7d68bec96cde0 assets/artistry/models/item/amethyst_stars.json
 32c080b7db66c98dba7d11435dd2233670f58c10 assets/artistry/models/item/ancient_tear.json
 73fe7333d37ecde4ea79ba093344f9bc4ccda762 assets/artistry/models/item/aspen_boat.json
@@ -23,6 +23,7 @@ becd9d35161297236e46319eb33d79d9cc6b4a96 assets/artistry/models/item/aspen_wood.
 b49dd61e0715bffcdb8be282cb570f49aa889b8c assets/artistry/models/item/calcite_slab.json
 ea208c24655cee91cfb37bd4ed9889e2087785bb assets/artistry/models/item/calcite_stairs.json
 a85f076ec716e06c9dba328f508dbf2fde46ae6d assets/artistry/models/item/calcite_wall.json
+1b01f8d7455df361cf404223865308ac33061f00 assets/artistry/models/item/carving_knife.json
 0382bcd9ddec8e25ebb6784a0ca6f2801358fda4 assets/artistry/models/item/copper_chain.json
 b2a2e6b1ba00c198b10d46712251a8a4c790b44a assets/artistry/models/item/corpse_flower.json
 b4b200145c4b9480c9f335ab6554589d76177841 assets/artistry/models/item/dripstone_brick_slab.json
@@ -50,6 +51,21 @@ d78d3fcd23e7c03075db2983c9e3be21d704042d assets/artistry/models/item/polished_ca
 705c9e51e3fa8dc3cb25d7f1ba536c999307094e assets/artistry/models/item/polished_dripstone_slab.json
 0a8ffd1ca32e500df660563d6eef722fdecb2c5a assets/artistry/models/item/polished_dripstone_stairs.json
 43fb6bc0b6e5043e63482cda398f9966ea107799 assets/artistry/models/item/polished_dripstone_wall.json
+4c3d7c267a72dc7a10cee619e58348b634123886 assets/artistry/models/item/rotten_boat.json
+b5cf47b4f7fcea63d020fee8f33eddabd5fd164a assets/artistry/models/item/rotten_button.json
+8127f360a7bb1183b2240a13cdf1429c77948734 assets/artistry/models/item/rotten_chest_boat.json
+a66ac129afa0f877644c3a6d22ef07f47be4c641 assets/artistry/models/item/rotten_door.json
+ff2427e7f818a6854fdca597e2c621f64a9522dd assets/artistry/models/item/rotten_fence.json
+6b1d79edccbe5f5a0cb818edec791cd8d85c13d2 assets/artistry/models/item/rotten_fence_gate.json
+9c19f4961c22489d4e6b5fae72e7b8214a690617 assets/artistry/models/item/rotten_hanging_sign.json
+563f25b84b2d2ec9f8c9a0114d7e9c2f62aeaa29 assets/artistry/models/item/rotten_log.json
+4810f48cd2a26f1180645f45620bbef3c3b71021 assets/artistry/models/item/rotten_pressure_plate.json
+87d20e2f9581aaa08f4f93df796d0f45be0b4b86 assets/artistry/models/item/rotten_sapling.json
+d9a0e73a1746aa7d7b6528775be0fb5eef75caba assets/artistry/models/item/rotten_sign.json
+7f50c212831210a057cd2f1f310ab05dc5dbd1a4 assets/artistry/models/item/rotten_slab.json
+444d71d4095f28fd37d72d27cbd02061aceda879 assets/artistry/models/item/rotten_stairs.json
+65fba12c08767f1afe16458e84c43c2ca00a4713 assets/artistry/models/item/rotten_trapdoor.json
+137874e7f020d82e2130e6ed27a9c77d8213f5e8 assets/artistry/models/item/rotten_wood.json
 9499df4ab05bd4ca7cd721b7d256733530dcf6c2 assets/artistry/models/item/round_lantern.json
 f2dba199b979db817daf9c6fd28d1cb150a021c5 assets/artistry/models/item/short_teardrop_grass.json
 39741a1d118c0c185668e5ab3683c12a041a75a4 assets/artistry/models/item/small_calcite_brick_slab.json
@@ -65,8 +81,8 @@ a511bca21f33d628342a6e1ac1d698576a8ffc7d assets/artistry/models/item/stone_tile_
 56f934be845b2de636ace63044fdb08c734065e9 assets/artistry/models/item/string_lights.json
 7303ce917bcf0481c1158b278ee859aec5e14363 assets/artistry/models/item/stripped_aspen_log.json
 d225289f4fd7fd64655a14b4219b3ae89bafab89 assets/artistry/models/item/stripped_aspen_wood.json
-2cc11996f3adfa1e471b6b72024c502c7878aaa1 assets/artistry/models/item/stripped_woven_log.json
-7723f7f7c4a3f98d6bef32f1de5d96c8a97cc781 assets/artistry/models/item/stripped_woven_wood.json
+70d73818899157eaf7dc566df7a11093bc44cdd9 assets/artistry/models/item/stripped_rotten_log.json
+be1d7facb5c075b31ff0ce73bf9ffc00d2f7fd1b assets/artistry/models/item/stripped_rotten_wood.json
 07624c97319caa02427b65e5ffbda64d755225d5 assets/artistry/models/item/sunburst_vines.json
 825b2f7c1542f477289a67f7530adc151d5e7982 assets/artistry/models/item/sunsprout.json
 f82c0b1744fcf655800a0d91e39b67f0186e3a3d assets/artistry/models/item/tall_teardrop_grass.json
@@ -75,5 +91,3 @@ f82c0b1744fcf655800a0d91e39b67f0186e3a3d assets/artistry/models/item/tall_teardr
 271189c372f40392d8c0ea0e8140d708385dd547 assets/artistry/models/item/waxed_oxidized_copper_chain.json
 becf00466f3f68d421deff8c8b56986159a64771 assets/artistry/models/item/waxed_weathered_copper_chain.json
 becf00466f3f68d421deff8c8b56986159a64771 assets/artistry/models/item/weathered_copper_chain.json
-14346351119d38f0b2bbc06cd7f158069c3fba58 assets/artistry/models/item/woven_log.json
-2041d5c85d046c8cca1c9e0d1dab64168daa92aa assets/artistry/models/item/woven_wood.json

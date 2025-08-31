@@ -1,0 +1,10 @@
+{
+  "values": {
+    "#artistry:leechable_saplings": {
+      "block": "artistry:rotten_sapling"
+    },
+    "artistry:blooming_vines": {
+      "block": "minecraft:glow_lichen"
+    }
+  }
+}

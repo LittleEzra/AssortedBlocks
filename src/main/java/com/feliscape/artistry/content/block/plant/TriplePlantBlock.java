@@ -1,6 +1,5 @@
 package com.feliscape.artistry.content.block.plant;
 
-import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.content.block.properties.TriplePlantPart;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -20,7 +19,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.Fluids;
 
@@ -96,7 +94,7 @@ public class TriplePlantBlock extends BushBlock {
     public BlockState playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
         if (!level.isClientSide) {
             if (player.isCreative()) {
-                preventDropsFromOtherParts(level, pos, state, player);
+                preventDropsFromBase(level, pos, state, player);
             } else {
                 dropResources(state, level, pos, null, player, player.getMainHandItem());
             }
@@ -110,7 +108,7 @@ public class TriplePlantBlock extends BushBlock {
         super.playerDestroy(level, player, pos, Blocks.AIR.defaultBlockState(), te, stack);
     }
 
-    protected static void preventDropsFromOtherParts(Level level, BlockPos pos, BlockState state, Player player) {
+    protected static void preventDropsFromBase(Level level, BlockPos pos, BlockState state, Player player) {
         TriplePlantPart part = state.getValue(PART);
         if (part == TriplePlantPart.BASE) return;
 

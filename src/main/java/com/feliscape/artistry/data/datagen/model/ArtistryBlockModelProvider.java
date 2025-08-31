@@ -1,7 +1,6 @@
 package com.feliscape.artistry.data.datagen.model;
 
 import com.feliscape.artistry.Artistry;
-import com.feliscape.artistry.content.block.RoundLanternBlock;
 import com.feliscape.artistry.content.block.*;
 import com.feliscape.artistry.content.block.plant.*;
 import com.feliscape.artistry.content.block.properties.TriplePlantPart;
@@ -18,6 +17,8 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.function.Supplier;
 
+import static com.feliscape.artistry.registry.ArtistryBlocks.*;
+
 public class ArtistryBlockModelProvider extends BlockStateProvider {
     public ArtistryBlockModelProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, Artistry.MOD_ID, exFileHelper);
@@ -25,215 +26,260 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ArtistryBlocks.CRACKED_BRICKS);
-        blockWithItem(ArtistryBlocks.MOSSY_BRICKS);
+        blockWithItem(CRACKED_BRICKS);
+        blockWithItem(MOSSY_BRICKS);
 
-        ResourceLocation stoneTileTexture = blockTexture(ArtistryBlocks.STONE_TILES.get());
-        blockWithItem(ArtistryBlocks.STONE_TILES);
-        stairsBlock(ArtistryBlocks.STONE_TILE_STAIRS.get(), stoneTileTexture);
-        slabBlock(ArtistryBlocks.STONE_TILE_SLAB.get(), stoneTileTexture, stoneTileTexture);
+        ResourceLocation stoneTileTexture = blockTexture(STONE_TILES.get());
+        blockWithItem(STONE_TILES);
+        stairsBlock(STONE_TILE_STAIRS.get(), stoneTileTexture);
+        slabBlock(STONE_TILE_SLAB.get(), stoneTileTexture, stoneTileTexture);
 
-        ResourceLocation mossyStoneTileTexture = blockTexture(ArtistryBlocks.MOSSY_STONE_TILES.get());
-        blockWithItem(ArtistryBlocks.MOSSY_STONE_TILES);
-        stairsBlock(ArtistryBlocks.MOSSY_STONE_TILE_STAIRS.get(), mossyStoneTileTexture);
-        slabBlock(ArtistryBlocks.MOSSY_STONE_TILE_SLAB.get(), mossyStoneTileTexture, mossyStoneTileTexture);
+        ResourceLocation mossyStoneTileTexture = blockTexture(MOSSY_STONE_TILES.get());
+        blockWithItem(MOSSY_STONE_TILES);
+        stairsBlock(MOSSY_STONE_TILE_STAIRS.get(), mossyStoneTileTexture);
+        slabBlock(MOSSY_STONE_TILE_SLAB.get(), mossyStoneTileTexture, mossyStoneTileTexture);
 
-        blockWithItem(ArtistryBlocks.OVERGROWN_STONE_TILES);
-        axisBlock(ArtistryBlocks.STONE_PILLAR.get());
-        axisBlock(ArtistryBlocks.MOSSY_STONE_PILLAR.get());
+        blockWithItem(OVERGROWN_STONE_TILES);
+        axisBlock(STONE_PILLAR.get());
+        axisBlock(MOSSY_STONE_PILLAR.get());
 
-        sunsprout(ArtistryBlocks.SUNSPROUT);
-        crossBlockWithRenderType(ArtistryBlocks.SUNBURST_VINES.get(), "cutout");
-        crossBlockWithRenderType(ArtistryBlocks.SUNBURST_VINES_PLANT.get(), "cutout");
-        directionalBlock(ArtistryBlocks.SPARKLER.get(), models().getExistingFile(Artistry.location("block/sparkler")));
-        amethystStars(ArtistryBlocks.AMETHYST_STARS.get());
+        sunsprout(SUNSPROUT);
+        crossBlockWithRenderType(SUNBURST_VINES.get(), "cutout");
+        crossBlockWithRenderType(SUNBURST_VINES_PLANT.get(), "cutout");
+        directionalBlock(SPARKLER.get(), models().getExistingFile(Artistry.location("block/sparkler")));
+        amethystStars(AMETHYST_STARS.get());
 
-        simpleBlock(ArtistryBlocks.SPARK_FOUNTAIN.get(), models().getExistingFile(Artistry.location("block/spark_fountain")));
-        simpleBlockWithItem(ArtistryBlocks.WATER_FOUNTAIN.get(), models().getExistingFile(Artistry.location("block/water_fountain")));
+        simpleBlock(SPARK_FOUNTAIN.get(), models().getExistingFile(Artistry.location("block/spark_fountain")));
+        simpleBlockWithItem(WATER_FOUNTAIN.get(), models().getExistingFile(Artistry.location("block/water_fountain")));
 
-        table(ArtistryBlocks.OAK_TABLE);
-        table(ArtistryBlocks.SPRUCE_TABLE);
-        table(ArtistryBlocks.BIRCH_TABLE);
-        table(ArtistryBlocks.JUNGLE_TABLE);
-        table(ArtistryBlocks.ACACIA_TABLE);
-        table(ArtistryBlocks.CHERRY_TABLE);
-        table(ArtistryBlocks.DARK_OAK_TABLE);
-        table(ArtistryBlocks.MANGROVE_TABLE);
-        table(ArtistryBlocks.ASPEN_TABLE);
-        table(ArtistryBlocks.BAMBOO_TABLE);
-        table(ArtistryBlocks.CRIMSON_TABLE);
-        table(ArtistryBlocks.WARPED_TABLE);
+        table(OAK_TABLE);
+        table(SPRUCE_TABLE);
+        table(BIRCH_TABLE);
+        table(JUNGLE_TABLE);
+        table(ACACIA_TABLE);
+        table(CHERRY_TABLE);
+        table(DARK_OAK_TABLE);
+        table(MANGROVE_TABLE);
+        table(ASPEN_TABLE);
+        table(ROTTEN_TABLE);
+        table(BAMBOO_TABLE);
+        table(CRIMSON_TABLE);
+        table(WARPED_TABLE);
 
-        table(ArtistryBlocks.STONE_TABLE);
-        table(ArtistryBlocks.ANDESITE_TABLE);
-        table(ArtistryBlocks.GRANITE_TABLE);
-        table(ArtistryBlocks.DIORITE_TABLE);
-        table(ArtistryBlocks.DEEPSLATE_TABLE);
-        table(ArtistryBlocks.POLISHED_BLACKSTONE_TABLE);
-        table(ArtistryBlocks.TUFF_TABLE);
-        table(ArtistryBlocks.CALCITE_TABLE);
+        table(STONE_TABLE);
+        table(ANDESITE_TABLE);
+        table(GRANITE_TABLE);
+        table(DIORITE_TABLE);
+        table(DEEPSLATE_TABLE);
+        table(POLISHED_BLACKSTONE_TABLE);
+        table(TUFF_TABLE);
+        table(CALCITE_TABLE);
 
-        blockWithItem(ArtistryBlocks.WHITE_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.LIGHT_GRAY_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.GRAY_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.BLACK_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.BROWN_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.RED_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.ORANGE_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.YELLOW_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.LIME_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.GREEN_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.CYAN_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.LIGHT_BLUE_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.BLUE_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.PURPLE_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.MAGENTA_FROSTED_GLASS, "translucent");
-        blockWithItem(ArtistryBlocks.PINK_FROSTED_GLASS, "translucent");
+        blockWithItem(WHITE_FROSTED_GLASS, "translucent");
+        blockWithItem(LIGHT_GRAY_FROSTED_GLASS, "translucent");
+        blockWithItem(GRAY_FROSTED_GLASS, "translucent");
+        blockWithItem(BLACK_FROSTED_GLASS, "translucent");
+        blockWithItem(BROWN_FROSTED_GLASS, "translucent");
+        blockWithItem(RED_FROSTED_GLASS, "translucent");
+        blockWithItem(ORANGE_FROSTED_GLASS, "translucent");
+        blockWithItem(YELLOW_FROSTED_GLASS, "translucent");
+        blockWithItem(LIME_FROSTED_GLASS, "translucent");
+        blockWithItem(GREEN_FROSTED_GLASS, "translucent");
+        blockWithItem(CYAN_FROSTED_GLASS, "translucent");
+        blockWithItem(LIGHT_BLUE_FROSTED_GLASS, "translucent");
+        blockWithItem(BLUE_FROSTED_GLASS, "translucent");
+        blockWithItem(PURPLE_FROSTED_GLASS, "translucent");
+        blockWithItem(MAGENTA_FROSTED_GLASS, "translucent");
+        blockWithItem(PINK_FROSTED_GLASS, "translucent");
 
-        stringLights(ArtistryBlocks.STRING_LIGHTS.get());
-        wallStringLights(ArtistryBlocks.WALL_STRING_LIGHTS.get());
+        stringLights(STRING_LIGHTS.get());
+        wallStringLights(WALL_STRING_LIGHTS.get());
 
-        largeLantern(ArtistryBlocks.LARGE_LANTERN);
-        largeLantern(ArtistryBlocks.LARGE_SOUL_LANTERN);
-        roundLantern(ArtistryBlocks.ROUND_LANTERN);
-        directionalBlock(ArtistryBlocks.FLAT_LIGHT.get(), models().getExistingFile(Artistry.location("block/flat_light")));
+        largeLantern(LARGE_LANTERN);
+        largeLantern(LARGE_SOUL_LANTERN);
+        roundLantern(ROUND_LANTERN);
+        directionalBlock(FLAT_LIGHT.get(), models().getExistingFile(Artistry.location("block/flat_light")));
 
-        bloomingVines(ArtistryBlocks.BLOOMING_VINES);
+        bloomingVines(BLOOMING_VINES);
         /*getVariantBuilder(ArtistryBlocks.LUSH_FERN.get())
                 .partialState().addModels(ConfiguredModel.builder().modelFile(
                         models().getExistingFile(Artistry.location("block/lush_fern"))
                 ).buildLast());*/
-        simpleBlock(ArtistryBlocks.LUSH_FERN.get(), models().getExistingFile(Artistry.location("block/lush_fern")));
-        lushFernCropBlock(ArtistryBlocks.LUSH_FERN_CROP.get());
-        teardropGrassBlock(ArtistryBlocks.TEARDROP_GRASS_BLOCK.get());
-        crossBlockWithRenderType(ArtistryBlocks.SHORT_TEARDROP_GRASS.get(), "cutout");
-        doublePlantBlock(ArtistryBlocks.TALL_TEARDROP_GRASS.get(), "cutout");
-        pottedCrossPlantBlock(ArtistryBlocks.POTTED_TEARDROP_GRASS, Artistry.location("block/potted_teardrop_grass"));
-        corpseFlowerBlock(ArtistryBlocks.CORPSE_FLOWER.get());
-        flyLureBlock(ArtistryBlocks.FLY_LURE.get());
-        horizontalBlock(ArtistryBlocks.HEADSTONE.get(), models().getExistingFile(Artistry.location("block/headstone")));
+        simpleBlock(LUSH_FERN.get(), models().getExistingFile(Artistry.location("block/lush_fern")));
+        lushFernCropBlock(LUSH_FERN_CROP.get());
+        teardropGrassBlock(TEARDROP_GRASS_BLOCK.get());
+        crossBlockWithRenderType(SHORT_TEARDROP_GRASS.get(), "cutout");
+        doublePlantBlock(TALL_TEARDROP_GRASS.get(), "cutout");
+        pottedCrossPlantBlock(POTTED_TEARDROP_GRASS, Artistry.location("block/potted_teardrop_grass"));
+        corpseFlowerBlock(CORPSE_FLOWER.get());
+        flyLureBlock(FLY_LURE.get());
 
-        honeydewFruitBlock(ArtistryBlocks.HONEYDEW_FRUIT.get());
-        crossCropBlock(ArtistryBlocks.HONEYDEW_STALK.get());
+        honeydewFruitBlock(HONEYDEW_FRUIT.get());
+        crossCropBlock(HONEYDEW_STALK.get());
 
-        axisBlock(ArtistryBlocks.COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/copper_chain")));
-        axisBlock(ArtistryBlocks.EXPOSED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/exposed_copper_chain")));
-        axisBlock(ArtistryBlocks.WEATHERED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/weathered_copper_chain")));
-        axisBlock(ArtistryBlocks.OXIDIZED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/oxidized_copper_chain")));
+        axisBlock(COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/copper_chain")));
+        axisBlock(EXPOSED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/exposed_copper_chain")));
+        axisBlock(WEATHERED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/weathered_copper_chain")));
+        axisBlock(OXIDIZED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/oxidized_copper_chain")));
 
-        axisBlock(ArtistryBlocks.WAXED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/copper_chain")));
-        axisBlock(ArtistryBlocks.WAXED_EXPOSED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/exposed_copper_chain")));
-        axisBlock(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/weathered_copper_chain")));
-        axisBlock(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/oxidized_copper_chain")));
+        axisBlock(WAXED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/copper_chain")));
+        axisBlock(WAXED_EXPOSED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/exposed_copper_chain")));
+        axisBlock(WAXED_WEATHERED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/weathered_copper_chain")));
+        axisBlock(WAXED_OXIDIZED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/oxidized_copper_chain")));
 
-        blockWithItem(ArtistryBlocks.ROCKY_DIRT);
+        blockWithItem(ROCKY_DIRT);
 
-        particlesOnly(ArtistryBlocks.PAINTED_POT.get(), blockTexture(Blocks.TERRACOTTA));
+        particlesOnly(PAINTED_POT.get(), blockTexture(Blocks.TERRACOTTA));
 
         ResourceLocation calciteTexture = blockTexture(Blocks.CALCITE);
-        ResourceLocation smoothCalciteTexture = blockTexture(ArtistryBlocks.SMOOTH_CALCITE.get());
-        ResourceLocation polishedCalciteTexture = blockTexture(ArtistryBlocks.POLISHED_CALCITE.get());
-        ResourceLocation calciteBrickTexture = blockTexture(ArtistryBlocks.CALCITE_BRICKS.get());
-        ResourceLocation smallCalciteBrickTexture = blockTexture(ArtistryBlocks.SMALL_CALCITE_BRICKS.get());
+        ResourceLocation smoothCalciteTexture = blockTexture(SMOOTH_CALCITE.get());
+        ResourceLocation polishedCalciteTexture = blockTexture(POLISHED_CALCITE.get());
+        ResourceLocation calciteBrickTexture = blockTexture(CALCITE_BRICKS.get());
+        ResourceLocation smallCalciteBrickTexture = blockTexture(SMALL_CALCITE_BRICKS.get());
 
-        stairsBlock(ArtistryBlocks.CALCITE_STAIRS.get(), calciteTexture);
-        slabBlock(ArtistryBlocks.CALCITE_SLAB.get(), calciteTexture, calciteTexture);
-        wallBlock(ArtistryBlocks.CALCITE_WALL.get(), calciteTexture);
+        stairsBlock(CALCITE_STAIRS.get(), calciteTexture);
+        slabBlock(CALCITE_SLAB.get(), calciteTexture, calciteTexture);
+        wallBlock(CALCITE_WALL.get(), calciteTexture);
 
-        blockWithItem(ArtistryBlocks.SMOOTH_CALCITE);
-        stairsBlock(ArtistryBlocks.SMOOTH_CALCITE_STAIRS.get(), smoothCalciteTexture);
-        slabBlock(ArtistryBlocks.SMOOTH_CALCITE_SLAB.get(), smoothCalciteTexture, smoothCalciteTexture);
+        blockWithItem(SMOOTH_CALCITE);
+        stairsBlock(SMOOTH_CALCITE_STAIRS.get(), smoothCalciteTexture);
+        slabBlock(SMOOTH_CALCITE_SLAB.get(), smoothCalciteTexture, smoothCalciteTexture);
 
-        blockWithItem(ArtistryBlocks.POLISHED_CALCITE);
-        blockWithItem(ArtistryBlocks.CHISELED_CALCITE);
-        stairsBlock(ArtistryBlocks.POLISHED_CALCITE_STAIRS.get(), polishedCalciteTexture);
-        slabBlock(ArtistryBlocks.POLISHED_CALCITE_SLAB.get(), polishedCalciteTexture, polishedCalciteTexture);
-        wallBlock(ArtistryBlocks.POLISHED_CALCITE_WALL.get(), polishedCalciteTexture);
+        blockWithItem(POLISHED_CALCITE);
+        blockWithItem(CHISELED_CALCITE);
+        stairsBlock(POLISHED_CALCITE_STAIRS.get(), polishedCalciteTexture);
+        slabBlock(POLISHED_CALCITE_SLAB.get(), polishedCalciteTexture, polishedCalciteTexture);
+        wallBlock(POLISHED_CALCITE_WALL.get(), polishedCalciteTexture);
 
-        blockWithItem(ArtistryBlocks.CALCITE_BRICKS);
-        stairsBlock(ArtistryBlocks.CALCITE_BRICK_STAIRS.get(), calciteBrickTexture);
-        slabBlock(ArtistryBlocks.CALCITE_BRICK_SLAB.get(), calciteBrickTexture, calciteBrickTexture);
-        wallBlock(ArtistryBlocks.CALCITE_BRICK_WALL.get(), calciteBrickTexture);
+        blockWithItem(CALCITE_BRICKS);
+        stairsBlock(CALCITE_BRICK_STAIRS.get(), calciteBrickTexture);
+        slabBlock(CALCITE_BRICK_SLAB.get(), calciteBrickTexture, calciteBrickTexture);
+        wallBlock(CALCITE_BRICK_WALL.get(), calciteBrickTexture);
 
-        ResourceLocation smallCalciteBrickTopTexture = blockTexture(ArtistryBlocks.SMALL_CALCITE_BRICKS.get()).withSuffix("_top");
-        simpleCubeColumn(ArtistryBlocks.SMALL_CALCITE_BRICKS.get());
-        stairsBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS.get(), smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
-        slabBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB.get(), smallCalciteBrickTexture, smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
+        ResourceLocation smallCalciteBrickTopTexture = blockTexture(SMALL_CALCITE_BRICKS.get()).withSuffix("_top");
+        simpleCubeColumn(SMALL_CALCITE_BRICKS.get());
+        stairsBlock(SMALL_CALCITE_BRICK_STAIRS.get(), smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
+        slabBlock(SMALL_CALCITE_BRICK_SLAB.get(), smallCalciteBrickTexture, smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
 
-        blockWithItem(ArtistryBlocks.PAINTED_SMOOTH_CALCITE);
-        blockWithItem(ArtistryBlocks.PAINTED_POLISHED_CALCITE);
-        blockWithItem(ArtistryBlocks.PAINTED_CALCITE_BRICKS);
-        simpleCubeColumn(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS.get());
+        blockWithItem(PAINTED_SMOOTH_CALCITE);
+        blockWithItem(PAINTED_POLISHED_CALCITE);
+        blockWithItem(PAINTED_CALCITE_BRICKS);
+        simpleCubeColumn(PAINTED_SMALL_CALCITE_BRICKS.get());
 
         ResourceLocation dripstoneTexture = blockTexture(Blocks.DRIPSTONE_BLOCK);
-        ResourceLocation polishedDripstoneTexture = blockTexture(ArtistryBlocks.POLISHED_DRIPSTONE.get());
-        ResourceLocation dripstoneBrickTexture = blockTexture(ArtistryBlocks.DRIPSTONE_BRICKS.get());
+        ResourceLocation polishedDripstoneTexture = blockTexture(POLISHED_DRIPSTONE.get());
+        ResourceLocation dripstoneBrickTexture = blockTexture(DRIPSTONE_BRICKS.get());
 
-        stairsBlock(ArtistryBlocks.DRIPSTONE_STAIRS.get(), dripstoneTexture);
-        slabBlock(ArtistryBlocks.DRIPSTONE_SLAB.get(), dripstoneTexture, dripstoneTexture);
-        wallBlock(ArtistryBlocks.DRIPSTONE_WALL.get(), dripstoneTexture);
+        stairsBlock(DRIPSTONE_STAIRS.get(), dripstoneTexture);
+        slabBlock(DRIPSTONE_SLAB.get(), dripstoneTexture, dripstoneTexture);
+        wallBlock(DRIPSTONE_WALL.get(), dripstoneTexture);
 
-        blockWithItem(ArtistryBlocks.POLISHED_DRIPSTONE);
-        blockWithItem(ArtistryBlocks.CHISELED_DRIPSTONE);
-        stairsBlock(ArtistryBlocks.POLISHED_DRIPSTONE_STAIRS.get(), polishedDripstoneTexture);
-        slabBlock(ArtistryBlocks.POLISHED_DRIPSTONE_SLAB.get(), polishedDripstoneTexture, polishedDripstoneTexture);
-        wallBlock(ArtistryBlocks.POLISHED_DRIPSTONE_WALL.get(), polishedDripstoneTexture);
+        blockWithItem(POLISHED_DRIPSTONE);
+        blockWithItem(CHISELED_DRIPSTONE);
+        stairsBlock(POLISHED_DRIPSTONE_STAIRS.get(), polishedDripstoneTexture);
+        slabBlock(POLISHED_DRIPSTONE_SLAB.get(), polishedDripstoneTexture, polishedDripstoneTexture);
+        wallBlock(POLISHED_DRIPSTONE_WALL.get(), polishedDripstoneTexture);
 
-        blockWithItem(ArtistryBlocks.DRIPSTONE_BRICKS);
-        stairsBlock(ArtistryBlocks.DRIPSTONE_BRICK_STAIRS.get(), dripstoneBrickTexture);
-        slabBlock(ArtistryBlocks.DRIPSTONE_BRICK_SLAB.get(), dripstoneBrickTexture, dripstoneBrickTexture);
-        wallBlock(ArtistryBlocks.DRIPSTONE_BRICK_WALL.get(), dripstoneBrickTexture);
+        blockWithItem(DRIPSTONE_BRICKS);
+        stairsBlock(DRIPSTONE_BRICK_STAIRS.get(), dripstoneBrickTexture);
+        slabBlock(DRIPSTONE_BRICK_SLAB.get(), dripstoneBrickTexture, dripstoneBrickTexture);
+        wallBlock(DRIPSTONE_BRICK_WALL.get(), dripstoneBrickTexture);
 
         // Aspen Wood
 
-        leavesBlock(ArtistryBlocks.ASPEN_LEAVES, "cutout_mipped");
+        leavesBlock(ASPEN_LEAVES, "cutout_mipped");
 
-        ResourceLocation aspenLogTexture = blockTexture(ArtistryBlocks.ASPEN_LOG.get());
-        ResourceLocation strippedAspenLogTexture = blockTexture(ArtistryBlocks.STRIPPED_ASPEN_LOG.get());
-        ResourceLocation aspenPlanksTexture = blockTexture(ArtistryBlocks.ASPEN_PLANKS.get());
+        ResourceLocation aspenLogTexture = blockTexture(ASPEN_LOG.get());
+        ResourceLocation strippedAspenLogTexture = blockTexture(STRIPPED_ASPEN_LOG.get());
+        ResourceLocation aspenPlanksTexture = blockTexture(ASPEN_PLANKS.get());
 
-        signBlock(ArtistryBlocks.ASPEN_SIGN.get(), ArtistryBlocks.ASPEN_WALL_SIGN.get(),
+        signBlock(ASPEN_SIGN.get(), ASPEN_WALL_SIGN.get(),
                 aspenPlanksTexture);
-        hangingSignBlock(ArtistryBlocks.ASPEN_HANGING_SIGN.get(), ArtistryBlocks.ASPEN_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ASPEN_HANGING_SIGN.get(), ASPEN_WALL_HANGING_SIGN.get(),
                 aspenPlanksTexture);
 
-        logBlock(ArtistryBlocks.ASPEN_LOG.get());
-        axisBlock(ArtistryBlocks.ASPEN_WOOD.get(), aspenLogTexture, aspenLogTexture);
-        logBlock(ArtistryBlocks.STRIPPED_ASPEN_LOG.get());
-        axisBlock(ArtistryBlocks.STRIPPED_ASPEN_WOOD.get(), strippedAspenLogTexture, strippedAspenLogTexture);
+        logBlock(ASPEN_LOG.get());
+        axisBlock(ASPEN_WOOD.get(), aspenLogTexture, aspenLogTexture);
+        logBlock(STRIPPED_ASPEN_LOG.get());
+        axisBlock(STRIPPED_ASPEN_WOOD.get(), strippedAspenLogTexture, strippedAspenLogTexture);
 
-        blockWithItem(ArtistryBlocks.ASPEN_PLANKS);
+        blockWithItem(ASPEN_PLANKS);
 
-        pottedCrossPlantBlock(ArtistryBlocks.POTTED_ASPEN_SAPLING);
+        pottedCrossPlantBlock(POTTED_ASPEN_SAPLING);
 
-        stairsBlock(ArtistryBlocks.ASPEN_STAIRS.get(), aspenPlanksTexture);
-        slabBlock(ArtistryBlocks.ASPEN_SLAB.get(), aspenPlanksTexture, aspenPlanksTexture);
-        buttonBlock(ArtistryBlocks.ASPEN_BUTTON.get(), aspenPlanksTexture);
-        pressurePlateBlock(ArtistryBlocks.ASPEN_PRESSURE_PLATE.get(), aspenPlanksTexture);
-        fenceBlock(ArtistryBlocks.ASPEN_FENCE.get(), aspenPlanksTexture);
-        fenceGateBlock(ArtistryBlocks.ASPEN_FENCE_GATE.get(), aspenPlanksTexture);
+        stairsBlock(ASPEN_STAIRS.get(), aspenPlanksTexture);
+        slabBlock(ASPEN_SLAB.get(), aspenPlanksTexture, aspenPlanksTexture);
+        buttonBlock(ASPEN_BUTTON.get(), aspenPlanksTexture);
+        pressurePlateBlock(ASPEN_PRESSURE_PLATE.get(), aspenPlanksTexture);
+        fenceBlock(ASPEN_FENCE.get(), aspenPlanksTexture);
+        fenceGateBlock(ASPEN_FENCE_GATE.get(), aspenPlanksTexture);
 
-        doorBlockWithRenderType(ArtistryBlocks.ASPEN_DOOR.get(), modLoc("block/aspen_door_bottom"), modLoc("block/aspen_door_top"), "cutout");
-        trapdoorBlockWithRenderType(ArtistryBlocks.ASPEN_TRAPDOOR.get(), modLoc("block/aspen_trapdoor"), true, "cutout");
+        doorBlockWithRenderType(ASPEN_DOOR.get(), modLoc("block/aspen_door_bottom"), modLoc("block/aspen_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ASPEN_TRAPDOOR.get(), modLoc("block/aspen_trapdoor"), true, "cutout");
 
-        crossBlockWithRenderType(ArtistryBlocks.ASPEN_SAPLING.get(), "cutout");
+        crossBlockWithRenderType(ASPEN_SAPLING.get(), "cutout");
 
-        // Woven Wood
+        horizontalBlock(HEADSTONE.get(), models().getExistingFile(Artistry.location("block/headstone")));
+        blockWithItem(LEECHING_SOIL);
+        simpleBlockWithItem(WAXED_LEECHING_SOIL.get(), cubeAll(LEECHING_SOIL.get()));
 
-        leavesBlock(ArtistryBlocks.WOVEN_LEAVES, "cutout_mipped");
+        carvedPumpkin(WICKED_CARVED_PUMPKIN.get());
+        carvedPumpkin(HUNGRY_CARVED_PUMPKIN.get());
+        carvedPumpkin(HAPPY_CARVED_PUMPKIN.get());
+        carvedPumpkin(STALWART_CARVED_PUMPKIN.get());
+        carvedPumpkin(PEEKING_CARVED_PUMPKIN.get());
+        carvedPumpkin(BELLOWING_CARVED_PUMPKIN.get());
 
-        ResourceLocation wovenLogTexture = blockTexture(ArtistryBlocks.WOVEN_LOG.get());
-        ResourceLocation strippedWovenLogTexture = blockTexture(ArtistryBlocks.STRIPPED_WOVEN_LOG.get());
-        ResourceLocation wovenPlanksTexture = blockTexture(ArtistryBlocks.WOVEN_PLANKS.get());
+        carvedPumpkin(WICKED_JACK_O_LANTERN.get());
+        carvedPumpkin(HUNGRY_JACK_O_LANTERN.get());
+        carvedPumpkin(HAPPY_JACK_O_LANTERN.get());
+        carvedPumpkin(STALWART_JACK_O_LANTERN.get());
+        carvedPumpkin(PEEKING_JACK_O_LANTERN.get());
+        carvedPumpkin(BELLOWING_JACK_O_LANTERN.get());
 
-        logBlock(ArtistryBlocks.WOVEN_LOG.get());
-        axisBlock(ArtistryBlocks.WOVEN_WOOD.get(), wovenLogTexture, wovenLogTexture);
-        logBlock(ArtistryBlocks.STRIPPED_WOVEN_LOG.get());
-        axisBlock(ArtistryBlocks.STRIPPED_WOVEN_WOOD.get(), strippedWovenLogTexture, strippedWovenLogTexture);
+        // Rotten Wood
 
-        blockWithItem(ArtistryBlocks.WOVEN_PLANKS);
+        leavesBlock(ROTTEN_LEAVES, "cutout_mipped");
 
 
+        ResourceLocation rottenLogTexture = blockTexture(ROTTEN_LOG.get());
+        ResourceLocation strippedRottenLogTexture = blockTexture(STRIPPED_ROTTEN_LOG.get());
+        ResourceLocation rottenPlanksTexture = blockTexture(ROTTEN_PLANKS.get());
+
+        signBlock(ROTTEN_SIGN.get(), ROTTEN_WALL_SIGN.get(),
+                rottenPlanksTexture);
+        hangingSignBlock(ROTTEN_HANGING_SIGN.get(), ROTTEN_WALL_HANGING_SIGN.get(),
+                rottenPlanksTexture);
+
+        logBlock(ROTTEN_LOG.get());
+        axisBlock(ROTTEN_WOOD.get(), rottenLogTexture, rottenLogTexture);
+        logBlock(STRIPPED_ROTTEN_LOG.get());
+        axisBlock(STRIPPED_ROTTEN_WOOD.get(), strippedRottenLogTexture, strippedRottenLogTexture);
+
+        simpleBlockWithVariants(ROTTEN_PLANKS.get(), 3);
+
+        stairsBlock(ROTTEN_STAIRS.get(), rottenPlanksTexture);
+        slabBlock(ROTTEN_SLAB.get(), rottenPlanksTexture, rottenPlanksTexture);
+        buttonBlock(ROTTEN_BUTTON.get(), rottenPlanksTexture);
+        pressurePlateBlock(ROTTEN_PRESSURE_PLATE.get(), rottenPlanksTexture);
+        fenceBlock(ROTTEN_FENCE.get(), rottenPlanksTexture);
+        fenceGateBlock(ROTTEN_FENCE_GATE.get(), rottenPlanksTexture);
+
+        doorBlockWithRenderType(ROTTEN_DOOR.get(), modLoc("block/rotten_door_bottom"), modLoc("block/rotten_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ROTTEN_TRAPDOOR.get(), modLoc("block/rotten_trapdoor"), true, "cutout");
+
+        crossBlockWithRenderType(ROTTEN_SAPLING.get(), "cutout");
+        pottedCrossPlantBlock(POTTED_ROTTEN_SAPLING);
+
+    }
+
+    private static final ResourceLocation PUMPKIN_SIDE = ResourceLocation.withDefaultNamespace("block/pumpkin_side");
+    private static final ResourceLocation PUMPKIN_TOP = ResourceLocation.withDefaultNamespace("block/pumpkin_top");
+
+    private void carvedPumpkin(CarvedPumpkinBlock block) {
+        ModelFile model = models().orientable(name(block), PUMPKIN_SIDE, blockTexture(block), PUMPKIN_TOP);
+        horizontalBlock(block, model);
+        simpleBlockItem(block, model);
     }
 
     private void honeydewFruitBlock(HoneydewFruitBlock block) {
@@ -281,6 +327,23 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
                 .addModels(ConfiguredModel.allYRotations(variant1, 0, false, 1))
         ;
         simpleBlockItem(block, variant0);
+    }
+
+    /**
+     * A simple block and item with multiple variants
+     * @param variants The number of variants excluding the primary texture
+     */
+    private void simpleBlockWithVariants(Block block, int variants){
+        ModelFile primary = cubeAll(block);
+        VariantBlockStateBuilder variantBuilder = getVariantBuilder(block);
+        variantBuilder.partialState().addModels(ConfiguredModel.builder().modelFile(primary).weight(1).build());
+
+        for (int i = 0; i < variants; i++){
+            variantBuilder.partialState().addModels(ConfiguredModel.builder()
+                    .modelFile(models().cubeAll(name(block) + "_" + i, blockTexture(block).withSuffix("_" + i)))
+                    .weight(1).build());
+        }
+        simpleBlockItem(block, primary);
     }
 
     public void axisBlock(RotatedPillarBlock block, ModelFile model) {

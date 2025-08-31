@@ -15,10 +15,14 @@ public class ArtistryBlockEntityTypes {
 
     public static final Supplier<BlockEntityType<ModSignBlockEntity>> MOD_SIGN =
             BLOCK_ENTITIES.register("mod_sign", () -> BlockEntityType.Builder.of(ModSignBlockEntity::new,
-                    ArtistryBlocks.ASPEN_SIGN.get(), ArtistryBlocks.ASPEN_WALL_SIGN.get()).build(null));
+                    ArtistryBlocks.ASPEN_SIGN.get(), ArtistryBlocks.ASPEN_WALL_SIGN.get(),
+                    ArtistryBlocks.ROTTEN_SIGN.get(), ArtistryBlocks.ROTTEN_WALL_SIGN.get()
+            ).build(null));
     public static final Supplier<BlockEntityType<ModHangingSignBlockEntity>> MOD_HANGING_SIGN =
             BLOCK_ENTITIES.register("mod_hanging_sign", () -> BlockEntityType.Builder.of(ModHangingSignBlockEntity::new,
-                    ArtistryBlocks.ASPEN_HANGING_SIGN.get(), ArtistryBlocks.ASPEN_WALL_HANGING_SIGN.get()).build(null));
+                    ArtistryBlocks.ASPEN_HANGING_SIGN.get(), ArtistryBlocks.ASPEN_WALL_HANGING_SIGN.get(),
+                    ArtistryBlocks.ROTTEN_HANGING_SIGN.get(), ArtistryBlocks.ROTTEN_WALL_HANGING_SIGN.get()
+            ).build(null));
     public static final Supplier<BlockEntityType<SparkFountainBlockEntity>> SPARK_FOUNTAIN =
             BLOCK_ENTITIES.register("spark_fountain", () -> BlockEntityType.Builder.of(SparkFountainBlockEntity::new,
                     ArtistryBlocks.SPARK_FOUNTAIN.get()).build(null));

@@ -1,4 +1,11 @@
 ## Added:
+- Leeching Soil
+    - Crafted with 2 Soul Sand or Soul Soil, two Dirt, and two Bones
+    - Will change certain blocks above itself
+    - Can be waxed like copper to stop this
+- Rotten Trees
+    - The sapling is obtained by placing any non-rotten sapling on Leeching Soil
+    - Can be grown like any other tree
 - Corpse Flower
     - Seed dug up by Sniffers in Crimson and Warped Nylium
     - Makes fly particles
@@ -10,9 +17,13 @@
 - Honeydew Fruit
     - Found as a random drop alongside Raw Gold in Gold Ore
     - Must be planted on any stone-like block (including Rocky Dirt)
+- Carving Knife
+    - Crafted like an Iron Sword but diagonal
+    - Can be used like shears on pumpkins (including Carved Pumpkins) to carve them into one of 7 variants (including vanilla Carved Pumpkins)
 ## Changes:
 - Changed the texture of Aspen Leaves
 - Made Sniffer Cakes remove the cooldown of the next 3 digs instead of just one
     - This number can be adjusted in the Server Config
 ## Fixes:
 - Made String Lights stackable to 64
+- Fixed some mistakes in the German translation

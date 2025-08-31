@@ -2,6 +2,7 @@ package com.feliscape.artistry.data.datagen.language;
 
 import com.feliscape.artistry.data.pot.ArtistryPaintedPotDecorations;
 import com.feliscape.artistry.registry.ArtistryBlocks;
+import com.feliscape.artistry.registry.ArtistryEntityTypes;
 import com.feliscape.artistry.registry.ArtistryItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.DyeColor;
@@ -14,10 +15,19 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
 
     @Override
     protected void addTranslations() {
+        this.addEntityType(ArtistryEntityTypes.MOD_BOAT, "Boot");
+        this.addEntityType(ArtistryEntityTypes.MOD_CHEST_BOAT, "Truhenboot");
+
         this.addItem(ArtistryItems.ASPEN_SIGN, "Espenholzschild");
         this.addItem(ArtistryItems.ASPEN_HANGING_SIGN, "Espenholzhängeschild");
         this.addItem(ArtistryItems.ASPEN_BOAT, "Espenholzboot");
         this.addItem(ArtistryItems.ASPEN_CHEST_BOAT, "Espenholztruhenboot");
+
+        this.addItem(ArtistryItems.ROTTEN_SIGN, "Verottetes schild");
+        this.addItem(ArtistryItems.ROTTEN_HANGING_SIGN, "Verottetes Hängeschild");
+        this.addItem(ArtistryItems.ROTTEN_BOAT, "Verrottetes Boot");
+        this.addItem(ArtistryItems.ROTTEN_CHEST_BOAT, "Verrottetes Truhenboot");
+
         this.addItem(ArtistryItems.SUNBURST_VINES, "Sonnenscheinranken");
         this.addItem(ArtistryItems.SUNSPROUT, "Sonnensprosse");
         this.addItem(ArtistryItems.FERN_SEED, "Farnsamen");
@@ -25,6 +35,7 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.ANCIENT_TEAR, "Antike Träne");
         this.addItem(ArtistryItems.SNIFFER_CAKE, "Schnüffler-Kuchen");
         this.addItemTooltip(ArtistryItems.SNIFFER_CAKE, "Das Lieblingsessen eines Schnüfflers");
+        this.addItem(ArtistryItems.CARVING_KNIFE, "Schnitzmesser");
 
         this.addBlock(ArtistryBlocks.MOSSY_BRICKS, "Bemooste Ziegelsteine");
         this.addBlock(ArtistryBlocks.CRACKED_BRICKS, "Rissige Ziegelsteine");
@@ -67,6 +78,7 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.DARK_OAK_TABLE, "Schwarzeichenholztisch");
         this.addBlock(ArtistryBlocks.MANGROVE_TABLE, "Mangrovenholztisch");
         this.addBlock(ArtistryBlocks.ASPEN_TABLE, "Espenholztisch");
+        this.addBlock(ArtistryBlocks.ROTTEN_TABLE, "Verrotteter Tisch");
         this.addBlock(ArtistryBlocks.BAMBOO_TABLE, "Bambustisch");
         this.addBlock(ArtistryBlocks.CRIMSON_TABLE, "Karmesintisch");
         this.addBlock(ArtistryBlocks.WARPED_TABLE, "Wirrtisch");
@@ -174,10 +186,10 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.ASPEN_PLANKS, "Espenholzbretter");
         this.addBlock(ArtistryBlocks.ASPEN_STAIRS, "Espenholztreppe");
         this.addBlock(ArtistryBlocks.ASPEN_SLAB, "Espenholzstufe");
-        this.addBlock(ArtistryBlocks.ASPEN_BUTTON, "Espenholz");
-        this.addBlock(ArtistryBlocks.ASPEN_PRESSURE_PLATE, "Espenholz");
-        this.addBlock(ArtistryBlocks.ASPEN_FENCE, "Espenholz");
-        this.addBlock(ArtistryBlocks.ASPEN_FENCE_GATE, "Espenholz");
+        this.addBlock(ArtistryBlocks.ASPEN_BUTTON, "Espenholzknopf");
+        this.addBlock(ArtistryBlocks.ASPEN_PRESSURE_PLATE, "Espenholzdruckplatte");
+        this.addBlock(ArtistryBlocks.ASPEN_FENCE, "Espenholzzaun");
+        this.addBlock(ArtistryBlocks.ASPEN_FENCE_GATE, "Espenholzzauntor");
 
         this.add("block.artistry.aspen_wall_sign", "Espenholzwandschild");
         this.add("block.artistry.aspen_wall_hanging_sign", "Espenholzwandhängeschild");
@@ -188,6 +200,45 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.POTTED_ASPEN_SAPLING, "Eingetopfter Espensetzling");
 
         this.addBlock(ArtistryBlocks.HEADSTONE, "Grabstein");
+        this.addBlock(ArtistryBlocks.LEECHING_SOIL, "Auslaugender Boden");
+        this.addBlock(ArtistryBlocks.WAXED_LEECHING_SOIL, "Gewachster auslaugender Boden");
+
+        this.addBlock(ArtistryBlocks.WICKED_CARVED_PUMPKIN, "Böser geschnitzter Kürbis");
+        this.addBlock(ArtistryBlocks.HUNGRY_CARVED_PUMPKIN, "Hungriger geschnitzter Kürbis");
+        this.addBlock(ArtistryBlocks.HAPPY_CARVED_PUMPKIN, "Fröhlicher geschnitzter Kürbis");
+        this.addBlock(ArtistryBlocks.STALWART_CARVED_PUMPKIN, "Stämmiger geschnitzter Kürbis");
+        this.addBlock(ArtistryBlocks.PEEKING_CARVED_PUMPKIN, "Spähender geschnitzter Kürbis");
+        this.addBlock(ArtistryBlocks.BELLOWING_CARVED_PUMPKIN, "Brüllender geschnitzter Kürbis");
+
+        this.addBlock(ArtistryBlocks.WICKED_JACK_O_LANTERN, "Böse Kürbislaterne");
+        this.addBlock(ArtistryBlocks.HUNGRY_JACK_O_LANTERN, "Hungrige Kürbislaterne");
+        this.addBlock(ArtistryBlocks.HAPPY_JACK_O_LANTERN, "Fröhliche Kürbislaterne");
+        this.addBlock(ArtistryBlocks.STALWART_JACK_O_LANTERN, "Stämmige Kürbislaterne");
+        this.addBlock(ArtistryBlocks.PEEKING_JACK_O_LANTERN, "Spähende Kürbislaterne");
+        this.addBlock(ArtistryBlocks.BELLOWING_JACK_O_LANTERN, "Brüllende Kürbislaterne");
+
+        // Rotten
+
+        this.addBlock(ArtistryBlocks.ROTTEN_LEAVES, "Verrottetes Laub");
+        this.addBlock(ArtistryBlocks.ROTTEN_LOG, "Verrotteter Stamm");
+        this.addBlock(ArtistryBlocks.ROTTEN_WOOD, "Verrottetes Holz");
+        this.addBlock(ArtistryBlocks.STRIPPED_ROTTEN_LOG, "Entrindeter verrotteter Stamm");
+        this.addBlock(ArtistryBlocks.STRIPPED_ROTTEN_WOOD, "Entrindetes verrottetes Holz");
+        this.addBlock(ArtistryBlocks.ROTTEN_PLANKS, "Verottete Bretter");
+        this.addBlock(ArtistryBlocks.ROTTEN_STAIRS, "Verottete Treppe");
+        this.addBlock(ArtistryBlocks.ROTTEN_SLAB, "Verottete Stufe");
+        this.addBlock(ArtistryBlocks.ROTTEN_BUTTON, "Verotteter Knopf");
+        this.addBlock(ArtistryBlocks.ROTTEN_PRESSURE_PLATE, "Verrottete Druckplatte");
+        this.addBlock(ArtistryBlocks.ROTTEN_FENCE, "Verotteter Zaun");
+        this.addBlock(ArtistryBlocks.ROTTEN_FENCE_GATE, "Verrottetes Zauntor");
+
+        this.add("block.artistry.rotten_wall_sign", "Verrottetes Wandschild");
+        this.add("block.artistry.rotten_wall_hanging_sign", "Verrottetes Wandhängeschild");
+
+        this.addBlock(ArtistryBlocks.ROTTEN_DOOR, "Verottete Tür");
+        this.addBlock(ArtistryBlocks.ROTTEN_TRAPDOOR, "Verottete Falltür");
+        this.addBlock(ArtistryBlocks.ROTTEN_SAPLING, "Verotteter Setzling");
+        this.addBlock(ArtistryBlocks.POTTED_ROTTEN_SAPLING, "Eingetopfter verotteter Setzling");
 
         this.addPaintedPotBase(DyeColor.WHITE, "Weiße Basis");
         this.addPaintedPotBase(DyeColor.LIGHT_GRAY, "Hellgraue Basis");

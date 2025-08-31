@@ -33,6 +33,9 @@ public class ModChestBoat extends ChestBoat {
             case ASPEN -> {
                 return ArtistryItems.ASPEN_CHEST_BOAT.get();
             }
+            case ROTTEN -> {
+                return ArtistryItems.ROTTEN_CHEST_BOAT.get();
+            }
         }
         return super.getDropItem();
     }

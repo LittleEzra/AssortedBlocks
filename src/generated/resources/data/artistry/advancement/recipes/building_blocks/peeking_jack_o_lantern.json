@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_peeking_carved_pumpkin": {
+      "conditions": {
+        "items": [
+          {
+            "items": "artistry:peeking_carved_pumpkin"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "artistry:peeking_jack_o_lantern"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_peeking_carved_pumpkin"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "artistry:peeking_jack_o_lantern"
+    ]
+  }
+}

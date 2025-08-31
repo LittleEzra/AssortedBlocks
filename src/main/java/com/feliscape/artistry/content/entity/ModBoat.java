@@ -36,6 +36,7 @@ public class ModBoat extends Boat{
     public Item getDropItem() {
         return switch (getModVariant()){
             case ASPEN -> ArtistryItems.ASPEN_BOAT.get();
+            case ROTTEN -> ArtistryItems.ROTTEN_BOAT.get();
         };
     }
 
@@ -66,7 +67,8 @@ public class ModBoat extends Boat{
     }
 
     public static enum Type implements StringRepresentable {
-        ASPEN(ArtistryBlocks.ASPEN_PLANKS.get(), "aspen");
+        ASPEN(ArtistryBlocks.ASPEN_PLANKS.get(), "aspen"),
+        ROTTEN(ArtistryBlocks.ROTTEN_PLANKS.get(), "rotten");
 
         private final String name;
         private final Block planks;

@@ -392,6 +392,7 @@ public class ArtistryRecipeProvider extends RecipeProvider {
         table(recipeOutput, ArtistryBlocks.DARK_OAK_TABLE, Blocks.DARK_OAK_SLAB);
         table(recipeOutput, ArtistryBlocks.MANGROVE_TABLE, Blocks.MANGROVE_SLAB);
         table(recipeOutput, ArtistryBlocks.ASPEN_TABLE, ArtistryBlocks.ASPEN_SLAB);
+        table(recipeOutput, ArtistryBlocks.ROTTEN_TABLE, ArtistryBlocks.ROTTEN_SLAB);
         table(recipeOutput, ArtistryBlocks.BAMBOO_TABLE, Blocks.BAMBOO_SLAB);
         table(recipeOutput, ArtistryBlocks.CRIMSON_TABLE, Blocks.CRIMSON_SLAB);
         table(recipeOutput, ArtistryBlocks.WARPED_TABLE, Blocks.WARPED_SLAB);
@@ -582,6 +583,14 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("L#L")
                 .unlockedBy("has_sniffer_food", has(ItemTags.SNIFFER_FOOD))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ArtistryItems.CARVING_KNIFE)
+                .define('/', Items.STICK)
+                .define('#', Items.IRON_INGOT)
+                .pattern("  #")
+                .pattern(" # ")
+                .pattern("/  ")
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.FLY_LURE)
                 .define('/', Tags.Items.RODS_WOODEN)
@@ -601,6 +610,21 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("##")
                 .unlockedBy(getHasName(Blocks.STONE_BRICKS), has(Blocks.STONE_BRICKS))
                 .save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.LEECHING_SOIL, 4)
+                .requires(Ingredient.of(ItemTags.SOUL_FIRE_BASE_BLOCKS), 2)
+                .requires(Blocks.DIRT, 2)
+                .requires(Items.BONE, 2)
+                .unlockedBy("has_soul_fire_base_block", has(ItemTags.SOUL_FIRE_BASE_BLOCKS))
+                .save(recipeOutput);
+        ;
+
+        jackOLantern(recipeOutput, ArtistryBlocks.WICKED_CARVED_PUMPKIN, ArtistryBlocks.WICKED_JACK_O_LANTERN);
+        jackOLantern(recipeOutput, ArtistryBlocks.HUNGRY_CARVED_PUMPKIN, ArtistryBlocks.HUNGRY_JACK_O_LANTERN);
+        jackOLantern(recipeOutput, ArtistryBlocks.HAPPY_CARVED_PUMPKIN, ArtistryBlocks.HAPPY_JACK_O_LANTERN);
+        jackOLantern(recipeOutput, ArtistryBlocks.STALWART_CARVED_PUMPKIN, ArtistryBlocks.STALWART_JACK_O_LANTERN);
+        jackOLantern(recipeOutput, ArtistryBlocks.PEEKING_CARVED_PUMPKIN, ArtistryBlocks.PEEKING_JACK_O_LANTERN);
+        jackOLantern(recipeOutput, ArtistryBlocks.BELLOWING_CARVED_PUMPKIN, ArtistryBlocks.BELLOWING_JACK_O_LANTERN);
 
         //region Aspen
         planksFromLog(recipeOutput, ArtistryBlocks.ASPEN_PLANKS.get(), ArtistryTags.Items.ASPEN_LOGS, 4);
@@ -642,6 +666,58 @@ public class ArtistryRecipeProvider extends RecipeProvider {
         woodenBoat(recipeOutput, ArtistryItems.ASPEN_BOAT, ArtistryBlocks.ASPEN_PLANKS.get());
         chestBoat(recipeOutput, ArtistryItems.ASPEN_CHEST_BOAT, ArtistryItems.ASPEN_BOAT);
         //endregion
+
+
+        //region Rotten
+        planksFromLog(recipeOutput, ArtistryBlocks.ROTTEN_PLANKS.get(), ArtistryTags.Items.ROTTEN_LOGS, 4);
+        woodFromLogs(recipeOutput, ArtistryBlocks.ROTTEN_WOOD.get(), ArtistryBlocks.ROTTEN_LOG.get());
+        woodFromLogs(recipeOutput, ArtistryBlocks.STRIPPED_ROTTEN_WOOD.get(), ArtistryBlocks.STRIPPED_ROTTEN_LOG.get());
+
+        Ingredient rottenPlankIngredient = Ingredient.of(ArtistryBlocks.ROTTEN_PLANKS.get());
+
+        String hasRottenPlanksName = getHasName(ArtistryBlocks.ROTTEN_PLANKS.get());
+        var hasRottenPlanks = has(ArtistryBlocks.ROTTEN_PLANKS.get());
+
+
+        stairBuilder(ArtistryBlocks.ROTTEN_STAIRS.get(), rottenPlankIngredient)
+                .unlockedBy(hasRottenPlanksName, hasRottenPlanks)
+                .save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.ROTTEN_SLAB.get(), ArtistryBlocks.ROTTEN_PLANKS.get());
+        doorBuilder(ArtistryBlocks.ROTTEN_DOOR.get(), rottenPlankIngredient)
+                .unlockedBy(hasRottenPlanksName, hasRottenPlanks)
+                .save(recipeOutput);
+        trapdoorBuilder(ArtistryBlocks.ROTTEN_TRAPDOOR.get(), rottenPlankIngredient)
+                .unlockedBy(hasRottenPlanksName, hasRottenPlanks)
+                .save(recipeOutput);
+        signBuilder(ArtistryItems.ROTTEN_SIGN.get(), rottenPlankIngredient)
+                .unlockedBy(hasRottenPlanksName, hasRottenPlanks)
+                .save(recipeOutput);
+        hangingSign(recipeOutput, ArtistryItems.ROTTEN_HANGING_SIGN.get(), ArtistryBlocks.ROTTEN_PLANKS.get());
+
+        fenceBuilder(ArtistryBlocks.ROTTEN_FENCE.get(), rottenPlankIngredient)
+                .unlockedBy(hasRottenPlanksName, hasRottenPlanks)
+                .save(recipeOutput);
+        fenceGateBuilder(ArtistryBlocks.ROTTEN_FENCE_GATE.get(), rottenPlankIngredient)
+                .unlockedBy(hasRottenPlanksName, hasRottenPlanks)
+                .save(recipeOutput);;
+        buttonBuilder(ArtistryBlocks.ROTTEN_BUTTON.get(), rottenPlankIngredient)
+                .unlockedBy(hasRottenPlanksName, hasRottenPlanks)
+                .save(recipeOutput);;
+        pressurePlate(recipeOutput, ArtistryBlocks.ROTTEN_PRESSURE_PLATE.get(), ArtistryBlocks.ROTTEN_PLANKS.get());
+
+        woodenBoat(recipeOutput, ArtistryItems.ROTTEN_BOAT, ArtistryBlocks.ROTTEN_PLANKS.get());
+        chestBoat(recipeOutput, ArtistryItems.ROTTEN_CHEST_BOAT, ArtistryItems.ROTTEN_BOAT);
+        //endregion
+    }
+
+    private void jackOLantern(RecipeOutput recipeOutput, ItemLike carved, ItemLike jackOLantern) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, jackOLantern)
+                .define('A', carved)
+                .define('B', Blocks.TORCH)
+                .pattern("A")
+                .pattern("B")
+                .unlockedBy(getHasName(carved), has(carved))
+                .save(recipeOutput);
     }
 
     private void frostedGlass(RecipeOutput output, ItemLike frostedGlass, ItemLike cleanGlass, ItemLike dye) {

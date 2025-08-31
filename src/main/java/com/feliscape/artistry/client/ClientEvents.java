@@ -64,6 +64,8 @@ public class ClientEvents {
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
         event.registerLayerDefinition(ArtistryModelLayers.ASPEN_BOAT, BoatModel::createBodyModel);
         event.registerLayerDefinition(ArtistryModelLayers.ASPEN_CHEST_BOAT, ChestBoatModel::createBodyModel);
+        event.registerLayerDefinition(ArtistryModelLayers.ROTTEN_BOAT, BoatModel::createBodyModel);
+        event.registerLayerDefinition(ArtistryModelLayers.ROTTEN_CHEST_BOAT, ChestBoatModel::createBodyModel);
     }
 
     @SubscribeEvent

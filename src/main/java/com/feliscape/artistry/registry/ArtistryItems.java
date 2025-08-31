@@ -4,6 +4,7 @@ import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.content.block.entity.SparkFountainBlockEntity;
 import com.feliscape.artistry.content.entity.ModBoat;
 import com.feliscape.artistry.content.item.AncientTearItem;
+import com.feliscape.artistry.content.item.CarvingKnifeItem;
 import com.feliscape.artistry.content.item.ModBoatItem;
 import com.feliscape.artistry.content.item.SnifferCakeItem;
 import com.feliscape.artistry.content.pot.PaintedPotDecorations;
@@ -34,6 +35,8 @@ public class ArtistryItems {
             AncientTearItem::new);
     public static final DeferredItem<SnifferCakeItem> SNIFFER_CAKE = ITEMS.registerItem("sniffer_cake",
             SnifferCakeItem::new);
+    public static final DeferredItem<CarvingKnifeItem> CARVING_KNIFE = ITEMS.registerItem("carving_knife",
+            p -> new CarvingKnifeItem(p.attributes(SwordItem.createAttributes(Tiers.IRON, 1, -2.0F))));
 
     public static final DeferredItem<StandingAndWallBlockItem> STRING_LIGHTS = ITEMS.registerItem("string_lights",
             p -> new StandingAndWallBlockItem(ArtistryBlocks.STRING_LIGHTS.get(), ArtistryBlocks.WALL_STRING_LIGHTS.get(), p, Direction.UP));
@@ -50,6 +53,16 @@ public class ArtistryItems {
             p -> new ModBoatItem(false, ModBoat.Type.ASPEN, new Item.Properties().stacksTo(1)));
     public static final DeferredItem<ModBoatItem> ASPEN_CHEST_BOAT = ITEMS.register("aspen_chest_boat",
             p -> new ModBoatItem(true, ModBoat.Type.ASPEN, new Item.Properties().stacksTo(1)));
+
+    public static final DeferredItem<SignItem> ROTTEN_SIGN = ITEMS.registerItem("rotten_sign",
+            p -> new SignItem(p.stacksTo(16), ArtistryBlocks.ROTTEN_SIGN.get(), ArtistryBlocks.ROTTEN_WALL_SIGN.get()));
+    public static final DeferredItem<HangingSignItem> ROTTEN_HANGING_SIGN = ITEMS.registerItem("rotten_hanging_sign",
+            p -> new HangingSignItem(ArtistryBlocks.ROTTEN_HANGING_SIGN.get(), ArtistryBlocks.ROTTEN_WALL_HANGING_SIGN.get(), p.stacksTo(16)));
+
+    public static final DeferredItem<ModBoatItem> ROTTEN_BOAT = ITEMS.registerItem("rotten_boat",
+            p -> new ModBoatItem(false, ModBoat.Type.ROTTEN, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<ModBoatItem> ROTTEN_CHEST_BOAT = ITEMS.register("rotten_chest_boat",
+            p -> new ModBoatItem(true, ModBoat.Type.ROTTEN, new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

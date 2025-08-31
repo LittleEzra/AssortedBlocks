@@ -2,6 +2,8 @@
   "values": [
     "artistry:overgrown_stone_tiles",
     "artistry:rocky_dirt",
-    "artistry:teardrop_grass_block"
+    "artistry:teardrop_grass_block",
+    "artistry:leeching_soil",
+    "artistry:waxed_leeching_soil"
   ]
 }

@@ -11,4 +11,9 @@ public class ArtistryTreeGrowers {
                     Optional.empty(),
                     Optional.of(ArtistryTreeFeatures.ASPEN_TREE),
                     Optional.empty());
+    public static final TreeGrower ROTTEN =
+            new TreeGrower(Artistry.location("rotten").toString(),
+                    Optional.empty(),
+                    Optional.of(ArtistryTreeFeatures.ROTTEN_TREE),
+                    Optional.empty());
 }

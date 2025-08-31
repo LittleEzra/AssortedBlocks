@@ -6,6 +6,9 @@
     "artistry:exposed_copper_chain": {
       "waxed": "artistry:waxed_exposed_copper_chain"
     },
+    "artistry:leeching_soil": {
+      "waxed": "artistry:waxed_leeching_soil"
+    },
     "artistry:oxidized_copper_chain": {
       "waxed": "artistry:waxed_oxidized_copper_chain"
     },

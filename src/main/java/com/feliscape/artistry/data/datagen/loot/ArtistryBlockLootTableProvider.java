@@ -75,6 +75,7 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.DARK_OAK_TABLE.get());
         this.dropSelf(ArtistryBlocks.MANGROVE_TABLE.get());
         this.dropSelf(ArtistryBlocks.ASPEN_TABLE.get());
+        this.dropSelf(ArtistryBlocks.ROTTEN_TABLE.get());
         this.dropSelf(ArtistryBlocks.BAMBOO_TABLE.get());
         this.dropSelf(ArtistryBlocks.CRIMSON_TABLE.get());
         this.dropSelf(ArtistryBlocks.WARPED_TABLE.get());
@@ -208,18 +209,56 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ArtistryBlocks.ASPEN_LEAVES.get(),
                 block -> createLeavesDrops(block, ArtistryBlocks.ASPEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
-        // Woven Wood
-
-        this.dropSelf(ArtistryBlocks.WOVEN_LOG.get());
-        this.dropSelf(ArtistryBlocks.WOVEN_WOOD.get());
-        this.dropSelf(ArtistryBlocks.STRIPPED_WOVEN_LOG.get());
-        this.dropSelf(ArtistryBlocks.STRIPPED_WOVEN_WOOD.get());
-        this.dropSelf(ArtistryBlocks.WOVEN_PLANKS.get());
-
-        this.add(ArtistryBlocks.WOVEN_LEAVES.get(),
-                block -> createLeavesDrops(block, ArtistryBlocks.ASPEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
-
         this.dropSelf(ArtistryBlocks.HEADSTONE.get());
+        this.dropSelf(ArtistryBlocks.LEECHING_SOIL.get());
+        this.dropSelf(ArtistryBlocks.WAXED_LEECHING_SOIL.get());
+        this.dropSelf(ArtistryBlocks.ROTTEN_PLANKS.get());
+
+        this.dropSelf(ArtistryBlocks.WICKED_CARVED_PUMPKIN.get());
+        this.dropSelf(ArtistryBlocks.HUNGRY_CARVED_PUMPKIN.get());
+        this.dropSelf(ArtistryBlocks.HAPPY_CARVED_PUMPKIN.get());
+        this.dropSelf(ArtistryBlocks.STALWART_CARVED_PUMPKIN.get());
+        this.dropSelf(ArtistryBlocks.PEEKING_CARVED_PUMPKIN.get());
+        this.dropSelf(ArtistryBlocks.BELLOWING_CARVED_PUMPKIN.get());
+
+        this.dropSelf(ArtistryBlocks.WICKED_JACK_O_LANTERN.get());
+        this.dropSelf(ArtistryBlocks.HUNGRY_JACK_O_LANTERN.get());
+        this.dropSelf(ArtistryBlocks.HAPPY_JACK_O_LANTERN.get());
+        this.dropSelf(ArtistryBlocks.STALWART_JACK_O_LANTERN.get());
+        this.dropSelf(ArtistryBlocks.PEEKING_JACK_O_LANTERN.get());
+        this.dropSelf(ArtistryBlocks.BELLOWING_JACK_O_LANTERN.get());
+
+        // Aspen
+
+        this.dropSelf(ArtistryBlocks.ROTTEN_LOG.get());
+        this.dropSelf(ArtistryBlocks.ROTTEN_WOOD.get());
+        this.dropSelf(ArtistryBlocks.STRIPPED_ROTTEN_LOG.get());
+        this.dropSelf(ArtistryBlocks.STRIPPED_ROTTEN_WOOD.get());
+        this.dropSelf(ArtistryBlocks.ROTTEN_PLANKS.get());
+
+        this.add(ArtistryBlocks.ROTTEN_SIGN.get(), block ->
+                createSingleItemTable(ArtistryItems.ROTTEN_SIGN.get()));
+        this.add(ArtistryBlocks.ROTTEN_WALL_SIGN.get(), block ->
+                createSingleItemTable(ArtistryItems.ROTTEN_SIGN.get()));
+        this.add(ArtistryBlocks.ROTTEN_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ArtistryItems.ROTTEN_HANGING_SIGN.get()));
+        this.add(ArtistryBlocks.ROTTEN_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ArtistryItems.ROTTEN_HANGING_SIGN.get()));
+
+        this.dropSelf(ArtistryBlocks.ROTTEN_STAIRS.get());
+        this.dropSelf(ArtistryBlocks.ROTTEN_BUTTON.get());
+        this.dropSelf(ArtistryBlocks.ROTTEN_PRESSURE_PLATE.get());
+        this.dropSelf(ArtistryBlocks.ROTTEN_TRAPDOOR.get());
+        this.dropSelf(ArtistryBlocks.ROTTEN_FENCE.get());
+        this.dropSelf(ArtistryBlocks.ROTTEN_FENCE_GATE.get());
+        this.dropSelf(ArtistryBlocks.ROTTEN_SAPLING.get());
+        this.dropPottedContents(ArtistryBlocks.POTTED_ROTTEN_SAPLING.get());
+
+        this.add(ArtistryBlocks.ROTTEN_SLAB.get(), this::createSlabItemTable);
+        this.add(ArtistryBlocks.ROTTEN_DOOR.get(), this::createDoorTable);
+
+        this.add(ArtistryBlocks.ROTTEN_LEAVES.get(),
+                block -> createLeavesDrops(block, ArtistryBlocks.ROTTEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     protected LootTable.Builder createSingleTriplePlantShearsDrop(Block sheared) {

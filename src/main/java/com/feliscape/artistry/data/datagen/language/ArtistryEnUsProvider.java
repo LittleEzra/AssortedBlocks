@@ -17,6 +17,12 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.ASPEN_HANGING_SIGN, "Aspen Hanging Sign");
         this.addItem(ArtistryItems.ASPEN_BOAT, "Aspen Boat");
         this.addItem(ArtistryItems.ASPEN_CHEST_BOAT, "Aspen Boat with Chest");
+
+        this.addItem(ArtistryItems.ROTTEN_SIGN, "Rotten Sign");
+        this.addItem(ArtistryItems.ROTTEN_HANGING_SIGN, "Rotten Hanging Sign");
+        this.addItem(ArtistryItems.ROTTEN_BOAT, "Rotten Boat");
+        this.addItem(ArtistryItems.ROTTEN_CHEST_BOAT, "Rotten Boat with Chest");
+
         this.addItem(ArtistryItems.SUNBURST_VINES, "Sunburst Vines");
         this.addItem(ArtistryItems.SUNSPROUT, "Sunsprout");
         this.addItem(ArtistryItems.FERN_SEED, "Fern Seed");
@@ -24,6 +30,7 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.ANCIENT_TEAR, "Ancient Tear");
         this.addItem(ArtistryItems.SNIFFER_CAKE, "Sniffer Cake");
         this.addItemTooltip(ArtistryItems.SNIFFER_CAKE, "A Sniffer's favorite food");
+        this.addItem(ArtistryItems.CARVING_KNIFE, "Carving Knife");
 
         this.addBlock(ArtistryBlocks.MOSSY_BRICKS, "Mossy Bricks");
         this.addBlock(ArtistryBlocks.CRACKED_BRICKS, "Cracked Bricks");
@@ -65,6 +72,7 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.DARK_OAK_TABLE, "Dark Oak Table");
         this.addBlock(ArtistryBlocks.MANGROVE_TABLE, "Mangrove Table");
         this.addBlock(ArtistryBlocks.ASPEN_TABLE, "Aspen Table");
+        this.addBlock(ArtistryBlocks.ROTTEN_TABLE, "Rotten Table");
         this.addBlock(ArtistryBlocks.BAMBOO_TABLE, "Bamboo Table");
         this.addBlock(ArtistryBlocks.CRIMSON_TABLE, "Crimson Table");
         this.addBlock(ArtistryBlocks.WARPED_TABLE, "Warped Table");
@@ -77,7 +85,7 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.POLISHED_BLACKSTONE_TABLE, "Polished Blackstone Table");
         this.addBlock(ArtistryBlocks.TUFF_TABLE, "Tuff Table");
         this.addBlock(ArtistryBlocks.CALCITE_TABLE, "Calcite Table");
-        
+
         this.addBlock(ArtistryBlocks.WHITE_FROSTED_GLASS, "White Frosted Glass");
         this.addBlock(ArtistryBlocks.LIGHT_GRAY_FROSTED_GLASS, "Light Gray Frosted Glass");
         this.addBlock(ArtistryBlocks.GRAY_FROSTED_GLASS, "Gray Frosted Glass");
@@ -187,16 +195,46 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.ASPEN_SAPLING, "Aspen Sapling");
         this.addBlock(ArtistryBlocks.POTTED_ASPEN_SAPLING, "Potted Aspen Sapling");
 
-        // Woven Wood
-
-        this.addBlock(ArtistryBlocks.WOVEN_LEAVES, "Woven Leaves");
-        this.addBlock(ArtistryBlocks.WOVEN_LOG, "Woven Log");
-        this.addBlock(ArtistryBlocks.WOVEN_WOOD, "Woven Wood");
-        this.addBlock(ArtistryBlocks.STRIPPED_WOVEN_LOG, "Stripped Woven Log");
-        this.addBlock(ArtistryBlocks.STRIPPED_WOVEN_WOOD, "Stripped Woven Wood");
-        this.addBlock(ArtistryBlocks.WOVEN_PLANKS, "Woven Planks");
-
         this.addBlock(ArtistryBlocks.HEADSTONE, "Headstone");
+        this.addBlock(ArtistryBlocks.LEECHING_SOIL, "Leeching Soil");
+        this.addBlock(ArtistryBlocks.WAXED_LEECHING_SOIL, "Waxed Leeching Soil");
+
+        this.addBlock(ArtistryBlocks.WICKED_CARVED_PUMPKIN, "Wicked Carved Pumpkin");
+        this.addBlock(ArtistryBlocks.HUNGRY_CARVED_PUMPKIN, "Hungry Carved Pumpkin");
+        this.addBlock(ArtistryBlocks.HAPPY_CARVED_PUMPKIN, "Happy Carved Pumpkin");
+        this.addBlock(ArtistryBlocks.STALWART_CARVED_PUMPKIN, "Stalwart Carved Pumpkin");
+        this.addBlock(ArtistryBlocks.PEEKING_CARVED_PUMPKIN, "Peeking Carved Pumpkin");
+        this.addBlock(ArtistryBlocks.BELLOWING_CARVED_PUMPKIN, "Bellowing Carved Pumpkin");
+
+        this.addBlock(ArtistryBlocks.WICKED_JACK_O_LANTERN, "Wicked Jack o' Lantern");
+        this.addBlock(ArtistryBlocks.HUNGRY_JACK_O_LANTERN, "Hungry Jack o' Lantern");
+        this.addBlock(ArtistryBlocks.HAPPY_JACK_O_LANTERN, "Happy Jack o' Lantern");
+        this.addBlock(ArtistryBlocks.STALWART_JACK_O_LANTERN, "Stalwart Jack o' Lantern");
+        this.addBlock(ArtistryBlocks.PEEKING_JACK_O_LANTERN, "Peeking Jack o' Lantern");
+        this.addBlock(ArtistryBlocks.BELLOWING_JACK_O_LANTERN, "Bellowing Jack o' Lantern");
+
+        // Rotten
+
+        this.addBlock(ArtistryBlocks.ROTTEN_LEAVES, "Rotten Leaves");
+        this.addBlock(ArtistryBlocks.ROTTEN_LOG, "Rotten Log");
+        this.addBlock(ArtistryBlocks.ROTTEN_WOOD, "Rotten Wood");
+        this.addBlock(ArtistryBlocks.STRIPPED_ROTTEN_LOG, "Stripped Rotten Log");
+        this.addBlock(ArtistryBlocks.STRIPPED_ROTTEN_WOOD, "Stripped Rotten Wood");
+        this.addBlock(ArtistryBlocks.ROTTEN_PLANKS, "Rotten Planks");
+        this.addBlock(ArtistryBlocks.ROTTEN_STAIRS, "Rotten Stairs");
+        this.addBlock(ArtistryBlocks.ROTTEN_SLAB, "Rotten Slab");
+        this.addBlock(ArtistryBlocks.ROTTEN_BUTTON, "Rotten Button");
+        this.addBlock(ArtistryBlocks.ROTTEN_PRESSURE_PLATE, "Rotten Pressure Plate");
+        this.addBlock(ArtistryBlocks.ROTTEN_FENCE, "Rotten Fence");
+        this.addBlock(ArtistryBlocks.ROTTEN_FENCE_GATE, "Rotten Fence Gate");
+
+        this.add("block.artistry.rotten_wall_sign", "Rotten Wall Sign");
+        this.add("block.artistry.rotten_wall_hanging_sign", "Rotten Wall Hanging Sign");
+
+        this.addBlock(ArtistryBlocks.ROTTEN_DOOR, "Rotten Door");
+        this.addBlock(ArtistryBlocks.ROTTEN_TRAPDOOR, "Rotten Trapdoor");
+        this.addBlock(ArtistryBlocks.ROTTEN_SAPLING, "Rotten Sapling");
+        this.addBlock(ArtistryBlocks.POTTED_ROTTEN_SAPLING, "Potted Rotten Sapling");
 
         this.addPaintedPotBase(DyeColor.WHITE, "White Base");
         this.addPaintedPotBase(DyeColor.LIGHT_GRAY, "Light Gray Base");

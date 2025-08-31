@@ -15,6 +15,12 @@
     "artistry:lush_fern": {
       "chance": 0.3
     },
+    "artistry:rotten_leaves": {
+      "chance": 0.3
+    },
+    "artistry:rotten_sapling": {
+      "chance": 0.3
+    },
     "artistry:short_teardrop_grass": {
       "chance": 0.3
     },

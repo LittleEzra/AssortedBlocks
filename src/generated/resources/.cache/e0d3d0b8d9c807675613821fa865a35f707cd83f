@@ -1,6 +1,8 @@
-// 1.21.1	2025-08-12T15:04:49.7903583	Data Maps
+// 1.21.1	2025-08-29T15:20:47.7583506	Data Maps
+a8d25981682966619ec1b6870f23b7fd608888e6 data/artistry/data_maps/block/leechables.json
 9d83d6b0a522af4054b31f5a4ba6ebb1082832d1 data/artistry/data_maps/block/sniffer_plants.json
+133ad200091a6be41846f7081e16ef63abc737de data/artistry/data_maps/block/strippables.json
 da91e45ac25a5c24083fd25b1cd71b3abf7dbcef data/neoforge/data_maps/block/oxidizables.json
-cf9b00962bf291cabff7b3c89202dad9d1736a4f data/neoforge/data_maps/block/waxables.json
-33da02ed91b036b0752e2cb92ad4e49b8974780f data/neoforge/data_maps/item/compostables.json
+f88c465fcc0af20555585d84bc02729f60673831 data/neoforge/data_maps/block/waxables.json
+1b4b7ca26492ac09bf007e6a5e4e185546c5a9dc data/neoforge/data_maps/item/compostables.json
 efbb37977c18bd879873febfa6cc03882f9d3056 data/neoforge/data_maps/item/furnace_fuels.json

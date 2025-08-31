@@ -7,4 +7,5 @@ import static net.minecraft.world.level.block.state.properties.BlockSetType.regi
 
 public class ArtistryBlockSetTypes {
     public static final BlockSetType ASPEN = register(new BlockSetType(Artistry.stringLocation("aspen")));
+    public static final BlockSetType ROTTEN = register(new BlockSetType(Artistry.stringLocation("rotten")));
 }
