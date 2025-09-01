@@ -304,24 +304,28 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         getVariantBuilder(block).forAllStatesExcept(state -> {
             int count = state.getValue(TallCandleBlock.CANDLES);
             boolean lit = state.getValue(TallCandleBlock.LIT);
-            String suffix = getTallCandleSuffix(count, lit);
-            String parentName = "block/template" + getTallCandleSuffix(count, false);
+            boolean base = state.getValue(TallCandleBlock.BASE);
+            String suffix = getTallCandleSuffix(count, lit, base);
+            String parentName = "block/template" + getTallCandleSuffix(count, false, base);
 
-            ModelFile file = models().withExistingParent(name(block) + suffix, Artistry.location(parentName))
-                    .texture("all", blockTexture(block).withSuffix(lit ? "_lit" : ""));
+            ResourceLocation name = getLocation(block);
+            ModelFile file = models().withExistingParent("block/tall_candle/" + name(block) + suffix, Artistry.location(parentName))
+                    .texture("all", ResourceLocation.fromNamespaceAndPath(name.getNamespace(),
+                            ModelProvider.BLOCK_FOLDER + "/tall_candle/" + name.getPath() + (base ? "_base" : (lit ? "_lit" : ""))
+                    ));
 
             return ConfiguredModel.builder().modelFile(file).build();
             }, TallCandleBlock.WATERLOGGED);
     }
 
-    private String getTallCandleSuffix(int count, boolean lit) {
+    private String getTallCandleSuffix(int count, boolean lit, boolean base) {
         String countString = switch (count) {
             case 2 -> "_two_tall_candles";
             case 3 -> "_three_tall_candles";
             case 4 -> "_four_tall_candles";
             default -> "_one_tall_candle";
         };
-        return lit ? countString + "_lit" : countString;
+        return base ? countString + "_base" : (lit ? countString + "_lit" : countString);
     }
 
     private void carvedPumpkin(CarvedPumpkinBlock block) {

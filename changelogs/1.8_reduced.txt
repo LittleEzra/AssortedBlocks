@@ -1,0 +1,28 @@
+## Added:
+- Leeching Soil
+    - Will "leech" and change certain blocks above itself
+    - Can be waxed like copper to stop this
+    - This feature is data-driven using a data map with the id "artistry:leechables"
+- Rotten Trees, a sapling obtained by leeching a sapling
+- Marigold, a flower obtained by leeching any small flower
+- Corpse Flower
+    - ! UNOBTAINABLE !
+- Fly Lure
+    - ! UNOBTAINABLE !
+- Golden Bulb
+    - Found as a random drop alongside Raw Gold in Gold Ore
+    - Must be planted on any stone-like block (including Rocky Dirt)
+- Carving Knife
+    - Can be used like shears on pumpkins (including Carved Pumpkins)to carve them into one of 7 variants (including vanilla Carved Pumpkins)
+- Tall Candles in all colors + undyed
+    - Can be stacked up to a height of two to make even taller candles
+- Urn
+    - Acts as a single-item storage like a decorated pot
+## Changes:
+- Changed the texture of Aspen Leaves
+- Made Sniffer Cakes remove the cooldown of the next 3 digs instead of just one
+    - This number can be adjusted in the Server Config
+## Fixes:
+- Made String Lights stackable to 64
+- Fixed some mistakes in the German translation
+- Made it so you can no longer dye pots with sherds on them

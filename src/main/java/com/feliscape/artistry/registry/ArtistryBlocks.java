@@ -926,40 +926,40 @@ public class ArtistryBlocks {
                     .pushReaction(PushReaction.DESTROY)));
 
     public static final DeferredBlock<TallCandleBlock> TALL_CANDLE = registerBlockWithItem("tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(null, tallCandle(p, MapColor.SAND)));
 
     public static final DeferredBlock<TallCandleBlock> WHITE_TALL_CANDLE = registerBlockWithItem("white_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.WHITE, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> LIGHT_GRAY_TALL_CANDLE = registerBlockWithItem("light_gray_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.LIGHT_GRAY, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> GRAY_TALL_CANDLE = registerBlockWithItem("gray_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.GRAY, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> BLACK_TALL_CANDLE = registerBlockWithItem("black_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.BLACK, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> BROWN_TALL_CANDLE = registerBlockWithItem("brown_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.BROWN, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> RED_TALL_CANDLE = registerBlockWithItem("red_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.RED, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> ORANGE_TALL_CANDLE = registerBlockWithItem("orange_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.ORANGE, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> YELLOW_TALL_CANDLE = registerBlockWithItem("yellow_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.YELLOW, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> LIME_TALL_CANDLE = registerBlockWithItem("lime_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.LIME, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> GREEN_TALL_CANDLE = registerBlockWithItem("green_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.GREEN, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> CYAN_TALL_CANDLE = registerBlockWithItem("cyan_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.CYAN, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> LIGHT_BLUE_TALL_CANDLE = registerBlockWithItem("light_blue_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.LIGHT_BLUE, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> BLUE_TALL_CANDLE = registerBlockWithItem("blue_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.BLUE, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> PURPLE_TALL_CANDLE = registerBlockWithItem("purple_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.PURPLE, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> MAGENTA_TALL_CANDLE = registerBlockWithItem("magenta_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.MAGENTA, tallCandle(p, MapColor.SAND)));
     public static final DeferredBlock<TallCandleBlock> PINK_TALL_CANDLE = registerBlockWithItem("pink_tall_candle",
-            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+            p -> new TallCandleBlock(DyeColor.PINK, tallCandle(p, MapColor.SAND)));
 
     public static final DeferredBlock<CarvedPumpkinBlock> WICKED_CARVED_PUMPKIN = registerBlockWithItem("wicked_carved_pumpkin",
             p -> new CarvedPumpkinBlock(carvedPumpkinProperties(p)));

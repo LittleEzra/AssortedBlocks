@@ -27,6 +27,9 @@
 - Carving Knife
     - Crafted like an Iron Sword but diagonal
     - Can be used like shears on pumpkins (including Carved Pumpkins) to carve them into one of 7 variants (including vanilla Carved Pumpkins)
+- Tall Candles
+    - All 16 colors + undyed
+    - Can be stacked to make even taller candles
 - Urn
     - Acts as a single-item storage like a decorated pot
 ## Changes:

@@ -1,6 +1,0 @@
-{
-  "parent": "artistry:block/template_one_tall_candle",
-  "textures": {
-    "all": "artistry:block/red_tall_candle"
-  }
-}
