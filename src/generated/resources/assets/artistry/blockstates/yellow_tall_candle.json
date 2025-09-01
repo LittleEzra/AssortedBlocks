@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "candles=1,lit=false": {
+      "model": "artistry:block/yellow_tall_candle_one_tall_candle"
+    },
+    "candles=1,lit=true": {
+      "model": "artistry:block/yellow_tall_candle_one_tall_candle_lit"
+    },
+    "candles=2,lit=false": {
+      "model": "artistry:block/yellow_tall_candle_two_tall_candles"
+    },
+    "candles=2,lit=true": {
+      "model": "artistry:block/yellow_tall_candle_two_tall_candles_lit"
+    },
+    "candles=3,lit=false": {
+      "model": "artistry:block/yellow_tall_candle_three_tall_candles"
+    },
+    "candles=3,lit=true": {
+      "model": "artistry:block/yellow_tall_candle_three_tall_candles_lit"
+    },
+    "candles=4,lit=false": {
+      "model": "artistry:block/yellow_tall_candle_four_tall_candles"
+    },
+    "candles=4,lit=true": {
+      "model": "artistry:block/yellow_tall_candle_four_tall_candles_lit"
+    }
+  }
+}

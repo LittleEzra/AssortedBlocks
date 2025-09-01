@@ -915,6 +915,42 @@ public class ArtistryBlocks {
                     .noOcclusion()
                     .pushReaction(PushReaction.DESTROY)));
 
+    public static final DeferredBlock<TallCandleBlock> TALL_CANDLE = registerBlockWithItem("tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+
+    public static final DeferredBlock<TallCandleBlock> WHITE_TALL_CANDLE = registerBlockWithItem("white_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> LIGHT_GRAY_TALL_CANDLE = registerBlockWithItem("light_gray_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> GRAY_TALL_CANDLE = registerBlockWithItem("gray_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> BLACK_TALL_CANDLE = registerBlockWithItem("black_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> BROWN_TALL_CANDLE = registerBlockWithItem("brown_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> RED_TALL_CANDLE = registerBlockWithItem("red_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> ORANGE_TALL_CANDLE = registerBlockWithItem("orange_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> YELLOW_TALL_CANDLE = registerBlockWithItem("yellow_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> LIME_TALL_CANDLE = registerBlockWithItem("lime_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> GREEN_TALL_CANDLE = registerBlockWithItem("green_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> CYAN_TALL_CANDLE = registerBlockWithItem("cyan_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> LIGHT_BLUE_TALL_CANDLE = registerBlockWithItem("light_blue_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> BLUE_TALL_CANDLE = registerBlockWithItem("blue_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> PURPLE_TALL_CANDLE = registerBlockWithItem("purple_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> MAGENTA_TALL_CANDLE = registerBlockWithItem("magenta_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+    public static final DeferredBlock<TallCandleBlock> PINK_TALL_CANDLE = registerBlockWithItem("pink_tall_candle",
+            p -> new TallCandleBlock(tallCandle(p, MapColor.SAND)));
+
     public static final DeferredBlock<CarvedPumpkinBlock> WICKED_CARVED_PUMPKIN = registerBlockWithItem("wicked_carved_pumpkin",
             p -> new CarvedPumpkinBlock(carvedPumpkinProperties(p)));
     public static final DeferredBlock<CarvedPumpkinBlock> HUNGRY_CARVED_PUMPKIN = registerBlockWithItem("hungry_carved_pumpkin",
@@ -1070,6 +1106,16 @@ public class ArtistryBlocks {
 
     //endregion
 
+
+    private static BlockBehaviour.Properties tallCandle(BlockBehaviour.Properties properties, MapColor mapColor) {
+        return BlockBehaviour.Properties.of()
+                        .mapColor(mapColor)
+                        .noOcclusion()
+                        .strength(0.1F)
+                        .sound(SoundType.CANDLE)
+                        .lightLevel(TallCandleBlock.LIGHT_EMISSION)
+                        .pushReaction(PushReaction.DESTROY);
+    }
 
     private static BlockBehaviour.Properties carvedPumpkinProperties(BlockBehaviour.Properties properties) {
         return properties.mapColor(MapColor.COLOR_ORANGE)

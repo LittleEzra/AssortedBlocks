@@ -16,6 +16,22 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.function.Supplier;
 
+import static com.feliscape.artistry.registry.ArtistryBlocks.*;
+import static com.feliscape.artistry.registry.ArtistryBlocks.BLACK_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.BLUE_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.BROWN_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.CYAN_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.GRAY_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.GREEN_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.LIGHT_BLUE_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.LIME_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.MAGENTA_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.ORANGE_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.PINK_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.PURPLE_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.RED_TALL_CANDLE;
+import static com.feliscape.artistry.registry.ArtistryBlocks.YELLOW_TALL_CANDLE;
+
 public class ArtistryItemModelProvider extends ItemModelProvider {
 
     public ArtistryItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -95,6 +111,25 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
 
         blockItemSprite(ArtistryBlocks.HEADSTONE);
         generatedBlockItem(ArtistryBlocks.MARIGOLD);
+
+        blockItemSprite(ArtistryBlocks.TALL_CANDLE);
+
+        blockItemSprite(ArtistryBlocks.WHITE_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.LIGHT_GRAY_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.GRAY_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.BLACK_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.BROWN_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.RED_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.ORANGE_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.YELLOW_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.LIME_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.GREEN_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.CYAN_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.LIGHT_BLUE_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.BLUE_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.PURPLE_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.MAGENTA_TALL_CANDLE);
+        blockItemSprite(ArtistryBlocks.PINK_TALL_CANDLE);
 
         // Aspen
 

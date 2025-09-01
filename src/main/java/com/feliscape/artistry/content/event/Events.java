@@ -24,6 +24,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.DecoratedPotBlockEntity;
+import net.minecraft.world.level.block.entity.PotDecorations;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -43,14 +44,17 @@ public class Events {
         BlockState blockState = event.getLevel().getBlockState(pos);
         ItemStack itemStack = event.getItemStack();
         if (blockState.is(Blocks.DECORATED_POT) && DyeColor.getColor(itemStack) != null){
-            event.setCanceled(true);
-            event.setCancellationResult(InteractionResult.SUCCESS);
             BlockEntity oldEntity = level.getBlockEntity(pos);
             ItemStack stackToTransfer = ItemStack.EMPTY;
             if (oldEntity instanceof DecoratedPotBlockEntity decoratedPot){
+                if (!isEmptyPot(decoratedPot.getDecorations()))
+                    return;
                 stackToTransfer = decoratedPot.getTheItem();
                 decoratedPot.setTheItem(ItemStack.EMPTY);
             }
+
+            event.setCanceled(true);
+            event.setCancellationResult(InteractionResult.SUCCESS);
 
             BlockState newState = ArtistryBlocks.PAINTED_POT.get().withPropertiesOf(blockState);
             level.setBlock(pos, newState, Block.UPDATE_NONE);
@@ -61,6 +65,10 @@ public class Events {
                 paintedPot.setTheItem(stackToTransfer);
             }
         }
+    }
+
+    private static boolean isEmptyPot(PotDecorations decorations) {
+        return decorations.back().isEmpty() && decorations.front().isEmpty() && decorations.left().isEmpty() && decorations.right().isEmpty();
     }
 
     @SubscribeEvent

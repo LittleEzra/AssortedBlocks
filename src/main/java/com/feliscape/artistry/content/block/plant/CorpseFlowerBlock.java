@@ -3,10 +3,15 @@ package com.feliscape.artistry.content.block.plant;
 import com.feliscape.artistry.content.block.properties.TriplePlantPart;
 import com.feliscape.artistry.registry.ArtistryParticles;
 import com.mojang.serialization.MapCodec;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -16,6 +21,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
+import java.util.List;
 
 public class CorpseFlowerBlock extends TriplePlantBlock {
     public static final MapCodec<CorpseFlowerBlock> CODEC = simpleCodec(CorpseFlowerBlock::new);
@@ -56,5 +63,10 @@ public class CorpseFlowerBlock extends TriplePlantBlock {
 
     public CorpseFlowerBlock(Properties properties) {
         super(properties);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        tooltipComponents.add(Component.translatable("item.artistry.wip").withStyle(ChatFormatting.GRAY));
     }
 }

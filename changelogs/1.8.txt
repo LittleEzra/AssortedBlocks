@@ -14,10 +14,12 @@
     - Seed dug up by Sniffers in Crimson and Warped Nylium
     - Makes fly particles
     - Scares nearby mobs away
+    - ! UNOBTAINABLE !
 - Fly Lure
     - Crafted with a Corpse Flower
     - Makes fly particles (in a larger radius than the Corpse Flower)
     - Doesn't scare mobs
+    - ! UNOBTAINABLE !
 - Honeydew Fruit
     - Found as a random drop alongside Raw Gold in Gold Ore
     - Must be planted on any stone-like block (including Rocky Dirt)
@@ -31,3 +33,4 @@
 ## Fixes:
 - Made String Lights stackable to 64
 - Fixed some mistakes in the German translation
+- Made it so you can no longer dye pots with sherds on them

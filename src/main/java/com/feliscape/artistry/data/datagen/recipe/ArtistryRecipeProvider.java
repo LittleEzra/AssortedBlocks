@@ -628,6 +628,32 @@ public class ArtistryRecipeProvider extends RecipeProvider {
         jackOLantern(recipeOutput, ArtistryBlocks.PEEKING_CARVED_PUMPKIN, ArtistryBlocks.PEEKING_JACK_O_LANTERN);
         jackOLantern(recipeOutput, ArtistryBlocks.BELLOWING_CARVED_PUMPKIN, ArtistryBlocks.BELLOWING_JACK_O_LANTERN);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ArtistryBlocks.TALL_CANDLE)
+                .define('S', Items.STRING)
+                .define('H', Items.HONEYCOMB)
+                .pattern("S")
+                .pattern("H")
+                .pattern("H")
+                .unlockedBy("has_string", has(Items.STRING))
+                .unlockedBy("has_honeycomb", has(Items.HONEYCOMB))
+                .save(recipeOutput);
+        tallCandle(recipeOutput, ArtistryBlocks.BLACK_TALL_CANDLE, Items.BLACK_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.BLUE_TALL_CANDLE, Items.BLUE_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.BROWN_TALL_CANDLE, Items.BROWN_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.CYAN_TALL_CANDLE, Items.CYAN_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.GRAY_TALL_CANDLE, Items.GRAY_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.GREEN_TALL_CANDLE, Items.GREEN_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.LIGHT_BLUE_TALL_CANDLE, Items.LIGHT_BLUE_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.LIGHT_GRAY_TALL_CANDLE, Items.LIGHT_GRAY_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.LIME_TALL_CANDLE, Items.LIME_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.MAGENTA_TALL_CANDLE, Items.MAGENTA_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.ORANGE_TALL_CANDLE, Items.ORANGE_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.PINK_TALL_CANDLE, Items.PINK_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.PURPLE_TALL_CANDLE, Items.PURPLE_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.RED_TALL_CANDLE, Items.RED_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.WHITE_TALL_CANDLE, Items.WHITE_DYE);
+        tallCandle(recipeOutput, ArtistryBlocks.YELLOW_TALL_CANDLE, Items.YELLOW_DYE);
+
         //region Aspen
         planksFromLog(recipeOutput, ArtistryBlocks.ASPEN_PLANKS.get(), ArtistryTags.Items.ASPEN_LOGS, 4);
         woodFromLogs(recipeOutput, ArtistryBlocks.ASPEN_WOOD.get(), ArtistryBlocks.ASPEN_LOG.get());
@@ -710,6 +736,15 @@ public class ArtistryRecipeProvider extends RecipeProvider {
         woodenBoat(recipeOutput, ArtistryItems.ROTTEN_BOAT, ArtistryBlocks.ROTTEN_PLANKS.get());
         chestBoat(recipeOutput, ArtistryItems.ROTTEN_CHEST_BOAT, ArtistryItems.ROTTEN_BOAT);
         //endregion
+    }
+
+    protected static void tallCandle(RecipeOutput recipeOutput, ItemLike candle, ItemLike dye) {
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, candle)
+                .requires(ArtistryBlocks.TALL_CANDLE)
+                .requires(dye)
+                .group("dyed_candle")
+                .unlockedBy(getHasName(dye), has(dye))
+                .save(recipeOutput);
     }
 
     private void jackOLantern(RecipeOutput recipeOutput, ItemLike carved, ItemLike jackOLantern) {

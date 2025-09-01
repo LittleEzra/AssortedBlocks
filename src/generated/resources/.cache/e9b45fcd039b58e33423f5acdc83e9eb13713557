@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-31T23:18:56.7396892	Tags for minecraft:block mod id artistry
+// 1.21.1	2025-09-01T12:01:05.3615616	Tags for minecraft:block mod id artistry
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/block/aspen_logs.json
 cb8f42934e5133f862b85f346da074f586ebab6b data/artistry/tags/block/carvable_pumpkins.json
 3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/block/frosted_glass.json
@@ -7,12 +7,30 @@ bc49eaf7b496dee41800ce76feab00786862c54a data/artistry/tags/block/leechable_sapl
 babf96531eb9053c8504bf5d0eb1315fa6001385 data/artistry/tags/block/rotten_logs.json
 2b01c878f7df076cc4c1411bf14299f80461cbce data/artistry/tags/block/sniffer_diggable/has_aspen_plants.json
 158a4877fad0ee79d00e8c9f641ad661e822cdb5 data/artistry/tags/block/sniffer_diggable/has_lush_plants.json
+2bfdd47c936c1bc7e9948da6d2ad59e4cb9a11cb data/artistry/tags/block/sniffer_diggable/has_nylium_plants.json
 c1a14eff6d6ae90bd58c7ccdab212291e17d5e74 data/artistry/tags/block/sniffer_diggable/has_teardrop_grass.json
 c3b39af3db5bc3768608a47a706098d450692fe3 data/artistry/tags/block/string_lights.json
 01a4149b278fed1965636e639f1fcbcb4453d95c data/artistry/tags/block/tables.json
+dd566f52665853cdd6a4c541e6488bda1c8e866e data/artistry/tags/block/tall_candles.json
 b2150163dab67f2b8eb4a5471269cb87e24fca39 data/artistry/tags/block/underground_plant_soil.json
 d0310e8a2afc8c5fad1ca9bdcb5e0bcf20c036ca data/artistry/tags/block/wooden_tables.json
 a26f989d9d2559d9e0e8694fb535d8abfc90c9ae data/c/tags/block/chains.json
+efe4c7ed41184cea209629a245cd3e3b9de42ef0 data/c/tags/block/dyed/black.json
+d9ea347b35be54f6e03eebdd30c78b9909526c6f data/c/tags/block/dyed/blue.json
+b79bcb96dcbf90682b4dace306908e1766415d0b data/c/tags/block/dyed/brown.json
+9aec667563df4ff8450a5141054a6b338e53c9ae data/c/tags/block/dyed/cyan.json
+69848b0484d6af8fba2e5c2393305aa395b49842 data/c/tags/block/dyed/gray.json
+68efadecbd744113f4aa56f76bbfdc27b3f489f7 data/c/tags/block/dyed/green.json
+94d2dd2c7aa48416bf5e27c4212a7da82bb9eaa4 data/c/tags/block/dyed/light_blue.json
+bab5fdeacc8611d06e79af47738430ebff3051fc data/c/tags/block/dyed/light_gray.json
+2ba1572b2fe5314d3fbc07dfbf68a1b2a3b930a6 data/c/tags/block/dyed/lime.json
+6bbe91672fb534814a91abacff839ae335358ea4 data/c/tags/block/dyed/magenta.json
+47aa5833674ce351cdc399bf53f31979dfba80b2 data/c/tags/block/dyed/orange.json
+5c6e51bf2776e7de2cf62d442c7bca67ea898055 data/c/tags/block/dyed/pink.json
+d5d79ab47ef7c740701ed405fecac8184a3fad08 data/c/tags/block/dyed/purple.json
+138f74e2f5ce9956154e1652ba74fb9473779866 data/c/tags/block/dyed/red.json
+168a224005ce91a495944fed692f32f5cf6a38dd data/c/tags/block/dyed/white.json
+65d49c39b19105827898e48390358638ab310948 data/c/tags/block/dyed/yellow.json
 6cdc3b7b9f5016145573e5f0f35fcf333a0272a3 data/c/tags/block/glass_blocks/cheap.json
 d8a68a479a6f3bd8701902b48641dde4b374b10c data/c/tags/block/pumpkins/carved.json
 d94b514b237177c0bc17835639b8147a5c8698b6 data/c/tags/block/pumpkins/jack_o_lanterns.json

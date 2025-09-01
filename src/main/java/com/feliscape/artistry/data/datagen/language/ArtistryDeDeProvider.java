@@ -15,6 +15,8 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
 
     @Override
     protected void addTranslations() {
+        this.add("item.artistry.wip", "WIP - Im Überlebensmodus nicht erhältlich");
+
         this.addEntityType(ArtistryEntityTypes.MOD_BOAT, "Boot");
         this.addEntityType(ArtistryEntityTypes.MOD_CHEST_BOAT, "Truhenboot");
 
@@ -218,6 +220,25 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.STALWART_JACK_O_LANTERN, "Stämmige Kürbislaterne");
         this.addBlock(ArtistryBlocks.PEEKING_JACK_O_LANTERN, "Spähende Kürbislaterne");
         this.addBlock(ArtistryBlocks.BELLOWING_JACK_O_LANTERN, "Brüllende Kürbislaterne");
+
+        this.addBlock(ArtistryBlocks.TALL_CANDLE, "Große Kerze");
+
+        this.addBlock(ArtistryBlocks.WHITE_TALL_CANDLE, "Weiße große Kerze");
+        this.addBlock(ArtistryBlocks.LIGHT_GRAY_TALL_CANDLE, "Hellgraue große Kerze");
+        this.addBlock(ArtistryBlocks.GRAY_TALL_CANDLE, "Graue große Kerze");
+        this.addBlock(ArtistryBlocks.BLACK_TALL_CANDLE, "Schwarze große Kerze");
+        this.addBlock(ArtistryBlocks.BROWN_TALL_CANDLE, "Braune große Kerze");
+        this.addBlock(ArtistryBlocks.RED_TALL_CANDLE, "Rote große Kerze");
+        this.addBlock(ArtistryBlocks.ORANGE_TALL_CANDLE, "Orange große Kerze");
+        this.addBlock(ArtistryBlocks.YELLOW_TALL_CANDLE, "Gelbe große Kerze");
+        this.addBlock(ArtistryBlocks.LIME_TALL_CANDLE, "Hellgrüne große Kerze");
+        this.addBlock(ArtistryBlocks.GREEN_TALL_CANDLE, "Grüne große Kerze");
+        this.addBlock(ArtistryBlocks.CYAN_TALL_CANDLE, "Türkise große Kerze");
+        this.addBlock(ArtistryBlocks.LIGHT_BLUE_TALL_CANDLE, "Hellblaue große Kerze");
+        this.addBlock(ArtistryBlocks.BLUE_TALL_CANDLE, "Blaue große Kerze");
+        this.addBlock(ArtistryBlocks.PURPLE_TALL_CANDLE, "Violette große Kerze");
+        this.addBlock(ArtistryBlocks.MAGENTA_TALL_CANDLE, "Magenta große Kerze");
+        this.addBlock(ArtistryBlocks.PINK_TALL_CANDLE, "Pinke große Kerze");
 
         // Rotten
 

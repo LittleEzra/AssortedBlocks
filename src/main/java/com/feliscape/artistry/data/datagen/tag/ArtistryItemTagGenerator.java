@@ -26,6 +26,7 @@ public class ArtistryItemTagGenerator extends ItemTagsProvider {
         this.copy(ArtistryTags.Blocks.WOODEN_TABLES, ArtistryTags.Items.WOODEN_TABLES);
         this.copy(ArtistryTags.Blocks.TABLES, ArtistryTags.Items.TABLES);
         this.copy(ArtistryTags.Blocks.FROSTED_GLASS, ArtistryTags.Items.FROSTED_GLASS);
+        this.copy(ArtistryTags.Blocks.TALL_CANDLES, ArtistryTags.Items.TALL_CANDLES);
 
         this.tag(ItemTags.SNIFFER_FOOD)
                 .add(ArtistryItems.SNIFFER_CAKE.get());

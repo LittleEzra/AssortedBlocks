@@ -229,6 +229,25 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.PEEKING_JACK_O_LANTERN.get());
         this.dropSelf(ArtistryBlocks.BELLOWING_JACK_O_LANTERN.get());
 
+        this.add(ArtistryBlocks.TALL_CANDLE.get(), this::createCandleDrops);
+
+        this.add(ArtistryBlocks.WHITE_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.LIGHT_GRAY_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.GRAY_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.BLACK_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.BROWN_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.RED_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.ORANGE_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.YELLOW_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.LIME_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.GREEN_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.CYAN_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.LIGHT_BLUE_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.BLUE_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.PURPLE_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.MAGENTA_TALL_CANDLE.get(), this::createCandleDrops);
+        this.add(ArtistryBlocks.PINK_TALL_CANDLE.get(), this::createCandleDrops);
+
         // Aspen
 
         this.dropSelf(ArtistryBlocks.ROTTEN_LOG.get());

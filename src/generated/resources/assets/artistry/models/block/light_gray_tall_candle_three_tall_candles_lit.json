@@ -1,0 +1,6 @@
+{
+  "parent": "artistry:block/template_three_tall_candles",
+  "textures": {
+    "all": "artistry:block/light_gray_tall_candle_lit"
+  }
+}

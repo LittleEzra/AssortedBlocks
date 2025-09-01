@@ -4,13 +4,19 @@ import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryTags;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
+import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
 
 import static com.feliscape.artistry.registry.ArtistryBlocks.*;
@@ -259,6 +265,27 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(Blocks.WARPED_NYLIUM)
         ;
 
+        this.tag(ArtistryTags.Blocks.TALL_CANDLES).add(
+                TALL_CANDLE.get(),
+
+                WHITE_TALL_CANDLE.get(),
+                LIGHT_GRAY_TALL_CANDLE.get(),
+                GRAY_TALL_CANDLE.get(),
+                BLACK_TALL_CANDLE.get(),
+                BROWN_TALL_CANDLE.get(),
+                RED_TALL_CANDLE.get(),
+                ORANGE_TALL_CANDLE.get(),
+                YELLOW_TALL_CANDLE.get(),
+                LIME_TALL_CANDLE.get(),
+                GREEN_TALL_CANDLE.get(),
+                CYAN_TALL_CANDLE.get(),
+                LIGHT_BLUE_TALL_CANDLE.get(),
+                BLUE_TALL_CANDLE.get(),
+                PURPLE_TALL_CANDLE.get(),
+                MAGENTA_TALL_CANDLE.get(),
+                PINK_TALL_CANDLE.get()
+        );
+
         this.tag(Tags.Blocks.GLASS_BLOCKS_CHEAP)
                 .addTag(ArtistryTags.Blocks.FROSTED_GLASS);
 
@@ -478,6 +505,8 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(HONEYDEW_STALK.get())
         ;
 
+        addColored(Tags.Blocks.DYED, "{color}_frosted_glass");
+        addColored(Tags.Blocks.DYED, "{color}_tall_candle");
 
         this.tag(Tags.Blocks.CHAINS)
                 .add(
@@ -491,5 +520,27 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         WAXED_OXIDIZED_COPPER_CHAIN.get()
                 )
         ;
+    }
+
+    private void addColored(TagKey<Block> group, String pattern) {
+        String prefix = group.location().getPath().toUpperCase(Locale.ENGLISH) + '_';
+        for (DyeColor color : DyeColor.values()) {
+            ResourceLocation key = Artistry.location(pattern.replace("{color}", color.getName()));
+            TagKey<Block> tag = getForgeTag(prefix + color.getName());
+            Block block = BuiltInRegistries.BLOCK.get(key);
+            if (block == null || block == Blocks.AIR)
+                throw new IllegalStateException("Unknown artistry block: " + key);
+            tag(tag).add(block);
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    private TagKey<Block> getForgeTag(String name) {
+        try {
+            name = name.toUpperCase(Locale.ENGLISH);
+            return (TagKey<Block>) Tags.Blocks.class.getDeclaredField(name).get(null);
+        } catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException e) {
+            throw new IllegalStateException(Tags.Blocks.class.getName() + " is missing tag name: " + name);
+        }
     }
 }

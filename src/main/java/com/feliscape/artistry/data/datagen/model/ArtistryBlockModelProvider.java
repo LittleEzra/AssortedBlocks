@@ -242,6 +242,24 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         carvedPumpkin(PEEKING_JACK_O_LANTERN.get());
         carvedPumpkin(BELLOWING_JACK_O_LANTERN.get());
 
+        tallCandle(TALL_CANDLE.get());
+        tallCandle(WHITE_TALL_CANDLE.get());
+        tallCandle(LIGHT_GRAY_TALL_CANDLE.get());
+        tallCandle(GRAY_TALL_CANDLE.get());
+        tallCandle(BLACK_TALL_CANDLE.get());
+        tallCandle(BROWN_TALL_CANDLE.get());
+        tallCandle(RED_TALL_CANDLE.get());
+        tallCandle(ORANGE_TALL_CANDLE.get());
+        tallCandle(YELLOW_TALL_CANDLE.get());
+        tallCandle(LIME_TALL_CANDLE.get());
+        tallCandle(GREEN_TALL_CANDLE.get());
+        tallCandle(CYAN_TALL_CANDLE.get());
+        tallCandle(LIGHT_BLUE_TALL_CANDLE.get());
+        tallCandle(BLUE_TALL_CANDLE.get());
+        tallCandle(PURPLE_TALL_CANDLE.get());
+        tallCandle(MAGENTA_TALL_CANDLE.get());
+        tallCandle(PINK_TALL_CANDLE.get());
+
         // Rotten Wood
 
         leavesBlock(ROTTEN_LEAVES, "cutout_mipped");
@@ -280,6 +298,30 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
     private static final ResourceLocation PUMPKIN_SIDE = ResourceLocation.withDefaultNamespace("block/pumpkin_side");
     private static final ResourceLocation PUMPKIN_TOP = ResourceLocation.withDefaultNamespace("block/pumpkin_top");
+
+    private void tallCandle(TallCandleBlock block) {
+        getVariantBuilder(block).forAllStatesExcept(state -> {
+            int count = state.getValue(TallCandleBlock.CANDLES);
+            boolean lit = state.getValue(TallCandleBlock.LIT);
+            String suffix = getTallCandleSuffix(count, lit);
+            String parentName = "block/template" + getTallCandleSuffix(count, false);
+
+            ModelFile file = models().withExistingParent(name(block) + suffix, Artistry.location(parentName))
+                    .texture("all", blockTexture(block).withSuffix(lit ? "_lit" : ""));
+
+            return ConfiguredModel.builder().modelFile(file).build();
+            }, TallCandleBlock.WATERLOGGED);
+    }
+
+    private String getTallCandleSuffix(int count, boolean lit) {
+        String countString = switch (count) {
+            case 2 -> "_two_tall_candles";
+            case 3 -> "_three_tall_candles";
+            case 4 -> "_four_tall_candles";
+            default -> "_one_tall_candle";
+        };
+        return lit ? countString + "_lit" : countString;
+    }
 
     private void carvedPumpkin(CarvedPumpkinBlock block) {
         ModelFile model = models().orientable(name(block), PUMPKIN_SIDE, blockTexture(block), PUMPKIN_TOP);

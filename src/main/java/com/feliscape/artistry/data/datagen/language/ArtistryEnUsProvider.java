@@ -13,6 +13,8 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
 
     @Override
     protected void addTranslations() {
+        this.add("item.artistry.wip", "WIP - Unobtainable in Survival");
+
         this.addItem(ArtistryItems.ASPEN_SIGN, "Aspen Sign");
         this.addItem(ArtistryItems.ASPEN_HANGING_SIGN, "Aspen Hanging Sign");
         this.addItem(ArtistryItems.ASPEN_BOAT, "Aspen Boat");
@@ -214,6 +216,25 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.STALWART_JACK_O_LANTERN, "Stalwart Jack o' Lantern");
         this.addBlock(ArtistryBlocks.PEEKING_JACK_O_LANTERN, "Peeking Jack o' Lantern");
         this.addBlock(ArtistryBlocks.BELLOWING_JACK_O_LANTERN, "Bellowing Jack o' Lantern");
+
+        this.addBlock(ArtistryBlocks.TALL_CANDLE, "Tall Candle");
+
+        this.addBlock(ArtistryBlocks.WHITE_TALL_CANDLE, "White Tall Candle");
+        this.addBlock(ArtistryBlocks.LIGHT_GRAY_TALL_CANDLE, "Light Gray Tall Candle");
+        this.addBlock(ArtistryBlocks.GRAY_TALL_CANDLE, "Gray Tall Candle");
+        this.addBlock(ArtistryBlocks.BLACK_TALL_CANDLE, "Black Tall Candle");
+        this.addBlock(ArtistryBlocks.BROWN_TALL_CANDLE, "Brown Tall Candle");
+        this.addBlock(ArtistryBlocks.RED_TALL_CANDLE, "Red Tall Candle");
+        this.addBlock(ArtistryBlocks.ORANGE_TALL_CANDLE, "Orange Tall Candle");
+        this.addBlock(ArtistryBlocks.YELLOW_TALL_CANDLE, "Yellow Tall Candle");
+        this.addBlock(ArtistryBlocks.LIME_TALL_CANDLE, "Lime Tall Candle");
+        this.addBlock(ArtistryBlocks.GREEN_TALL_CANDLE, "Green Tall Candle");
+        this.addBlock(ArtistryBlocks.CYAN_TALL_CANDLE, "Cyan Tall Candle");
+        this.addBlock(ArtistryBlocks.LIGHT_BLUE_TALL_CANDLE, "Light Blue Tall Candle");
+        this.addBlock(ArtistryBlocks.BLUE_TALL_CANDLE, "Blue Tall Candle");
+        this.addBlock(ArtistryBlocks.PURPLE_TALL_CANDLE, "Purple Tall Candle");
+        this.addBlock(ArtistryBlocks.MAGENTA_TALL_CANDLE, "Magenta Tall Candle");
+        this.addBlock(ArtistryBlocks.PINK_TALL_CANDLE, "Pink Tall Candle");
 
         // Rotten
 
