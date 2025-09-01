@@ -32,6 +32,9 @@ public class ArtistryBlockEntityTypes {
     public static final Supplier<BlockEntityType<PaintedPotBlockEntity>> PAINTED_POT =
             BLOCK_ENTITIES.register("painted_pot", () -> BlockEntityType.Builder.of(PaintedPotBlockEntity::new,
                     ArtistryBlocks.PAINTED_POT.get()).build(null));
+    public static final Supplier<BlockEntityType<UrnBlockEntity>> URN =
+            BLOCK_ENTITIES.register("urn", () -> BlockEntityType.Builder.of(UrnBlockEntity::new,
+                    ArtistryBlocks.URN.get()).build(null));
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

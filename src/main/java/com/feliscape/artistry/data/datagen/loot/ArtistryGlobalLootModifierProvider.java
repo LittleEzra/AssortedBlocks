@@ -6,9 +6,11 @@ import com.feliscape.artistry.data.loot.ArtistryLootTables;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.neoforged.neoforge.common.data.GlobalLootModifierProvider;
+import net.neoforged.neoforge.common.loot.AddTableLootModifier;
 import net.neoforged.neoforge.common.loot.LootTableIdCondition;
 
 import java.util.List;
@@ -53,6 +55,20 @@ public class ArtistryGlobalLootModifierProvider extends GlobalLootModifierProvid
                 new ReplaceSnifferLootModifier(new LootItemCondition[]{
                         LootTableIdCondition.builder(ResourceLocation.withDefaultNamespace("gameplay/sniffer_digging")).build()
                 }),
+                List.of()
+        );
+        add("add_to_gold_ore",
+                new AddTableLootModifier(new LootItemCondition[]{
+                        LootTableIdCondition.builder(ResourceLocation.withDefaultNamespace("blocks/gold_ore")).build(),
+                        LootItemRandomChanceCondition.randomChance(0.05F).build()
+                }, ArtistryLootTables.GOLDEN_BULB_DROP),
+                List.of()
+        );
+        add("add_to_deepslate_gold_ore",
+                new AddTableLootModifier(new LootItemCondition[]{
+                        LootTableIdCondition.builder(ResourceLocation.withDefaultNamespace("blocks/deepslate_gold_ore")).build(),
+                        LootItemRandomChanceCondition.randomChance(0.05F).build()
+                }, ArtistryLootTables.GOLDEN_BULB_DROP),
                 List.of()
         );
     }

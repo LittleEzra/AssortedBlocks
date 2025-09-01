@@ -1,3 +1,5 @@
-// 1.21.1	2025-08-11T23:32:34.9679169	Global Loot Modifiers : artistry
+// 1.21.1	2025-09-01T13:18:30.8915432	Global Loot Modifiers : artistry
+cc6418d7b3645b1574d00c345678e2cea31774e3 data/artistry/loot_modifiers/add_to_deepslate_gold_ore.json
+f22dd748dbad80d09061399c1177f67bd2427e21 data/artistry/loot_modifiers/add_to_gold_ore.json
 727e779c636dfae03b12b89953f89424f93cc5d4 data/artistry/loot_modifiers/add_to_sniffer_loot.json
-07b088023f051f74feea82c998ebfc153b6a8262 data/neoforge/loot_modifiers/global_loot_modifiers.json
+05244eb2c69c8a714fbb4181daab054a2cde4875 data/neoforge/loot_modifiers/global_loot_modifiers.json

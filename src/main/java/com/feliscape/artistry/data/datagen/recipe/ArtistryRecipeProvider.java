@@ -603,6 +603,14 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .save(recipeOutput);
 
         // Seasonal
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.URN)
+                .define('#', ItemTags.TERRACOTTA)
+                .define('o', Items.BRICK)
+                .pattern("o#o")
+                .pattern(" o ")
+                .unlockedBy("has_terracotta", has(ItemTags.TERRACOTTA))
+                .unlockedBy(getHasName(Items.BRICK), has(Items.BRICK))
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.HEADSTONE, 4)
                 .define('#', Blocks.STONE_BRICKS)
                 .pattern("##")

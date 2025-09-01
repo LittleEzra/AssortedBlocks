@@ -901,6 +901,16 @@ public class ArtistryBlocks {
                     .strength(1.5F, 6.0F)
             ));
 
+    public static final DeferredBlock<UrnBlock> URN = registerBlockWithItem("urn",
+            p -> new UrnBlock(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .sound(SoundType.DECORATED_POT)
+                    .pushReaction(PushReaction.DESTROY)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .strength(0.0F, 0.0F)
+            ));
+
     public static final DeferredBlock<FlowerBlock> MARIGOLD = registerBlockWithItem("marigold",
             p -> new FlowerBlock(MobEffects.SLOW_FALLING, 5.0F, p
                     .mapColor(MapColor.PLANT)

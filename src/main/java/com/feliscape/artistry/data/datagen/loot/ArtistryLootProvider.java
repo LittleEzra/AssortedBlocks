@@ -13,7 +13,9 @@ public class ArtistryLootProvider extends LootTableProvider {
 
     public ArtistryLootProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, Collections.emptySet(), List.of(
-                new LootTableProvider.SubProviderEntry(ArtistryBlockLootTableProvider::new, LootContextParamSets.BLOCK)),
+                new LootTableProvider.SubProviderEntry(ArtistryBlockLootTableProvider::new, LootContextParamSets.BLOCK),
+                new LootTableProvider.SubProviderEntry(ArtistryGLMBlockLootProvider::new, LootContextParamSets.BLOCK)
+                ),
                 registries);
     }
 }

@@ -204,6 +204,7 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.HEADSTONE, "Grabstein");
         this.addBlock(ArtistryBlocks.LEECHING_SOIL, "Auslaugender Boden");
         this.addBlock(ArtistryBlocks.WAXED_LEECHING_SOIL, "Gewachster auslaugender Boden");
+        this.addBlock(ArtistryBlocks.URN, "Urne");
         this.addBlock(ArtistryBlocks.MARIGOLD, "Ringelblume");
         this.addBlock(ArtistryBlocks.POTTED_MARIGOLD, "Eingetopfte Ringelblume");
 

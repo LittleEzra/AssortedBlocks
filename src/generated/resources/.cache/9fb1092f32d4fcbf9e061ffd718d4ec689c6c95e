@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-01T11:47:41.7372486	Recipes
+// 1.21.1	2025-09-01T14:08:46.9610917	Recipes
 4dfdfcadddfeb41f7c010a8e150b7ea299d0e8c7 data/artistry/advancement/recipes/building_blocks/amethyst_stars.json
 21f916604ecc9edb9b074980b7ccbede717f4623 data/artistry/advancement/recipes/building_blocks/aspen_planks.json
 c8ef6b09ab8cd139eb51a9978e21f188915d9374 data/artistry/advancement/recipes/building_blocks/aspen_slab.json
@@ -123,6 +123,7 @@ bbea56211a9d564ef356da267accdacff936fb75 data/artistry/advancement/recipes/build
 993f55f4b453d4ab2dc1ddcf9d8062085d222953 data/artistry/advancement/recipes/building_blocks/string_lights.json
 5d2475954d35d8d1652b6cce0248c595a3456f57 data/artistry/advancement/recipes/building_blocks/stripped_aspen_wood.json
 4488d61c5f5a12e6eef3b40e71d0f9ec96dac9c8 data/artistry/advancement/recipes/building_blocks/stripped_rotten_wood.json
+a5f906b4fb50b1a133d48d6da362bc32fdac7645 data/artistry/advancement/recipes/building_blocks/urn.json
 57fe3f6e66a9ad9c6920dbca8c5c8c8c7d55173a data/artistry/advancement/recipes/building_blocks/water_fountain.json
 93fc0d88334803e010a032f610566e3931682ed5 data/artistry/advancement/recipes/building_blocks/waxed_copper_chain.json
 60edec7706a2d8c8c9406195c1abc5f43fa656f9 data/artistry/advancement/recipes/building_blocks/waxed_exposed_copper_chain.json
@@ -371,6 +372,7 @@ f743ac10dd9cf23cfb793479798fcedd6b42c076 data/artistry/recipe/string_lights.json
 d97f0a362d6512304eb4401c74eb855df7075f9d data/artistry/recipe/stripped_rotten_wood.json
 bc556c1b98d4eb5f39544e2820872c23270540ed data/artistry/recipe/tall_candle.json
 c829ab472c286fbee241f39e1809c86c47a8bcb2 data/artistry/recipe/tuff_table.json
+729e5020e87c3a54958ff51a610aa0931e279c6c data/artistry/recipe/urn.json
 bab78bc6df3b2f61a813df0f9c29a73a6a5d5b7a data/artistry/recipe/warped_table.json
 aa777027fe5c1fe2b294e6744a0023f8669d1f7f data/artistry/recipe/water_fountain.json
 ee65a7c8061be4f8cd51060447493e617eb2bfa4 data/artistry/recipe/waxed_copper_chain.json

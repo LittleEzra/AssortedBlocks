@@ -18,6 +18,7 @@ public class ArtistryModelLayers {
 
     public static final ModelLayerLocation PAINTED_POT_TRIM = register("painted_pot/trim");
     public static final ModelLayerLocation PAINTED_POT_PATTERN = register("painted_pot/pattern");
+    public static final ModelLayerLocation URN = register("urn");
 
     private static ModelLayerLocation register(String path) {
         return register(path, "main");

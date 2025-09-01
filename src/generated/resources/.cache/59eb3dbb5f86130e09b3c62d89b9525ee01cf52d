@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-01T11:43:11.1836804	Loot Tables
+// 1.21.1	2025-09-01T16:32:20.5045749	Loot Tables
 47b6b4ddb80a89fa9150b4f209f8c1912ba8fd04 data/artistry/loot_table/blocks/acacia_table.json
 c17e141140c72bb4ad538245b3bc5de5e3b91093 data/artistry/loot_table/blocks/amethyst_stars.json
 8472b2e2149ff7987014f0ebdfb5631626250e58 data/artistry/loot_table/blocks/andesite_table.json
@@ -174,6 +174,7 @@ a98a6c8a7e9fcf21a794a7a643adeea0ae7862c5 data/artistry/loot_table/blocks/strippe
 1476611e40a0497bb6f4a2c72f4e19f064976660 data/artistry/loot_table/blocks/tall_teardrop_grass.json
 8f807997899ad0a3c4783a029a0cf4f30d0a2b2f data/artistry/loot_table/blocks/teardrop_grass_block.json
 a69e65e4607bcd0eb4b3135656fddb5b8b7057d9 data/artistry/loot_table/blocks/tuff_table.json
+cd9137ab67f0a52231581ffdd0646b035239c7bd data/artistry/loot_table/blocks/urn.json
 c55418b246e884539a571ddd37a932d01831b080 data/artistry/loot_table/blocks/wall_string_lights.json
 a15135286e6f353f358f00c0a009aeddbc120f96 data/artistry/loot_table/blocks/warped_table.json
 d1ca11d7858fc3caadbeedf37479c6d7f9ab7e80 data/artistry/loot_table/blocks/water_fountain.json
@@ -189,3 +190,4 @@ cbf4df4e0fd6646498be5a9219bb2b3b3de0ac8e data/artistry/loot_table/blocks/weather
 6a7126db5f6e89d534cb3a9fa73d5233ae9d5c28 data/artistry/loot_table/blocks/wicked_jack_o_lantern.json
 1a8ab4e9e7f2a697df0a6ab4223036ef2de561c3 data/artistry/loot_table/blocks/yellow_frosted_glass.json
 48d087c6b2561fc7a43c71979d093a9bd445b90a data/artistry/loot_table/blocks/yellow_tall_candle.json
+d60336d1fc8b2ce80102e785fdb5aa6908a3ff01 data/artistry/loot_table/glm/block/gold_ore_extra.json

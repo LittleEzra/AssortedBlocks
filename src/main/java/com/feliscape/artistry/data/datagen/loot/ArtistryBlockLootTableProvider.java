@@ -1,5 +1,6 @@
 package com.feliscape.artistry.data.datagen.loot;
 
+import com.feliscape.artistry.content.block.UrnBlock;
 import com.feliscape.artistry.content.block.plant.TriplePlantBlock;
 import com.feliscape.artistry.content.block.properties.TriplePlantPart;
 import com.feliscape.artistry.content.pot.PaintedPotDecorations;
@@ -27,6 +28,11 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
 import java.util.Set;
+
+import static net.minecraft.advancements.critereon.StatePropertiesPredicate.Builder.properties;
+import static net.minecraft.world.level.storage.loot.LootPool.lootPool;
+import static net.minecraft.world.level.storage.loot.entries.LootItem.lootTableItem;
+import static net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition.hasBlockStateProperties;
 
 public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
     public ArtistryBlockLootTableProvider(HolderLookup.Provider registries) {
@@ -212,6 +218,7 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.HEADSTONE.get());
         this.dropSelf(ArtistryBlocks.LEECHING_SOIL.get());
         this.dropSelf(ArtistryBlocks.WAXED_LEECHING_SOIL.get());
+        this.add(ArtistryBlocks.URN.get(), this::createUrnTable);
         this.dropSelf(ArtistryBlocks.MARIGOLD.get());
         this.dropPottedContents(ArtistryBlocks.POTTED_MARIGOLD.get());
 
@@ -284,19 +291,24 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
     protected LootTable.Builder createSingleTriplePlantShearsDrop(Block sheared) {
         return LootTable.lootTable()
                 .withPool(
-                        LootPool.lootPool().when(HAS_SHEARS).add(LootItem.lootTableItem(sheared).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))
+                        lootPool().when(HAS_SHEARS).add(lootTableItem(sheared).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F))))
                 );
     }
 
+    private LootTable.Builder createUrnTable(Block block){
+        return LootTable.lootTable().withPool(lootPool().add(lootTableItem(block))
+                .when(hasBlockStateProperties(block)
+                        .setProperties(properties().hasProperty(UrnBlock.CRACKED, false))));
+    }
 
     private LootTable.Builder createPaintedPotTable(Block block) {
-        return LootTable.lootTable().withPool(LootPool.lootPool()
+        return LootTable.lootTable().withPool(lootPool()
                         .setRolls(ConstantValue.exactly(1.0F)).add(
-                                LootItem.lootTableItem(Items.BRICK).apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F))) // No sherds can be applied, so just drop 4 bricks
-                                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
-                                                                .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DecoratedPotBlock.CRACKED, true)))
+                                lootTableItem(Items.BRICK).apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F))) // No sherds can be applied, so just drop 4 bricks
+                                        .when(hasBlockStateProperties(block)
+                                                                .setProperties(properties().hasProperty(DecoratedPotBlock.CRACKED, true)))
                                         .otherwise(
-                                                LootItem.lootTableItem(block)
+                                                lootTableItem(block)
                                                         .apply(
                                                                 CopyComponentsFunction.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY)
                                                                         .include(PaintedPotDecorations.type())
@@ -306,9 +318,9 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
                 );
     }
     private LootTable.Builder createSparkFountain(Block block) {
-        return LootTable.lootTable().withPool(LootPool.lootPool()
+        return LootTable.lootTable().withPool(lootPool()
                         .setRolls(ConstantValue.exactly(1.0F)).add(
-                                LootItem.lootTableItem(block)
+                                lootTableItem(block)
                                         .apply(
                                                 CopyComponentsFunction.copyComponents(CopyComponentsFunction.Source.BLOCK_ENTITY)
                                                         .include(DataComponents.DYED_COLOR)
@@ -318,15 +330,15 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
 
     protected LootTable.Builder createWallStringLights(Block block) {
         return LootTable.lootTable()
-                .withPool(LootPool.lootPool().add(
+                .withPool(lootPool().add(
                         this.applyExplosionDecay(
                                 block,
-                                LootItem.lootTableItem(block)
+                                lootTableItem(block)
                                         .apply(
                                                 Direction.Plane.HORIZONTAL,
                                                 faceProperty -> SetItemCountFunction.setCount(ConstantValue.exactly(1.0F), true)
-                                                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
-                                                                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(MultifaceBlock.getFaceProperty(faceProperty), true))
+                                                        .when(hasBlockStateProperties(block)
+                                                                        .setProperties(properties().hasProperty(MultifaceBlock.getFaceProperty(faceProperty), true))
                                                         )
                             )
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(-1.0F), true))
@@ -336,12 +348,12 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
     }
 
     protected LootTable.Builder createMultifaceBlockDrops(Block block) {
-        return LootTable.lootTable().withPool(LootPool.lootPool().add(
-                this.applyExplosionDecay(block, LootItem.lootTableItem(block)
+        return LootTable.lootTable().withPool(lootPool().add(
+                this.applyExplosionDecay(block, lootTableItem(block)
                         .apply(
                                 Direction.values(), direction -> SetItemCountFunction.setCount(ConstantValue.exactly(1.0F), true)
-                                        .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
-                                                .setProperties(StatePropertiesPredicate.Builder.properties()
+                                        .when(hasBlockStateProperties(block)
+                                                .setProperties(properties()
                                                         .hasProperty(MultifaceBlock.getFaceProperty(direction), true))))
                         .apply(SetItemCountFunction.setCount(ConstantValue.exactly(-1.0F), true)))));
     }

@@ -1,6 +1,8 @@
 {
   "entries": [
-    "artistry:add_to_sniffer_loot"
+    "artistry:add_to_sniffer_loot",
+    "artistry:add_to_gold_ore",
+    "artistry:add_to_deepslate_gold_ore"
   ],
   "replace": false
 }

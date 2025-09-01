@@ -134,7 +134,8 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         DRIPSTONE_BRICK_SLAB.get(),
                         DRIPSTONE_BRICK_WALL.get(),
 
-                        HEADSTONE.get()
+                        HEADSTONE.get(),
+                        URN.get()
                 );
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .addTag(ArtistryTags.Blocks.WOODEN_TABLES).add(

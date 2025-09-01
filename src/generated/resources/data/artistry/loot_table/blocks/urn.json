@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "block": "artistry:urn",
+          "condition": "minecraft:block_state_property",
+          "properties": {
+            "cracked": "false"
+          }
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "artistry:urn"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "artistry:blocks/urn"
+}

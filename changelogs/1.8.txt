@@ -20,12 +20,15 @@
     - Makes fly particles (in a larger radius than the Corpse Flower)
     - Doesn't scare mobs
     - ! UNOBTAINABLE !
-- Honeydew Fruit
+- Golden Bulb
     - Found as a random drop alongside Raw Gold in Gold Ore
     - Must be planted on any stone-like block (including Rocky Dirt)
+    - Grows into Honeydew Fruit
 - Carving Knife
     - Crafted like an Iron Sword but diagonal
     - Can be used like shears on pumpkins (including Carved Pumpkins) to carve them into one of 7 variants (including vanilla Carved Pumpkins)
+- Urn
+    - Acts as a single-item storage like a decorated pot
 ## Changes:
 - Changed the texture of Aspen Leaves
 - Made Sniffer Cakes remove the cooldown of the next 3 digs instead of just one

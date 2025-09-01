@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-01T12:01:05.3615616	Tags for minecraft:block mod id artistry
+// 1.21.1	2025-09-01T14:08:46.978449	Tags for minecraft:block mod id artistry
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/block/aspen_logs.json
 cb8f42934e5133f862b85f346da074f586ebab6b data/artistry/tags/block/carvable_pumpkins.json
 3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/block/frosted_glass.json
@@ -51,7 +51,7 @@ e9b2b4e7962ab80d7efeab43fbed187f75c59a91 data/minecraft/tags/block/hoglin_repell
 407b677ec2ac7e153c7b3ffc64573110796ea34b data/minecraft/tags/block/maintains_farmland.json
 23118db2fe3ad20c3a727829c33509bf1b1bd3a4 data/minecraft/tags/block/mineable/axe.json
 14850c5e1f50c3a6a80630b9a5aedf7ccce407cc data/minecraft/tags/block/mineable/hoe.json
-36cf4ff00314e27ff0416f2f608694da000e9997 data/minecraft/tags/block/mineable/pickaxe.json
+386ee9c5970b18535b764c55c0cc53d27e663f40 data/minecraft/tags/block/mineable/pickaxe.json
 5d6119ef37c50a29edbaa389d8a218016af478b2 data/minecraft/tags/block/mineable/shovel.json
 6ccdd7553eca982a759b33a781c50b9ea255ce34 data/minecraft/tags/block/moss_replaceable.json
 ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/nether_carver_replaceables.json

@@ -222,6 +222,7 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
 
         horizontalBlock(HEADSTONE.get(), models().getExistingFile(Artistry.location("block/headstone")));
+        simpleBlock(URN.get(), models().getExistingFile(Artistry.location("block/urn")));
         blockWithItem(LEECHING_SOIL);
         simpleBlockWithItem(WAXED_LEECHING_SOIL.get(), cubeAll(LEECHING_SOIL.get()));
 

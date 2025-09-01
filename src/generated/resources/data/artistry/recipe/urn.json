@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "tag": "minecraft:terracotta"
+    },
+    "o": {
+      "item": "minecraft:brick"
+    }
+  },
+  "pattern": [
+    "o#o",
+    " o "
+  ],
+  "result": {
+    "count": 1,
+    "id": "artistry:urn"
+  }
+}
