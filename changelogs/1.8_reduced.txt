@@ -26,3 +26,5 @@
 - Made String Lights stackable to 64
 - Fixed some mistakes in the German translation
 - Made it so you can no longer dye pots with sherds on them
+## Technical:
+- Updated to NeoForge 21.1.208
