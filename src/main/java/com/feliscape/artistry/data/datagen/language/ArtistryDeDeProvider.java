@@ -33,7 +33,6 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.SUNBURST_VINES, "Sonnenscheinranken");
         this.addItem(ArtistryItems.SUNSPROUT, "Sonnensprosse");
         this.addItem(ArtistryItems.FERN_SEED, "Farnsamen");
-        this.addItem(ArtistryItems.GOLDEN_BULB, "Goldene Knolle");
         this.addItem(ArtistryItems.ANCIENT_TEAR, "Antike Träne");
         this.addItem(ArtistryItems.SNIFFER_CAKE, "Schnüffler-Kuchen");
         this.addItemTooltip(ArtistryItems.SNIFFER_CAKE, "Das Lieblingsessen eines Schnüfflers");
@@ -68,8 +67,8 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.CORPSE_FLOWER, "Leichenblume");
         this.addBlock(ArtistryBlocks.FLY_LURE, "Fliegenköder");
 
-        this.addBlock(ArtistryBlocks.HONEYDEW_FRUIT, "Honigtaufrucht");
-        this.addBlock(ArtistryBlocks.HONEYDEW_STALK, "Honigtaustiel");
+        this.addBlock(ArtistryBlocks.GLOWING_MUSHROOM, "Leuchtpilz");
+        this.addBlock(ArtistryBlocks.GLOWING_MUSHROOM_BLOCK, "Leuchtpilzblock");
 
         this.addBlock(ArtistryBlocks.OAK_TABLE, "Eichenholztisch");
         this.addBlock(ArtistryBlocks.SPRUCE_TABLE, "Fichtenholztisch");

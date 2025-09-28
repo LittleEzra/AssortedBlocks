@@ -34,7 +34,7 @@ public class ArtistryTreeFeatures {
                 new StraightTrunkPlacer(9, 1, 3),
 
                 BlockStateProvider.simple(ArtistryBlocks.ASPEN_LEAVES.get()),
-                new AspenFoliagePlacer(ConstantInt.of(3), ConstantInt.of(7), 3, UniformInt.of(9, 11)),
+                new AspenFoliagePlacer(ConstantInt.of(3), ConstantInt.of(7), 3, ConstantInt.of(11)),
 
                 new TwoLayersFeatureSize(1, 0, 2)
         );

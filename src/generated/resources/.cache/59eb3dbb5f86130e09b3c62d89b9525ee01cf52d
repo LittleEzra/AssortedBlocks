@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-01T16:32:20.5045749	Loot Tables
+// 1.21.1	2025-09-28T20:56:47.9235949	Loot Tables
 47b6b4ddb80a89fa9150b4f209f8c1912ba8fd04 data/artistry/loot_table/blocks/acacia_table.json
 c17e141140c72bb4ad538245b3bc5de5e3b91093 data/artistry/loot_table/blocks/amethyst_stars.json
 8472b2e2149ff7987014f0ebdfb5631626250e58 data/artistry/loot_table/blocks/andesite_table.json
@@ -61,6 +61,8 @@ ba994b82daebf578d2697d6db8b9ae8bd94897df data/artistry/loot_table/blocks/dripsto
 e318588d5d2c53a0951a1428aa4b1d6a922d03fe data/artistry/loot_table/blocks/exposed_copper_chain.json
 4e454b13ef84c5dfd9626d1cb0a88818ea9454da data/artistry/loot_table/blocks/flat_light.json
 a6a7face90aed4490eee21ab888ae96b773cab54 data/artistry/loot_table/blocks/fly_lure.json
+ed5de50b76fdc713a937858538a10db0c1d606d2 data/artistry/loot_table/blocks/glowing_mushroom.json
+ab2ac690e209fdc085c4520081e61207bab82d73 data/artistry/loot_table/blocks/glowing_mushroom_block.json
 e235759b905a1d7240603ae29389e80e4842d22b data/artistry/loot_table/blocks/granite_table.json
 9cc7b6aaef84316eacaedfc259fb40286d454070 data/artistry/loot_table/blocks/gray_frosted_glass.json
 00ee48c2cd0ba762874ddd9281dd9d7053cd8f09 data/artistry/loot_table/blocks/gray_tall_candle.json
@@ -69,8 +71,6 @@ e235759b905a1d7240603ae29389e80e4842d22b data/artistry/loot_table/blocks/granite
 10354fe990a197791e85fe5cd148c747939e37c9 data/artistry/loot_table/blocks/happy_carved_pumpkin.json
 7edb73e4344aec2dd81a54a890cefe5b3773d344 data/artistry/loot_table/blocks/happy_jack_o_lantern.json
 b72430e46716d10e8a9dd9ac82573a8fae193f4f data/artistry/loot_table/blocks/headstone.json
-a54aa3ba921b322688739db79f221bec9353e811 data/artistry/loot_table/blocks/honeydew_fruit.json
-cb4bfcbe889c0fe5e10f4ea7d38dd4272796d2fa data/artistry/loot_table/blocks/honeydew_stalk.json
 452a3d04b799985e90566c7672a20147bc47e228 data/artistry/loot_table/blocks/hungry_carved_pumpkin.json
 0477178c91a36fd1a3c3739f4fd8f40f14c5e598 data/artistry/loot_table/blocks/hungry_jack_o_lantern.json
 a59bb02cdae51ba553a890a0796036572a1fda89 data/artistry/loot_table/blocks/jungle_table.json
@@ -190,4 +190,3 @@ cbf4df4e0fd6646498be5a9219bb2b3b3de0ac8e data/artistry/loot_table/blocks/weather
 6a7126db5f6e89d534cb3a9fa73d5233ae9d5c28 data/artistry/loot_table/blocks/wicked_jack_o_lantern.json
 1a8ab4e9e7f2a697df0a6ab4223036ef2de561c3 data/artistry/loot_table/blocks/yellow_frosted_glass.json
 48d087c6b2561fc7a43c71979d093a9bd445b90a data/artistry/loot_table/blocks/yellow_tall_candle.json
-d60336d1fc8b2ce80102e785fdb5aa6908a3ff01 data/artistry/loot_table/glm/block/gold_ore_extra.json

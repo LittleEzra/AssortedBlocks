@@ -28,7 +28,6 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addItem(ArtistryItems.SUNBURST_VINES, "Sunburst Vines");
         this.addItem(ArtistryItems.SUNSPROUT, "Sunsprout");
         this.addItem(ArtistryItems.FERN_SEED, "Fern Seed");
-        this.addItem(ArtistryItems.GOLDEN_BULB, "Golden Bulb");
         this.addItem(ArtistryItems.ANCIENT_TEAR, "Ancient Tear");
         this.addItem(ArtistryItems.SNIFFER_CAKE, "Sniffer Cake");
         this.addItemTooltip(ArtistryItems.SNIFFER_CAKE, "A Sniffer's favorite food");
@@ -62,8 +61,9 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.TALL_TEARDROP_GRASS, "Tall Teardrop Grass");
         this.addBlock(ArtistryBlocks.CORPSE_FLOWER, "Corpse Flower");
         this.addBlock(ArtistryBlocks.FLY_LURE, "Fly Lure");
-        this.addBlock(ArtistryBlocks.HONEYDEW_FRUIT, "Honeydew Fruit");
-        this.addBlock(ArtistryBlocks.HONEYDEW_STALK, "Honeydew Stalk");
+
+        this.addBlock(ArtistryBlocks.GLOWING_MUSHROOM, "Glowing Mushroom");
+        this.addBlock(ArtistryBlocks.GLOWING_MUSHROOM_BLOCK, "Glowing Mushroom Block");
 
         this.addBlock(ArtistryBlocks.OAK_TABLE, "Oak Table");
         this.addBlock(ArtistryBlocks.SPRUCE_TABLE, "Spruce Table");

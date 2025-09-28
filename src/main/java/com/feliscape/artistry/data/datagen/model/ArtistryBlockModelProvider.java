@@ -114,8 +114,8 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         corpseFlowerBlock(CORPSE_FLOWER.get());
         flyLureBlock(FLY_LURE.get());
 
-        honeydewFruitBlock(HONEYDEW_FRUIT.get());
-        crossCropBlock(HONEYDEW_STALK.get());
+        crossBlockWithVariants(GLOWING_MUSHROOM.get(), 2);
+        hugeMushroomBlock(GLOWING_MUSHROOM_BLOCK.get());
 
         axisBlock(COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/copper_chain")));
         axisBlock(EXPOSED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/exposed_copper_chain")));
@@ -300,6 +300,35 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
     private static final ResourceLocation PUMPKIN_SIDE = ResourceLocation.withDefaultNamespace("block/pumpkin_side");
     private static final ResourceLocation PUMPKIN_TOP = ResourceLocation.withDefaultNamespace("block/pumpkin_top");
 
+
+    private void hugeMushroomBlock(HugeMushroomBlock block) {
+        var builder = getMultipartBuilder(block);
+
+        ModelFile outside = models().withExistingParent(name(block), "block/template_single_face")
+                .texture("texture", blockTexture(block));
+        ModelFile inside = models().getExistingFile(ResourceLocation.withDefaultNamespace("block/mushroom_block_inside"));
+
+        for (Direction direction : Direction.values()){
+
+            int yRot = direction.get2DDataValue() < 0 ? 0 : ((int) direction.toYRot() + 180) % 360;
+            int xRot = 0;
+            if (direction == Direction.UP){
+                xRot = 270;
+            } else if (direction == Direction.DOWN){
+                xRot = 90;
+            }
+
+            builder.part().modelFile(outside).rotationY(yRot).uvLock(true).rotationX(xRot).addModel()
+                    .condition(PipeBlock.PROPERTY_BY_DIRECTION.get(direction), true)
+                    .end();
+            builder.part().modelFile(inside).rotationY(yRot).uvLock(false).rotationX(xRot).addModel()
+                    .condition(PipeBlock.PROPERTY_BY_DIRECTION.get(direction), false)
+                    .end();
+        }
+        simpleBlockItem(block, models().cubeAll(name(block) + "_inventory", blockTexture(block)));
+
+    }
+
     private void tallCandle(TallCandleBlock block) {
         getVariantBuilder(block).forAllStatesExcept(state -> {
             int count = state.getValue(TallCandleBlock.CANDLES);
@@ -332,16 +361,6 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         ModelFile model = models().orientable(name(block), PUMPKIN_SIDE, blockTexture(block), PUMPKIN_TOP);
         horizontalBlock(block, model);
         simpleBlockItem(block, model);
-    }
-
-    private void honeydewFruitBlock(HoneydewFruitBlock block) {
-        ModelFile planted = models().cubeAll(name(block) + "_planted", blockTexture(block));
-        ModelFile placed = models().cubeColumn(name(block), blockTexture(block), blockTexture(block).withSuffix("_top"));
-        getVariantBuilder(block)
-                .forAllStates(
-                        state -> ConfiguredModel.builder().modelFile(state.getValue(HoneydewFruitBlock.PLANTED) ? planted : placed).build()
-                );
-        simpleBlockItem(block, placed);
     }
 
     private void flyLureBlock(FlyLureBlock block) {
@@ -396,6 +415,22 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
                     .weight(1).build());
         }
         simpleBlockItem(block, primary);
+    }
+    /**
+     * A simple block and item with multiple variants
+     * @param variants The number of variants excluding the primary texture
+     */
+    private void crossBlockWithVariants(Block block, int variants){
+        ModelFile primary = models().cross(name(block), blockTexture(block)).renderType("cutout");
+        VariantBlockStateBuilder variantBuilder = getVariantBuilder(block);
+        variantBuilder.partialState().addModels(ConfiguredModel.builder().modelFile(primary).weight(1).build());
+
+        for (int i = 0; i < variants; i++){
+            variantBuilder.partialState().addModels(ConfiguredModel.builder()
+                    .modelFile(models().cross(name(block) + "_" + i, blockTexture(block).withSuffix("_" + i))
+                            .renderType("cutout"))
+                    .weight(1).build());
+        }
     }
 
     public void axisBlock(RotatedPillarBlock block, ModelFile model) {

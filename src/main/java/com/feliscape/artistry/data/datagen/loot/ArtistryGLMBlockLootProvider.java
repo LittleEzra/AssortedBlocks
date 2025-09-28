@@ -20,8 +20,6 @@ public class ArtistryGLMBlockLootProvider implements LootTableSubProvider {
 
     @Override
     public void generate(BiConsumer<ResourceKey<LootTable>, LootTable.Builder> output) {
-        output.accept(ArtistryLootTables.GOLDEN_BULB_DROP, LootTable.lootTable()
-                .withPool(LootPool.lootPool().add(LootItem.lootTableItem(ArtistryItems.GOLDEN_BULB)))
-        );
+
     }
 }

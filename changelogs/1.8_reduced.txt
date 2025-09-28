@@ -9,13 +9,12 @@
     - ! UNOBTAINABLE !
 - Fly Lure
     - ! UNOBTAINABLE !
-- Golden Bulb
-    - Found as a random drop alongside Raw Gold in Gold Ore
-    - Must be planted on any stone-like block (including Rocky Dirt)
 - Carving Knife
     - Can be used like shears on pumpkins (including Carved Pumpkins)to carve them into one of 7 variants (including vanilla Carved Pumpkins)
 - Tall Candles in all colors + undyed
     - Can be stacked up to a height of two to make even taller candles
+- Glowing Mushroom
+    - Obtained by growing a mushroom on an Amethyst Block
 - Urn
     - Acts as a single-item storage like a decorated pot
 ## Changes:

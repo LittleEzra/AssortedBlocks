@@ -3,23 +3,21 @@ package com.feliscape.artistry.content.event;
 import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.content.block.entity.PaintedPotBlockEntity;
 import com.feliscape.artistry.content.entity.ai.RunAwayFromBlockGoal;
+import com.feliscape.artistry.data.worldgen.registry.ArtistryConfiguredFeatures;
 import com.feliscape.artistry.registry.ArtistryAttachmentTypes;
 import com.feliscape.artistry.registry.ArtistryBlocks;
-import com.feliscape.artistry.registry.ArtistryItems;
 import com.feliscape.artistry.registry.ArtistryTags;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.animal.sniffer.Sniffer;
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -28,11 +26,11 @@ import net.minecraft.world.level.block.entity.PotDecorations;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.event.AddPackFindersEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
-import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
-import net.neoforged.neoforge.event.entity.living.MobSpawnEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.level.BlockGrowFeatureEvent;
 import net.neoforged.neoforge.event.tick.EntityTickEvent;
 
 @EventBusSubscriber(modid = Artistry.MOD_ID)
@@ -90,6 +88,17 @@ public class Events {
             if (motivation > 0 && sniffer.getBrain().hasMemoryValue(MemoryModuleType.SNIFF_COOLDOWN)){
                 sniffer.getBrain().eraseMemory(MemoryModuleType.SNIFF_COOLDOWN);
                 sniffer.setData(ArtistryAttachmentTypes.SNIFFER_MOTIVATION, motivation - 1);
+            }
+        }
+    }
+    @SubscribeEvent
+    public static void onBlockGrowFeature(BlockGrowFeatureEvent event){
+        LevelAccessor level = event.getLevel();
+        BlockPos pos = event.getPos();
+        BlockState plantBlock = event.getLevel().getBlockState(event.getPos());
+        if (plantBlock.is(ArtistryTags.Blocks.NON_GLOWING_MUSHROOMS)){
+            if (level.getBlockState(pos.below()).is(ArtistryTags.Blocks.GLOWING_MUSHROOM_SUBSTRATE)){
+                event.setFeature(ArtistryConfiguredFeatures.HUGE_GLOWING_MUSHROOM);
             }
         }
     }

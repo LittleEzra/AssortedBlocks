@@ -10,10 +10,13 @@ import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.HugeMushroomBlock;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
@@ -23,6 +26,7 @@ import java.util.List;
 
 public class ArtistryConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> TEARDROP_GRASS_BONEMEAL = createKey("teardrop_grass_bonemeal");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> HUGE_GLOWING_MUSHROOM = createKey("huge_glowing_mushroom");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         ArtistryTreeFeatures.bootstrap(context);
@@ -31,6 +35,17 @@ public class ArtistryConfiguredFeatures {
                 Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ArtistryBlocks.SHORT_TEARDROP_GRASS.get())),
                 List.of(ArtistryBlocks.TEARDROP_GRASS_BLOCK.get()), 3, 2, 10
         ));
+        FeatureUtils.register(context, HUGE_GLOWING_MUSHROOM, ArtistryFeatures.HUGE_GLOWING_MUSHROOM.get(),
+                new HugeMushroomFeatureConfiguration(
+                        BlockStateProvider.simple(ArtistryBlocks.GLOWING_MUSHROOM_BLOCK.get().defaultBlockState().setValue(HugeMushroomBlock.DOWN, Boolean.FALSE)),
+                        BlockStateProvider.simple(
+                                Blocks.MUSHROOM_STEM.defaultBlockState()
+                                        .setValue(HugeMushroomBlock.UP, Boolean.FALSE)
+                                        .setValue(HugeMushroomBlock.DOWN, Boolean.FALSE)
+                        ),
+                        2
+                )
+        );
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> createKey(String name) {

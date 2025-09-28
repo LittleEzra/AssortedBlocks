@@ -21,6 +21,8 @@ public class ArtistryTags {
         public static final TagKey<Block> LEECHABLE_SAPLINGS = create("leechable_saplings");
         public static final TagKey<Block> LEECHABLE_FLOWERS = create("leechable_flowers");
         public static final TagKey<Block> CARVABLE_PUMPKINS = create("carvable_pumpkins");
+        public static final TagKey<Block> NON_GLOWING_MUSHROOMS = create("non_glowing_mushrooms");
+        public static final TagKey<Block> GLOWING_MUSHROOM_SUBSTRATE = create("glowing_mushroom_substrate");
 
         public static final TagKey<Block> UNDERGROUND_PLANT_SOIL = create("underground_plant_soil");
 

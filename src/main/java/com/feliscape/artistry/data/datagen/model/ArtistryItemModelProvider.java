@@ -29,7 +29,6 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
 
         simpleItem(ArtistryItems.SUNSPROUT);
         simpleItem(ArtistryItems.FERN_SEED);
-        simpleItem(ArtistryItems.GOLDEN_BULB);
         simpleItem(ArtistryItems.ANCIENT_TEAR);
         simpleItem(ArtistryItems.SNIFFER_CAKE);
         itemWithBlockTexture(ArtistryItems.SUNBURST_VINES);
@@ -92,6 +91,7 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
 
         blockItemSprite(ArtistryBlocks.CORPSE_FLOWER);
         blockItemSprite(ArtistryBlocks.FLY_LURE);
+        generatedBlockItem(ArtistryBlocks.GLOWING_MUSHROOM);
 
         blockItemSprite(ArtistryBlocks.HEADSTONE);
         generatedBlockItem(ArtistryBlocks.MARIGOLD);

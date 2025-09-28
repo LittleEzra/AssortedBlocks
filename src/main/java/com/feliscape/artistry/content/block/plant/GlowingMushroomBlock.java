@@ -32,7 +32,7 @@ public class GlowingMushroomBlock extends BushBlock implements BonemealableBlock
                     .apply(instance, GlowingMushroomBlock::new)
     );
     protected static final float AABB_OFFSET = 3.0F;
-    protected static final VoxelShape SHAPE = Block.box(5.0, 0.0, 5.0, 11.0, 6.0, 11.0);
+    protected static final VoxelShape SHAPE = Block.box(4.0, 0.0, 4.0, 12.0, 8.0, 12.0);
     private final ResourceKey<ConfiguredFeature<?, ?>> feature;
 
     @Override

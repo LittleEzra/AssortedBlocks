@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "artistry:block/honeydew_fruit_top",
-    "side": "artistry:block/honeydew_fruit"
-  }
-}

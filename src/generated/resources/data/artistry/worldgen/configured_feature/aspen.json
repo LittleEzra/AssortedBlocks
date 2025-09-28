@@ -11,11 +11,7 @@
     "foliage_placer": {
       "type": "artistry:aspen_foliage_placer",
       "height": 3,
-      "leavesHeight": {
-        "type": "minecraft:uniform",
-        "max_inclusive": 11,
-        "min_inclusive": 9
-      },
+      "leavesHeight": 11,
       "offset": 7,
       "radius": 3
     },

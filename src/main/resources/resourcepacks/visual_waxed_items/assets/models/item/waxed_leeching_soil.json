@@ -1,0 +1,6 @@
+{
+  "parent": "artistry:block/leeching_soil",
+  "textures": {
+    "all": "visual_waxed_items:item/waxed_leeching_soil"
+  }
+}

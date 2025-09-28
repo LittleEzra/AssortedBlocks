@@ -1,5 +1,6 @@
 package com.feliscape.artistry;
 
+import com.feliscape.artistry.data.worldgen.registry.ArtistryFeatures;
 import com.feliscape.artistry.data.worldgen.registry.ArtistryFoliagePlacers;
 import com.feliscape.artistry.registry.*;
 import net.minecraft.resources.ResourceLocation;
@@ -46,6 +47,7 @@ public class Artistry
         ArtistryParticles.register(modEventBus);
 
         ArtistryFoliagePlacers.register(modEventBus);
+        ArtistryFeatures.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
 
@@ -69,6 +71,8 @@ public class Artistry
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ArtistryBlocks.MARIGOLD.getId(), ArtistryBlocks.POTTED_MARIGOLD);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ArtistryBlocks.SHORT_TEARDROP_GRASS.getId(), ArtistryBlocks.POTTED_TEARDROP_GRASS);
         });
+
+
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event)

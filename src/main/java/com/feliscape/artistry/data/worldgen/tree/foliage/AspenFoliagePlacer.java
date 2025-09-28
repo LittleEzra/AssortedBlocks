@@ -13,17 +13,18 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 
 public class AspenFoliagePlacer extends FoliagePlacer {
-    public static final MapCodec<AspenFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec(aspenFoliagePlacerInstance
-            -> foliagePlacerParts(aspenFoliagePlacerInstance)
+    public static final MapCodec<AspenFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec(instance
+            -> foliagePlacerParts(instance)
             .and(Codec.intRange(0, 16).fieldOf("height").forGetter(fp -> fp.height))
             .and(IntProvider.codec(4, 16).fieldOf("leavesHeight").forGetter(fp -> fp.leavesHeight))
-            .apply(aspenFoliagePlacerInstance, AspenFoliagePlacer::new));
+            .apply(instance, AspenFoliagePlacer::new));
+
 
     private final int height;
     private final IntProvider leavesHeight;
 
-    public AspenFoliagePlacer(IntProvider pRadius, IntProvider pOffset, int height, IntProvider leavesHeight) {
-        super(pRadius, pOffset);
+    public AspenFoliagePlacer(IntProvider radius, IntProvider offset, int height, IntProvider leavesHeight) {
+        super(radius, offset);
         this.height = height;
         this.leavesHeight = leavesHeight;
     }
@@ -36,33 +37,96 @@ public class AspenFoliagePlacer extends FoliagePlacer {
     @Override
     protected void createFoliage(LevelSimulatedReader level, FoliageSetter blockSetter, RandomSource random, TreeConfiguration config,
                                  int maxFreeTreeHeight, FoliageAttachment attachment, int foliageHeight, int foliageRadius, int offset) {
-
         BlockPos blockpos = attachment.pos().below(offset);
         int size = leavesHeight.sample(random);
         for (int i = 0; i < size; i++){
-            if (i < 2 || i == size - 1){
-                this.placeLeavesRow(level, blockSetter, random, config, blockpos, 1, i, attachment.doubleTrunk());
+            if (i == size - 1){
+                this.placeLeavesRow(level, blockSetter, random, config, blockpos, 0, size - 1, i, attachment.doubleTrunk());
+            } else if (i == 0 || i >= size - 3){
+                this.placeLeavesRow(level, blockSetter, random, config, blockpos, 1, size - 1, i, attachment.doubleTrunk());
             } else{
-                this.placeLeavesRow(level, blockSetter, random, config, blockpos, 2, i, attachment.doubleTrunk());
+                this.placeLeavesRow(level, blockSetter, random, config, blockpos, 2, size - 1, i, attachment.doubleTrunk());
             }
         }
     }
 
     @Override
-    public int foliageHeight(RandomSource pRandom, int pHeight, TreeConfiguration pConfig) {
-        return this.height + pRandom.nextInt(2);
+    public int foliageHeight(RandomSource random, int height, TreeConfiguration config) {
+        return this.height + random.nextInt(2);
+    }
+
+    protected void placeLeavesRow(LevelSimulatedReader level, FoliageSetter foliageSetter, RandomSource random, TreeConfiguration treeConfiguration, BlockPos pos, int range, int foliageHeight, int localY, boolean large) {
+        int i = large ? 1 : 0;
+        BlockPos.MutableBlockPos mutablePos = new BlockPos.MutableBlockPos();
+
+        for(int j = -range; j <= range + i; ++j) {
+            for(int k = -range; k <= range + i; ++k) {
+                if (!this.shouldSkipLocationSigned(random, j, localY, k, range, foliageHeight, large)) {
+                    mutablePos.setWithOffset(pos, j, localY, k);
+                    tryPlaceLeaf(level, foliageSetter, random, treeConfiguration, mutablePos);
+                }
+            }
+        }
+    }
+
+    protected boolean shouldSkipLocationSigned(RandomSource random, int localX, int localY, int localZ, int range, int foliageHeight, boolean large) {
+        int x;
+        int z;
+        if (large) {
+            x = Math.min(Math.abs(localX), Math.abs(localX - 1));
+            z = Math.min(Math.abs(localZ), Math.abs(localZ - 1));
+        } else {
+            x = Math.abs(localX);
+            z = Math.abs(localZ);
+        }
+
+        return this.shouldSkipLocation(random, x, localY, z, range, foliageHeight, large);
+    }
+
+    protected boolean shouldSkipLocation(RandomSource random, int localX, int localY, int localZ, int range, int foliageHeight, boolean large) {
+        int reversedY = foliageHeight - localY;
+        if (range == 0) return false;
+
+        boolean isCorner = localX != 0 && localZ != 0;
+        boolean isEdge = localX == range || localZ == range;
+        boolean isOuterCorner = Math.abs(localX) == range && Math.abs(localZ) == range;
+
+        if (reversedY <= 1){ // block below top
+            return isCorner;
+        } else if (reversedY == 3){
+            return isCorner && isEdge;
+        } else if (reversedY == 4){
+            return isOuterCorner;
+        } else if (localY > 0 && Math.abs(localX) == range && Math.abs(localZ) == range){
+            return range == 2 && random.nextInt(3) < 2;
+        }
+        return false;
+
+        /*if (localX == range && localZ == range && reversedY % 2 != 0 && localY >= 2) return true;
+
+        if (reversedY == 2){
+            boolean isCorner = localX != 0 && localZ != 0;
+            boolean isEdge = localX == range || localZ == range;
+            return isCorner && isEdge;
+        }
+        else if (localX == range && localZ == range){
+            if (reversedY <= 1) return true;
+            else return range == 2 && random.nextInt(3) < 2;
+        } else{
+            return false;
+        }*/
     }
 
     @Override
-    protected boolean shouldSkipLocation(RandomSource pRandom, int pLocalX, int pLocalY, int pLocalZ, int pRange, boolean pLarge) {
-        if (pLocalY == 2){
-            boolean isCorner = pLocalX != 0 && pLocalZ != 0;
-            boolean isEdge = pLocalX == pRange || pLocalZ == pRange;
+    protected boolean shouldSkipLocation(RandomSource random, int localX, int localY, int localZ, int range, boolean large) {
+        if (localY == 2){
+            boolean isCorner = localX != 0 && localZ != 0;
+            boolean isEdge = localX == range || localZ == range;
             return isCorner && isEdge;
         }
-        else if (pLocalX == pRange && pLocalZ == pRange){
-            if (pLocalY == 0) return true;
-            else return pRange == 2 && pRandom.nextInt(3) < 2;
+        else if (localX == range && localZ == range){
+            if (localY == 0) return true;
+            else return range == 2 && random.nextInt(3) < 2;
         } else{
             return false;
         }

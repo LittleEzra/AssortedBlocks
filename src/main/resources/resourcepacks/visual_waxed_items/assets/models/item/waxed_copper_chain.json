@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "artistry:item/golden_bulb"
+    "layer0": "visual_waxed_items:item/waxed_copper_chain"
   }
 }

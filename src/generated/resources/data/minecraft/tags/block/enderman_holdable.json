@@ -5,5 +5,7 @@
     "artistry:teardrop_grass_block",
     "artistry:leeching_soil"
   ],
-  "values": []
+  "values": [
+    "artistry:glowing_mushroom"
+  ]
 }

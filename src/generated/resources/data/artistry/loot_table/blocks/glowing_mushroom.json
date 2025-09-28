@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "artistry:honeydew_fruit"
+          "name": "artistry:glowing_mushroom"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "artistry:blocks/honeydew_fruit"
+  "random_sequence": "artistry:blocks/glowing_mushroom"
 }

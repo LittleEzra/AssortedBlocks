@@ -29,8 +29,6 @@ public class ArtistryItems {
             p -> new ItemNameBlockItem(ArtistryBlocks.SUNSPROUT.get(), p));
     public static final DeferredItem<ItemNameBlockItem> FERN_SEED = ITEMS.registerItem("fern_seed",
             p -> new ItemNameBlockItem(ArtistryBlocks.LUSH_FERN_CROP.get(), p));
-    public static final DeferredItem<ItemNameBlockItem> GOLDEN_BULB = ITEMS.registerItem("golden_bulb",
-            p -> new ItemNameBlockItem(ArtistryBlocks.HONEYDEW_STALK.get(), p));
     public static final DeferredItem<AncientTearItem> ANCIENT_TEAR = ITEMS.registerItem("ancient_tear",
             AncientTearItem::new);
     public static final DeferredItem<SnifferCakeItem> SNIFFER_CAKE = ITEMS.registerItem("sniffer_cake",

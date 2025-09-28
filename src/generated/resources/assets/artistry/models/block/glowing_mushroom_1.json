@@ -2,6 +2,6 @@
   "parent": "minecraft:block/cross",
   "render_type": "minecraft:cutout",
   "textures": {
-    "cross": "artistry:block/honeydew_stalk_stage2"
+    "cross": "artistry:block/glowing_mushroom_1"
   }
 }

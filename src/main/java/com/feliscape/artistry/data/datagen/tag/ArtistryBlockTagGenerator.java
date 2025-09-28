@@ -163,8 +163,9 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         LUSH_FERN_CROP.get(),
                         CORPSE_FLOWER.get(),
                         FLY_LURE.get(),
-                        HONEYDEW_FRUIT.get(),
-                        HONEYDEW_STALK.get()
+
+                        GLOWING_MUSHROOM.get(),
+                        GLOWING_MUSHROOM_BLOCK.get()
                 );
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ROCKY_DIRT.get())
@@ -243,6 +244,16 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         ArtistryBlocks.PEEKING_JACK_O_LANTERN.get(),
                         ArtistryBlocks.BELLOWING_JACK_O_LANTERN.get()
         );
+        this.tag(ArtistryTags.Blocks.NON_GLOWING_MUSHROOMS).add(
+                Blocks.BROWN_MUSHROOM,
+                Blocks.RED_MUSHROOM
+        );
+        this.tag(ArtistryTags.Blocks.GLOWING_MUSHROOM_SUBSTRATE).add(
+                        Blocks.AMETHYST_BLOCK
+        );
+        this.tag(BlockTags.MUSHROOM_GROW_BLOCK).add(
+                        Blocks.AMETHYST_BLOCK
+        );
 
         this.tag(BlockTags.SNIFFER_DIGGABLE_BLOCK)
                 .add(Blocks.CLAY)
@@ -314,7 +325,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(SUNSPROUT.get())
                 .add(SUNBURST_VINES.get())
                 .add(SUNBURST_VINES_PLANT.get())
-                .add(HONEYDEW_STALK.get())
+                .add(GLOWING_MUSHROOM.get())
         ;
         this.tag(ArtistryTags.Blocks.TABLES)
                 .addTag(ArtistryTags.Blocks.WOODEN_TABLES)
@@ -368,6 +379,10 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(POLISHED_DRIPSTONE_SLAB.get())
                 .add(DRIPSTONE_BRICK_SLAB.get())
         ;
+
+        this.tag(BlockTags.ENDERMAN_HOLDABLE).add(
+                GLOWING_MUSHROOM.get()
+        );
 
         this.tag(BlockTags.DIRT)
                 .add(OVERGROWN_STONE_TILES.get())
@@ -465,6 +480,13 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(ROTTEN_LEAVES.get())
         ;
 
+        this.tag(BlockTags.FLOWER_POTS).add(
+                POTTED_MARIGOLD.get(),
+                POTTED_ASPEN_SAPLING.get(),
+                POTTED_ROTTEN_SAPLING.get(),
+                POTTED_TEARDROP_GRASS.get()
+        );
+
         this.tag(BlockTags.HOGLIN_REPELLENTS)
                 .add(CORPSE_FLOWER.get())
         ;
@@ -483,7 +505,6 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(SHORT_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())
                 .add(LUSH_FERN_CROP.get())
-                .add(HONEYDEW_STALK.get())
                 .add(CORPSE_FLOWER.get())
         ;
         this.tag(BlockTags.REPLACEABLE_BY_TREES)
@@ -495,15 +516,12 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MAINTAINS_FARMLAND)
                 .add(LUSH_FERN_CROP.get())
                 .add(LUSH_FERN.get())
-                .add(HONEYDEW_STALK.get())
         ;
         this.tag(BlockTags.CROPS)
                 .add(LUSH_FERN_CROP.get())
-                .add(HONEYDEW_STALK.get())
         ;
         this.tag(BlockTags.BEE_GROWABLES)
                 .add(LUSH_FERN_CROP.get())
-                .add(HONEYDEW_STALK.get())
         ;
 
         addColored(Tags.Blocks.DYED, "{color}_frosted_glass");

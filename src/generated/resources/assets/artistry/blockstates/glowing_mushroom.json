@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "artistry:block/glowing_mushroom"
+      },
+      {
+        "model": "artistry:block/glowing_mushroom_0"
+      },
+      {
+        "model": "artistry:block/glowing_mushroom_1"
+      }
+    ]
+  }
+}

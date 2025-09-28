@@ -57,19 +57,5 @@ public class ArtistryGlobalLootModifierProvider extends GlobalLootModifierProvid
                 }),
                 List.of()
         );
-        add("add_to_gold_ore",
-                new AddTableLootModifier(new LootItemCondition[]{
-                        LootTableIdCondition.builder(ResourceLocation.withDefaultNamespace("blocks/gold_ore")).build(),
-                        LootItemRandomChanceCondition.randomChance(0.05F).build()
-                }, ArtistryLootTables.GOLDEN_BULB_DROP),
-                List.of()
-        );
-        add("add_to_deepslate_gold_ore",
-                new AddTableLootModifier(new LootItemCondition[]{
-                        LootTableIdCondition.builder(ResourceLocation.withDefaultNamespace("blocks/deepslate_gold_ore")).build(),
-                        LootItemRandomChanceCondition.randomChance(0.05F).build()
-                }, ArtistryLootTables.GOLDEN_BULB_DROP),
-                List.of()
-        );
     }
 }

@@ -5,9 +5,12 @@ import com.feliscape.artistry.content.block.RoundLanternBlock;
 import com.feliscape.artistry.content.block.*;
 import com.feliscape.artistry.content.block.flammable.*;
 import com.feliscape.artistry.content.block.plant.*;
+import com.feliscape.artistry.data.worldgen.registry.ArtistryConfiguredFeatures;
 import com.feliscape.artistry.data.worldgen.registry.ArtistryTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.data.worldgen.features.CaveFeatures;
+import net.minecraft.data.worldgen.features.TreeFeatures;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -421,21 +424,27 @@ public class ArtistryBlocks {
                     .strength(3.5F)
             ));
 
-    public static final DeferredBlock<HoneydewFruitBlock> HONEYDEW_FRUIT = registerBlockWithItem("honeydew_fruit",
-            p -> new HoneydewFruitBlock(p
-                    .mapColor(MapColor.GOLD)
-                    .strength(1.5F)
-                    .sound(SoundType.WOOD)
-                    .pushReaction(PushReaction.DESTROY)
-            ));
-    public static final DeferredBlock<HoneydewPlantBlock> HONEYDEW_STALK = BLOCKS.registerBlock("honeydew_stalk",
-            p -> new HoneydewPlantBlock(p
-                    .mapColor(MapColor.GOLD)
+    public static final DeferredBlock<GlowingMushroomBlock> GLOWING_MUSHROOM = registerBlockWithItem("glowing_mushroom",
+            p -> new GlowingMushroomBlock(ArtistryConfiguredFeatures.HUGE_GLOWING_MUSHROOM, p
+                    .mapColor(MapColor.COLOR_PURPLE)
                     .instabreak()
                     .noCollission()
                     .noOcclusion()
-                    .sound(SoundType.HARD_CROP)
+                    .randomTicks()
+                    .lightLevel(state -> 5)
+                    .sound(SoundType.GRASS)
                     .pushReaction(PushReaction.DESTROY)
+            ));
+
+    public static final DeferredBlock<HugeMushroomBlock> GLOWING_MUSHROOM_BLOCK = registerBlockWithItem("glowing_mushroom_block",
+            p -> new HugeMushroomBlock(p
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .strength(0.2F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+                    .lightLevel(state -> 5)
+                    .emissiveRendering(ArtistryBlocks::always)
             ));
 
     public static final DeferredBlock<FlowerPotBlock> POTTED_TEARDROP_GRASS = BLOCKS.registerBlock("potted_teardrop_grass",

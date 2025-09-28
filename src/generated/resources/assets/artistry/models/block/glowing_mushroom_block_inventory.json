@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "artistry:block/honeydew_fruit"
+    "all": "artistry:block/glowing_mushroom_block"
   }
 }
