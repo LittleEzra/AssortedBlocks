@@ -3,27 +3,27 @@
     - Will "leech" and change certain blocks above itself
     - Can be waxed like copper to stop this
     - This feature is data-driven using a data map with the id "artistry:leechables"
-- Rotten Trees, a sapling obtained by leeching a sapling
-- Marigold, a flower obtained by leeching any small flower
-- Corpse Flower
-    - ! UNOBTAINABLE !
-- Fly Lure
-    - ! UNOBTAINABLE !
+    - Has JEI integration to show all leechables
+- Rotten Trees
+- Marigold
 - Carving Knife
-    - Can be used like shears on pumpkins (including Carved Pumpkins)to carve them into one of 7 variants (including vanilla Carved Pumpkins)
+- Carved Pumpkin variants
 - Tall Candles in all colors + undyed
     - Can be stacked up to a height of two to make even taller candles
 - Glowing Mushroom
-    - Obtained by growing a mushroom on an Amethyst Block
+    - Obtained by growing a brown or red mushroom on an Amethyst Block
 - Urn
-    - Acts as a single-item storage like a decorated pot
+- Corpse Flower
+    - Currently unobtainable
+- Fly Lure
+    - Currently unobtainable
 ## Changes:
 - Changed the texture of Aspen Leaves
+- Changed the shape of Aspen foliage
 - Made Sniffer Cakes remove the cooldown of the next 3 digs instead of just one
     - This number can be adjusted in the Server Config
 ## Fixes:
 - Made String Lights stackable to 64
 - Fixed some mistakes in the German translation
 - Made it so you can no longer dye pots with sherds on them
-## Technical:
-- Updated to NeoForge 21.1.208
+- Made the Sniffer Digging JEI category actually have a background

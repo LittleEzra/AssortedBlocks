@@ -1,18 +1,13 @@
-package com.feliscape.artistry.compat.jei;
+package com.feliscape.artistry.compat.jei.sniffer;
 
 
-import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.registry.ArtistryDataMapTypes;
-import net.minecraft.advancements.critereon.BlockPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import org.checkerframework.checker.units.qual.A;
 
 import java.util.*;
 

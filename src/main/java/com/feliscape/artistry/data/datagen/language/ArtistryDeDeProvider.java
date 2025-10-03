@@ -300,6 +300,7 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
 
         this.add("artistry.jei.sniffer_dig.title", "Schnüffler-Graben");
         this.add("artistry.jei.sniffer_dig.found_in", "Gefunden In:");
+        this.add("artistry.jei.leeching.title", "Auslaugen");
 
         this.add("itemGroup.artistry.base", "Artistry");
 

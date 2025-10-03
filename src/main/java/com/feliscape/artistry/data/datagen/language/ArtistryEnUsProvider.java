@@ -297,6 +297,7 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
 
         this.add("artistry.jei.sniffer_dig.title", "Sniffer Digging");
         this.add("artistry.jei.sniffer_dig.found_in", "Found In:");
+        this.add("artistry.jei.leeching.title", "Leeching");
 
         this.add("itemGroup.artistry.base", "Artistry");
 
