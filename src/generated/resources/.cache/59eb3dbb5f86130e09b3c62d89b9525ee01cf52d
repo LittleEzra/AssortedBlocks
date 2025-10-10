@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-28T20:56:47.9235949	Loot Tables
+// 1.21.1	2025-10-10T14:52:20.8824123	Loot Tables
 47b6b4ddb80a89fa9150b4f209f8c1912ba8fd04 data/artistry/loot_table/blocks/acacia_table.json
 c17e141140c72bb4ad538245b3bc5de5e3b91093 data/artistry/loot_table/blocks/amethyst_stars.json
 8472b2e2149ff7987014f0ebdfb5631626250e58 data/artistry/loot_table/blocks/andesite_table.json
@@ -60,6 +60,7 @@ ba994b82daebf578d2697d6db8b9ae8bd94897df data/artistry/loot_table/blocks/dripsto
 01508df45bf7c0848572ef5f3d98fa195194d212 data/artistry/loot_table/blocks/dripstone_wall.json
 e318588d5d2c53a0951a1428aa4b1d6a922d03fe data/artistry/loot_table/blocks/exposed_copper_chain.json
 4e454b13ef84c5dfd9626d1cb0a88818ea9454da data/artistry/loot_table/blocks/flat_light.json
+e8b9d8f188f4dc362b30b4dd24c15cd92cfd71f5 data/artistry/loot_table/blocks/flower_vase.json
 a6a7face90aed4490eee21ab888ae96b773cab54 data/artistry/loot_table/blocks/fly_lure.json
 ed5de50b76fdc713a937858538a10db0c1d606d2 data/artistry/loot_table/blocks/glowing_mushroom.json
 ab2ac690e209fdc085c4520081e61207bab82d73 data/artistry/loot_table/blocks/glowing_mushroom_block.json

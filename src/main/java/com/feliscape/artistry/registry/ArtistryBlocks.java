@@ -104,6 +104,12 @@ public class ArtistryBlocks {
                     .strength(1.2F)
                     .instrument(NoteBlockInstrument.BASEDRUM)
             ));
+    public static final DeferredBlock<FlowerVaseBlock> FLOWER_VASE = registerBlockWithItem("flower_vase",
+            p -> new FlowerVaseBlock(p
+                    .instabreak()
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)
+            ));
 
     public static final DeferredBlock<SunsproutBlock> SUNSPROUT = BLOCKS.registerBlock("sunsprout",
             p -> new SunsproutBlock(p

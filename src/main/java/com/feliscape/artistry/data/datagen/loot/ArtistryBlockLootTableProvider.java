@@ -136,6 +136,7 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.WATER_FOUNTAIN.get());
 
         this.dropSelf(ArtistryBlocks.ROCKY_DIRT.get());
+        this.dropSelf(ArtistryBlocks.FLOWER_VASE.get());
 
         this.add(ArtistryBlocks.PAINTED_POT.get(), this::createPaintedPotTable);
 

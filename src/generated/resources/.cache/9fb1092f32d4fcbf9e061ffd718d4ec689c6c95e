@@ -1,4 +1,4 @@
-// 1.21.1	2025-09-01T14:08:46.9610917	Recipes
+// 1.21.1	2025-10-10T14:52:20.8961644	Recipes
 4dfdfcadddfeb41f7c010a8e150b7ea299d0e8c7 data/artistry/advancement/recipes/building_blocks/amethyst_stars.json
 21f916604ecc9edb9b074980b7ccbede717f4623 data/artistry/advancement/recipes/building_blocks/aspen_planks.json
 c8ef6b09ab8cd139eb51a9978e21f188915d9374 data/artistry/advancement/recipes/building_blocks/aspen_slab.json
@@ -45,6 +45,7 @@ a8b94423e21e749b6dc349d8f4a69628cc9bc32e data/artistry/advancement/recipes/build
 9b25884437c4b680a9d98b4dd43b7b3beb65e10e data/artistry/advancement/recipes/building_blocks/dripstone_wall_from_dripstone_block_stonecutting.json
 09ae4fc26b12a8f74c262f1b29a2ed8e88c23e78 data/artistry/advancement/recipes/building_blocks/exposed_copper_chain.json
 12e0ec7b42a26a682e4806ba7edf0d8f8e7689ce data/artistry/advancement/recipes/building_blocks/flat_light.json
+8e9457848d3014a1f45d490c190afd12c2b9a652 data/artistry/advancement/recipes/building_blocks/flower_vase.json
 af8add3ce14c9022f1e22691e57a0ea870993ae9 data/artistry/advancement/recipes/building_blocks/fly_lure.json
 74d8548505dfcce99b7d6e6abb94a816f7b45495 data/artistry/advancement/recipes/building_blocks/gray_frosted_glass.json
 853277737ba342552cbfad80e81fa5179537ab5e data/artistry/advancement/recipes/building_blocks/green_frosted_glass.json
@@ -264,6 +265,7 @@ b369ab497a16c1828647478edbd11402a0d94b43 data/artistry/recipe/dripstone_brick_wa
 f66bdef804b3fa69b17e3d1fa818d50be3b99377 data/artistry/recipe/dripstone_wall_from_dripstone_block_stonecutting.json
 868edfd8065693c532eb65524239294fb8f77aea data/artistry/recipe/exposed_copper_chain.json
 920e672f7d8c18e9bb739562f5ad336bd42a20cc data/artistry/recipe/flat_light.json
+147d1b30931a51da0ead23f742b8c67af5dccbdc data/artistry/recipe/flower_vase.json
 4ccf3a381ad1f653216d867fc751dcc0d637de35 data/artistry/recipe/fly_lure.json
 493633e10687fdd0284620d7308e4479bf512a17 data/artistry/recipe/granite_table.json
 2b16674ebbfdbd9d9672abfefa5b45cc3866a503 data/artistry/recipe/gray_frosted_glass.json

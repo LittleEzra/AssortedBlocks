@@ -51,6 +51,7 @@ public class ArtistryCreativeModeTabs {
 
             output.accept(ArtistryBlocks.MOSSY_BRICKS);
             output.accept(ArtistryBlocks.CRACKED_BRICKS);
+            output.accept(ArtistryBlocks.ROCKY_DIRT);
 
             output.accept(ArtistryItems.SNIFFER_CAKE);
             output.accept(ArtistryItems.SUNSPROUT);

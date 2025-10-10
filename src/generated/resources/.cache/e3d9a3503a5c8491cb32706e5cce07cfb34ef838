@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-02T18:05:48.7899899	Block States: artistry
+// 1.21.1	2025-10-10T15:04:55.307394	Block States: artistry
 04648a511f6ea4a4e9ce6b834b5734def6a42b97 assets/artistry/blockstates/acacia_table.json
 648e73aacc0168ea4989507dab5b341f43dde90f assets/artistry/blockstates/amethyst_stars.json
 5e0b15704b52e3808a2bf8ef14982c76af6f93a5 assets/artistry/blockstates/andesite_table.json
@@ -60,6 +60,7 @@ dea3b71245d303b36d317bd316b9917af65388e3 assets/artistry/blockstates/diorite_tab
 220a451e8b9bfe4b8e19c9155e4b9c8b1afdf894 assets/artistry/blockstates/dripstone_wall.json
 46df7fc45cb244a96dfe8efae98d6181ea8a6af4 assets/artistry/blockstates/exposed_copper_chain.json
 395875216f798216d04c5d82f7d07be89c21ed9a assets/artistry/blockstates/flat_light.json
+cdc6f1ae48ba7d90ffa188f485d455aaf9bc85bb assets/artistry/blockstates/flower_vase.json
 d60beb1dfc384ab59266a2b96debb65e4fb2c03f assets/artistry/blockstates/fly_lure.json
 0dfd92466b177681dc7c1365d5411ae027874c1e assets/artistry/blockstates/glowing_mushroom.json
 aa2728b7469ad9d3b9398df11a2e886e32de7193 assets/artistry/blockstates/glowing_mushroom_block.json
@@ -175,7 +176,7 @@ d80c562f5750b201adb2dfae8c4687cc1d6c42c5 assets/artistry/blockstates/sunsprout.j
 2730f50a5adb24d8802c314e5a5e11cb6ec1aa69 assets/artistry/blockstates/teardrop_grass_block.json
 7165de8933b79a65ca8332b8661de1dbc0dab9fe assets/artistry/blockstates/tuff_table.json
 51b539ac407784621d4f72b0bc2b4cfb9f1c97b2 assets/artistry/blockstates/urn.json
-21cbc9a9523f524b959874c57523504871dff471 assets/artistry/blockstates/wall_string_lights.json
+9e1f6f3b40dcd48edf73dfc7935aef1ac23a84b0 assets/artistry/blockstates/wall_string_lights.json
 1690a4356b7826b1d5f59592e0aa6d81a4568ceb assets/artistry/blockstates/warped_table.json
 67459ccfb6f7401d144fdeacc1e9f1b5cb76c2f0 assets/artistry/blockstates/water_fountain.json
 e51c4f6bcdef6046bc454de7266cd06f06564cd2 assets/artistry/blockstates/waxed_copper_chain.json
