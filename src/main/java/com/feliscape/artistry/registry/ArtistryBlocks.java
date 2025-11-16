@@ -245,6 +245,23 @@ public class ArtistryBlocks {
                     .noOcclusion()
             ));
 
+    public static final DeferredBlock<GrateBlock> GRATE = registerBlockWithItem("grate",
+            p -> new GrateBlock(p
+                    .mapColor(MapColor.METAL)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .strength(4.0F, 6.0F)
+                    .sound(SoundType.METAL)
+            ));
+    public static final DeferredBlock<BollardBlock> BOLLARD = registerBlockWithItem("bollard",
+            p -> new BollardBlock(p
+                    .mapColor(MapColor.METAL)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .strength(5.0F, 6.0F)
+                    .sound(SoundType.METAL)
+            ));
+
     public static final DeferredBlock<StringLightsBlock> STRING_LIGHTS = BLOCKS.registerBlock("string_lights",
             p -> new StringLightsBlock(p
                     .mapColor(MapColor.COLOR_YELLOW)

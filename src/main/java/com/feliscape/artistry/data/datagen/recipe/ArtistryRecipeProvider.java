@@ -566,6 +566,23 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("|")
                 .unlockedBy(getHasName(Items.COPPER_INGOT), has(Items.COPPER_INGOT))
                 .save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.BOLLARD, 4)
+                .define('|', Items.IRON_INGOT)
+                .define('#', Blocks.IRON_BLOCK)
+                .pattern("#")
+                .pattern("|")
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.GRATE, 4)
+                .define('#', Items.IRON_INGOT)
+                .define('/', Tags.Items.RODS_WOODEN)
+                .pattern("#/#")
+                .pattern("/ /")
+                .pattern("#/#")
+                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
+                .save(recipeOutput);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.ROCKY_DIRT, 4)
                 .define('D', Blocks.DIRT)
                 .define('C', Blocks.COBBLESTONE)

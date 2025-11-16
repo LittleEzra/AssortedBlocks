@@ -127,6 +127,10 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         axisBlock(WAXED_WEATHERED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/weathered_copper_chain")));
         axisBlock(WAXED_OXIDIZED_COPPER_CHAIN.get(), models().getExistingFile(Artistry.location("block/oxidized_copper_chain")));
 
+        directionalBlock(BOLLARD.get(), models().getExistingFile(Artistry.location("block/bollard")));
+        simpleBlockItem(BOLLARD.get(), models().getExistingFile(Artistry.location("block/bollard")));
+        simpleBlockWithItem(GRATE.get(), models().getExistingFile(Artistry.location("block/grate")));
+
         blockWithItem(ROCKY_DIRT);
         simpleBlock(FLOWER_VASE.get(), models().getExistingFile(Artistry.location("block/flower_vase")));
 

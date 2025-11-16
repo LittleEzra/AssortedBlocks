@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-10T15:04:55.3196443	Tags for minecraft:block mod id artistry
+// 1.21.1	2025-10-12T22:00:56.460292	Tags for minecraft:block mod id artistry
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/block/aspen_logs.json
 cb8f42934e5133f862b85f346da074f586ebab6b data/artistry/tags/block/carvable_pumpkins.json
 3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/block/frosted_glass.json
@@ -56,7 +56,7 @@ e9b2b4e7962ab80d7efeab43fbed187f75c59a91 data/minecraft/tags/block/hoglin_repell
 3461b63cb872077dea9e5ea7f482a54e48a246ff data/minecraft/tags/block/maintains_farmland.json
 41a4335d03c56a83e54f051de95ccf0d88a08c31 data/minecraft/tags/block/mineable/axe.json
 14850c5e1f50c3a6a80630b9a5aedf7ccce407cc data/minecraft/tags/block/mineable/hoe.json
-386ee9c5970b18535b764c55c0cc53d27e663f40 data/minecraft/tags/block/mineable/pickaxe.json
+c44a864163752cfd7033a1ca7e86de88f5e5b465 data/minecraft/tags/block/mineable/pickaxe.json
 5d6119ef37c50a29edbaa389d8a218016af478b2 data/minecraft/tags/block/mineable/shovel.json
 55d0bdfe2f4ed1236c39998fb1d7851e47489c70 data/minecraft/tags/block/moss_replaceable.json
 dcfcde0b3716705215c339c3ed7bb1fe6da2cdb2 data/minecraft/tags/block/mushroom_grow_block.json

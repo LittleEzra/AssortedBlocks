@@ -127,6 +127,8 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN, "Gewachste verwitterte Kupferkette");
         this.addBlock(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN, "Gewachste oxidierte Kupferkette");
 
+        this.addBlock(ArtistryBlocks.BOLLARD, "Poller");
+
         this.addBlock(ArtistryBlocks.SPARKLER, "Wunderkerze");
         this.addBlock(ArtistryBlocks.AMETHYST_STARS, "Amethyststerne");
         this.addBlock(ArtistryBlocks.SPARK_FOUNTAIN, "Funkenbrunnen");

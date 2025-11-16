@@ -19,6 +19,7 @@ public class RunAwayFromBlockGoal extends Goal {
     private final Predicate<BlockState> predicate;
     private final double speedModifier;
     protected Path path;
+    private int ticksUntilNextCheck;
 
     public RunAwayFromBlockGoal(PathfinderMob mob, Predicate<BlockState> predicate, double speedModifier) {
         this.mob = mob;
@@ -42,21 +43,32 @@ public class RunAwayFromBlockGoal extends Goal {
 
     @Override
     public boolean canUse() {
-        Optional<BlockPos> nearestRepellentOptional = nearestBlockToAvoid(5, 3);
-        if (nearestRepellentOptional.isEmpty()) return false;
-        BlockPos nearestRepellent = nearestRepellentOptional.get();
-        Vec3 repellentCenter = nearestRepellent.getBottomCenter();
-
-        Vec3 pos = DefaultRandomPos.getPosAway(mob, 12, 7, repellentCenter);
-        if (pos == null)
+        if (ticksUntilNextCheck > 0){
+            ticksUntilNextCheck--;
             return false;
+        } else{
+            ticksUntilNextCheck = 10 + this.mob.getRandom().nextInt(10);
+            Optional<BlockPos> nearestRepellentOptional = nearestBlockToAvoid(5, 3);
+            if (nearestRepellentOptional.isEmpty()) return false;
+            BlockPos nearestRepellent = nearestRepellentOptional.get();
+            Vec3 repellentCenter = nearestRepellent.getBottomCenter();
 
-        if (repellentCenter.distanceToSqr(pos) < pos.distanceToSqr(mob.position())){
-            return false;
+            Vec3 pos = DefaultRandomPos.getPosAway(mob, 12, 7, repellentCenter);
+            if (pos == null)
+                return false;
+
+            if (repellentCenter.distanceToSqr(pos) < pos.distanceToSqr(mob.position())){
+                return false;
+            }
+
+            path = mob.getNavigation().createPath(pos.x, pos.y, pos.z, 0);
+            return path != null;
         }
+    }
 
-        path = mob.getNavigation().createPath(pos.x, pos.y, pos.z, 0);
-        return path != null;
+    @Override
+    public boolean requiresUpdateEveryTick() {
+        return true;
     }
 
     @Override

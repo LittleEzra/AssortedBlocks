@@ -124,6 +124,9 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN.get());
         this.dropSelf(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get());
 
+        this.dropSelf(ArtistryBlocks.GRATE.get());
+        this.dropSelf(ArtistryBlocks.BOLLARD.get());
+
         this.add(ArtistryBlocks.LARGE_LANTERN.get(), this::createSingleItemTable);
         this.add(ArtistryBlocks.LARGE_SOUL_LANTERN.get(), this::createSingleItemTable);
         this.add(ArtistryBlocks.ROUND_LANTERN.get(), this::createSingleItemTable);

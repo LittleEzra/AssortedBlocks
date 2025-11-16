@@ -52,6 +52,7 @@ public class ArtistryCreativeModeTabs {
             output.accept(ArtistryBlocks.MOSSY_BRICKS);
             output.accept(ArtistryBlocks.CRACKED_BRICKS);
             output.accept(ArtistryBlocks.ROCKY_DIRT);
+            output.accept(ArtistryBlocks.FLOWER_VASE);
 
             output.accept(ArtistryItems.SNIFFER_CAKE);
             output.accept(ArtistryItems.SUNSPROUT);
@@ -165,6 +166,9 @@ public class ArtistryCreativeModeTabs {
             output.accept(ArtistryBlocks.WAXED_EXPOSED_COPPER_CHAIN);
             output.accept(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN);
             output.accept(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN);
+
+            output.accept(ArtistryBlocks.GRATE);
+            output.accept(ArtistryBlocks.BOLLARD);
 
             output.accept(ArtistryBlocks.ASPEN_LOG);
             output.accept(ArtistryBlocks.ASPEN_WOOD);

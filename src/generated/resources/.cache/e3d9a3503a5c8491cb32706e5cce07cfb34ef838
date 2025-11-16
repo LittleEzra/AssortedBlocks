@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-10T15:04:55.307394	Block States: artistry
+// 1.21.1	2025-10-12T22:00:56.447806	Block States: artistry
 04648a511f6ea4a4e9ce6b834b5734def6a42b97 assets/artistry/blockstates/acacia_table.json
 648e73aacc0168ea4989507dab5b341f43dde90f assets/artistry/blockstates/amethyst_stars.json
 5e0b15704b52e3808a2bf8ef14982c76af6f93a5 assets/artistry/blockstates/andesite_table.json
@@ -29,6 +29,7 @@ d90f69e4e9c1389c552b6a9da1d92947a3be2590 assets/artistry/blockstates/birch_table
 800f54acf6f2d9aeceae8e93ce4eb4574feff2be assets/artistry/blockstates/blooming_vines.json
 4f73c4d68cd3be76db76fe0066216d5dd58c95ad assets/artistry/blockstates/blue_frosted_glass.json
 43114394ea72aa218055d2f4f91487a79dd73eee assets/artistry/blockstates/blue_tall_candle.json
+68bfd3801ed6d7f72d6d8ad39c43dd3b42289318 assets/artistry/blockstates/bollard.json
 77d306e04a813573be5aec631b45d388f2f602e6 assets/artistry/blockstates/brown_frosted_glass.json
 d3899327a44277c6c7f59aaa175cdc3d622c1e06 assets/artistry/blockstates/brown_tall_candle.json
 43bc57383af76e02762de468d451cbeb6b1b508d assets/artistry/blockstates/calcite_bricks.json
@@ -65,6 +66,7 @@ d60beb1dfc384ab59266a2b96debb65e4fb2c03f assets/artistry/blockstates/fly_lure.js
 0dfd92466b177681dc7c1365d5411ae027874c1e assets/artistry/blockstates/glowing_mushroom.json
 aa2728b7469ad9d3b9398df11a2e886e32de7193 assets/artistry/blockstates/glowing_mushroom_block.json
 c3d6b39f45d73741feca990ee92e2664b955fe49 assets/artistry/blockstates/granite_table.json
+1acd942f96f48961a100951a4010a7e9c35ecc4b assets/artistry/blockstates/grate.json
 675244d804ecaf540ed6342dec719908e5ad3698 assets/artistry/blockstates/gray_frosted_glass.json
 351b407c0891988aa4b63967671c93846976f910 assets/artistry/blockstates/gray_tall_candle.json
 2e83751b6f1eae9b5069d91e2c4b9424eaac01bc assets/artistry/blockstates/green_frosted_glass.json
@@ -176,7 +178,7 @@ d80c562f5750b201adb2dfae8c4687cc1d6c42c5 assets/artistry/blockstates/sunsprout.j
 2730f50a5adb24d8802c314e5a5e11cb6ec1aa69 assets/artistry/blockstates/teardrop_grass_block.json
 7165de8933b79a65ca8332b8661de1dbc0dab9fe assets/artistry/blockstates/tuff_table.json
 51b539ac407784621d4f72b0bc2b4cfb9f1c97b2 assets/artistry/blockstates/urn.json
-9e1f6f3b40dcd48edf73dfc7935aef1ac23a84b0 assets/artistry/blockstates/wall_string_lights.json
+bc6047dedd2472605d5b4598c34ba68b7af33e65 assets/artistry/blockstates/wall_string_lights.json
 1690a4356b7826b1d5f59592e0aa6d81a4568ceb assets/artistry/blockstates/warped_table.json
 67459ccfb6f7401d144fdeacc1e9f1b5cb76c2f0 assets/artistry/blockstates/water_fountain.json
 e51c4f6bcdef6046bc454de7266cd06f06564cd2 assets/artistry/blockstates/waxed_copper_chain.json
@@ -765,6 +767,7 @@ f0e4346e88668fa2d22aef92bc29a9e2b5cf34f7 assets/artistry/models/item/bellowing_c
 5178bb993a376b2c960df4519cad6d92af9302cd assets/artistry/models/item/birch_table.json
 e36581b048d464c5d44c53e088ebc64b2a8f2df4 assets/artistry/models/item/black_frosted_glass.json
 74d96f015beb6b29c35753d4cfce9322ad075292 assets/artistry/models/item/blue_frosted_glass.json
+6ed1aee8d0e4020e315ef6f94ce3390be34382b8 assets/artistry/models/item/bollard.json
 a3bae357566cb4301881ea0e700dd54ed3e950d6 assets/artistry/models/item/brown_frosted_glass.json
 f1109b4d6768397e87a5c9d82620a93bbf636f25 assets/artistry/models/item/calcite_bricks.json
 24797dc696fd3b19f791b2858b0b0e97184d49b8 assets/artistry/models/item/calcite_table.json
@@ -780,6 +783,7 @@ a124cc0e2aa15e1fbd3af7bf011b64978eed7786 assets/artistry/models/item/deepslate_t
 d4357b46990c96657258b7ea11606a2b97494389 assets/artistry/models/item/dripstone_bricks.json
 7454b23466cf48d83cc89fcbe0c8e74f751ee879 assets/artistry/models/item/glowing_mushroom_block.json
 8114d3904481f6ff29ab9bc9c7af11a2098e0d5d assets/artistry/models/item/granite_table.json
+27d63596acffdaba530e5b3bfb3f5c5f652b1b89 assets/artistry/models/item/grate.json
 b5bca9d6789ba45dedac94f336da6833fd90f1e2 assets/artistry/models/item/gray_frosted_glass.json
 630fee2e6e7eb66a0d48a0b392a26344eaf33ac8 assets/artistry/models/item/green_frosted_glass.json
 3a91843cbfaaf3b8958f5ce26aa644bab2660fe8 assets/artistry/models/item/happy_carved_pumpkin.json

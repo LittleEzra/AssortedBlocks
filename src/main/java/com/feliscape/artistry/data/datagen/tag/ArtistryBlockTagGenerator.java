@@ -64,6 +64,9 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         WAXED_WEATHERED_COPPER_CHAIN.get(),
                         WAXED_OXIDIZED_COPPER_CHAIN.get(),
 
+                        BOLLARD.get(),
+                        GRATE.get(),
+
                         WATER_FOUNTAIN.get(),
 
                         STONE_TABLE.get(),
