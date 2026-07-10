@@ -2,6 +2,7 @@ package com.feliscape.artistry.data.datagen.language;
 
 import com.feliscape.artistry.data.pot.ArtistryPaintedPotDecorations;
 import com.feliscape.artistry.registry.ArtistryBlocks;
+import com.feliscape.artistry.registry.ArtistryEntityTypes;
 import com.feliscape.artistry.registry.ArtistryItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.item.DyeColor;
@@ -14,6 +15,9 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
     @Override
     protected void addTranslations() {
         this.add("item.artistry.wip", "WIP - Unobtainable in Survival");
+
+        this.addEntityType(ArtistryEntityTypes.MOD_BOAT, "Boat");
+        this.addEntityType(ArtistryEntityTypes.MOD_CHEST_BOAT, "Chest Boat");
 
         this.addItem(ArtistryItems.ASPEN_SIGN, "Aspen Sign");
         this.addItem(ArtistryItems.ASPEN_HANGING_SIGN, "Aspen Hanging Sign");
@@ -109,6 +113,7 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.WALL_STRING_LIGHTS, "Wall String Lights");
         this.addBlock(ArtistryBlocks.LARGE_LANTERN, "Large Lantern");
         this.addBlock(ArtistryBlocks.LARGE_SOUL_LANTERN, "Large Soul Lantern");
+        this.addBlock(ArtistryBlocks.STONE_LANTERN, "Stone Lantern");
         this.addBlock(ArtistryBlocks.ROUND_LANTERN, "Round Lantern");
         this.addBlock(ArtistryBlocks.FLAT_LIGHT, "Flat Light");
 
@@ -144,6 +149,7 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
 
         this.addBlock(ArtistryBlocks.POLISHED_CALCITE, "Polished Calcite");
         this.addBlock(ArtistryBlocks.CHISELED_CALCITE, "Chiseled Calcite");
+        this.addBlock(ArtistryBlocks.CALCITE_PILLAR, "Calcite Pillar");
         this.addBlock(ArtistryBlocks.POLISHED_CALCITE_STAIRS, "Polished Calcite Stairs");
         this.addBlock(ArtistryBlocks.POLISHED_CALCITE_SLAB, "Polished Calcite Slab");
         this.addBlock(ArtistryBlocks.POLISHED_CALCITE_WALL, "Polished Calcite Wall");
@@ -262,6 +268,16 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.ROTTEN_TRAPDOOR, "Rotten Trapdoor");
         this.addBlock(ArtistryBlocks.ROTTEN_SAPLING, "Rotten Sapling");
         this.addBlock(ArtistryBlocks.POTTED_ROTTEN_SAPLING, "Potted Rotten Sapling");
+
+        this.addBlock(ArtistryBlocks.SNOW_BRICKS, "Snow Bricks");
+        this.addBlock(ArtistryBlocks.SNOW_BRICK_STAIRS, "Snow Brick Stairs");
+        this.addBlock(ArtistryBlocks.SNOW_BRICK_SLAB, "Snow Brick Slab");
+        this.addBlock(ArtistryBlocks.SNOW_BRICK_WALL, "Snow Brick Wall");
+        this.addBlock(ArtistryBlocks.CARVED_ICE, "Carved Ice");
+        this.addBlock(ArtistryBlocks.ICE_BRICKS, "Ice Bricks");
+        this.addBlock(ArtistryBlocks.ICE_BRICK_STAIRS, "Ice Brick Stairs");
+        this.addBlock(ArtistryBlocks.ICE_BRICK_SLAB, "Ice Brick Slab");
+        this.addBlock(ArtistryBlocks.ICE_BRICK_WALL, "Ice Brick Wall");
 
         this.addPaintedPotBase(DyeColor.WHITE, "White Base");
         this.addPaintedPotBase(DyeColor.LIGHT_GRAY, "Light Gray Base");

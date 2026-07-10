@@ -124,11 +124,11 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN.get());
         this.dropSelf(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN.get());
 
-        this.dropSelf(ArtistryBlocks.GRATE.get());
         this.dropSelf(ArtistryBlocks.BOLLARD.get());
 
         this.add(ArtistryBlocks.LARGE_LANTERN.get(), this::createSingleItemTable);
         this.add(ArtistryBlocks.LARGE_SOUL_LANTERN.get(), this::createSingleItemTable);
+        this.add(ArtistryBlocks.STONE_LANTERN.get(), this::createSingleItemTable);
         this.add(ArtistryBlocks.ROUND_LANTERN.get(), this::createSingleItemTable);
         this.add(ArtistryBlocks.FLAT_LIGHT.get(), this::createSingleItemTable);
 
@@ -154,6 +154,7 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
 
         this.dropSelf(ArtistryBlocks.POLISHED_CALCITE.get());
         this.dropSelf(ArtistryBlocks.CHISELED_CALCITE.get());
+        this.dropSelf(ArtistryBlocks.CALCITE_PILLAR.get());
         this.dropSelf(ArtistryBlocks.POLISHED_CALCITE_STAIRS.get());
         this.dropSelf(ArtistryBlocks.POLISHED_CALCITE_WALL.get());
         this.add(ArtistryBlocks.POLISHED_CALCITE_SLAB.get(), this::createSlabItemTable);
@@ -290,6 +291,17 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ArtistryBlocks.ROTTEN_LEAVES.get(),
                 block -> createLeavesDrops(block, ArtistryBlocks.ROTTEN_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(ArtistryBlocks.SNOW_BRICKS.get());
+        this.dropSelf(ArtistryBlocks.SNOW_BRICK_STAIRS.get());
+        this.add(ArtistryBlocks.SNOW_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ArtistryBlocks.SNOW_BRICK_WALL.get());
+
+        this.dropSelf(ArtistryBlocks.CARVED_ICE.get());
+        this.dropSelf(ArtistryBlocks.ICE_BRICKS.get());
+        this.dropSelf(ArtistryBlocks.ICE_BRICK_STAIRS.get());
+        this.add(ArtistryBlocks.ICE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ArtistryBlocks.ICE_BRICK_WALL.get());
     }
 
     protected LootTable.Builder createSingleTriplePlantShearsDrop(Block sheared) {

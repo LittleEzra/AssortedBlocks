@@ -127,6 +127,7 @@ public class ArtistryCreativeModeTabs {
             output.accept(ArtistryBlocks.POLISHED_CALCITE_SLAB);
             output.accept(ArtistryBlocks.POLISHED_CALCITE_WALL);
             output.accept(ArtistryBlocks.CHISELED_CALCITE);
+            output.accept(ArtistryBlocks.CALCITE_PILLAR);
 
             output.accept(ArtistryBlocks.CALCITE_BRICKS);
             output.accept(ArtistryBlocks.CALCITE_BRICK_STAIRS);
@@ -167,7 +168,6 @@ public class ArtistryCreativeModeTabs {
             output.accept(ArtistryBlocks.WAXED_WEATHERED_COPPER_CHAIN);
             output.accept(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN);
 
-            output.accept(ArtistryBlocks.GRATE);
             output.accept(ArtistryBlocks.BOLLARD);
 
             output.accept(ArtistryBlocks.ASPEN_LOG);
@@ -248,6 +248,17 @@ public class ArtistryCreativeModeTabs {
             output.accept(ArtistryItems.ROTTEN_CHEST_BOAT);
             output.accept(ArtistryBlocks.ROTTEN_LEAVES);
             output.accept(ArtistryBlocks.ROTTEN_SAPLING);
+
+            // Christmas
+            output.accept(ArtistryBlocks.SNOW_BRICKS);
+            output.accept(ArtistryBlocks.SNOW_BRICK_STAIRS);
+            output.accept(ArtistryBlocks.SNOW_BRICK_SLAB);
+            output.accept(ArtistryBlocks.SNOW_BRICK_WALL);
+            output.accept(ArtistryBlocks.CARVED_ICE);
+            output.accept(ArtistryBlocks.ICE_BRICKS);
+            output.accept(ArtistryBlocks.ICE_BRICK_STAIRS);
+            output.accept(ArtistryBlocks.ICE_BRICK_SLAB);
+            output.accept(ArtistryBlocks.ICE_BRICK_WALL);
         }
     }
 

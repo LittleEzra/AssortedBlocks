@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:stone_bricks"
+    },
+    "/": {
+      "item": "minecraft:candle"
+    }
+  },
+  "pattern": [
+    "#",
+    "/",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "artistry:stone_lantern"
+  }
+}

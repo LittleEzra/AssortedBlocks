@@ -13,6 +13,7 @@
     "artistry:mossy_stone_pillar",
     "artistry:large_lantern",
     "artistry:large_soul_lantern",
+    "artistry:stone_lantern",
     "artistry:round_lantern",
     "artistry:flat_light",
     "artistry:sparkler",
@@ -26,7 +27,6 @@
     "artistry:waxed_weathered_copper_chain",
     "artistry:waxed_oxidized_copper_chain",
     "artistry:bollard",
-    "artistry:grate",
     "artistry:water_fountain",
     "artistry:stone_table",
     "artistry:andesite_table",
@@ -45,6 +45,7 @@
     "artistry:smooth_calcite_slab",
     "artistry:polished_calcite",
     "artistry:chiseled_calcite",
+    "artistry:calcite_pillar",
     "artistry:polished_calcite_stairs",
     "artistry:polished_calcite_slab",
     "artistry:polished_calcite_wall",
@@ -88,6 +89,11 @@
     "artistry:dripstone_brick_slab",
     "artistry:dripstone_brick_wall",
     "artistry:headstone",
-    "artistry:urn"
+    "artistry:urn",
+    "artistry:carved_ice",
+    "artistry:ice_bricks",
+    "artistry:ice_brick_stairs",
+    "artistry:ice_brick_slab",
+    "artistry:ice_brick_wall"
   ]
 }

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "hanging=false,lit=false,waterlogged=false": {
+      "model": "artistry:block/stone_lantern"
+    },
+    "hanging=false,lit=false,waterlogged=true": {
+      "model": "artistry:block/stone_lantern"
+    },
+    "hanging=false,lit=true,waterlogged=false": {
+      "model": "artistry:block/stone_lantern"
+    },
+    "hanging=false,lit=true,waterlogged=true": {
+      "model": "artistry:block/stone_lantern"
+    },
+    "hanging=true,lit=false,waterlogged=false": {
+      "model": "artistry:block/stone_lantern_hanging"
+    },
+    "hanging=true,lit=false,waterlogged=true": {
+      "model": "artistry:block/stone_lantern_hanging"
+    },
+    "hanging=true,lit=true,waterlogged=false": {
+      "model": "artistry:block/stone_lantern_hanging"
+    },
+    "hanging=true,lit=true,waterlogged=true": {
+      "model": "artistry:block/stone_lantern_hanging"
+    }
+  }
+}

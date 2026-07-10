@@ -50,6 +50,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         MOSSY_STONE_PILLAR.get(),
                         LARGE_LANTERN.get(),
                         LARGE_SOUL_LANTERN.get(),
+                        STONE_LANTERN.get(),
                         ROUND_LANTERN.get(),
                         FLAT_LIGHT.get(),
                         SPARKLER.get(),
@@ -65,7 +66,6 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         WAXED_OXIDIZED_COPPER_CHAIN.get(),
 
                         BOLLARD.get(),
-                        GRATE.get(),
 
                         WATER_FOUNTAIN.get(),
 
@@ -90,6 +90,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
 
                         POLISHED_CALCITE.get(),
                         CHISELED_CALCITE.get(),
+                        CALCITE_PILLAR.get(),
                         POLISHED_CALCITE_STAIRS.get(),
                         POLISHED_CALCITE_SLAB.get(),
                         POLISHED_CALCITE_WALL.get(),
@@ -138,7 +139,13 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         DRIPSTONE_BRICK_WALL.get(),
 
                         HEADSTONE.get(),
-                        URN.get()
+                        URN.get(),
+
+                        CARVED_ICE.get(),
+                        ICE_BRICKS.get(),
+                        ICE_BRICK_STAIRS.get(),
+                        ICE_BRICK_SLAB.get(),
+                        ICE_BRICK_WALL.get()
                 );
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .addTag(ArtistryTags.Blocks.WOODEN_TABLES).add(
@@ -171,10 +178,17 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         GLOWING_MUSHROOM_BLOCK.get()
                 );
         this.tag(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ROCKY_DIRT.get())
-                .add(TEARDROP_GRASS_BLOCK.get())
-                .add(LEECHING_SOIL.get())
-                .add(WAXED_LEECHING_SOIL.get())
+                .add(
+                        ROCKY_DIRT.get(),
+                        TEARDROP_GRASS_BLOCK.get(),
+                        LEECHING_SOIL.get(),
+                        WAXED_LEECHING_SOIL.get(),
+
+                        SNOW_BRICKS.get(),
+                        SNOW_BRICK_STAIRS.get(),
+                        SNOW_BRICK_SLAB.get(),
+                        SNOW_BRICK_WALL.get()
+                )
         ;
 
         this.tag(ArtistryTags.Blocks.FROSTED_GLASS)
@@ -257,6 +271,8 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.MUSHROOM_GROW_BLOCK).add(
                         Blocks.AMETHYST_BLOCK
         );
+        this.tag(ArtistryTags.Blocks.STONE_LANTERNS)
+                .add(STONE_LANTERN.get());
 
         this.tag(BlockTags.SNIFFER_DIGGABLE_BLOCK)
                 .add(Blocks.CLAY)
@@ -416,6 +432,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(DRIPSTONE_WALL.get())
                 .add(POLISHED_DRIPSTONE_WALL.get())
                 .add(DRIPSTONE_BRICK_WALL.get())
+                .add(ICE_BRICK_WALL.get())
         ;
 
         this.tag(BlockTags.PLANKS)

@@ -155,6 +155,7 @@ public class ArtistryRecipeProvider extends RecipeProvider {
         slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.POLISHED_CALCITE_SLAB, ArtistryBlocks.POLISHED_CALCITE.get());
         wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.POLISHED_CALCITE_WALL, ArtistryBlocks.POLISHED_CALCITE);
         chiseled(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.CHISELED_CALCITE, ArtistryBlocks.POLISHED_CALCITE_SLAB);
+        chiseled(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.CALCITE_PILLAR, ArtistryBlocks.POLISHED_CALCITE);
 
         stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
                 ArtistryBlocks.POLISHED_CALCITE,
@@ -172,6 +173,9 @@ public class ArtistryRecipeProvider extends RecipeProvider {
         stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
                 ArtistryBlocks.CHISELED_CALCITE,
                 ArtistryBlocks.POLISHED_CALCITE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_PILLAR,
+                ArtistryBlocks.POLISHED_CALCITE);
 
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
                 ArtistryBlocks.POLISHED_CALCITE_STAIRS,
@@ -181,6 +185,12 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 Blocks.CALCITE, 2);
         stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
                 ArtistryBlocks.POLISHED_CALCITE_WALL,
+                Blocks.CALCITE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CHISELED_CALCITE,
+                Blocks.CALCITE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CALCITE_PILLAR,
                 Blocks.CALCITE);
 
         // Calcite Bricks
@@ -441,6 +451,14 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("o#o")
                 .unlockedBy(getHasName(Items.IRON_NUGGET), has(Items.IRON_NUGGET))
                 .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.STONE_LANTERN)
+                .define('#', Items.STONE_BRICKS)
+                .define('/', Items.CANDLE)
+                .pattern("#")
+                .pattern("/")
+                .pattern("#")
+                .unlockedBy(getHasName(Items.CANDLE), has(Items.CANDLE))
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.ROUND_LANTERN)
                 .define('#', Tags.Items.GLASS_BLOCKS)
                 .define('I', Items.IRON_INGOT)
@@ -572,14 +590,6 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .define('#', Blocks.IRON_BLOCK)
                 .pattern("#")
                 .pattern("|")
-                .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
-                .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.GRATE, 4)
-                .define('#', Items.IRON_INGOT)
-                .define('/', Tags.Items.RODS_WOODEN)
-                .pattern("#/#")
-                .pattern("/ /")
-                .pattern("#/#")
                 .unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
                 .save(recipeOutput);
 
@@ -769,6 +779,86 @@ public class ArtistryRecipeProvider extends RecipeProvider {
         woodenBoat(recipeOutput, ArtistryItems.ROTTEN_BOAT, ArtistryBlocks.ROTTEN_PLANKS.get());
         chestBoat(recipeOutput, ArtistryItems.ROTTEN_CHEST_BOAT, ArtistryItems.ROTTEN_BOAT);
         //endregion
+
+        twoByTwoConversion(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SNOW_BRICKS, Items.SNOW_BLOCK);
+        stairBuilder(ArtistryBlocks.SNOW_BRICK_STAIRS, Ingredient.of(ArtistryBlocks.SNOW_BRICKS.get()))
+                .unlockedBy(getHasName(ArtistryBlocks.SNOW_BRICKS), has(ArtistryBlocks.SNOW_BRICKS))
+                .save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SNOW_BRICK_SLAB, ArtistryBlocks.SNOW_BRICKS.get());
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SNOW_BRICK_WALL, Ingredient.of(ArtistryBlocks.SNOW_BRICKS))
+                .unlockedBy(getHasName(ArtistryBlocks.SNOW_BRICKS), has(ArtistryBlocks.SNOW_BRICKS))
+                .save(recipeOutput);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SNOW_BRICK_STAIRS,
+                ArtistryBlocks.SNOW_BRICKS);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SNOW_BRICK_SLAB,
+                ArtistryBlocks.SNOW_BRICKS, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SNOW_BRICK_WALL,
+                ArtistryBlocks.SNOW_BRICKS);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SNOW_BRICK_STAIRS,
+                Blocks.SNOW);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SNOW_BRICK_SLAB,
+                Blocks.SNOW, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SNOW_BRICK_WALL,
+                Blocks.SNOW);
+
+        twoByTwoConversion(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.CARVED_ICE, Items.PACKED_ICE);
+        twoByTwoConversion(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.ICE_BRICKS, ArtistryBlocks.CARVED_ICE);
+        stairBuilder(ArtistryBlocks.ICE_BRICK_STAIRS, Ingredient.of(ArtistryBlocks.ICE_BRICKS.get()))
+                .unlockedBy(getHasName(ArtistryBlocks.ICE_BRICKS), has(ArtistryBlocks.ICE_BRICKS))
+                .save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.ICE_BRICK_SLAB, ArtistryBlocks.ICE_BRICKS.get());
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.ICE_BRICK_WALL, Ingredient.of(ArtistryBlocks.ICE_BRICK_WALL))
+                .unlockedBy(getHasName(ArtistryBlocks.ICE_BRICKS), has(ArtistryBlocks.ICE_BRICKS))
+                .save(recipeOutput);;
+
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.ICE_BRICKS,
+                ArtistryBlocks.CARVED_ICE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.ICE_BRICKS,
+                Blocks.PACKED_ICE);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.ICE_BRICK_STAIRS,
+                ArtistryBlocks.ICE_BRICKS);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.ICE_BRICK_SLAB,
+                ArtistryBlocks.ICE_BRICKS, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.ICE_BRICK_WALL,
+                ArtistryBlocks.ICE_BRICKS);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.ICE_BRICK_STAIRS,
+                ArtistryBlocks.CARVED_ICE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.ICE_BRICK_SLAB,
+                ArtistryBlocks.CARVED_ICE, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.ICE_BRICK_WALL,
+                ArtistryBlocks.CARVED_ICE);
+
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.ICE_BRICK_STAIRS,
+                Blocks.PACKED_ICE);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.ICE_BRICK_SLAB,
+                Blocks.PACKED_ICE, 2);
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.ICE_BRICK_WALL,
+                Blocks.PACKED_ICE);
+
+        stonecutting(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.CARVED_ICE,
+                Blocks.PACKED_ICE);
     }
 
     protected static void tallCandle(RecipeOutput recipeOutput, ItemLike candle, ItemLike dye) {

@@ -3,7 +3,6 @@ package com.feliscape.artistry.client;
 import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.client.atlas.ArtistrySheets;
 import com.feliscape.artistry.client.extension.CustomItemRendererExtension;
-import com.feliscape.artistry.client.model.UrnModel;
 import com.feliscape.artistry.client.render.blockentity.PaintedPotRenderer;
 import com.feliscape.artistry.client.render.blockentity.UrnRenderer;
 import com.feliscape.artistry.client.render.entity.ModBoatRenderer;
@@ -12,11 +11,8 @@ import com.feliscape.artistry.registry.ArtistryBlockEntityTypes;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryEntityTypes;
 import com.feliscape.artistry.registry.ArtistryItems;
-import net.minecraft.client.model.BoatModel;
-import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
-import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.component.DyedItemColor;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.api.distmarker.Dist;
@@ -60,15 +56,6 @@ public class ClientEvents {
     @SubscribeEvent
     public static void registerClientExtensions(RegisterClientExtensionsEvent event){
         event.registerItem(new CustomItemRendererExtension(), ArtistryItems.PAINTED_POT);
-    }
-
-    @SubscribeEvent
-    public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
-        event.registerLayerDefinition(ArtistryModelLayers.ASPEN_BOAT, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ArtistryModelLayers.ASPEN_CHEST_BOAT, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ArtistryModelLayers.ROTTEN_BOAT, BoatModel::createBodyModel);
-        event.registerLayerDefinition(ArtistryModelLayers.ROTTEN_CHEST_BOAT, ChestBoatModel::createBodyModel);
-        event.registerLayerDefinition(ArtistryModelLayers.URN, UrnModel::createLayer);
     }
 
     @SubscribeEvent

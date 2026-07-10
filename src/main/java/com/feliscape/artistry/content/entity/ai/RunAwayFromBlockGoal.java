@@ -27,14 +27,10 @@ public class RunAwayFromBlockGoal extends Goal {
         this.speedModifier = speedModifier;
     }
     public RunAwayFromBlockGoal(PathfinderMob mob, Block block, double speedModifier) {
-        this.mob = mob;
-        this.predicate = state -> state.is(block);
-        this.speedModifier = speedModifier;
+        this(mob, state -> state.is(block), speedModifier);
     }
     public RunAwayFromBlockGoal(PathfinderMob mob, TagKey<Block> block, double speedModifier) {
-        this.mob = mob;
-        this.predicate = state -> state.is(block);
-        this.speedModifier = speedModifier;
+        this(mob, state -> state.is(block), speedModifier);
     }
 
     public Predicate<BlockState> block(){
@@ -73,7 +69,7 @@ public class RunAwayFromBlockGoal extends Goal {
 
     @Override
     public void start() {
-        this.mob.getNavigation().moveTo(this.path, 1.2D);
+        this.mob.getNavigation().moveTo(this.path, speedModifier);
     }
 
     @Override

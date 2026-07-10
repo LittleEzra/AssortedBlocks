@@ -40,6 +40,9 @@ public class RoundLanternBlock extends Block implements SimpleWaterloggedBlock {
 
     public RoundLanternBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(this.getStateDefinition().any()
+                .setValue(HANGING, false)
+                .setValue(WATERLOGGED, false));
     }
 
     @Override

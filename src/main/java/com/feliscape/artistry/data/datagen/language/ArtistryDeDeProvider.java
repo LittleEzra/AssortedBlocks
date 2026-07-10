@@ -114,6 +114,7 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.WALL_STRING_LIGHTS, "Wandlichterkette");
         this.addBlock(ArtistryBlocks.LARGE_LANTERN, "Große Laterne");
         this.addBlock(ArtistryBlocks.LARGE_SOUL_LANTERN, "Große Seelenlaterne");
+        this.addBlock(ArtistryBlocks.STONE_LANTERN, "Steinlaterne");
         this.addBlock(ArtistryBlocks.ROUND_LANTERN, "Runde Laterne");
         this.addBlock(ArtistryBlocks.FLAT_LIGHT, "Flache Lampe");
 
@@ -149,6 +150,7 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
 
         this.addBlock(ArtistryBlocks.POLISHED_CALCITE, "Polierter Kalzit");
         this.addBlock(ArtistryBlocks.CHISELED_CALCITE, "Gemeißelter Kalzit");
+        this.addBlock(ArtistryBlocks.CALCITE_PILLAR, "Kalzitsäule");
         this.addBlock(ArtistryBlocks.POLISHED_CALCITE_STAIRS, "Polierte Kalzittreppe");
         this.addBlock(ArtistryBlocks.POLISHED_CALCITE_SLAB, "Polierte Kalzitstufe");
         this.addBlock(ArtistryBlocks.POLISHED_CALCITE_WALL, "Polierte Kalzitmauer");
@@ -265,6 +267,16 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.ROTTEN_TRAPDOOR, "Verottete Falltür");
         this.addBlock(ArtistryBlocks.ROTTEN_SAPLING, "Verotteter Setzling");
         this.addBlock(ArtistryBlocks.POTTED_ROTTEN_SAPLING, "Eingetopfter verotteter Setzling");
+
+        this.addBlock(ArtistryBlocks.SNOW_BRICKS, "Schneeziegel");
+        this.addBlock(ArtistryBlocks.SNOW_BRICK_STAIRS, "Schneeziegeltreppe");
+        this.addBlock(ArtistryBlocks.SNOW_BRICK_SLAB, "Schneeziegelstufe");
+        this.addBlock(ArtistryBlocks.SNOW_BRICK_WALL, "Schneeziegelmauer");
+        this.addBlock(ArtistryBlocks.CARVED_ICE, "Gemeißeltes Eis");
+        this.addBlock(ArtistryBlocks.ICE_BRICKS, "Eisziegel");
+        this.addBlock(ArtistryBlocks.ICE_BRICK_STAIRS, "Eisziegeltreppe");
+        this.addBlock(ArtistryBlocks.ICE_BRICK_SLAB, "Eisziegelstufe");
+        this.addBlock(ArtistryBlocks.ICE_BRICK_WALL, "Eisziegelmauer");
 
         this.addPaintedPotBase(DyeColor.WHITE, "Weiße Basis");
         this.addPaintedPotBase(DyeColor.LIGHT_GRAY, "Hellgraue Basis");

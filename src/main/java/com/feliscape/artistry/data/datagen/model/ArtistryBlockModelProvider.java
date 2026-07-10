@@ -97,6 +97,7 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         largeLantern(LARGE_LANTERN);
         largeLantern(LARGE_SOUL_LANTERN);
+        stoneLantern(STONE_LANTERN);
         roundLantern(ROUND_LANTERN);
         directionalBlock(FLAT_LIGHT.get(), models().getExistingFile(Artistry.location("block/flat_light")));
 
@@ -129,7 +130,6 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         directionalBlock(BOLLARD.get(), models().getExistingFile(Artistry.location("block/bollard")));
         simpleBlockItem(BOLLARD.get(), models().getExistingFile(Artistry.location("block/bollard")));
-        simpleBlockWithItem(GRATE.get(), models().getExistingFile(Artistry.location("block/grate")));
 
         blockWithItem(ROCKY_DIRT);
         simpleBlock(FLOWER_VASE.get(), models().getExistingFile(Artistry.location("block/flower_vase")));
@@ -152,6 +152,7 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         blockWithItem(POLISHED_CALCITE);
         blockWithItem(CHISELED_CALCITE);
+        axisBlock(CALCITE_PILLAR.get());
         stairsBlock(POLISHED_CALCITE_STAIRS.get(), polishedCalciteTexture);
         slabBlock(POLISHED_CALCITE_SLAB.get(), polishedCalciteTexture, polishedCalciteTexture);
         wallBlock(POLISHED_CALCITE_WALL.get(), polishedCalciteTexture);
@@ -300,6 +301,19 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         crossBlockWithRenderType(ROTTEN_SAPLING.get(), "cutout");
         pottedCrossPlantBlock(POTTED_ROTTEN_SAPLING);
 
+        blockWithItem(SNOW_BRICKS);
+        ResourceLocation snowBrickTexture = blockTexture(SNOW_BRICKS.get());
+        stairsBlock(SNOW_BRICK_STAIRS.get(), snowBrickTexture);
+        slabBlock(SNOW_BRICK_SLAB.get(), snowBrickTexture, snowBrickTexture);
+        wallBlock(SNOW_BRICK_WALL.get(), snowBrickTexture);
+
+        blockWithItem(CARVED_ICE);
+
+        blockWithItem(ICE_BRICKS);
+        ResourceLocation iceBrickTexture = blockTexture(ICE_BRICKS.get());
+        stairsBlock(ICE_BRICK_STAIRS.get(), iceBrickTexture);
+        slabBlock(ICE_BRICK_SLAB.get(), iceBrickTexture, iceBrickTexture);
+        wallBlock(ICE_BRICK_WALL.get(), iceBrickTexture);
     }
 
     private static final ResourceLocation PUMPKIN_SIDE = ResourceLocation.withDefaultNamespace("block/pumpkin_side");
@@ -536,6 +550,16 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         builder.forAllStates(state -> ConfiguredModel.builder()
                 .modelFile(state.getValue(RoundLanternBlock.HANGING) ? hanging : standard)
+                .build());
+    }
+    private void stoneLantern(Supplier<? extends StoneLanternBlock> block){
+        VariantBlockStateBuilder builder = getVariantBuilder(block.get());
+
+        ModelFile standard = models().getExistingFile(Artistry.location("block/stone_lantern"));
+        ModelFile hanging = models().getExistingFile(Artistry.location("block/stone_lantern_hanging"));
+
+        builder.forAllStates(state -> ConfiguredModel.builder()
+                .modelFile(state.getValue(StoneLanternBlock.HANGING) ? hanging : standard)
                 .build());
     }
 

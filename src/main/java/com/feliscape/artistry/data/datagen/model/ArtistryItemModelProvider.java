@@ -58,6 +58,7 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         manualBlockItem(ArtistryBlocks.SMOOTH_CALCITE_SLAB);
         manualBlockItem(ArtistryBlocks.CALCITE_STAIRS);
         manualBlockItem(ArtistryBlocks.CALCITE_SLAB);
+        manualBlockItem(ArtistryBlocks.CALCITE_PILLAR);
         minecraftBasedWallItem(ArtistryBlocks.CALCITE_WALL, Blocks.CALCITE);
         manualBlockItem(ArtistryBlocks.POLISHED_CALCITE_STAIRS);
         manualBlockItem(ArtistryBlocks.POLISHED_CALCITE_SLAB);
@@ -80,6 +81,7 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
 
         blockItemSprite(ArtistryBlocks.LARGE_LANTERN);
         blockItemSprite(ArtistryBlocks.LARGE_SOUL_LANTERN);
+        blockItemSprite(ArtistryBlocks.STONE_LANTERN);
         blockItemSprite(ArtistryBlocks.ROUND_LANTERN);
         blockItemSprite(ArtistryBlocks.FLAT_LIGHT);
         generatedBlockItem(ArtistryBlocks.SPARKLER);
@@ -160,6 +162,14 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         simpleItem(ArtistryItems.ROTTEN_CHEST_BOAT);
 
         generatedBlockItem(ArtistryBlocks.ROTTEN_SAPLING);
+
+
+        manualBlockItem(ArtistryBlocks.SNOW_BRICK_STAIRS);
+        manualBlockItem(ArtistryBlocks.SNOW_BRICK_SLAB);
+        wallItem(ArtistryBlocks.SNOW_BRICK_WALL, ArtistryBlocks.SNOW_BRICKS);
+        manualBlockItem(ArtistryBlocks.ICE_BRICK_STAIRS);
+        manualBlockItem(ArtistryBlocks.ICE_BRICK_SLAB);
+        wallItem(ArtistryBlocks.ICE_BRICK_WALL, ArtistryBlocks.ICE_BRICKS);
     }
 
     private ItemModelBuilder simpleItem(Supplier<? extends Item> item){

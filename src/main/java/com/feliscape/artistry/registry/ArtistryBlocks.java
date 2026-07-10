@@ -20,6 +20,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -29,6 +30,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class ArtistryBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Artistry.MOD_ID);
@@ -245,14 +247,14 @@ public class ArtistryBlocks {
                     .noOcclusion()
             ));
 
-    public static final DeferredBlock<GrateBlock> GRATE = registerBlockWithItem("grate",
+    /*public static final DeferredBlock<GrateBlock> GRATE = registerBlockWithItem("grate",
             p -> new GrateBlock(p
                     .mapColor(MapColor.METAL)
                     .noOcclusion()
                     .requiresCorrectToolForDrops()
                     .strength(4.0F, 6.0F)
                     .sound(SoundType.METAL)
-            ));
+            ));*/
     public static final DeferredBlock<BollardBlock> BOLLARD = registerBlockWithItem("bollard",
             p -> new BollardBlock(p
                     .mapColor(MapColor.METAL)
@@ -305,6 +307,16 @@ public class ArtistryBlocks {
                     .noOcclusion()
                     .pushReaction(PushReaction.DESTROY)
                     ));
+    public static final DeferredBlock<StoneLanternBlock> STONE_LANTERN = registerBlockWithItem("stone_lantern",
+            p -> new StoneLanternBlock(p
+                    .mapColor(MapColor.STONE)
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .lightLevel(state -> state.getValue(StoneLanternBlock.LIT) ? 12 : 0)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)
+            ));
     public static final DeferredBlock<RoundLanternBlock> ROUND_LANTERN = registerBlockWithItem("round_lantern",
             p -> new RoundLanternBlock(p
                     .mapColor(MapColor.METAL)
@@ -548,6 +560,14 @@ public class ArtistryBlocks {
             ));
     public static final DeferredBlock<Block> CHISELED_CALCITE = registerBlockWithItem("chiseled_calcite",
             p -> new Block(p
+                    .mapColor(MapColor.TERRACOTTA_WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<RotatedPillarBlock> CALCITE_PILLAR = registerBlockWithItem("calcite_pillar",
+            p -> new RotatedPillarBlock(p
                     .mapColor(MapColor.TERRACOTTA_WHITE)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .sound(SoundType.CALCITE)
@@ -1149,6 +1169,80 @@ public class ArtistryBlocks {
     //endregion
 
 
+
+    public static final DeferredBlock<Block> SNOW_BRICKS = registerBlockWithItem("snow_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.SNOW)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.2F)
+                    .sound(SoundType.SNOW)
+            ));
+    public static final DeferredBlock<StairBlock> SNOW_BRICK_STAIRS = registerBlockWithItem("snow_brick_stairs",
+            p -> new StairBlock(SNOW_BRICKS.get().defaultBlockState(), p
+                    .mapColor(MapColor.SNOW)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.2F)
+                    .sound(SoundType.SNOW)
+            ));
+    public static final DeferredBlock<SlabBlock> SNOW_BRICK_SLAB = registerBlockWithItem("snow_brick_slab",
+            p -> new SlabBlock(p
+                    .mapColor(MapColor.SNOW)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.2F)
+                    .sound(SoundType.SNOW)
+            ));
+    public static final DeferredBlock<WallBlock> SNOW_BRICK_WALL = registerBlockWithItem("snow_brick_wall",
+            p -> new WallBlock(p
+                    .mapColor(MapColor.SNOW)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.2F)
+                    .sound(SoundType.SNOW)
+            ));
+
+
+    public static final DeferredBlock<Block> CARVED_ICE = registerBlockWithItem("carved_ice",
+            p -> new Block(p
+                    .mapColor(MapColor.ICE)
+                    .instrument(NoteBlockInstrument.CHIME)
+                    .friction(0.98F)
+                    .strength(0.5F)
+                    .sound(SoundType.GLASS)
+            ));
+    public static final DeferredBlock<Block> ICE_BRICKS = registerBlockWithItem("ice_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.ICE)
+                    .instrument(NoteBlockInstrument.CHIME)
+                    .friction(0.98F)
+                    .strength(0.5F)
+                    .sound(SoundType.GLASS)
+            ));
+    public static final DeferredBlock<StairBlock> ICE_BRICK_STAIRS = registerBlockWithItem("ice_brick_stairs",
+            p -> new StairBlock(ICE_BRICKS.get().defaultBlockState(), p
+                    .mapColor(MapColor.ICE)
+                    .instrument(NoteBlockInstrument.CHIME)
+                    .friction(0.98F)
+                    .strength(0.5F)
+                    .sound(SoundType.GLASS))
+    );
+    public static final DeferredBlock<SlabBlock> ICE_BRICK_SLAB = registerBlockWithItem("ice_brick_slab",
+            p -> new SlabBlock(p
+                    .mapColor(MapColor.ICE)
+                    .instrument(NoteBlockInstrument.CHIME)
+                    .friction(0.98F)
+                    .strength(0.5F)
+                    .sound(SoundType.GLASS))
+        );
+    public static final DeferredBlock<WallBlock> ICE_BRICK_WALL = registerBlockWithItem("ice_brick_wall",
+            p -> new WallBlock(p
+                    .mapColor(MapColor.ICE)
+                    .instrument(NoteBlockInstrument.CHIME)
+                    .friction(0.98F)
+                    .strength(0.5F)
+                    .sound(SoundType.GLASS))
+    );
+
+
+
     private static BlockBehaviour.Properties tallCandle(BlockBehaviour.Properties properties, MapColor mapColor) {
         return BlockBehaviour.Properties.of()
                         .mapColor(mapColor)
@@ -1312,7 +1406,7 @@ public class ArtistryBlocks {
     private static ButtonBlock woodenButton(BlockSetType type) {
         return new ButtonBlock(type, 30, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
     }
-
+    
     private static <T extends Block> DeferredBlock<T> registerBlockWithItem(String name, Function<BlockBehaviour.Properties, ? extends T> block)
     {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, block);
@@ -1326,7 +1420,7 @@ public class ArtistryBlocks {
     }
 
     public static void register(IEventBus eventBus){
-        BLOCKS.addAlias(Artistry.location("teardrop_grass"), Artistry.location("short_teardrop_grass"));
+        //BLOCKS.addAlias(Artistry.location("teardrop_grass"), Artistry.location("short_teardrop_grass"));
 
         BLOCKS.register(eventBus);
     }

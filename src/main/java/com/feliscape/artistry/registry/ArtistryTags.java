@@ -17,6 +17,7 @@ public class ArtistryTags {
         public static final TagKey<Block> STRING_LIGHTS = create("string_lights");
         public static final TagKey<Block> FROSTED_GLASS = create("frosted_glass");
         public static final TagKey<Block> TALL_CANDLES = create("tall_candles");
+        public static final TagKey<Block> STONE_LANTERNS = create("stone_lanterns");
 
         public static final TagKey<Block> LEECHABLE_SAPLINGS = create("leechable_saplings");
         public static final TagKey<Block> LEECHABLE_FLOWERS = create("leechable_flowers");

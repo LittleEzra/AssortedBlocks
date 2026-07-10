@@ -1,4 +1,4 @@
-// 1.21.1	2025-10-10T14:52:20.8887721	Item Models: artistry
+// 1.21.1	2026-05-02T09:11:31.5730339	Item Models: artistry
 59b250cc8214b86eac1ffb0e41d7d68bec96cde0 assets/artistry/models/item/amethyst_stars.json
 32c080b7db66c98dba7d11435dd2233670f58c10 assets/artistry/models/item/ancient_tear.json
 73fe7333d37ecde4ea79ba093344f9bc4ccda762 assets/artistry/models/item/aspen_boat.json
@@ -23,6 +23,7 @@ cb0b513014a2f03a09e6adbcf7dccf907207a12c assets/artistry/models/item/brown_tall_
 2e6d135215df679421c8e687e43b0b47338f989a assets/artistry/models/item/calcite_brick_slab.json
 7dc655f5fd599619c20b939465b68cd6b0d494b6 assets/artistry/models/item/calcite_brick_stairs.json
 248095a77c177f971b214ac8cb7bf0efd33dc9bd assets/artistry/models/item/calcite_brick_wall.json
+79cb7485064375b138d0d2fd8782d821aba69cd3 assets/artistry/models/item/calcite_pillar.json
 b49dd61e0715bffcdb8be282cb570f49aa889b8c assets/artistry/models/item/calcite_slab.json
 ea208c24655cee91cfb37bd4ed9889e2087785bb assets/artistry/models/item/calcite_stairs.json
 a85f076ec716e06c9dba328f508dbf2fde46ae6d assets/artistry/models/item/calcite_wall.json
@@ -45,6 +46,9 @@ dad7a396df2f2942b624350b5a46b3c79c785ff7 assets/artistry/models/item/glowing_mus
 b2404c5d61d5099bd89a3349bf023278a98c4f5b assets/artistry/models/item/gray_tall_candle.json
 76e8f9a106d8191b580974db7ff3a24974e0f485 assets/artistry/models/item/green_tall_candle.json
 4636226255e49cc9417358381cc887d388457bb9 assets/artistry/models/item/headstone.json
+86b7c964f29f2cb2e34a142f13cde0d2df03c9c9 assets/artistry/models/item/ice_brick_slab.json
+26361d9d12fd1a71fac2fc51e9dd7228fbf7dffe assets/artistry/models/item/ice_brick_stairs.json
+512188cf33140547cd43e7c51fddb889303f2d32 assets/artistry/models/item/ice_brick_wall.json
 d0a596b0b38f0561613761b3a9b28c4d3026061f assets/artistry/models/item/large_lantern.json
 b6b1aa7b7d340cf14a5ee7c77397dab55269a35c assets/artistry/models/item/large_soul_lantern.json
 3686b0d8f9d8f1ddac4c5a9826bd1b3497d17712 assets/artistry/models/item/light_blue_tall_candle.json
@@ -89,8 +93,12 @@ f2dba199b979db817daf9c6fd28d1cb150a021c5 assets/artistry/models/item/short_teard
 f8c40cc79133a43fb09b156cfa4f311022f95b64 assets/artistry/models/item/smooth_calcite_slab.json
 80c93b0241fabc6545eeff994bc526db26ce7238 assets/artistry/models/item/smooth_calcite_stairs.json
 680b4ceb6700b45d1bd33e72143b33788ba3f8b6 assets/artistry/models/item/sniffer_cake.json
+659dde175533acd8ac14a97b90e28729b9c4af96 assets/artistry/models/item/snow_brick_slab.json
+d289fb81d55614972d3040a6f46a621578a7976a assets/artistry/models/item/snow_brick_stairs.json
+58cf939c2387451a2ce5f7efbd82e27f6aa24476 assets/artistry/models/item/snow_brick_wall.json
 b835097adb96e67049c4319e6e678db7b5e29999 assets/artistry/models/item/sparkler.json
 dd876da894f20653e057d66d89c770e32816806d assets/artistry/models/item/spark_fountain.json
+0165446e10d10aa8c7cdb2a9f695dc105c4b3de1 assets/artistry/models/item/stone_lantern.json
 a6101b855d8f832875b0c5f5637086c52e1cf638 assets/artistry/models/item/stone_pillar.json
 e589eeae4fc95fc4cbef9f6e5ced83409ce37ecf assets/artistry/models/item/stone_tile_slab.json
 a511bca21f33d628342a6e1ac1d698576a8ffc7d assets/artistry/models/item/stone_tile_stairs.json

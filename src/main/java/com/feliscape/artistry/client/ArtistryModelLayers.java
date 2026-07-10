@@ -1,12 +1,21 @@
 package com.feliscape.artistry.client;
 
 import com.feliscape.artistry.Artistry;
+import com.feliscape.artistry.client.model.ScaffoldingModel;
+import com.feliscape.artistry.client.model.UrnModel;
 import com.google.common.collect.Sets;
+import net.minecraft.client.model.BoatModel;
+import net.minecraft.client.model.ChestBoatModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 
 import java.util.Set;
 import java.util.stream.Stream;
 
+@EventBusSubscriber(modid = Artistry.MOD_ID, value = Dist.CLIENT)
 public class ArtistryModelLayers {
     private static final Set<ModelLayerLocation> ALL_MODELS = Sets.newHashSet();
 
@@ -19,6 +28,8 @@ public class ArtistryModelLayers {
     public static final ModelLayerLocation PAINTED_POT_TRIM = register("painted_pot/trim");
     public static final ModelLayerLocation PAINTED_POT_PATTERN = register("painted_pot/pattern");
     public static final ModelLayerLocation URN = register("urn");
+    public static final ModelLayerLocation SPECTRAL_PLATFORM = register("spectral_platform");
+    public static final ModelLayerLocation SCAFFOLDING = register("scaffolding");
 
     private static ModelLayerLocation register(String path) {
         return register(path, "main");
@@ -39,5 +50,15 @@ public class ArtistryModelLayers {
 
     public static Stream<ModelLayerLocation> getKnownLocations() {
         return ALL_MODELS.stream();
+    }
+
+    @SubscribeEvent
+    public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
+        event.registerLayerDefinition(ArtistryModelLayers.ASPEN_BOAT, BoatModel::createBodyModel);
+        event.registerLayerDefinition(ArtistryModelLayers.ASPEN_CHEST_BOAT, ChestBoatModel::createBodyModel);
+        event.registerLayerDefinition(ArtistryModelLayers.ROTTEN_BOAT, BoatModel::createBodyModel);
+        event.registerLayerDefinition(ArtistryModelLayers.ROTTEN_CHEST_BOAT, ChestBoatModel::createBodyModel);
+        event.registerLayerDefinition(ArtistryModelLayers.URN, UrnModel::createLayer);
+        event.registerLayerDefinition(ArtistryModelLayers.SCAFFOLDING, ScaffoldingModel::createLayer);
     }
 }

@@ -28,7 +28,7 @@ public class HugeGlowingMushroomFeature extends AbstractHugeMushroomFeature {
 
     @Override
     protected void makeCap(LevelAccessor levelAccessor, RandomSource randomSource, BlockPos blockPos, int height, BlockPos.MutableBlockPos mutableBlockPos, HugeMushroomFeatureConfiguration config) {
-        for(int y = height - 2; y <= height; ++y) {
+        for(int y = height - 2; y <= height; y++) {
             int j = y < height ? config.foliageRadius : config.foliageRadius - 1;
             int k = config.foliageRadius - 2;
 

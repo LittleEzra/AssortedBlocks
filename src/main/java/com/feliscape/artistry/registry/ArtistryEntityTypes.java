@@ -4,7 +4,6 @@ import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.content.entity.ModBoat;
 import com.feliscape.artistry.content.entity.ModChestBoat;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.neoforged.bus.api.IEventBus;
