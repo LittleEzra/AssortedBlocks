@@ -39,6 +39,8 @@ public class RunAwayFromBlockGoal extends Goal {
 
     @Override
     public boolean canUse() {
+        return false;
+        /*
         if (ticksUntilNextCheck > 0){
             ticksUntilNextCheck--;
             return false;
@@ -60,6 +62,8 @@ public class RunAwayFromBlockGoal extends Goal {
             path = mob.getNavigation().createPath(pos.x, pos.y, pos.z, 0);
             return path != null;
         }
+
+         */
     }
 
     @Override

@@ -1,7 +1,6 @@
 package com.feliscape.artistry.client;
 
 import com.feliscape.artistry.Artistry;
-import com.feliscape.artistry.client.model.ScaffoldingModel;
 import com.feliscape.artistry.client.model.UrnModel;
 import com.google.common.collect.Sets;
 import net.minecraft.client.model.BoatModel;
@@ -28,8 +27,6 @@ public class ArtistryModelLayers {
     public static final ModelLayerLocation PAINTED_POT_TRIM = register("painted_pot/trim");
     public static final ModelLayerLocation PAINTED_POT_PATTERN = register("painted_pot/pattern");
     public static final ModelLayerLocation URN = register("urn");
-    public static final ModelLayerLocation SPECTRAL_PLATFORM = register("spectral_platform");
-    public static final ModelLayerLocation SCAFFOLDING = register("scaffolding");
 
     private static ModelLayerLocation register(String path) {
         return register(path, "main");
@@ -59,6 +56,5 @@ public class ArtistryModelLayers {
         event.registerLayerDefinition(ArtistryModelLayers.ROTTEN_BOAT, BoatModel::createBodyModel);
         event.registerLayerDefinition(ArtistryModelLayers.ROTTEN_CHEST_BOAT, ChestBoatModel::createBodyModel);
         event.registerLayerDefinition(ArtistryModelLayers.URN, UrnModel::createLayer);
-        event.registerLayerDefinition(ArtistryModelLayers.SCAFFOLDING, ScaffoldingModel::createLayer);
     }
 }
