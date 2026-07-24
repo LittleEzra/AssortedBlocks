@@ -4,7 +4,6 @@ import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.content.block.*;
 import com.feliscape.artistry.content.block.plant.*;
 import com.feliscape.artistry.content.block.properties.TriplePlantPart;
-import com.feliscape.artistry.registry.ArtistryBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -166,10 +165,26 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         stairsBlock(SMALL_CALCITE_BRICK_STAIRS.get(), smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
         slabBlock(SMALL_CALCITE_BRICK_SLAB.get(), smallCalciteBrickTexture, smallCalciteBrickTexture, smallCalciteBrickTopTexture, smallCalciteBrickTopTexture);
 
-        blockWithItem(PAINTED_SMOOTH_CALCITE);
-        blockWithItem(PAINTED_POLISHED_CALCITE);
-        blockWithItem(PAINTED_CALCITE_BRICKS);
-        simpleCubeColumn(PAINTED_SMALL_CALCITE_BRICKS.get());
+        blockWithItem(AZURE_SMOOTH_CALCITE);
+        blockWithItem(AZURE_POLISHED_CALCITE);
+        blockWithItem(AZURE_CALCITE_BRICKS);
+        simpleCubeColumn(AZURE_SMALL_CALCITE_BRICKS.get());
+        blockWithItem(SCARLET_SMOOTH_CALCITE);
+        blockWithItem(SCARLET_POLISHED_CALCITE);
+        blockWithItem(SCARLET_CALCITE_BRICKS);
+        simpleCubeColumn(SCARLET_SMALL_CALCITE_BRICKS.get());
+        blockWithItem(VERDANT_SMOOTH_CALCITE);
+        blockWithItem(VERDANT_POLISHED_CALCITE);
+        blockWithItem(VERDANT_CALCITE_BRICKS);
+        simpleCubeColumn(VERDANT_SMALL_CALCITE_BRICKS.get());
+        blockWithItem(ROSE_SMOOTH_CALCITE);
+        blockWithItem(ROSE_POLISHED_CALCITE);
+        blockWithItem(ROSE_CALCITE_BRICKS);
+        simpleCubeColumn(ROSE_SMALL_CALCITE_BRICKS.get());
+        blockWithItem(SUNNY_SMOOTH_CALCITE);
+        blockWithItem(SUNNY_POLISHED_CALCITE);
+        blockWithItem(SUNNY_CALCITE_BRICKS);
+        simpleCubeColumn(SUNNY_SMALL_CALCITE_BRICKS.get());
 
         ResourceLocation dripstoneTexture = blockTexture(Blocks.DRIPSTONE_BLOCK);
         ResourceLocation polishedDripstoneTexture = blockTexture(POLISHED_DRIPSTONE.get());

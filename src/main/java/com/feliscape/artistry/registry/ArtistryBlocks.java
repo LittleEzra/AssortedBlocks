@@ -9,8 +9,6 @@ import com.feliscape.artistry.data.worldgen.registry.ArtistryConfiguredFeatures;
 import com.feliscape.artistry.data.worldgen.registry.ArtistryTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.data.worldgen.features.CaveFeatures;
-import net.minecraft.data.worldgen.features.TreeFeatures;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
@@ -20,7 +18,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -30,7 +27,6 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Function;
-import java.util.function.Supplier;
 
 public class ArtistryBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Artistry.MOD_ID);
@@ -652,23 +648,7 @@ public class ArtistryBlocks {
 
 
 
-    public static final DeferredBlock<Block> PAINTED_SMOOTH_CALCITE = registerBlockWithItem("painted_smooth_calcite",
-            p -> new Block(p
-                    .mapColor(MapColor.TERRACOTTA_WHITE)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .sound(SoundType.CALCITE)
-                    .requiresCorrectToolForDrops()
-                    .strength(0.75F)
-            ));
-    public static final DeferredBlock<Block> PAINTED_POLISHED_CALCITE = registerBlockWithItem("painted_polished_calcite",
-            p -> new Block(p
-                    .mapColor(MapColor.TERRACOTTA_WHITE)
-                    .instrument(NoteBlockInstrument.BASEDRUM)
-                    .sound(SoundType.CALCITE)
-                    .requiresCorrectToolForDrops()
-                    .strength(0.75F)
-            ));
-    public static final DeferredBlock<Block> PAINTED_CALCITE_BRICKS = registerBlockWithItem("painted_calcite_bricks",
+    public static final DeferredBlock<Block> AZURE_SMOOTH_CALCITE = registerBlockWithItem("azure_smooth_calcite",
             p -> new Block(p
                     .mapColor(MapColor.LAPIS)
                     .instrument(NoteBlockInstrument.BASEDRUM)
@@ -676,9 +656,155 @@ public class ArtistryBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(0.75F)
             ));
-    public static final DeferredBlock<Block> PAINTED_SMALL_CALCITE_BRICKS = registerBlockWithItem("painted_small_calcite_bricks",
+    public static final DeferredBlock<Block> AZURE_POLISHED_CALCITE = registerBlockWithItem("azure_polished_calcite",
             p -> new Block(p
                     .mapColor(MapColor.LAPIS)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> AZURE_CALCITE_BRICKS = registerBlockWithItem("azure_calcite_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.LAPIS)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> AZURE_SMALL_CALCITE_BRICKS = registerBlockWithItem("azure_small_calcite_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.LAPIS)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+
+    public static final DeferredBlock<Block> SCARLET_SMOOTH_CALCITE = registerBlockWithItem("scarlet_smooth_calcite",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> SCARLET_POLISHED_CALCITE = registerBlockWithItem("scarlet_polished_calcite",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> SCARLET_CALCITE_BRICKS = registerBlockWithItem("scarlet_calcite_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> SCARLET_SMALL_CALCITE_BRICKS = registerBlockWithItem("scarlet_small_calcite_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+
+    public static final DeferredBlock<Block> VERDANT_SMOOTH_CALCITE = registerBlockWithItem("verdant_smooth_calcite",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> VERDANT_POLISHED_CALCITE = registerBlockWithItem("verdant_polished_calcite",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> VERDANT_CALCITE_BRICKS = registerBlockWithItem("verdant_calcite_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> VERDANT_SMALL_CALCITE_BRICKS = registerBlockWithItem("verdant_small_calcite_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_GREEN)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> ROSE_SMOOTH_CALCITE = registerBlockWithItem("rose_smooth_calcite",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> ROSE_POLISHED_CALCITE = registerBlockWithItem("rose_polished_calcite",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> ROSE_CALCITE_BRICKS = registerBlockWithItem("rose_calcite_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> ROSE_SMALL_CALCITE_BRICKS = registerBlockWithItem("rose_small_calcite_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> SUNNY_SMOOTH_CALCITE = registerBlockWithItem("sunny_smooth_calcite",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> SUNNY_POLISHED_CALCITE = registerBlockWithItem("sunny_polished_calcite",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> SUNNY_CALCITE_BRICKS = registerBlockWithItem("sunny_calcite_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.CALCITE)
+                    .requiresCorrectToolForDrops()
+                    .strength(0.75F)
+            ));
+    public static final DeferredBlock<Block> SUNNY_SMALL_CALCITE_BRICKS = registerBlockWithItem("sunny_small_calcite_bricks",
+            p -> new Block(p
+                    .mapColor(MapColor.COLOR_YELLOW)
                     .instrument(NoteBlockInstrument.BASEDRUM)
                     .sound(SoundType.CALCITE)
                     .requiresCorrectToolForDrops()
@@ -1413,7 +1539,10 @@ public class ArtistryBlocks {
     }
 
     public static void register(IEventBus eventBus){
-        //BLOCKS.addAlias(Artistry.location("teardrop_grass"), Artistry.location("short_teardrop_grass"));
+        BLOCKS.addAlias(Artistry.location("painted_calcite_bricks"), Artistry.location("azure_calcite_bricks"));
+        BLOCKS.addAlias(Artistry.location("painted_small_calcite_bricks"), Artistry.location("azure_small_calcite_bricks"));
+        BLOCKS.addAlias(Artistry.location("painted_polished_calcite"), Artistry.location("azure_polished_calcite"));
+        BLOCKS.addAlias(Artistry.location("painted_smooth_calcite"), Artistry.location("azure_smooth_calcite"));
 
         BLOCKS.register(eventBus);
     }

@@ -11,7 +11,6 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.LinkedList;
@@ -146,10 +145,26 @@ public class ArtistryCreativeModeTabs {
             output.accept(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS);
             output.accept(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB);
 
-            output.accept(ArtistryBlocks.PAINTED_SMOOTH_CALCITE);
-            output.accept(ArtistryBlocks.PAINTED_POLISHED_CALCITE);
-            output.accept(ArtistryBlocks.PAINTED_CALCITE_BRICKS);
-            output.accept(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS);
+            output.accept(ArtistryBlocks.SCARLET_SMOOTH_CALCITE);
+            output.accept(ArtistryBlocks.SCARLET_POLISHED_CALCITE);
+            output.accept(ArtistryBlocks.SCARLET_CALCITE_BRICKS);
+            output.accept(ArtistryBlocks.SCARLET_SMALL_CALCITE_BRICKS);
+            output.accept(ArtistryBlocks.SUNNY_SMOOTH_CALCITE);
+            output.accept(ArtistryBlocks.SUNNY_POLISHED_CALCITE);
+            output.accept(ArtistryBlocks.SUNNY_CALCITE_BRICKS);
+            output.accept(ArtistryBlocks.SUNNY_SMALL_CALCITE_BRICKS);
+            output.accept(ArtistryBlocks.VERDANT_SMOOTH_CALCITE);
+            output.accept(ArtistryBlocks.VERDANT_POLISHED_CALCITE);
+            output.accept(ArtistryBlocks.VERDANT_CALCITE_BRICKS);
+            output.accept(ArtistryBlocks.VERDANT_SMALL_CALCITE_BRICKS);
+            output.accept(ArtistryBlocks.AZURE_SMOOTH_CALCITE);
+            output.accept(ArtistryBlocks.AZURE_POLISHED_CALCITE);
+            output.accept(ArtistryBlocks.AZURE_CALCITE_BRICKS);
+            output.accept(ArtistryBlocks.AZURE_SMALL_CALCITE_BRICKS);
+            output.accept(ArtistryBlocks.ROSE_SMOOTH_CALCITE);
+            output.accept(ArtistryBlocks.ROSE_POLISHED_CALCITE);
+            output.accept(ArtistryBlocks.ROSE_CALCITE_BRICKS);
+            output.accept(ArtistryBlocks.ROSE_SMALL_CALCITE_BRICKS);
 
             output.accept(ArtistryBlocks.DRIPSTONE_STAIRS);
             output.accept(ArtistryBlocks.DRIPSTONE_SLAB);

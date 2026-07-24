@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "artistry:polished_calcite"
+    },
+    "L": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "#L#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "artistry:sunny_polished_calcite"
+  }
+}

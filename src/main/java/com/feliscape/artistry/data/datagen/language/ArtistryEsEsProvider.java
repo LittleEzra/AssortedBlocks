@@ -12,6 +12,8 @@ public class ArtistryEsEsProvider extends ArtistryLanguageProvider{
         super(output, "es_es");
     }
 
+    // The spanish translation is incomplete and (likely) poorly translated.
+    // Feel free to improve it if you know spanish!
     @Override
     protected void addTranslations() {
         this.add("item.artistry.wip", "WIP - Imposible de obtener en modo supervivencia");
@@ -159,10 +161,10 @@ public class ArtistryEsEsProvider extends ArtistryLanguageProvider{
         this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS, "Escaleras de pequeños ladrillos de calcita");
         this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB, "Losa de pequeños ladrillos de calcita");
 
-        this.addBlock(ArtistryBlocks.PAINTED_SMOOTH_CALCITE, "Calcita lisa pintada");
-        this.addBlock(ArtistryBlocks.PAINTED_POLISHED_CALCITE, "Calcita pulida pintada");
-        this.addBlock(ArtistryBlocks.PAINTED_CALCITE_BRICKS, "Ladrillos de calcita pintados");
-        this.addBlock(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS, "Pequeños ladrillos de calcita pintados");
+        this.addBlock(ArtistryBlocks.AZURE_SMOOTH_CALCITE, "Calcita lisa pintada");
+        this.addBlock(ArtistryBlocks.AZURE_POLISHED_CALCITE, "Calcita pulida pintada");
+        this.addBlock(ArtistryBlocks.AZURE_CALCITE_BRICKS, "Ladrillos de calcita pintados");
+        this.addBlock(ArtistryBlocks.AZURE_SMALL_CALCITE_BRICKS, "Pequeños ladrillos de calcita pintados");
 
         this.addBlock(ArtistryBlocks.DRIPSTONE_STAIRS, "Escaleras de caliza");
         this.addBlock(ArtistryBlocks.DRIPSTONE_SLAB, "Losa de caliza");

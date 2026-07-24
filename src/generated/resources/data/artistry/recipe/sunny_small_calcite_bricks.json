@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "artistry:small_calcite_bricks"
+    },
+    "L": {
+      "item": "minecraft:gold_nugget"
+    }
+  },
+  "pattern": [
+    "###",
+    "#L#",
+    "###"
+  ],
+  "result": {
+    "count": 8,
+    "id": "artistry:sunny_small_calcite_bricks"
+  }
+}

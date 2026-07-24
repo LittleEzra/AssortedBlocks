@@ -162,10 +162,26 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS, "Small Calcite Brick Stairs");
         this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB, "Small Calcite Brick Slab");
 
-        this.addBlock(ArtistryBlocks.PAINTED_SMOOTH_CALCITE, "Painted Smooth Calcite");
-        this.addBlock(ArtistryBlocks.PAINTED_POLISHED_CALCITE, "Painted Polished Calcite");
-        this.addBlock(ArtistryBlocks.PAINTED_CALCITE_BRICKS, "Painted Calcite Bricks");
-        this.addBlock(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS, "Painted Small Calcite Bricks");
+        this.addBlock(ArtistryBlocks.AZURE_SMOOTH_CALCITE, "Azure Smooth Calcite");
+        this.addBlock(ArtistryBlocks.AZURE_POLISHED_CALCITE, "Azure Polished Calcite");
+        this.addBlock(ArtistryBlocks.AZURE_CALCITE_BRICKS, "Azure Calcite Bricks");
+        this.addBlock(ArtistryBlocks.AZURE_SMALL_CALCITE_BRICKS, "Azure Small Calcite Bricks");
+        this.addBlock(ArtistryBlocks.SCARLET_SMOOTH_CALCITE, "Scarlet Smooth Calcite");
+        this.addBlock(ArtistryBlocks.SCARLET_POLISHED_CALCITE, "Scarlet Polished Calcite");
+        this.addBlock(ArtistryBlocks.SCARLET_CALCITE_BRICKS, "Scarlet Calcite Bricks");
+        this.addBlock(ArtistryBlocks.SCARLET_SMALL_CALCITE_BRICKS, "Scarlet Small Calcite Bricks");
+        this.addBlock(ArtistryBlocks.VERDANT_SMOOTH_CALCITE, "Verdant Smooth Calcite");
+        this.addBlock(ArtistryBlocks.VERDANT_POLISHED_CALCITE, "Verdant Polished Calcite");
+        this.addBlock(ArtistryBlocks.VERDANT_CALCITE_BRICKS, "Verdant Calcite Bricks");
+        this.addBlock(ArtistryBlocks.VERDANT_SMALL_CALCITE_BRICKS, "Verdant Small Calcite Bricks");
+        this.addBlock(ArtistryBlocks.ROSE_SMOOTH_CALCITE, "Rose Smooth Calcite");
+        this.addBlock(ArtistryBlocks.ROSE_POLISHED_CALCITE, "Rose Polished Calcite");
+        this.addBlock(ArtistryBlocks.ROSE_CALCITE_BRICKS, "Rose Calcite Bricks");
+        this.addBlock(ArtistryBlocks.ROSE_SMALL_CALCITE_BRICKS, "Rose Small Calcite Bricks");
+        this.addBlock(ArtistryBlocks.SUNNY_SMOOTH_CALCITE, "Sunny Smooth Calcite");
+        this.addBlock(ArtistryBlocks.SUNNY_POLISHED_CALCITE, "Sunny Polished Calcite");
+        this.addBlock(ArtistryBlocks.SUNNY_CALCITE_BRICKS, "Sunny Calcite Bricks");
+        this.addBlock(ArtistryBlocks.SUNNY_SMALL_CALCITE_BRICKS, "Sunny Small Calcite Bricks");
 
         this.addBlock(ArtistryBlocks.DRIPSTONE_STAIRS, "Dripstone Stairs");
         this.addBlock(ArtistryBlocks.DRIPSTONE_SLAB, "Dripstone Slab");

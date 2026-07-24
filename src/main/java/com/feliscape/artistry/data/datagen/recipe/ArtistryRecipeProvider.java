@@ -1,7 +1,6 @@
 package com.feliscape.artistry.data.datagen.recipe;
 
 import com.feliscape.artistry.Artistry;
-import com.feliscape.artistry.content.block.FrostedGlassBlock;
 import com.feliscape.artistry.registry.ArtistryItems;
 import com.feliscape.artistry.registry.ArtistryTags;
 import com.feliscape.artistry.registry.ArtistryBlocks;
@@ -9,17 +8,12 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -360,7 +354,8 @@ public class ArtistryRecipeProvider extends RecipeProvider {
         chiseled(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.CHISELED_DRIPSTONE, ArtistryBlocks.POLISHED_DRIPSTONE_SLAB);
 
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.PAINTED_POLISHED_CALCITE, 8)
+        // Azure
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.AZURE_POLISHED_CALCITE, 8)
                 .define('#', ArtistryBlocks.POLISHED_CALCITE)
                 .define('L', Items.LAPIS_LAZULI)
                 .pattern("###")
@@ -368,7 +363,7 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
                 .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.PAINTED_SMOOTH_CALCITE, 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.AZURE_SMOOTH_CALCITE, 8)
                 .define('#', ArtistryBlocks.SMOOTH_CALCITE)
                 .define('L', Items.LAPIS_LAZULI)
                 .pattern("###")
@@ -376,7 +371,7 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
                 .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.PAINTED_CALCITE_BRICKS, 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.AZURE_CALCITE_BRICKS, 8)
                 .define('#', ArtistryBlocks.CALCITE_BRICKS)
                 .define('L', Items.LAPIS_LAZULI)
                 .pattern("###")
@@ -384,7 +379,7 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
                 .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS, 8)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.AZURE_SMALL_CALCITE_BRICKS, 8)
                 .define('#', ArtistryBlocks.SMALL_CALCITE_BRICKS)
                 .define('L', Items.LAPIS_LAZULI)
                 .pattern("###")
@@ -392,6 +387,142 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .unlockedBy(getHasName(Items.LAPIS_LAZULI), has(Items.LAPIS_LAZULI))
                 .save(recipeOutput);
+        // Scarlet
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SCARLET_POLISHED_CALCITE, 8)
+                .define('#', ArtistryBlocks.POLISHED_CALCITE)
+                .define('L', Items.REDSTONE)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SCARLET_SMOOTH_CALCITE, 8)
+                .define('#', ArtistryBlocks.SMOOTH_CALCITE)
+                .define('L', Items.REDSTONE)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SCARLET_CALCITE_BRICKS, 8)
+                .define('#', ArtistryBlocks.CALCITE_BRICKS)
+                .define('L', Items.REDSTONE)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SCARLET_SMALL_CALCITE_BRICKS, 8)
+                .define('#', ArtistryBlocks.SMALL_CALCITE_BRICKS)
+                .define('L', Items.REDSTONE)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                .save(recipeOutput);
+
+        // Verdant
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.VERDANT_POLISHED_CALCITE, 8)
+                .define('#', ArtistryBlocks.POLISHED_CALCITE)
+                .define('L', Items.EMERALD)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.VERDANT_SMOOTH_CALCITE, 8)
+                .define('#', ArtistryBlocks.SMOOTH_CALCITE)
+                .define('L', Items.EMERALD)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.VERDANT_CALCITE_BRICKS, 8)
+                .define('#', ArtistryBlocks.CALCITE_BRICKS)
+                .define('L', Items.EMERALD)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.VERDANT_SMALL_CALCITE_BRICKS, 8)
+                .define('#', ArtistryBlocks.SMALL_CALCITE_BRICKS)
+                .define('L', Items.EMERALD)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD))
+                .save(recipeOutput);
+
+        // Rose
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.ROSE_POLISHED_CALCITE, 8)
+                .define('#', ArtistryBlocks.POLISHED_CALCITE)
+                .define('L', Items.AMETHYST_SHARD)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.ROSE_SMOOTH_CALCITE, 8)
+                .define('#', ArtistryBlocks.SMOOTH_CALCITE)
+                .define('L', Items.AMETHYST_SHARD)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.ROSE_CALCITE_BRICKS, 8)
+                .define('#', ArtistryBlocks.CALCITE_BRICKS)
+                .define('L', Items.AMETHYST_SHARD)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.ROSE_SMALL_CALCITE_BRICKS, 8)
+                .define('#', ArtistryBlocks.SMALL_CALCITE_BRICKS)
+                .define('L', Items.AMETHYST_SHARD)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+                .save(recipeOutput);
+
+        // Sunny
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SUNNY_POLISHED_CALCITE, 8)
+                .define('#', ArtistryBlocks.POLISHED_CALCITE)
+                .define('L', Items.GOLD_NUGGET)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.GOLD_NUGGET), has(Items.GOLD_NUGGET))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SUNNY_SMOOTH_CALCITE, 8)
+                .define('#', ArtistryBlocks.SMOOTH_CALCITE)
+                .define('L', Items.GOLD_NUGGET)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.GOLD_NUGGET), has(Items.GOLD_NUGGET))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SUNNY_CALCITE_BRICKS, 8)
+                .define('#', ArtistryBlocks.CALCITE_BRICKS)
+                .define('L', Items.GOLD_NUGGET)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.GOLD_NUGGET), has(Items.GOLD_NUGGET))
+                .save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.SUNNY_SMALL_CALCITE_BRICKS, 8)
+                .define('#', ArtistryBlocks.SMALL_CALCITE_BRICKS)
+                .define('L', Items.GOLD_NUGGET)
+                .pattern("###")
+                .pattern("#L#")
+                .pattern("###")
+                .unlockedBy(getHasName(Items.GOLD_NUGGET), has(Items.GOLD_NUGGET))
+                .save(recipeOutput);
+
 
         table(recipeOutput, ArtistryBlocks.OAK_TABLE, Blocks.OAK_SLAB);
         table(recipeOutput, ArtistryBlocks.SPRUCE_TABLE, Blocks.SPRUCE_SLAB);

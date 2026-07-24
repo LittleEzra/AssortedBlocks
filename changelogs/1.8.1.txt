@@ -1,5 +1,0 @@
-## Added:
-- Flower Vase
-- Stone Lantern
-- Calcite Pillar
-- Snow and Ice Block Sets

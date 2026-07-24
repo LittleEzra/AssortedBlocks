@@ -163,10 +163,26 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_STAIRS, "Kleine Kalzitziegeltreppe");
         this.addBlock(ArtistryBlocks.SMALL_CALCITE_BRICK_SLAB, "Kleine Kalzitziegelstufe");
 
-        this.addBlock(ArtistryBlocks.PAINTED_SMOOTH_CALCITE, "Bemalter glatter Kalzit");
-        this.addBlock(ArtistryBlocks.PAINTED_POLISHED_CALCITE, "Bemalter polierter Kalzit");
-        this.addBlock(ArtistryBlocks.PAINTED_CALCITE_BRICKS, "Bemalte Kalzitziegel");
-        this.addBlock(ArtistryBlocks.PAINTED_SMALL_CALCITE_BRICKS, "Kleine bemalte Kalzitziegel");
+        this.addBlock(ArtistryBlocks.AZURE_SMOOTH_CALCITE, "Azurblauer glatter Kalzit");
+        this.addBlock(ArtistryBlocks.AZURE_POLISHED_CALCITE, "Azurblauer polierter Kalzit");
+        this.addBlock(ArtistryBlocks.AZURE_CALCITE_BRICKS, "Azurblaue Kalzitziegel");
+        this.addBlock(ArtistryBlocks.AZURE_SMALL_CALCITE_BRICKS, "Kleine azurblaue Kalzitziegel");
+        this.addBlock(ArtistryBlocks.SCARLET_SMOOTH_CALCITE, "Scharlachroter glatter Kalzit");
+        this.addBlock(ArtistryBlocks.SCARLET_POLISHED_CALCITE, "Scharlachroter polierter Kalzit");
+        this.addBlock(ArtistryBlocks.SCARLET_CALCITE_BRICKS, "Scharlachrote Kalzitziegel");
+        this.addBlock(ArtistryBlocks.SCARLET_SMALL_CALCITE_BRICKS, "Kleine scharlachrote Kalzitziegel");
+        this.addBlock(ArtistryBlocks.VERDANT_SMOOTH_CALCITE, "Grüner glatter Kalzit");
+        this.addBlock(ArtistryBlocks.VERDANT_POLISHED_CALCITE, "Grüner polierter Kalzit");
+        this.addBlock(ArtistryBlocks.VERDANT_CALCITE_BRICKS, "Grüne Kalzitziegel");
+        this.addBlock(ArtistryBlocks.VERDANT_SMALL_CALCITE_BRICKS, "Kleine grüne Kalzitziegel");
+        this.addBlock(ArtistryBlocks.ROSE_SMOOTH_CALCITE, "Rosafarbener glatter Kalzit");
+        this.addBlock(ArtistryBlocks.ROSE_POLISHED_CALCITE, "Rosafarbener polierter Kalzit");
+        this.addBlock(ArtistryBlocks.ROSE_CALCITE_BRICKS, "Rosafarbene Kalzitziegel");
+        this.addBlock(ArtistryBlocks.ROSE_SMALL_CALCITE_BRICKS, "Kleine rosafarbene Kalzitziegel");
+        this.addBlock(ArtistryBlocks.SUNNY_SMOOTH_CALCITE, "Sonniger glatter Kalzit");
+        this.addBlock(ArtistryBlocks.SUNNY_POLISHED_CALCITE, "Sonniger polierter Kalzit");
+        this.addBlock(ArtistryBlocks.SUNNY_CALCITE_BRICKS, "Sonnige Kalzitziegel");
+        this.addBlock(ArtistryBlocks.SUNNY_SMALL_CALCITE_BRICKS, "Kleine sonnige Kalzitziegel");
 
         this.addBlock(ArtistryBlocks.DRIPSTONE_STAIRS, "Tropfsteintreppen");
         this.addBlock(ArtistryBlocks.DRIPSTONE_SLAB, "Tropfsteinslab");
