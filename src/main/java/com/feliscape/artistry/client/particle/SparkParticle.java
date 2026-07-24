@@ -19,7 +19,7 @@ public class SparkParticle extends TextureSheetParticle {
     protected SparkParticle(ClientLevel pLevel, double pX, double pY, double pZ, double pXSpeed, double pYSpeed, double pZSpeed, double gravity, SpriteSet pSprites) {
         super(pLevel, pX, pY, pZ);
         this.setParticleSpeed(pXSpeed * 0.2D, pYSpeed * 0.2D, pZSpeed * 0.2D);
-        this.lifetime = 60 + this.random.nextInt(30);
+        this.lifetime = 20 + this.random.nextInt(10);
         this.sprites = pSprites;
         this.rotSpeed = ((float)Math.random() - 0.5F) * 0.1F;
         this.setSpriteFromAge(pSprites);
@@ -48,9 +48,9 @@ public class SparkParticle extends TextureSheetParticle {
 
             this.move(this.xd, this.yd, this.zd);
 
-            this.xd *= 0.97F;
-            this.yd *= 0.97F;
-            this.zd *= 0.97F;
+            this.xd *= 0.9F;
+            this.yd *= 0.9F;
+            this.zd *= 0.9F;
 
             this.yd -= gravity;
             this.yd = Math.max(this.yd, (double)-0.05F);
@@ -88,7 +88,7 @@ public class SparkParticle extends TextureSheetParticle {
         @Nullable
         @Override
         public Particle createParticle(ColorParticleOption type, ClientLevel level, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-            SparkParticle particle = new SparkParticle(level, x, y, z, xSpeed, ySpeed, zSpeed, 0.002D, this.sprites);
+            SparkParticle particle = new SparkParticle(level, x, y, z, xSpeed, ySpeed, zSpeed, 0.01D, this.sprites);
             particle.setColor(type.getRed(), type.getGreen(), type.getBlue());
             particle.setAlpha(type.getAlpha());
             return particle;

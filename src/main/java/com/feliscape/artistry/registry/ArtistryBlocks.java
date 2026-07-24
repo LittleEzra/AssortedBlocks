@@ -368,6 +368,15 @@ public class ArtistryBlocks {
             ));
 
 
+    public static final DeferredBlock<ThornHuskBlock> THORN_HUSK = registerBlockWithItem("thorn_husk",
+            p -> new ThornHuskBlock(p
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .replaceable()
+                    .noCollission()
+                    .strength(0.8F)
+                    .sound(SoundType.MANGROVE_ROOTS)
+                    .pushReaction(PushReaction.DESTROY)
+            ));
     public static final DeferredBlock<BloomingVinesBlock> BLOOMING_VINES = registerBlockWithItem("blooming_vines",
             p -> new BloomingVinesBlock(p
                     .mapColor(MapColor.PLANT)

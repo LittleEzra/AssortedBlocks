@@ -102,9 +102,9 @@ public class SparkFountainBlockEntity extends BlockEntity {
                 double z = pos.getZ() + 0.4375 + random.nextDouble() * 0.125;
 
                 double theta = random.nextDouble() * Math.TAU;
-                double xSpeed = Math.cos(theta) * 0.3D * RandomUtil.centeredDouble(random);
-                double ySpeed = random.nextDouble() * 0.7D + 1.5D;
-                double zSpeed = Math.sin(theta) * 0.3D * RandomUtil.centeredDouble(random);
+                double xSpeed = Math.cos(theta) * 0.7D * random.nextDouble();
+                double ySpeed = random.nextDouble() * 1.4D + 3.8D;
+                double zSpeed = Math.sin(theta) * 0.7D * random.nextDouble();
 
                 level.addParticle(ColorParticleOption.create(ArtistryParticles.SPARK.get(), flattenAlpha(fountain.color)),
                         x, pos.getY() + 1, z,

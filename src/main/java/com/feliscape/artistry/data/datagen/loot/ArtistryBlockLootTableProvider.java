@@ -56,6 +56,7 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ArtistryBlocks.SUNBURST_VINES.get(), BlockLootSubProvider::createShearsOnlyDrop);
         this.add(ArtistryBlocks.SUNBURST_VINES_PLANT.get(), BlockLootSubProvider::createShearsOnlyDrop);
 
+        this.add(ArtistryBlocks.THORN_HUSK.get(), block -> this.createMultifaceBlockDrops(block, HAS_SHEARS));
         this.add(ArtistryBlocks.BLOOMING_VINES.get(), block -> this.createMultifaceBlockDrops(block, HAS_SHEARS));
         this.add(ArtistryBlocks.WALL_STRING_LIGHTS.get(), this::createWallStringLights);
         this.add(ArtistryBlocks.LUSH_FERN.get(), BlockLootSubProvider::createShearsOnlyDrop);

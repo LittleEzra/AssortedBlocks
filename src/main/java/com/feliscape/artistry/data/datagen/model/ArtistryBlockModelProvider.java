@@ -100,6 +100,7 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         roundLantern(ROUND_LANTERN);
         directionalBlock(FLAT_LIGHT.get(), models().getExistingFile(Artistry.location("block/flat_light")));
 
+        thornHusk(THORN_HUSK);
         bloomingVines(BLOOMING_VINES);
         /*getVariantBuilder(ArtistryBlocks.LUSH_FERN.get())
                 .partialState().addModels(ConfiguredModel.builder().modelFile(
@@ -657,6 +658,30 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
                         .condition(StringLightsBlock.SUPPORTED, false);
             }
         });
+    }
+
+    private void thornHusk(Supplier<ThornHuskBlock> block){
+        MultiPartBlockStateBuilder multipart = getMultipartBuilder(block.get());
+
+        ModelFile model = models().cross(name(block.get()), blockTexture(block.get())).renderType("cutout");
+
+        addBloomingVinesFaceLoop(multipart, 90, 180, MultifaceBlock.getFaceProperty(Direction.NORTH), model);
+        bloomingVinesAddAllFalse(model, multipart, 90, 0);
+
+        addBloomingVinesFaceLoop(multipart, 90, 270, MultifaceBlock.getFaceProperty(Direction.EAST), model);
+        bloomingVinesAddAllFalse(model, multipart, 90, 90);
+
+        addBloomingVinesFaceLoop(multipart, 90, 0, MultifaceBlock.getFaceProperty(Direction.SOUTH), model);
+        bloomingVinesAddAllFalse(model, multipart, 90, 180);
+
+        addBloomingVinesFaceLoop(multipart, 90, 90, MultifaceBlock.getFaceProperty(Direction.WEST), model);
+        bloomingVinesAddAllFalse(model, multipart, 90, 270);
+
+        addBloomingVinesFaceLoop(multipart, 180, 0, MultifaceBlock.getFaceProperty(Direction.UP), model);
+        bloomingVinesAddAllFalse(model, multipart, 180, 0);
+
+        addBloomingVinesFaceLoop(multipart, 0, 0, MultifaceBlock.getFaceProperty(Direction.DOWN), model);
+        bloomingVinesAddAllFalse(model, multipart, 0, 0);
     }
 
     private void bloomingVines(Supplier<BloomingVinesBlock> block){

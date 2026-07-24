@@ -86,6 +86,7 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         generatedBlockItem(ArtistryBlocks.AMETHYST_STARS);
         blockItemSpriteLayered(ArtistryBlocks.SPARK_FOUNTAIN);
 
+        blockItemSprite(ArtistryBlocks.THORN_HUSK);
         blockItemSprite(ArtistryBlocks.BLOOMING_VINES);
         blockItemSprite(ArtistryBlocks.LUSH_FERN);
         generatedBlockItem(ArtistryBlocks.SHORT_TEARDROP_GRASS);

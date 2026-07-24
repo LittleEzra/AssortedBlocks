@@ -179,11 +179,11 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                         PEEKING_JACK_O_LANTERN.get(),
                         BELLOWING_JACK_O_LANTERN.get(),
 
+                        THORN_HUSK.get(),
                         BLOOMING_VINES.get(),
                         SUNSPROUT.get(),
                         SUNBURST_VINES.get(),
                         SUNBURST_VINES_PLANT.get(),
-                        BLOOMING_VINES.get(),
                         SHORT_TEARDROP_GRASS.get(),
                         LUSH_FERN.get(),
                         LUSH_FERN_CROP.get(),
@@ -352,6 +352,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(WARPED_TABLE.get())
         ;
         this.tag(BlockTags.SWORD_EFFICIENT)
+                .add(THORN_HUSK.get())
                 .add(BLOOMING_VINES.get())
                 .add(SHORT_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())
@@ -532,12 +533,14 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.REPLACEABLE)
+                .add(THORN_HUSK.get())
                 .add(BLOOMING_VINES.get())
                 .add(SHORT_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())
                 .add(CORPSE_FLOWER.get())
         ;
         this.tag(BlockTags.ENCHANTMENT_POWER_TRANSMITTER)
+                .add(THORN_HUSK.get())
                 .add(BLOOMING_VINES.get())
                 .add(SHORT_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())
@@ -545,6 +548,7 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(CORPSE_FLOWER.get())
         ;
         this.tag(BlockTags.REPLACEABLE_BY_TREES)
+                .add(THORN_HUSK.get())
                 .add(BLOOMING_VINES.get())
                 .add(SHORT_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())

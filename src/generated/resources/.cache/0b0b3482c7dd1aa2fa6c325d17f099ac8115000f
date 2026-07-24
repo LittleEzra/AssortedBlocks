@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-24T16:29:12.168586	Item Models: artistry
+// 1.21.1	2026-07-24T21:39:13.6736885	Item Models: artistry
 59b250cc8214b86eac1ffb0e41d7d68bec96cde0 assets/artistry/models/item/amethyst_stars.json
 32c080b7db66c98dba7d11435dd2233670f58c10 assets/artistry/models/item/ancient_tear.json
 73fe7333d37ecde4ea79ba093344f9bc4ccda762 assets/artistry/models/item/aspen_boat.json
@@ -110,6 +110,7 @@ be1d7facb5c075b31ff0ce73bf9ffc00d2f7fd1b assets/artistry/models/item/stripped_ro
 825b2f7c1542f477289a67f7530adc151d5e7982 assets/artistry/models/item/sunsprout.json
 a4a07da2e3f8ddd243cdc348dc3f6da5f1708724 assets/artistry/models/item/tall_candle.json
 f82c0b1744fcf655800a0d91e39b67f0186e3a3d assets/artistry/models/item/tall_teardrop_grass.json
+89feda93af02a03ec7392d071ebf82dbf96f216d assets/artistry/models/item/thorn_husk.json
 0382bcd9ddec8e25ebb6784a0ca6f2801358fda4 assets/artistry/models/item/waxed_copper_chain.json
 6d010cb754756ff057e355972090aad636bc1297 assets/artistry/models/item/waxed_exposed_copper_chain.json
 271189c372f40392d8c0ea0e8140d708385dd547 assets/artistry/models/item/waxed_oxidized_copper_chain.json

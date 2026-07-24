@@ -64,6 +64,7 @@ public class ArtistryCreativeModeTabs {
             output.accept(ArtistryBlocks.TEARDROP_GRASS_BLOCK);
             output.accept(ArtistryBlocks.SHORT_TEARDROP_GRASS);
             output.accept(ArtistryBlocks.TALL_TEARDROP_GRASS);
+            output.accept(ArtistryBlocks.THORN_HUSK);
             output.accept(ArtistryBlocks.CORPSE_FLOWER);
             output.accept(ArtistryBlocks.FLY_LURE);
             output.accept(ArtistryBlocks.GLOWING_MUSHROOM);

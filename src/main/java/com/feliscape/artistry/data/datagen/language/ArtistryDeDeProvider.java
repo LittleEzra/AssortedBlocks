@@ -57,6 +57,7 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.SUNBURST_VINES, "Sonnenscheinranken");
         this.addBlock(ArtistryBlocks.SUNBURST_VINES_PLANT, "Sonnenscheinranken");
 
+        this.addBlock(ArtistryBlocks.THORN_HUSK, "Dornenhülle");
         this.addBlock(ArtistryBlocks.BLOOMING_VINES, "Blühende Ranken");
         this.addBlock(ArtistryBlocks.LUSH_FERN, "Üppiger Farn");
         this.addBlock(ArtistryBlocks.LUSH_FERN_CROP, "Üppiger Farn");

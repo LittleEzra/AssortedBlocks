@@ -56,6 +56,7 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.SUNBURST_VINES, "Sunburst Vines");
         this.addBlock(ArtistryBlocks.SUNBURST_VINES_PLANT, "Sunburst Vines");
 
+        this.addBlock(ArtistryBlocks.THORN_HUSK, "Thorn Husk");
         this.addBlock(ArtistryBlocks.BLOOMING_VINES, "Blooming Vines");
         this.addBlock(ArtistryBlocks.LUSH_FERN, "Lush Fern");
         this.addBlock(ArtistryBlocks.LUSH_FERN_CROP, "Lush Fern");

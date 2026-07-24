@@ -2,10 +2,11 @@
   "multipart": [
     {
       "apply": {
-        "model": "artistry:block/wall_string_lights"
+        "model": "artistry:block/wall_string_lights",
+        "y": 180
       },
       "when": {
-        "north": "true"
+        "south": "true"
       }
     },
     {
@@ -19,11 +20,10 @@
     },
     {
       "apply": {
-        "model": "artistry:block/wall_string_lights",
-        "y": 180
+        "model": "artistry:block/wall_string_lights"
       },
       "when": {
-        "south": "true"
+        "north": "true"
       }
     },
     {
