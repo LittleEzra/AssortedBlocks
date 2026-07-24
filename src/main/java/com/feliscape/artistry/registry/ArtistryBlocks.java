@@ -106,13 +106,6 @@ public class ArtistryBlocks {
                     .strength(1.2F)
                     .instrument(NoteBlockInstrument.BASEDRUM)
             ));
-    public static final DeferredBlock<FlowerVaseBlock> FLOWER_VASE = registerBlockWithItem("flower_vase",
-            p -> new FlowerVaseBlock(p
-                    .instabreak()
-                    .noOcclusion()
-                    .pushReaction(PushReaction.DESTROY)
-            ));
-
     public static final DeferredBlock<SunsproutBlock> SUNSPROUT = BLOCKS.registerBlock("sunsprout",
             p -> new SunsproutBlock(p
                     .mapColor(MapColor.PLANT)
@@ -1302,7 +1295,7 @@ public class ArtistryBlocks {
                         .instrument(NoteBlockInstrument.BASS)
                         .strength(2.0F, 3.0F)
                         .sound(soundType)
-        , false);
+                , false);
     }
     private static TableBlock stoneTable(BlockBehaviour.Properties properties, MapColor mapColor, SoundType soundType) {
         return new TableBlock(
@@ -1312,7 +1305,7 @@ public class ArtistryBlocks {
                         .strength(1.5F, 6.0F)
                         .requiredFeatures()
                         .sound(soundType)
-        , false);
+                , false);
     }
 
     private static FlammableLogBlock log(BlockBehaviour.Properties properties, MapColor topMapColor, MapColor sideMapColor) {

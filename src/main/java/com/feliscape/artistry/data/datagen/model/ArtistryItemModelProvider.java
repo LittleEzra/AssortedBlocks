@@ -52,8 +52,6 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         manualBlockItem(ArtistryBlocks.MOSSY_STONE_TILE_STAIRS);
         manualBlockItem(ArtistryBlocks.MOSSY_STONE_TILE_SLAB);
 
-        blockItemSprite(ArtistryBlocks.FLOWER_VASE);
-
         manualBlockItem(ArtistryBlocks.SMOOTH_CALCITE_STAIRS);
         manualBlockItem(ArtistryBlocks.SMOOTH_CALCITE_SLAB);
         manualBlockItem(ArtistryBlocks.CALCITE_STAIRS);

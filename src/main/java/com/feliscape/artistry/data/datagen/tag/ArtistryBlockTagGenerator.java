@@ -409,20 +409,17 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(TEARDROP_GRASS_BLOCK.get())
                 .add(LEECHING_SOIL.get())
                 .add(WAXED_LEECHING_SOIL.get())
-                .add(FLOWER_VASE.get())
         ;
         this.tag(BlockTags.SNIFFER_DIGGABLE_BLOCK)
                 .add(OVERGROWN_STONE_TILES.get())
                 .add(ROCKY_DIRT.get())
         ;
-        this.tag(BlockTags.OVERWORLD_CARVER_REPLACEABLES).remove(OVERGROWN_STONE_TILES.get(), FLOWER_VASE.get());
-        this.tag(BlockTags.NETHER_CARVER_REPLACEABLES).remove(OVERGROWN_STONE_TILES.get(), FLOWER_VASE.get());
-        this.tag(BlockTags.ENDERMAN_HOLDABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get(), LEECHING_SOIL.get(), FLOWER_VASE.get());
-        this.tag(BlockTags.MOSS_REPLACEABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get(), LEECHING_SOIL.get(), FLOWER_VASE.get());
-        this.tag(BlockTags.AZALEA_ROOT_REPLACEABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get(), LEECHING_SOIL.get(), FLOWER_VASE.get());
-        this.tag(BlockTags.SCULK_REPLACEABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get(), LEECHING_SOIL.get(), FLOWER_VASE.get());
-        this.tag(BlockTags.BIG_DRIPLEAF_PLACEABLE).remove(FLOWER_VASE.get());
-        this.tag(BlockTags.BAMBOO_PLANTABLE_ON).remove(FLOWER_VASE.get());
+        this.tag(BlockTags.OVERWORLD_CARVER_REPLACEABLES).remove(OVERGROWN_STONE_TILES.get());
+        this.tag(BlockTags.NETHER_CARVER_REPLACEABLES).remove(OVERGROWN_STONE_TILES.get());
+        this.tag(BlockTags.ENDERMAN_HOLDABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get(), LEECHING_SOIL.get());
+        this.tag(BlockTags.MOSS_REPLACEABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get(), LEECHING_SOIL.get());
+        this.tag(BlockTags.AZALEA_ROOT_REPLACEABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get(), LEECHING_SOIL.get());
+        this.tag(BlockTags.SCULK_REPLACEABLE).remove(OVERGROWN_STONE_TILES.get(), ROCKY_DIRT.get(), TEARDROP_GRASS_BLOCK.get(), LEECHING_SOIL.get());
 
 
         this.tag(BlockTags.WALLS)

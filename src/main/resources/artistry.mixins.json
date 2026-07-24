@@ -3,7 +3,6 @@
   "package": "com.feliscape.artistry.content.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "BlockStateBaseMixin",
     "LanternBlockMixin",
     "MushroomBlockMixin",
     "SnifferMixin"

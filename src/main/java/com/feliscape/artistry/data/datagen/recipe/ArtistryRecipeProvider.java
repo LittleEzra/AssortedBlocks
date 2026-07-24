@@ -600,14 +600,6 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern("CD")
                 .unlockedBy(getHasName(Blocks.COBBLESTONE), has(Blocks.COBBLESTONE))
                 .save(recipeOutput);
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.FLOWER_VASE)
-                .define('B', Items.BRICK)
-                .define('D', Blocks.DIRT)
-                .pattern("D")
-                .pattern("B")
-                .pattern("B")
-                .unlockedBy(getHasName(Items.BRICK), has(Items.BRICK))
-                .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryItems.SNIFFER_CAKE)
                 .define('#', Items.WHEAT)

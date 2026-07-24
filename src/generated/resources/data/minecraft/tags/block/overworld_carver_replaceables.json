@@ -1,7 +1,6 @@
 {
   "remove": [
-    "artistry:overgrown_stone_tiles",
-    "artistry:flower_vase"
+    "artistry:overgrown_stone_tiles"
   ],
   "values": []
 }

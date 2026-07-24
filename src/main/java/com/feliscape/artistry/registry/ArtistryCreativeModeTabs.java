@@ -49,10 +49,11 @@ public class ArtistryCreativeModeTabs {
             output.accept(ArtistryBlocks.STONE_PILLAR);
             output.accept(ArtistryBlocks.MOSSY_STONE_PILLAR);
 
+            output.accept(ArtistryBlocks.MOSSY_STONE_PILLAR);
+
             output.accept(ArtistryBlocks.MOSSY_BRICKS);
             output.accept(ArtistryBlocks.CRACKED_BRICKS);
             output.accept(ArtistryBlocks.ROCKY_DIRT);
-            output.accept(ArtistryBlocks.FLOWER_VASE);
 
             output.accept(ArtistryItems.SNIFFER_CAKE);
             output.accept(ArtistryItems.SUNSPROUT);
@@ -113,6 +114,13 @@ public class ArtistryCreativeModeTabs {
             output.accept(ArtistryBlocks.AMETHYST_STARS);
             output.accept(ArtistryItems.SPARK_FOUNTAIN);
             output.accept(ArtistryBlocks.WATER_FOUNTAIN);
+
+            output.accept(ArtistryItems.STRING_LIGHTS);
+            output.accept(ArtistryBlocks.LARGE_LANTERN);
+            output.accept(ArtistryBlocks.LARGE_SOUL_LANTERN);
+            output.accept(ArtistryBlocks.STONE_LANTERN);
+            output.accept(ArtistryBlocks.ROUND_LANTERN);
+            output.accept(ArtistryBlocks.FLAT_LIGHT);
 
             output.accept(ArtistryBlocks.CALCITE_STAIRS);
             output.accept(ArtistryBlocks.CALCITE_SLAB);

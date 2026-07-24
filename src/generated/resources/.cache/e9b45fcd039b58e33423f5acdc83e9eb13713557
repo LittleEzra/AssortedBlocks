@@ -1,4 +1,4 @@
-// 1.21.1	2025-12-20T15:35:46.2464991	Tags for minecraft:block mod id artistry
+// 1.21.1	2026-07-24T16:29:12.1908024	Tags for minecraft:block mod id artistry
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/block/aspen_logs.json
 cb8f42934e5133f862b85f346da074f586ebab6b data/artistry/tags/block/carvable_pumpkins.json
 3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/block/frosted_glass.json
@@ -39,16 +39,14 @@ d8a68a479a6f3bd8701902b48641dde4b374b10c data/c/tags/block/pumpkins/carved.json
 d94b514b237177c0bc17835639b8147a5c8698b6 data/c/tags/block/pumpkins/jack_o_lanterns.json
 1351865c4741ce90f7e6200cb9f8ed90fdb2f1ad data/c/tags/block/stripped_logs.json
 6847dc1f39e072b5e30b5811df3365ff85ff4278 data/c/tags/block/stripped_woods.json
-55d0bdfe2f4ed1236c39998fb1d7851e47489c70 data/minecraft/tags/block/azalea_root_replaceable.json
-c674d1ac78901425be155c414d0702c7601745d6 data/minecraft/tags/block/bamboo_plantable_on.json
+6ccdd7553eca982a759b33a781c50b9ea255ce34 data/minecraft/tags/block/azalea_root_replaceable.json
 e56d56e03c7ad399d358e93b97e0aba754fb2d6e data/minecraft/tags/block/bee_growables.json
-c674d1ac78901425be155c414d0702c7601745d6 data/minecraft/tags/block/big_dripleaf_placeable.json
 1953e7803436673f9f36aef912045636eff1de17 data/minecraft/tags/block/ceiling_hanging_signs.json
 18901fb99991fa198524b1b985825fb4fa3dd545 data/minecraft/tags/block/climbable.json
 e56d56e03c7ad399d358e93b97e0aba754fb2d6e data/minecraft/tags/block/crops.json
-22de4887db741779a90555df3f852d7744b2d2a4 data/minecraft/tags/block/dirt.json
+5c8fd246cb4c6cbecfe87a247c6a8b7f8d5bf5dc data/minecraft/tags/block/dirt.json
 f8697e237397ee549db1b76b3ceed9e911110744 data/minecraft/tags/block/enchantment_power_transmitter.json
-095bf38739d8c5c3e82f2d76604df8ac85204c3b data/minecraft/tags/block/enderman_holdable.json
+defe176df0220bede1e82186f2858018c2b1babd data/minecraft/tags/block/enderman_holdable.json
 a2ee9243350f132386a14588222c5d567f681078 data/minecraft/tags/block/fence_gates.json
 a054d0b95ec321349d87186f27442d22b0f76887 data/minecraft/tags/block/flower_pots.json
 e9b2b4e7962ab80d7efeab43fbed187f75c59a91 data/minecraft/tags/block/hoglin_repellents.json
@@ -59,16 +57,16 @@ e9b2b4e7962ab80d7efeab43fbed187f75c59a91 data/minecraft/tags/block/hoglin_repell
 14850c5e1f50c3a6a80630b9a5aedf7ccce407cc data/minecraft/tags/block/mineable/hoe.json
 d7126bf037796d76702298f5b6c53e8e08a85a56 data/minecraft/tags/block/mineable/pickaxe.json
 f831ff3406b59eb9ef9d09ddeae21411936a61c5 data/minecraft/tags/block/mineable/shovel.json
-55d0bdfe2f4ed1236c39998fb1d7851e47489c70 data/minecraft/tags/block/moss_replaceable.json
+6ccdd7553eca982a759b33a781c50b9ea255ce34 data/minecraft/tags/block/moss_replaceable.json
 dcfcde0b3716705215c339c3ed7bb1fe6da2cdb2 data/minecraft/tags/block/mushroom_grow_block.json
-53a48f9b7cf2e4198459d30532dbf3942275472e data/minecraft/tags/block/nether_carver_replaceables.json
-53a48f9b7cf2e4198459d30532dbf3942275472e data/minecraft/tags/block/overworld_carver_replaceables.json
+ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/nether_carver_replaceables.json
+ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/overworld_carver_replaceables.json
 e9b2b4e7962ab80d7efeab43fbed187f75c59a91 data/minecraft/tags/block/piglin_repellents.json
 0a826df176c8ac3bd81711a7a4175a75126ac9c8 data/minecraft/tags/block/planks.json
 85357039af916763302e1f7b835ca56e1b8d7d55 data/minecraft/tags/block/replaceable.json
 85357039af916763302e1f7b835ca56e1b8d7d55 data/minecraft/tags/block/replaceable_by_trees.json
 55fbd68b31cdc5344669d843dc351d53321c9d4a data/minecraft/tags/block/saplings.json
-55d0bdfe2f4ed1236c39998fb1d7851e47489c70 data/minecraft/tags/block/sculk_replaceable.json
+6ccdd7553eca982a759b33a781c50b9ea255ce34 data/minecraft/tags/block/sculk_replaceable.json
 b1977e19a874a0184a24ba1e18ac7d402da9e845 data/minecraft/tags/block/slabs.json
 0891f75d862bbc6fd3d1e62dc36c0499a9e7a5c1 data/minecraft/tags/block/small_flowers.json
 729e133b86abd15ff91a981e92e588316a449c62 data/minecraft/tags/block/sniffer_diggable_block.json

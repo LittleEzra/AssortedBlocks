@@ -132,7 +132,6 @@ public class ArtistryEsEsProvider extends ArtistryLanguageProvider{
         this.addBlock(ArtistryBlocks.WATER_FOUNTAIN, "Fuente de agua");
 
         this.addBlock(ArtistryBlocks.ROCKY_DIRT, "Tierra rocosa");
-        this.addBlock(ArtistryBlocks.FLOWER_VASE, "Jarrón");
 
         this.addBlock(ArtistryBlocks.PAINTED_POT, "Vasija pintada");
 

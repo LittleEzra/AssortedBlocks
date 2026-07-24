@@ -132,7 +132,6 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         simpleBlockItem(BOLLARD.get(), models().getExistingFile(Artistry.location("block/bollard")));
 
         blockWithItem(ROCKY_DIRT);
-        simpleBlock(FLOWER_VASE.get(), models().getExistingFile(Artistry.location("block/flower_vase")));
 
         particlesOnly(PAINTED_POT.get(), blockTexture(Blocks.TERRACOTTA));
 

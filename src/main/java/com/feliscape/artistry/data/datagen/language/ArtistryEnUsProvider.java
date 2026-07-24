@@ -135,7 +135,6 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.WATER_FOUNTAIN, "Water Fountain");
 
         this.addBlock(ArtistryBlocks.ROCKY_DIRT, "Rocky Dirt");
-        this.addBlock(ArtistryBlocks.FLOWER_VASE, "Flower Vase");
 
         this.addBlock(ArtistryBlocks.PAINTED_POT, "Painted Pot");
 

@@ -136,7 +136,6 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.WATER_FOUNTAIN, "Wasserbrunnen");
 
         this.addBlock(ArtistryBlocks.ROCKY_DIRT, "Steinige Erde");
-        this.addBlock(ArtistryBlocks.FLOWER_VASE, "Blumenvase");
 
         this.addBlock(ArtistryBlocks.PAINTED_POT, "Bemalter Topf");
 
