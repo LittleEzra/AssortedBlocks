@@ -5,8 +5,11 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
@@ -15,6 +18,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -89,6 +93,23 @@ public class StringLightsBlock extends CrossCollisionBlock {
     }
 
     @Override
+    protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+        if (state.getValue(SUPPORTED)){
+            if (hasSupport(level, pos)){
+                level.setBlock(pos, state.setValue(SUPPORTED, false), Block.UPDATE_ALL);
+                return InteractionResult.SUCCESS;
+            }
+        } else{
+            if (canSurviveWithoutSupport(level, pos)){
+                level.setBlock(pos, state.setValue(SUPPORTED, true), Block.UPDATE_ALL);
+                return InteractionResult.SUCCESS;
+            }
+        }
+        return super.useWithoutItem(state, level, pos, player, hitResult);
+    }
+
+    // Returns true if the block can survive including any supports to the sides
+    @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockState above = level.getBlockState(pos.above());
         if (Block.canSupportCenter(level, pos.above(), Direction.DOWN) ||
@@ -104,11 +125,21 @@ public class StringLightsBlock extends CrossCollisionBlock {
                 (canBlockSupport(east) && canBlockSupport(west));
     }
 
+    // Returns true if the block can survive ignoring any supports to the sides
     protected boolean canSurviveWithoutSupport(LevelReader level, BlockPos pos) {
         BlockState above = level.getBlockState(pos.above());
         return Block.canSupportCenter(level, pos.above(), Direction.DOWN) ||
                 (above.is(ArtistryTags.Blocks.STRING_LIGHTS) && above.getValue(SUPPORTED)) ||
                 above.is(BlockTags.LEAVES);
+    }
+
+    protected boolean hasSupport(LevelReader level, BlockPos pos){
+        BlockState north = level.getBlockState(pos.north());
+        BlockState east = level.getBlockState(pos.east());
+        BlockState south = level.getBlockState(pos.south());
+        BlockState west = level.getBlockState(pos.west());
+        return (canBlockSupport(north) && canBlockSupport(south)) ||
+                (canBlockSupport(east) && canBlockSupport(west));
     }
 
     public BlockState getStateForPlacement(BlockPlaceContext context) {

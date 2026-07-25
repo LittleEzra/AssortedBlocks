@@ -66,12 +66,8 @@ public class ThornHuskBlock extends MultifaceBlock implements BonemealableBlock 
     @Override
     protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
         if (entity instanceof LivingEntity) {
-            if (!level.isClientSide && (entity.xOld != entity.getX() || entity.zOld != entity.getZ())) {
-                double d0 = Math.abs(entity.getX() - entity.xOld);
-                double d1 = Math.abs(entity.getZ() - entity.zOld);
-                if (d0 >= 0.003F || d1 >= 0.003F) {
-                    entity.hurt(level.damageSources().sweetBerryBush(), 1.0F);
-                }
+            if (!level.isClientSide()) {
+                entity.hurt(level.damageSources().sweetBerryBush(), 1.0F);
             }
         }
     }
