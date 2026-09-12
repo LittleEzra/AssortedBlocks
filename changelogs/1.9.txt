@@ -21,3 +21,5 @@
 - Made Tall Candles brighter
 - Removed String Lights connecting to other blocks.
     - Feedback is appreciated on this; this change can also be modified with the block/connects_to_string_lights tag
+## Fixes:
+- Fixed being able to add a candle to stacked tall candles even when you do not have enough

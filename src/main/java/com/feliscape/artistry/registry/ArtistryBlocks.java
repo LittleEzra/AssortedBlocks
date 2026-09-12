@@ -372,8 +372,7 @@ public class ArtistryBlocks {
                     .sound(SoundType.WOOL)
                     .pushReaction(PushReaction.DESTROY)
                     .noOcclusion()
-                    .requiresCorrectToolForDrops()
-                    .strength(0.0F, 0.0F)
+                    .strength(0.5F)
             ));
 
 

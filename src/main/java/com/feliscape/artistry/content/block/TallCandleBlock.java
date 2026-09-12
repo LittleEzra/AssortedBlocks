@@ -118,7 +118,11 @@ public class TallCandleBlock extends AbstractCandleBlock implements SimpleWaterl
 
     @Override
     protected boolean canBeReplaced(BlockState state, BlockPlaceContext useContext) {
-        return !useContext.isSecondaryUseActive() && useContext.getItemInHand().getItem() == this.asItem() && state.getValue(CANDLES) < 4 || super.canBeReplaced(state, useContext);
+        return !useContext.isSecondaryUseActive() &&
+                useContext.getItemInHand().getItem() == this.asItem() &&
+                state.getValue(CANDLES) < 4 &&
+                (useContext.getItemInHand().getCount() >= 2 || isSame(useContext.getLevel().getBlockState(useContext.getClickedPos().below())))
+                || super.canBeReplaced(state, useContext);
     }
 
     @Override

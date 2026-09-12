@@ -206,8 +206,8 @@ public class StringLightsBlock extends CrossCollisionBlock {
                     .setValue(PROPERTY_BY_DIRECTION.get(facing), this.connectsTo(facingState,
                             facingState.isFaceSturdy(level, neighborPos, facing.getOpposite()),
                             facing.getOpposite()));
-            if (canSurvive && !state.getValue(SUPPORTED)){
-                newState = state.setValue(SUPPORTED, true);
+            if (canSurvive && !hasSupport(level, pos)){
+                newState = newState.setValue(SUPPORTED, true);
             }
             return newState.setValue(DOWN, supported && (!hasHorizontalConnection(newState) || connectsDown));
         }

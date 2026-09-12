@@ -1,0 +1,11 @@
+{
+  "values": [
+    "minecraft:sponge",
+    "minecraft:wet_sponge",
+    "minecraft:white_wool",
+    {
+      "id": "#minecraft:wool",
+      "required": false
+    }
+  ]
+}
