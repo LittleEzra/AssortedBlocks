@@ -121,7 +121,7 @@ public class TallCandleBlock extends AbstractCandleBlock implements SimpleWaterl
         return !useContext.isSecondaryUseActive() &&
                 useContext.getItemInHand().getItem() == this.asItem() &&
                 state.getValue(CANDLES) < 4 &&
-                (useContext.getItemInHand().getCount() >= 2 || isSame(useContext.getLevel().getBlockState(useContext.getClickedPos().below())))
+                ((useContext.getPlayer() != null && useContext.getPlayer().hasInfiniteMaterials()) || useContext.getItemInHand().getCount() >= 2 || !isSame(useContext.getLevel().getBlockState(useContext.getClickedPos().below())))
                 || super.canBeReplaced(state, useContext);
     }
 
