@@ -127,6 +127,7 @@ public class ArtistryEsEsProvider extends ArtistryLanguageProvider{
         this.addBlock(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN, "Cadena de cobre oxidado encarado");
 
         this.addBlock(ArtistryBlocks.BOLLARD, "Bolardo");
+        this.addBlock(ArtistryBlocks.BOOK_PILE, "TODO"); // TODO
 
         this.addBlock(ArtistryBlocks.SPARKLER, "Bengala");
         this.addBlock(ArtistryBlocks.AMETHYST_STARS, "Estrellas de amatista");

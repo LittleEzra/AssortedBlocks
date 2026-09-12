@@ -15,6 +15,7 @@ public class ArtistryTags {
         public static final TagKey<Block> WOODEN_TABLES = create("wooden_tables");
         public static final TagKey<Block> TABLES = create("tables");
         public static final TagKey<Block> STRING_LIGHTS = create("string_lights");
+        public static final TagKey<Block> CONNECTS_TO_STRING_LIGHTS = create("connects_to_string_lights");
         public static final TagKey<Block> FROSTED_GLASS = create("frosted_glass");
         public static final TagKey<Block> TALL_CANDLES = create("tall_candles");
         public static final TagKey<Block> STONE_LANTERNS = create("stone_lanterns");
@@ -51,6 +52,7 @@ public class ArtistryTags {
         public static final TagKey<Item> TABLES = create("tables");
         public static final TagKey<Item> FROSTED_GLASS = create("frosted_glass");
         public static final TagKey<Item> TALL_CANDLES = create("tall_candles");
+        public static final TagKey<Item> WIPES_PAINT = create("wipes_paint");
 
         private static TagKey<Item> create(String name){
             return TagKey.create(Registries.ITEM, Artistry.location(name));

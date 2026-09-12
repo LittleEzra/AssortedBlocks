@@ -1,11 +1,13 @@
 package com.feliscape.artistry.data.datagen.loot;
 
+import com.feliscape.artistry.content.block.BookPileBlock;
 import com.feliscape.artistry.content.block.UrnBlock;
 import com.feliscape.artistry.content.block.plant.TriplePlantBlock;
 import com.feliscape.artistry.content.block.properties.TriplePlantPart;
 import com.feliscape.artistry.content.pot.PaintedPotDecorations;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
@@ -14,15 +16,17 @@ import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DecoratedPotBlock;
-import net.minecraft.world.level.block.MultifaceBlock;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.CopyComponentsFunction;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 
+import java.util.List;
 import java.util.Set;
 
 import static net.minecraft.advancements.critereon.StatePropertiesPredicate.Builder.properties;
@@ -138,6 +142,7 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
         this.dropSelf(ArtistryBlocks.ROCKY_DIRT.get());
 
         this.add(ArtistryBlocks.PAINTED_POT.get(), this::createPaintedPotTable);
+        this.add(ArtistryBlocks.BOOK_PILE.get(), this::createBookPileTable);
 
 
         this.dropSelf(ArtistryBlocks.CALCITE_STAIRS.get());
@@ -323,6 +328,23 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
                 );
     }
 
+    private LootTable.Builder createBookPileTable(Block block){
+        return LootTable.lootTable()
+                .withPool(LootPool.lootPool()
+                        .setRolls(ConstantValue.exactly(1.0F))
+                        .add(this.applyExplosionDecay(
+                                block, LootItem.lootTableItem(block)
+                                        .apply(List.of(2, 3, 4), i -> SetItemCountFunction.setCount(ConstantValue.exactly((float) i))
+                                                .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                                                        .setProperties(
+                                                                StatePropertiesPredicate.Builder.properties().hasProperty(BookPileBlock.SIZE, i)
+                                                        )
+                                                )
+                                        )
+                                )
+                        )
+                );
+    }
     private LootTable.Builder createUrnTable(Block block){
         return LootTable.lootTable().withPool(lootPool().add(lootTableItem(block))
                 .when(hasBlockStateProperties(block)

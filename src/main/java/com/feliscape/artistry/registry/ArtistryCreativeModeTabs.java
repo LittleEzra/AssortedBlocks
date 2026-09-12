@@ -114,6 +114,7 @@ public class ArtistryCreativeModeTabs {
             output.accept(ArtistryBlocks.AMETHYST_STARS);
             output.accept(ArtistryItems.SPARK_FOUNTAIN);
             output.accept(ArtistryBlocks.WATER_FOUNTAIN);
+            output.accept(ArtistryBlocks.BOOK_PILE);
 
             output.accept(ArtistryItems.STRING_LIGHTS);
             output.accept(ArtistryBlocks.LARGE_LANTERN);

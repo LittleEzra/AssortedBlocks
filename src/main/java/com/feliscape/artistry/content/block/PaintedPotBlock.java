@@ -3,6 +3,7 @@ package com.feliscape.artistry.content.block;
 import com.feliscape.artistry.content.block.entity.PaintedPotBlockEntity;
 import com.feliscape.artistry.content.pot.PaintedPotDecorations;
 import com.feliscape.artistry.registry.ArtistryBlocks;
+import com.feliscape.artistry.registry.ArtistryTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
@@ -43,7 +44,7 @@ public class PaintedPotBlock extends DecoratedPotBlock {
                 return ItemInteractionResult.CONSUME;
             } else {
                 boolean isDye = DyeColor.getColor(itemStack) != null;
-                if (itemStack.is(Items.SPONGE) || isDye){
+                if (itemStack.is(ArtistryTags.Items.WIPES_PAINT) || isDye){
                     if (applyItem(itemStack, pot, state, level, blockPos, player, blockHitResult)){
                         return ItemInteractionResult.SUCCESS;
                     }

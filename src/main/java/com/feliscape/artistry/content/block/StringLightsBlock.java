@@ -173,8 +173,12 @@ public class StringLightsBlock extends CrossCollisionBlock {
                 .setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER);
     }
 
+    public static boolean isExceptionForConnection(BlockState state) {
+        return state.is(Blocks.BARRIER) || state.is(Blocks.CARVED_PUMPKIN) || state.is(Blocks.JACK_O_LANTERN) || state.is(Blocks.MELON) || state.is(Blocks.PUMPKIN) || state.is(BlockTags.SHULKER_BOXES);
+    }
+
     public boolean connectsTo(BlockState state, boolean isSideSolid, Direction direction) {
-        return !isExceptionForConnection(state) && isSideSolid || state.is(ArtistryTags.Blocks.STRING_LIGHTS);
+        return (state.is(ArtistryTags.Blocks.CONNECTS_TO_STRING_LIGHTS) && !isExceptionForConnection(state) && isSideSolid) || state.is(ArtistryTags.Blocks.STRING_LIGHTS);
     }
 
     protected BlockState updateShape(BlockState state, Direction facing, BlockState facingState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
@@ -192,7 +196,8 @@ public class StringLightsBlock extends CrossCollisionBlock {
             boolean connectsDown = level.getBlockState(neighborPos).is(ArtistryTags.Blocks.STRING_LIGHTS);
             return state.setValue(DOWN, supported && (!hasHorizontalConnection(state) || connectsDown));
         } else if (facing.getAxis().getPlane() == Direction.Plane.HORIZONTAL){
-            if (!state.getValue(SUPPORTED) && state.getValue(PROPERTY_BY_DIRECTION.get(facing)) && !canSurvive(state, level, pos)){
+            boolean canSurvive = canSurvive(state, level, pos);
+            if (!state.getValue(SUPPORTED) && state.getValue(PROPERTY_BY_DIRECTION.get(facing)) && !canSurvive){
                 return Blocks.AIR.defaultBlockState();
             }
 
@@ -201,6 +206,9 @@ public class StringLightsBlock extends CrossCollisionBlock {
                     .setValue(PROPERTY_BY_DIRECTION.get(facing), this.connectsTo(facingState,
                             facingState.isFaceSturdy(level, neighborPos, facing.getOpposite()),
                             facing.getOpposite()));
+            if (canSurvive && !state.getValue(SUPPORTED)){
+                newState = state.setValue(SUPPORTED, true);
+            }
             return newState.setValue(DOWN, supported && (!hasHorizontalConnection(newState) || connectsDown));
         }
         return super.updateShape(state, facing, facingState, level, pos, neighborPos);

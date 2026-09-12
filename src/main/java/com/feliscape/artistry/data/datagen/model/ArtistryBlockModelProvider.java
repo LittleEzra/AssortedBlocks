@@ -130,6 +130,8 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         directionalBlock(BOLLARD.get(), models().getExistingFile(Artistry.location("block/bollard")));
         simpleBlockItem(BOLLARD.get(), models().getExistingFile(Artistry.location("block/bollard")));
+        bookPile(BOOK_PILE.get(), 6);
+        simpleBlockItem(BOOK_PILE.get(), models().getExistingFile(Artistry.location("block/decorative_book_inventory")));
 
         blockWithItem(ROCKY_DIRT);
 
@@ -334,6 +336,38 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
     private static final ResourceLocation PUMPKIN_SIDE = ResourceLocation.withDefaultNamespace("block/pumpkin_side");
     private static final ResourceLocation PUMPKIN_TOP = ResourceLocation.withDefaultNamespace("block/pumpkin_top");
 
+    private void bookPile(BookPileBlock block, int bookTextures) {
+        var builder = getMultipartBuilder(block);
+        ConfiguredModel.Builder<MultiPartBlockStateBuilder.PartBuilder> part;
+        for (int books = 1; books <= 4; books++){ // number of books
+            part = builder.part();
+            for (int i = 0; i < 3; i++){ // template variants
+                for (int texture = 0; texture < bookTextures; texture++){
+                    var model = getBookModel(block, i, books, (books + texture) % bookTextures);
+                    part.modelFile(model).weight(books);
+                    if (!(texture == bookTextures - 1 && i == 2)){
+                        part = part.nextModel();
+                    }
+                }
+            }
+            part.addModel().condition(BookPileBlock.SIZE, getBookValues(books))
+                    .end();
+        }
+    }
+
+    private Integer[] getBookValues(int books){
+        Integer[] values = new Integer[4 - books + 1];
+        for (int i = 0; i < values.length; i++){
+            values[i] = 4 - i;
+        }
+        return values;
+    }
+
+    private ModelFile getBookModel(BookPileBlock block, int template, int book, int texture){
+        return models().withExistingParent("block/book_pile/" + name(block) + "%s_%s_%s".formatted(template, book, texture),
+                        Artistry.stringLocation("block/book_pile/template/book_pile_book_%s_%s".formatted(template, book - 1)))
+                .texture("book_0", Artistry.location("block/book_" + texture));
+    }
 
     private void hugeMushroomBlock(HugeMushroomBlock block) {
         var builder = getMultipartBuilder(block);

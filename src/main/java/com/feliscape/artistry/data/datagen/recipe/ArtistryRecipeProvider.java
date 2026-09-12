@@ -649,6 +649,14 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .pattern(" # ")
                 .unlockedBy(getHasName(Items.WATER_BUCKET), has(Items.WATER_BUCKET))
                 .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.BOOK_PILE)
+                .requires(Items.BOOK)
+                .unlockedBy(getHasName(Items.BOOK), has(Items.BOOK))
+                .save(recipeOutput);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, Items.BOOK)
+                .requires(ArtistryBlocks.BOOK_PILE)
+                .unlockedBy(getHasName(ArtistryBlocks.BOOK_PILE), has(ArtistryBlocks.BOOK_PILE))
+                .save(recipeOutput, "book_from_decorative_book");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.COPPER_CHAIN, 8)
                 .define('|', Items.COPPER_INGOT)

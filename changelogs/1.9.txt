@@ -1,3 +1,5 @@
+*Note: This update contains a potentially dangerous change.* **! Make a backup before updating !**
+
 ## Added:
 - Stone Lantern
 - Calcite Pillar
@@ -7,6 +9,15 @@
     - Sunny Calcite
     - Verdant Calcite
     - Rose Calcite
+- New Sniffer plants
+    - Thorn Husk (Soul Sand & Soul Soil)
+    - Corpse Flower (Warped Nylium & Crimson Nylium)
+- Book Piles
 ## Changes:
 - Renamed Painted Calcite blocks to Azure Calcite
     - It should be able to update old worlds correctly, but you should probably still make a backup
+- Allowed for removing the support of String Lights by right-clicking them, making them droop.
+- Allowed wet sponges and wool to remove paint from Painted Pots
+- Made Tall Candles brighter
+- Removed String Lights connecting to other blocks.
+    - Feedback is appreciated on this; this change can also be modified with the block/connects_to_string_lights tag

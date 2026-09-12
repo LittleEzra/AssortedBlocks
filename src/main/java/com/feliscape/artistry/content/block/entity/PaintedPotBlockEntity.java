@@ -7,6 +7,7 @@ import com.feliscape.artistry.data.registry.ArtistryDatapackRegistries;
 import com.feliscape.artistry.registry.ArtistryBlockEntityTypes;
 import com.feliscape.artistry.registry.ArtistryBlocks;
 import com.feliscape.artistry.registry.ArtistryItems;
+import com.feliscape.artistry.registry.ArtistryTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Holder;
@@ -115,7 +116,7 @@ public class PaintedPotBlockEntity extends BlockEntity implements RandomizableCo
     }
 
     public boolean paintTrim(ItemStack itemStack) {
-        if (itemStack.is(Items.SPONGE)){
+        if (itemStack.is(ArtistryTags.Items.WIPES_PAINT)){
             this.decorations = new PaintedPotDecorations(this.decorations.base(),
                     Optional.empty(), -1,
                     this.decorations.pattern(), this.decorations.patternColor());
@@ -157,7 +158,7 @@ public class PaintedPotBlockEntity extends BlockEntity implements RandomizableCo
     }
 
     public boolean paintPattern(ItemStack itemStack) {
-        if (itemStack.is(Items.SPONGE)){
+        if (itemStack.is(ArtistryTags.Items.WIPES_PAINT)){
             this.decorations = new PaintedPotDecorations(this.decorations.base(),
                     this.decorations.trim(), this.decorations.trimColor(),
                     Optional.empty(), -1);

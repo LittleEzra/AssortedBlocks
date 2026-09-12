@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_book_pile": {
+      "conditions": {
+        "items": [
+          {
+            "items": "artistry:book_pile"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:book_from_decorative_book"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_book_pile"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:book_from_decorative_book"
+    ]
+  }
+}

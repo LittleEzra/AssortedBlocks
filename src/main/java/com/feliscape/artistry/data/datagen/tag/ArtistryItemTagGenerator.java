@@ -28,6 +28,12 @@ public class ArtistryItemTagGenerator extends ItemTagsProvider {
         this.copy(ArtistryTags.Blocks.FROSTED_GLASS, ArtistryTags.Items.FROSTED_GLASS);
         this.copy(ArtistryTags.Blocks.TALL_CANDLES, ArtistryTags.Items.TALL_CANDLES);
 
+        this.tag(ArtistryTags.Items.WIPES_PAINT)
+                .add(Items.SPONGE)
+                .add(Items.WET_SPONGE)
+                .add(Items.WHITE_WOOL)
+                .addOptionalTag(ItemTags.WOOL);
+
         this.tag(ItemTags.SNIFFER_FOOD)
                 .add(ArtistryItems.SNIFFER_CAKE.get());
 
@@ -46,18 +52,6 @@ public class ArtistryItemTagGenerator extends ItemTagsProvider {
                 .add(ArtistryBlocks.ROTTEN_PLANKS.asItem())
         ;
 
-        this.tag(ItemTags.LOGS_THAT_BURN)
-                .addTag(ArtistryTags.Items.ASPEN_LOGS)
-                .addTag(ArtistryTags.Items.ROTTEN_LOGS)
-        ;
-        this.tag(Tags.Items.STRIPPED_LOGS)
-                .add(ArtistryBlocks.STRIPPED_ASPEN_LOG.asItem())
-                .add(ArtistryBlocks.STRIPPED_ROTTEN_LOG.asItem())
-        ;
-        this.tag(Tags.Items.STRIPPED_WOODS)
-                .add(ArtistryBlocks.STRIPPED_ASPEN_WOOD.asItem())
-                .add(ArtistryBlocks.STRIPPED_ROTTEN_WOOD.asItem())
-        ;
 
         this.tag(ItemTags.WOODEN_STAIRS)
                 .add(ArtistryBlocks.ASPEN_STAIRS.asItem())

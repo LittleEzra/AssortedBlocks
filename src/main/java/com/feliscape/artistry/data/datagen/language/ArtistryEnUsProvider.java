@@ -129,6 +129,7 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
         this.addBlock(ArtistryBlocks.WAXED_OXIDIZED_COPPER_CHAIN, "Waxed Oxidized Copper Chain");
 
         this.addBlock(ArtistryBlocks.BOLLARD, "Bollard");
+        this.addBlock(ArtistryBlocks.BOOK_PILE, "Decorative Book");
 
         this.addBlock(ArtistryBlocks.SPARKLER, "Sparkler");
         this.addBlock(ArtistryBlocks.AMETHYST_STARS, "Amethyst Stars");

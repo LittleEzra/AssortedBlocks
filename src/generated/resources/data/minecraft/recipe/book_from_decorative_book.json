@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "artistry:book_pile"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:book"
+  }
+}

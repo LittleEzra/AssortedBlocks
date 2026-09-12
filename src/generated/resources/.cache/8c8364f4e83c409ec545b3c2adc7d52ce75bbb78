@@ -1,20 +1,18 @@
-// 1.21.1	2025-09-01T11:43:11.1916267	Tags for minecraft:item mod id vanilla
+// 1.21.1	2026-09-12T10:27:54.2527715	Tags for minecraft:item mod id vanilla
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/item/aspen_logs.json
 13994a7e7e704c24c0cebec3e302b41487842bfa data/artistry/tags/item/can_apply_moss.json
 3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/item/frosted_glass.json
 babf96531eb9053c8504bf5d0eb1315fa6001385 data/artistry/tags/item/rotten_logs.json
 01a4149b278fed1965636e639f1fcbcb4453d95c data/artistry/tags/item/tables.json
 dd566f52665853cdd6a4c541e6488bda1c8e866e data/artistry/tags/item/tall_candles.json
+dd1f4b390be6b7e4cced3e9ed3e04a7d607eff1b data/artistry/tags/item/wipes_paint.json
 d0310e8a2afc8c5fad1ca9bdcb5e0bcf20c036ca data/artistry/tags/item/wooden_tables.json
-1351865c4741ce90f7e6200cb9f8ed90fdb2f1ad data/c/tags/item/stripped_logs.json
-6847dc1f39e072b5e30b5811df3365ff85ff4278 data/c/tags/item/stripped_woods.json
 a6ed38b68615c5df30533c0301c7f1ad3999fc0f data/minecraft/tags/item/boats.json
 f925278b6c327861a5caa73432193efbb9bd7bc1 data/minecraft/tags/item/chest_boats.json
 4b51608237d06b9005437625fd944e0ff5bc0a8e data/minecraft/tags/item/chicken_food.json
 b02690b2f3848859bcde3f4b82ad7f3e0fc49eb5 data/minecraft/tags/item/dyeable.json
 ea2bd588f94e272c6787c43e81560090045dde28 data/minecraft/tags/item/hanging_signs.json
 14850c5e1f50c3a6a80630b9a5aedf7ccce407cc data/minecraft/tags/item/leaves.json
-22ea91b820790390b400e8c99b3bb0f9dc2fa164 data/minecraft/tags/item/logs_that_burn.json
 4b51608237d06b9005437625fd944e0ff5bc0a8e data/minecraft/tags/item/parrot_food.json
 80e5d4a86fc9a6b1e8307c4a777b3b2f1bc01958 data/minecraft/tags/item/planks.json
 55fbd68b31cdc5344669d843dc351d53321c9d4a data/minecraft/tags/item/saplings.json

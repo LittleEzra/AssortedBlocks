@@ -366,6 +366,15 @@ public class ArtistryBlocks {
                     .requiresCorrectToolForDrops()
                     .noOcclusion()
             ));
+    public static final DeferredBlock<BookPileBlock> BOOK_PILE = registerBlockWithItem("book_pile",
+            p -> new BookPileBlock(p
+                    .mapColor(MapColor.TERRACOTTA_BROWN)
+                    .sound(SoundType.WOOL)
+                    .pushReaction(PushReaction.DESTROY)
+                    .noOcclusion()
+                    .requiresCorrectToolForDrops()
+                    .strength(0.0F, 0.0F)
+            ));
 
 
     public static final DeferredBlock<ThornHuskBlock> THORN_HUSK = registerBlockWithItem("thorn_husk",

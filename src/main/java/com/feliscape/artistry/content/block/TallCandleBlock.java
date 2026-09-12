@@ -55,7 +55,8 @@ public class TallCandleBlock extends AbstractCandleBlock implements SimpleWaterl
     public static final BooleanProperty LIT = AbstractCandleBlock.LIT;
     public static final BooleanProperty BASE = BooleanProperty.create("base");
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final ToIntFunction<BlockState> LIGHT_EMISSION = state -> state.getValue(LIT) ? 3 * state.getValue(CANDLES) : 0;
+    private static final int[] LIGHT_LEVELS = {7, 10, 13, 15};
+    public static final ToIntFunction<BlockState> LIGHT_EMISSION = state -> state.getValue(LIT) ? LIGHT_LEVELS[state.getValue(CANDLES) - 1] : 0;
     @Nullable
     private final DyeColor color;
 

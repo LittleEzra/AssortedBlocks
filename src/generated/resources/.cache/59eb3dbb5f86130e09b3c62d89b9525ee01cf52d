@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-24T21:39:13.6679228	Loot Tables
+// 1.21.1	2026-09-12T10:27:54.2448366	Loot Tables
 47b6b4ddb80a89fa9150b4f209f8c1912ba8fd04 data/artistry/loot_table/blocks/acacia_table.json
 c17e141140c72bb4ad538245b3bc5de5e3b91093 data/artistry/loot_table/blocks/amethyst_stars.json
 8472b2e2149ff7987014f0ebdfb5631626250e58 data/artistry/loot_table/blocks/andesite_table.json
@@ -34,6 +34,7 @@ d7d26094fe25936840782aca967ec749982966f7 data/artistry/loot_table/blocks/black_t
 a8867a02324f48b015ceb3c1a650ad93159a497f data/artistry/loot_table/blocks/blue_frosted_glass.json
 4ef347ba4dd5f6f3e003317a00f93f1dbd4ccb66 data/artistry/loot_table/blocks/blue_tall_candle.json
 9005e21db45bd6d947d62b985ca5b7915f496371 data/artistry/loot_table/blocks/bollard.json
+a735c7c51569b150ace45d6494bab5a14d31f98c data/artistry/loot_table/blocks/book_pile.json
 27e0cde696c4219504210ba7a4572d3fdfcd59c6 data/artistry/loot_table/blocks/brown_frosted_glass.json
 5bbc92940329c9837b8a6aea91c64159d66d61f9 data/artistry/loot_table/blocks/brown_tall_candle.json
 0d428247ecd59e9db634dcd34f4651cab0dd3a48 data/artistry/loot_table/blocks/calcite_bricks.json
