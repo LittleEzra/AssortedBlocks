@@ -1,0 +1,6 @@
+{
+  "parent": "artistry:block/book_pile/template/book_pile_book_3_0",
+  "textures": {
+    "book_0": "artistry:block/book_2"
+  }
+}

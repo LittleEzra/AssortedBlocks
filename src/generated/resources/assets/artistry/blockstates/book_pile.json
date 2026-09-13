@@ -18,6 +18,12 @@
           "model": "artistry:block/book_pile/book_pile0_1_5"
         },
         {
+          "model": "artistry:block/book_pile/book_pile0_1_6"
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile0_1_7"
+        },
+        {
           "model": "artistry:block/book_pile/book_pile0_1_0"
         },
         {
@@ -34,6 +40,12 @@
         },
         {
           "model": "artistry:block/book_pile/book_pile1_1_5"
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile1_1_6"
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile1_1_7"
         },
         {
           "model": "artistry:block/book_pile/book_pile1_1_0"
@@ -54,7 +66,37 @@
           "model": "artistry:block/book_pile/book_pile2_1_5"
         },
         {
+          "model": "artistry:block/book_pile/book_pile2_1_6"
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile2_1_7"
+        },
+        {
           "model": "artistry:block/book_pile/book_pile2_1_0"
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_1_1"
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_1_2"
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_1_3"
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_1_4"
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_1_5"
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_1_6"
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_1_7"
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_1_0"
         }
       ],
       "when": {
@@ -77,6 +119,14 @@
         },
         {
           "model": "artistry:block/book_pile/book_pile0_2_5",
+          "weight": 2
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile0_2_6",
+          "weight": 2
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile0_2_7",
           "weight": 2
         },
         {
@@ -104,6 +154,14 @@
           "weight": 2
         },
         {
+          "model": "artistry:block/book_pile/book_pile1_2_6",
+          "weight": 2
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile1_2_7",
+          "weight": 2
+        },
+        {
           "model": "artistry:block/book_pile/book_pile1_2_0",
           "weight": 2
         },
@@ -128,11 +186,51 @@
           "weight": 2
         },
         {
+          "model": "artistry:block/book_pile/book_pile2_2_6",
+          "weight": 2
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile2_2_7",
+          "weight": 2
+        },
+        {
           "model": "artistry:block/book_pile/book_pile2_2_0",
           "weight": 2
         },
         {
           "model": "artistry:block/book_pile/book_pile2_2_1",
+          "weight": 2
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_2_2",
+          "weight": 2
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_2_3",
+          "weight": 2
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_2_4",
+          "weight": 2
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_2_5",
+          "weight": 2
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_2_6",
+          "weight": 2
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_2_7",
+          "weight": 2
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_2_0",
+          "weight": 2
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_2_1",
           "weight": 2
         }
       ],
@@ -152,6 +250,14 @@
         },
         {
           "model": "artistry:block/book_pile/book_pile0_3_5",
+          "weight": 3
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile0_3_6",
+          "weight": 3
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile0_3_7",
           "weight": 3
         },
         {
@@ -179,6 +285,14 @@
           "weight": 3
         },
         {
+          "model": "artistry:block/book_pile/book_pile1_3_6",
+          "weight": 3
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile1_3_7",
+          "weight": 3
+        },
+        {
           "model": "artistry:block/book_pile/book_pile1_3_0",
           "weight": 3
         },
@@ -203,6 +317,14 @@
           "weight": 3
         },
         {
+          "model": "artistry:block/book_pile/book_pile2_3_6",
+          "weight": 3
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile2_3_7",
+          "weight": 3
+        },
+        {
           "model": "artistry:block/book_pile/book_pile2_3_0",
           "weight": 3
         },
@@ -212,6 +334,38 @@
         },
         {
           "model": "artistry:block/book_pile/book_pile2_3_2",
+          "weight": 3
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_3_3",
+          "weight": 3
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_3_4",
+          "weight": 3
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_3_5",
+          "weight": 3
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_3_6",
+          "weight": 3
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_3_7",
+          "weight": 3
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_3_0",
+          "weight": 3
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_3_1",
+          "weight": 3
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_3_2",
           "weight": 3
         }
       ],
@@ -227,6 +381,14 @@
         },
         {
           "model": "artistry:block/book_pile/book_pile0_4_5",
+          "weight": 4
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile0_4_6",
+          "weight": 4
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile0_4_7",
           "weight": 4
         },
         {
@@ -254,6 +416,14 @@
           "weight": 4
         },
         {
+          "model": "artistry:block/book_pile/book_pile1_4_6",
+          "weight": 4
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile1_4_7",
+          "weight": 4
+        },
+        {
           "model": "artistry:block/book_pile/book_pile1_4_0",
           "weight": 4
         },
@@ -278,6 +448,14 @@
           "weight": 4
         },
         {
+          "model": "artistry:block/book_pile/book_pile2_4_6",
+          "weight": 4
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile2_4_7",
+          "weight": 4
+        },
+        {
           "model": "artistry:block/book_pile/book_pile2_4_0",
           "weight": 4
         },
@@ -291,6 +469,38 @@
         },
         {
           "model": "artistry:block/book_pile/book_pile2_4_3",
+          "weight": 4
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_4_4",
+          "weight": 4
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_4_5",
+          "weight": 4
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_4_6",
+          "weight": 4
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_4_7",
+          "weight": 4
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_4_0",
+          "weight": 4
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_4_1",
+          "weight": 4
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_4_2",
+          "weight": 4
+        },
+        {
+          "model": "artistry:block/book_pile/book_pile3_4_3",
           "weight": 4
         }
       ],

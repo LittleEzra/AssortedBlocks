@@ -143,6 +143,7 @@ public class ArtistryBlockLootTableProvider extends BlockLootSubProvider {
 
         this.add(ArtistryBlocks.PAINTED_POT.get(), this::createPaintedPotTable);
         this.add(ArtistryBlocks.BOOK_PILE.get(), this::createBookPileTable);
+        this.dropSelf(ArtistryBlocks.CRYSTAL_BALL.get());
 
 
         this.dropSelf(ArtistryBlocks.CALCITE_STAIRS.get());

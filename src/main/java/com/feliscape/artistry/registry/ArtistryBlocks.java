@@ -374,6 +374,17 @@ public class ArtistryBlocks {
                     .noOcclusion()
                     .strength(0.5F)
             ));
+    public static final DeferredBlock<CrystalBallBlock> CRYSTAL_BALL = registerBlockWithItem("crystal_ball",
+            p -> new CrystalBallBlock(p
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .forceSolidOn()
+                    .requiresCorrectToolForDrops()
+                    .strength(3.5F)
+                    .sound(SoundType.AMETHYST)
+                    .lightLevel(state -> 11)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.DESTROY)
+            ));
 
 
     public static final DeferredBlock<ThornHuskBlock> THORN_HUSK = registerBlockWithItem("thorn_husk",

@@ -130,8 +130,10 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
         directionalBlock(BOLLARD.get(), models().getExistingFile(Artistry.location("block/bollard")));
         simpleBlockItem(BOLLARD.get(), models().getExistingFile(Artistry.location("block/bollard")));
-        bookPile(BOOK_PILE.get(), 6);
+        bookPile(BOOK_PILE.get(), 8);
         simpleBlockItem(BOOK_PILE.get(), models().getExistingFile(Artistry.location("block/decorative_book_inventory")));
+        directionalBlock(CRYSTAL_BALL.get(), models().getExistingFile(Artistry.location("block/crystal_ball")));
+        simpleBlockItem(CRYSTAL_BALL.get(), models().getExistingFile(Artistry.location("block/crystal_ball")));
 
         blockWithItem(ROCKY_DIRT);
 
@@ -341,11 +343,11 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         ConfiguredModel.Builder<MultiPartBlockStateBuilder.PartBuilder> part;
         for (int books = 1; books <= 4; books++){ // number of books
             part = builder.part();
-            for (int i = 0; i < 3; i++){ // template variants
+            for (int i = 0; i < 4; i++){ // template variants
                 for (int texture = 0; texture < bookTextures; texture++){
                     var model = getBookModel(block, i, books, (books + texture) % bookTextures);
                     part.modelFile(model).weight(books);
-                    if (!(texture == bookTextures - 1 && i == 2)){
+                    if (!(texture == bookTextures - 1 && i == 3)){
                         part = part.nextModel();
                     }
                 }

@@ -3,6 +3,7 @@ package com.feliscape.artistry.client;
 import com.feliscape.artistry.Artistry;
 import com.feliscape.artistry.client.atlas.ArtistrySheets;
 import com.feliscape.artistry.client.extension.CustomItemRendererExtension;
+import com.feliscape.artistry.client.render.blockentity.CrystalBallRenderer;
 import com.feliscape.artistry.client.render.blockentity.PaintedPotRenderer;
 import com.feliscape.artistry.client.render.blockentity.UrnRenderer;
 import com.feliscape.artistry.client.render.entity.ModBoatRenderer;
@@ -67,5 +68,6 @@ public class ClientEvents {
         event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.MOD_HANGING_SIGN.get(), HangingSignRenderer::new);
         event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.PAINTED_POT.get(), PaintedPotRenderer::new);
         event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.URN.get(), UrnRenderer::new);
+        event.registerBlockEntityRenderer(ArtistryBlockEntityTypes.CRYSTAL_BALL.get(), CrystalBallRenderer::new);
     }
 }

@@ -130,6 +130,7 @@ public class ArtistryEnUsProvider extends ArtistryLanguageProvider {
 
         this.addBlock(ArtistryBlocks.BOLLARD, "Bollard");
         this.addBlock(ArtistryBlocks.BOOK_PILE, "Decorative Book");
+        this.addBlock(ArtistryBlocks.CRYSTAL_BALL, "Crystal Ball");
 
         this.addBlock(ArtistryBlocks.SPARKLER, "Sparkler");
         this.addBlock(ArtistryBlocks.AMETHYST_STARS, "Amethyst Stars");

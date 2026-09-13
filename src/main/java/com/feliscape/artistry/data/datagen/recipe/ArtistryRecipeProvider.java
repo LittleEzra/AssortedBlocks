@@ -256,6 +256,12 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 ArtistryBlocks.CALCITE_BRICKS, 2);
 
         // Dripstone
+        stairBuilder(ArtistryBlocks.DRIPSTONE_STAIRS, Ingredient.of(Blocks.DRIPSTONE_BLOCK))
+                .unlockedBy(getHasName(Blocks.DRIPSTONE_BLOCK), has(Blocks.DRIPSTONE_BLOCK))
+                .save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.DRIPSTONE_SLAB, Blocks.DRIPSTONE_BLOCK);
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.DRIPSTONE_WALL, Blocks.DRIPSTONE_BLOCK);
+
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
                 ArtistryBlocks.DRIPSTONE_STAIRS,
                 Blocks.DRIPSTONE_BLOCK);
@@ -657,6 +663,13 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .requires(ArtistryBlocks.BOOK_PILE)
                 .unlockedBy(getHasName(ArtistryBlocks.BOOK_PILE), has(ArtistryBlocks.BOOK_PILE))
                 .save(recipeOutput, "book_from_decorative_book");
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.CRYSTAL_BALL)
+                .define('o', Blocks.AMETHYST_BLOCK)
+                .define('#', Items.GOLD_INGOT)
+                .pattern("o")
+                .pattern("#")
+                .unlockedBy(getHasName(Blocks.AMETHYST_BLOCK), has(Blocks.AMETHYST_BLOCK))
+                .save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.COPPER_CHAIN, 8)
                 .define('|', Items.COPPER_INGOT)
@@ -920,6 +933,9 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ArtistryBlocks.SNOW_BRICKS), has(ArtistryBlocks.SNOW_BRICKS))
                 .save(recipeOutput);
 
+        stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                ArtistryBlocks.SNOW_BRICKS,
+                Blocks.SNOW_BLOCK);
         stonecutterResultFromBase(recipeOutput, RecipeCategory.BUILDING_BLOCKS,
                 ArtistryBlocks.SNOW_BRICK_STAIRS,
                 ArtistryBlocks.SNOW_BRICKS);

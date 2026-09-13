@@ -1,6 +1,7 @@
 package com.feliscape.artistry.registry;
 
 import com.feliscape.artistry.Artistry;
+import com.feliscape.artistry.content.block.CrystalBallBlock;
 import com.feliscape.artistry.content.block.entity.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -9,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
+@SuppressWarnings("DataFlowIssue")
 public class ArtistryBlockEntityTypes {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, Artistry.MOD_ID);
@@ -35,6 +37,9 @@ public class ArtistryBlockEntityTypes {
     public static final Supplier<BlockEntityType<UrnBlockEntity>> URN =
             BLOCK_ENTITIES.register("urn", () -> BlockEntityType.Builder.of(UrnBlockEntity::new,
                     ArtistryBlocks.URN.get()).build(null));
+    public static final Supplier<BlockEntityType<CrystalBallBlockEntity>> CRYSTAL_BALL =
+            BLOCK_ENTITIES.register("crystal_ball", () -> BlockEntityType.Builder.of(CrystalBallBlockEntity::new,
+                    ArtistryBlocks.CRYSTAL_BALL.get()).build(null));
 
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);

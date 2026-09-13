@@ -64,9 +64,9 @@ public class ArtistryCreativeModeTabs {
             output.accept(ArtistryBlocks.TEARDROP_GRASS_BLOCK);
             output.accept(ArtistryBlocks.SHORT_TEARDROP_GRASS);
             output.accept(ArtistryBlocks.TALL_TEARDROP_GRASS);
-            output.accept(ArtistryBlocks.THORN_HUSK);
-            output.accept(ArtistryBlocks.CORPSE_FLOWER);
-            output.accept(ArtistryBlocks.FLY_LURE);
+            //output.accept(ArtistryBlocks.THORN_HUSK);
+            //output.accept(ArtistryBlocks.CORPSE_FLOWER);
+            //output.accept(ArtistryBlocks.FLY_LURE);
             output.accept(ArtistryBlocks.GLOWING_MUSHROOM);
             output.accept(ArtistryBlocks.GLOWING_MUSHROOM_BLOCK);
 
@@ -115,6 +115,7 @@ public class ArtistryCreativeModeTabs {
             output.accept(ArtistryItems.SPARK_FOUNTAIN);
             output.accept(ArtistryBlocks.WATER_FOUNTAIN);
             output.accept(ArtistryBlocks.BOOK_PILE);
+            output.accept(ArtistryBlocks.CRYSTAL_BALL);
 
             output.accept(ArtistryItems.STRING_LIGHTS);
             output.accept(ArtistryBlocks.LARGE_LANTERN);

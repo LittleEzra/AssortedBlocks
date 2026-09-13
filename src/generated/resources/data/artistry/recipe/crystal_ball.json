@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_ingot"
+    },
+    "o": {
+      "item": "minecraft:amethyst_block"
+    }
+  },
+  "pattern": [
+    "o",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "artistry:crystal_ball"
+  }
+}

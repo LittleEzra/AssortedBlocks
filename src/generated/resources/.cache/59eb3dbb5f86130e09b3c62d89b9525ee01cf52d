@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-12T10:27:54.2448366	Loot Tables
+// 1.21.1	2026-09-12T20:19:25.0267593	Loot Tables
 47b6b4ddb80a89fa9150b4f209f8c1912ba8fd04 data/artistry/loot_table/blocks/acacia_table.json
 c17e141140c72bb4ad538245b3bc5de5e3b91093 data/artistry/loot_table/blocks/amethyst_stars.json
 8472b2e2149ff7987014f0ebdfb5631626250e58 data/artistry/loot_table/blocks/andesite_table.json
@@ -54,6 +54,7 @@ b2770aef1febdc8c4e4d5d22a064656ee57b83d2 data/artistry/loot_table/blocks/copper_
 bf8afedde1103bc56c3bacca5c8a88bcc148e07f data/artistry/loot_table/blocks/corpse_flower.json
 d31189d739c89769abb2671ff921aa7a669dc457 data/artistry/loot_table/blocks/cracked_bricks.json
 29132b60c8dbe6814751af439efddd7dd2759c08 data/artistry/loot_table/blocks/crimson_table.json
+76e62ccd6db2312baf5d6de65b1fc75abe8b15e4 data/artistry/loot_table/blocks/crystal_ball.json
 a3abcd5c5f685e834a528f0acb62cc57fbb82685 data/artistry/loot_table/blocks/cyan_frosted_glass.json
 bb0fe50bad07aea3586ed44e08af72a2fa384df1 data/artistry/loot_table/blocks/cyan_tall_candle.json
 a6b4203e1909762e718eb6c8806b92828c308362 data/artistry/loot_table/blocks/dark_oak_table.json
