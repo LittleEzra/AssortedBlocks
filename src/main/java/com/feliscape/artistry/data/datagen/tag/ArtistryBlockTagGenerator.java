@@ -543,14 +543,18 @@ public class ArtistryBlockTagGenerator extends BlockTagsProvider {
                 .add(THORN_HUSK.get())
                 .add(BLOOMING_VINES.get())
                 .add(SHORT_TEARDROP_GRASS.get())
+                .add(TALL_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())
                 .add(LUSH_FERN_CROP.get())
                 .add(CORPSE_FLOWER.get())
+                .add(BOOK_PILE.get())
+                .add(LETTER.get())
         ;
         this.tag(BlockTags.REPLACEABLE_BY_TREES)
                 .add(THORN_HUSK.get())
                 .add(BLOOMING_VINES.get())
                 .add(SHORT_TEARDROP_GRASS.get())
+                .add(TALL_TEARDROP_GRASS.get())
                 .add(LUSH_FERN.get())
                 .add(CORPSE_FLOWER.get())
         ;

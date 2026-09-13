@@ -131,6 +131,7 @@ public class ArtistryDeDeProvider extends ArtistryLanguageProvider {
 
         this.addBlock(ArtistryBlocks.BOLLARD, "Poller");
         this.addBlock(ArtistryBlocks.BOOK_PILE, "Dekoratives Buch");
+        this.addBlock(ArtistryBlocks.LETTER, "Brief");
         this.addBlock(ArtistryBlocks.CRYSTAL_BALL, "Kristallkugel");
 
         this.addBlock(ArtistryBlocks.SPARKLER, "Wunderkerze");

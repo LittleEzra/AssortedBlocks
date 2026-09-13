@@ -1,0 +1,110 @@
+{
+  "variants": {
+    "facing=east,sealed=false": [
+      {
+        "model": "artistry:block/letter_0",
+        "y": 90
+      },
+      {
+        "model": "artistry:block/letter_1",
+        "y": 90
+      },
+      {
+        "model": "artistry:block/letter_2",
+        "y": 90
+      }
+    ],
+    "facing=east,sealed=true": [
+      {
+        "model": "artistry:block/letter_0_sealed",
+        "y": 90
+      },
+      {
+        "model": "artistry:block/letter_1_sealed",
+        "y": 90
+      },
+      {
+        "model": "artistry:block/letter_2_sealed",
+        "y": 90
+      }
+    ],
+    "facing=north,sealed=false": [
+      {
+        "model": "artistry:block/letter_0"
+      },
+      {
+        "model": "artistry:block/letter_1"
+      },
+      {
+        "model": "artistry:block/letter_2"
+      }
+    ],
+    "facing=north,sealed=true": [
+      {
+        "model": "artistry:block/letter_0_sealed"
+      },
+      {
+        "model": "artistry:block/letter_1_sealed"
+      },
+      {
+        "model": "artistry:block/letter_2_sealed"
+      }
+    ],
+    "facing=south,sealed=false": [
+      {
+        "model": "artistry:block/letter_0",
+        "y": 180
+      },
+      {
+        "model": "artistry:block/letter_1",
+        "y": 180
+      },
+      {
+        "model": "artistry:block/letter_2",
+        "y": 180
+      }
+    ],
+    "facing=south,sealed=true": [
+      {
+        "model": "artistry:block/letter_0_sealed",
+        "y": 180
+      },
+      {
+        "model": "artistry:block/letter_1_sealed",
+        "y": 180
+      },
+      {
+        "model": "artistry:block/letter_2_sealed",
+        "y": 180
+      }
+    ],
+    "facing=west,sealed=false": [
+      {
+        "model": "artistry:block/letter_0",
+        "y": 270
+      },
+      {
+        "model": "artistry:block/letter_1",
+        "y": 270
+      },
+      {
+        "model": "artistry:block/letter_2",
+        "y": 270
+      }
+    ],
+    "facing=west,sealed=true": [
+      {
+        "model": "artistry:block/letter_0_sealed",
+        "y": 270
+      },
+      {
+        "model": "artistry:block/letter_1_sealed",
+        "y": 270
+      },
+      {
+        "model": "artistry:block/letter_2_sealed",
+        "y": 270
+      }
+    ]
+  }
+}

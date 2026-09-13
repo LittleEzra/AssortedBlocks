@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-12T20:19:25.0360152	Recipes
+// 1.21.1	2026-09-13T10:12:27.1647523	Recipes
 4dfdfcadddfeb41f7c010a8e150b7ea299d0e8c7 data/artistry/advancement/recipes/building_blocks/amethyst_stars.json
 21f916604ecc9edb9b074980b7ccbede717f4623 data/artistry/advancement/recipes/building_blocks/aspen_planks.json
 c8ef6b09ab8cd139eb51a9978e21f188915d9374 data/artistry/advancement/recipes/building_blocks/aspen_slab.json
@@ -80,6 +80,7 @@ b59b6deea9afa98b84b4c37df51ade927fa38b39 data/artistry/advancement/recipes/build
 8444a26eaa94edaa2bb198db19aad3619d0c7472 data/artistry/advancement/recipes/building_blocks/large_lantern.json
 104f04054307c3755da6505fe04ace76a1ee8296 data/artistry/advancement/recipes/building_blocks/large_soul_lantern.json
 549b38b2026c066fbddd2db08adae372283226c9 data/artistry/advancement/recipes/building_blocks/leeching_soil.json
+834300f015a3501eb1d7e5eca61c9683ccfe18a0 data/artistry/advancement/recipes/building_blocks/letter.json
 0d11e32a4b82b5128fbbaf52477ba527620c098b data/artistry/advancement/recipes/building_blocks/light_blue_frosted_glass.json
 242e2150c0a29e485b0767c128fe2fe97b3b9e4e data/artistry/advancement/recipes/building_blocks/light_gray_frosted_glass.json
 8f5fd06714a34061814ebc0b40aa86b07c9bf8fc data/artistry/advancement/recipes/building_blocks/lime_frosted_glass.json
@@ -349,6 +350,7 @@ e762be2ec62d244b45ad05e02adcf9b4ee3570a7 data/artistry/recipe/jungle_table.json
 f957d7cbd5792f08fce73ad05467aad6ed876321 data/artistry/recipe/large_lantern.json
 ee22a44900d020bfa0a6b2b2f63fdd4925bb7210 data/artistry/recipe/large_soul_lantern.json
 60a29746a86e329ba0943db7e50c5d8265f52352 data/artistry/recipe/leeching_soil.json
+f7cb565c1020994094513a1565415e6cb490d034 data/artistry/recipe/letter.json
 7a1735df0c3879cb75a0b3d9a56ab327d3557050 data/artistry/recipe/light_blue_frosted_glass.json
 ca8a4798e8dad30c8f5c2c78d93efcf1593a2279 data/artistry/recipe/light_blue_tall_candle.json
 14d6f147e7711ec44884a9c6a55bb1825dbf5a70 data/artistry/recipe/light_gray_frosted_glass.json

@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-24T21:39:13.6904212	Tags for minecraft:block mod id artistry
+// 1.21.1	2026-09-13T10:12:27.1977754	Tags for minecraft:block mod id artistry
 5c90f273af82a8e1108073b3bbdbb905e7ce23eb data/artistry/tags/block/aspen_logs.json
 cb8f42934e5133f862b85f346da074f586ebab6b data/artistry/tags/block/carvable_pumpkins.json
 3940cf1fb696b18b296973120b7a464b64d8152a data/artistry/tags/block/frosted_glass.json
@@ -45,7 +45,7 @@ e56d56e03c7ad399d358e93b97e0aba754fb2d6e data/minecraft/tags/block/bee_growables
 18901fb99991fa198524b1b985825fb4fa3dd545 data/minecraft/tags/block/climbable.json
 e56d56e03c7ad399d358e93b97e0aba754fb2d6e data/minecraft/tags/block/crops.json
 5c8fd246cb4c6cbecfe87a247c6a8b7f8d5bf5dc data/minecraft/tags/block/dirt.json
-a2efbc17897e9dd7b08874f030cdfc6fb9a6ac27 data/minecraft/tags/block/enchantment_power_transmitter.json
+f23d083e230e7684a71ac64e537afb792f9500ed data/minecraft/tags/block/enchantment_power_transmitter.json
 defe176df0220bede1e82186f2858018c2b1babd data/minecraft/tags/block/enderman_holdable.json
 a2ee9243350f132386a14588222c5d567f681078 data/minecraft/tags/block/fence_gates.json
 a054d0b95ec321349d87186f27442d22b0f76887 data/minecraft/tags/block/flower_pots.json
@@ -64,7 +64,7 @@ ee95fbee01f44f78c11c110138787de6c45f0107 data/minecraft/tags/block/overworld_car
 e9b2b4e7962ab80d7efeab43fbed187f75c59a91 data/minecraft/tags/block/piglin_repellents.json
 0a826df176c8ac3bd81711a7a4175a75126ac9c8 data/minecraft/tags/block/planks.json
 f64faf03409f352f30c24e4ca6d5d0b934df0027 data/minecraft/tags/block/replaceable.json
-f64faf03409f352f30c24e4ca6d5d0b934df0027 data/minecraft/tags/block/replaceable_by_trees.json
+e9ccb07f5660de89a2a2a1943d434118ceba1c7c data/minecraft/tags/block/replaceable_by_trees.json
 55fbd68b31cdc5344669d843dc351d53321c9d4a data/minecraft/tags/block/saplings.json
 6ccdd7553eca982a759b33a781c50b9ea255ce34 data/minecraft/tags/block/sculk_replaceable.json
 b1977e19a874a0184a24ba1e18ac7d402da9e845 data/minecraft/tags/block/slabs.json

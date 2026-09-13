@@ -35,6 +35,8 @@ public class ArtistryItemModelProvider extends ItemModelProvider {
         simpleItem(ArtistryItems.STRING_LIGHTS);
         handheldItem(ArtistryItems.CARVING_KNIFE);
 
+        blockItemSprite(ArtistryBlocks.LETTER);
+
         blockItemSprite(ArtistryBlocks.COPPER_CHAIN);
         blockItemSprite(ArtistryBlocks.EXPOSED_COPPER_CHAIN);
         blockItemSprite(ArtistryBlocks.WEATHERED_COPPER_CHAIN);

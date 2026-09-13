@@ -372,7 +372,16 @@ public class ArtistryBlocks {
                     .sound(SoundType.WOOL)
                     .pushReaction(PushReaction.DESTROY)
                     .noOcclusion()
-                    .strength(0.5F)
+                    .strength(0.25F)
+            ));
+    public static final DeferredBlock<LetterBlock> LETTER = registerBlockWithItem("letter",
+            p -> new LetterBlock(p
+                    .mapColor(MapColor.NONE)
+                    .sound(SoundType.WOOL)
+                    .pushReaction(PushReaction.DESTROY)
+                    .noOcclusion()
+                    .noCollission()
+                    .instabreak()
             ));
     public static final DeferredBlock<CrystalBallBlock> CRYSTAL_BALL = registerBlockWithItem("crystal_ball",
             p -> new CrystalBallBlock(p

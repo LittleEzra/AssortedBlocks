@@ -132,6 +132,7 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
         simpleBlockItem(BOLLARD.get(), models().getExistingFile(Artistry.location("block/bollard")));
         bookPile(BOOK_PILE.get(), 8);
         simpleBlockItem(BOOK_PILE.get(), models().getExistingFile(Artistry.location("block/decorative_book_inventory")));
+        letter(LETTER.get());
         directionalBlock(CRYSTAL_BALL.get(), models().getExistingFile(Artistry.location("block/crystal_ball")));
         simpleBlockItem(CRYSTAL_BALL.get(), models().getExistingFile(Artistry.location("block/crystal_ball")));
 
@@ -337,6 +338,28 @@ public class ArtistryBlockModelProvider extends BlockStateProvider {
 
     private static final ResourceLocation PUMPKIN_SIDE = ResourceLocation.withDefaultNamespace("block/pumpkin_side");
     private static final ResourceLocation PUMPKIN_TOP = ResourceLocation.withDefaultNamespace("block/pumpkin_top");
+
+    private void letter(LetterBlock block){
+        getVariantBuilder(block)
+                .forAllStates(state -> {
+                    boolean sealed = state.getValue(LetterBlock.SEALED);
+                    Direction facing = state.getValue(LetterBlock.FACING);
+                    var model0 = models().getExistingFile(Artistry.location("block/letter_0" + (sealed ? "_sealed" : "")));
+                    var model1 = models().getExistingFile(Artistry.location("block/letter_1" + (sealed ? "_sealed" : "")));
+                    var model2 = models().getExistingFile(Artistry.location("block/letter_2" + (sealed ? "_sealed" : "")));
+                    int rotation = (int) (facing.toYRot() + 180) % 360;
+                    return ConfiguredModel.builder()
+                            .modelFile(model0)
+                            .rotationY(rotation)
+                            .nextModel()
+                            .modelFile(model1)
+                            .rotationY(rotation)
+                            .nextModel()
+                            .modelFile(model2)
+                            .rotationY(rotation)
+                            .build();
+                });
+    }
 
     private void bookPile(BookPileBlock block, int bookTextures) {
         var builder = getMultipartBuilder(block);

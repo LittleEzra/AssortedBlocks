@@ -663,6 +663,12 @@ public class ArtistryRecipeProvider extends RecipeProvider {
                 .requires(ArtistryBlocks.BOOK_PILE)
                 .unlockedBy(getHasName(ArtistryBlocks.BOOK_PILE), has(ArtistryBlocks.BOOK_PILE))
                 .save(recipeOutput, "book_from_decorative_book");
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.LETTER)
+                .define('#', Items.PAPER)
+                .pattern("# #")
+                .pattern(" # ")
+                .unlockedBy(getHasName(Items.PAPER), has(Items.PAPER))
+                .save(recipeOutput);
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ArtistryBlocks.CRYSTAL_BALL)
                 .define('o', Blocks.AMETHYST_BLOCK)
                 .define('#', Items.GOLD_INGOT)

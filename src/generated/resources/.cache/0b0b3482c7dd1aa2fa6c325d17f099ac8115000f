@@ -1,4 +1,4 @@
-// 1.21.1	2026-07-24T21:39:13.6736885	Item Models: artistry
+// 1.21.1	2026-09-13T10:12:27.1585047	Item Models: artistry
 59b250cc8214b86eac1ffb0e41d7d68bec96cde0 assets/artistry/models/item/amethyst_stars.json
 32c080b7db66c98dba7d11435dd2233670f58c10 assets/artistry/models/item/ancient_tear.json
 73fe7333d37ecde4ea79ba093344f9bc4ccda762 assets/artistry/models/item/aspen_boat.json
@@ -50,6 +50,7 @@ b2404c5d61d5099bd89a3349bf023278a98c4f5b assets/artistry/models/item/gray_tall_c
 512188cf33140547cd43e7c51fddb889303f2d32 assets/artistry/models/item/ice_brick_wall.json
 d0a596b0b38f0561613761b3a9b28c4d3026061f assets/artistry/models/item/large_lantern.json
 b6b1aa7b7d340cf14a5ee7c77397dab55269a35c assets/artistry/models/item/large_soul_lantern.json
+2de62006312f4a9f35b4d1d18758deff38229e55 assets/artistry/models/item/letter.json
 3686b0d8f9d8f1ddac4c5a9826bd1b3497d17712 assets/artistry/models/item/light_blue_tall_candle.json
 5b2fda5a1019bbef5de7b4d8634bedc4e9659338 assets/artistry/models/item/light_gray_tall_candle.json
 7ef3638acd98ce4752c7d914315bce14a1b5fcfa assets/artistry/models/item/lime_tall_candle.json

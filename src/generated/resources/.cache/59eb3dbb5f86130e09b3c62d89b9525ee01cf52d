@@ -1,4 +1,4 @@
-// 1.21.1	2026-09-12T20:19:25.0267593	Loot Tables
+// 1.21.1	2026-09-13T10:12:27.1508312	Loot Tables
 47b6b4ddb80a89fa9150b4f209f8c1912ba8fd04 data/artistry/loot_table/blocks/acacia_table.json
 c17e141140c72bb4ad538245b3bc5de5e3b91093 data/artistry/loot_table/blocks/amethyst_stars.json
 8472b2e2149ff7987014f0ebdfb5631626250e58 data/artistry/loot_table/blocks/andesite_table.json
@@ -90,6 +90,7 @@ a59bb02cdae51ba553a890a0796036572a1fda89 data/artistry/loot_table/blocks/jungle_
 572c575c87ce525e8db4fab0cbeab182c7115b6b data/artistry/loot_table/blocks/large_lantern.json
 30678ce73520f6a9ce755beb03710e9d53108c22 data/artistry/loot_table/blocks/large_soul_lantern.json
 37ee4eacfa6eea6fd2256c8ea1c79844b21ff94e data/artistry/loot_table/blocks/leeching_soil.json
+fd01838d70a8b912cfd2132c44d3cdb3d12d905c data/artistry/loot_table/blocks/letter.json
 667f95de5eaa2778840bf4052b03ee64614af6db data/artistry/loot_table/blocks/light_blue_frosted_glass.json
 c489e095a2d5d42ab9f078717120623b82596fed data/artistry/loot_table/blocks/light_blue_tall_candle.json
 b42df7c36326f3d3aeb232701af7e44813431481 data/artistry/loot_table/blocks/light_gray_frosted_glass.json

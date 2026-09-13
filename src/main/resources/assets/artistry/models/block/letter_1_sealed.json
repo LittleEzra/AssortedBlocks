@@ -1,0 +1,6 @@
+{
+	"parent": "artistry:block/letter_1",
+	"textures": {
+		"texture": "artistry:block/sealed_letter"
+	}
+}

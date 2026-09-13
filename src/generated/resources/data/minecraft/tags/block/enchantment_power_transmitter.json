@@ -3,8 +3,11 @@
     "artistry:thorn_husk",
     "artistry:blooming_vines",
     "artistry:short_teardrop_grass",
+    "artistry:tall_teardrop_grass",
     "artistry:lush_fern",
     "artistry:lush_fern_crop",
-    "artistry:corpse_flower"
+    "artistry:corpse_flower",
+    "artistry:book_pile",
+    "artistry:letter"
   ]
 }
